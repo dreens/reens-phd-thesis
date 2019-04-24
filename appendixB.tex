@@ -1,0 +1,10 @@
+\chapter{Deceleration Code}	\OnePageChapter         % ONE PAGE!
+
+Here I include decelerator.py, a python module that enables more advanced switching schemes for Stark Deceleration. The code itself is already well-documented, but I will begin with some discussion of some important considerations. Historically, the most common technique for programming a decelerator was to simulate the propagation of the so-called synchronous molecule, and determine the length of each HV pulse by noting how long it took for this synchronous molecule to reach a certain phase angle within each given stage of the decelerator. This technique is conceptually very simple and appealing, but suffers from a few key practical limitations:
+\begin{enumerate}
+\item One has to guess the phase angle which will yield a certain final speed
+\item The phase-angle to final speed correspondence will be highly sensitive to time-step and force-grid unless they are made extremely fine (nanosecond, micron)
+\item Calculation time is long
+\end{enumerate}
+
+
