@@ -1,0 +1,84 @@
+\documentclass[defaultstyle,11pt]{thesis}
+
+\usepackage{amssymb}		% to get all AMS symbols
+\usepackage{graphicx}		% to insert figures
+\usepackage{hyperref}		% PDF hyperreferences??
+
+%%%%%%%%%%%%   All the preamble material:   %%%%%%%%%%%%
+
+\title{Pushing the Limits for Directly Cooled Molecules}
+
+\author{D.~L.}{Reens}
+
+\otherdegrees{S.B., Massachusetts Institute of Technology, 2011 \\
+	      M.S., University of Colorado, 2014}
+
+\degree{Doctor of Philosophy}		%  #1 {long descr.}
+	{Ph.D., Molecular Physics}		%  #2 {short descr.}
+
+\dept{Department of}			%  #1 {designation}
+	{Physics}		%  #2 {name}
+
+\advisor{Prof.}				%  #1 {title}
+	{Adj. Jun Ye}			%  #2 {name}
+
+\reader{Prof.~Heather Lewandowski}		%  2nd person to sign thesis
+\readerThree{Prof.~John Bohn}		%  3rd person to sign thesis
+
+\abstract{ 
+
+	This should be written last, and so I will. Here's a stab though.
+	
+	The subfield of cold and ultracold molecules is growing increasingly mature, with exciting results from laser cooled species, from precision measurement experiments, and from atomic dipolar competitors. These exciting developments have placed an appropriately stimulating pressure on direct cooling experiments to hurry along and deliver on long expected promises of high number densities and in-trap collisional effects. Towards this end, this thesis reports on several fundamental improvements in understanding and application of the key techniques employed. The first plugged magnetic traps for cold dipolar molecules are presented. Deceleration is modified to enable unprecedented improvement in the transverse trapping capability of the devices. Beam skimming is also made more effective, trap loading more efficient, and hold times enhanced to unprecedented lengths.
+	}
+
+\dedication[Dedication]{	% NEVER use \OnePageChapter here.
+	To Abby and the boys.
+	}
+
+\acknowledgements{	\OnePageChapter	% *MUST* BE ONLY ONE PAGE!
+	First and foremost I acknowledge my lovely wife. Abby, you have an incredible love and appreciation for the simple things in life- diligence, routine, and data collection! Without you as a life partner, I am certain I would have traded in the PhD life for a flashy but fleeting trendy tech job ages ago. I'm so glad we've stuck it out together. It's been a worthwhile struggle, and we're coming out stronger in so many ways. Kudos for finishing first.
+	
+	Acknowledge some other friends and family members.
+	Acknowledge spiritual conversations and describe some of my own developments in that area?
+	}
+
+% \IRBprotocol{E927F29.001X}	% optional!
+
+\ToCisShort	% use this only for 1-page Table of Contents
+
+\LoFisShort	% use this only for 1-page Table of Figures
+% \emptyLoF	% use this if there is no List of Figures
+
+\LoTisShort	% use this only for 1-page Table of Tables
+% \emptyLoT	% use this if there is no List of Tables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%       BEGIN DOCUMENT...         %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input macros.tex
+\input introduction.tex
+\input background.tex
+\input sourcing.tex
+\input skimming.tex
+\input focusing.tex
+\input slowing.tex
+\input trapping.tex
+\input colliding.tex
+
+%%%%%%%%%   then the Bibliography, if any   %%%%%%%%%
+\bibliographystyle{plain}	% or "siam", or "alpha", etc.
+\nocite{*}		% list all refs in database, cited or not
+\bibliography{refs}		% Bib database in "refs.bib"
+
+%%%%%%%%%   then the Appendices, if any   %%%%%%%%%
+\appendix
+\input appendixA.tex
+\input appendixB.tex
+
+
+\end{document}
+
