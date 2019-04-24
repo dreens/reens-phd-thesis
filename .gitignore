@@ -11,6 +11,12 @@
 #OSX/UNIX/LINUX Matlab Autosaves
 **.m~
 
+#Windows LOCK files
+**~$*
+
+#Samba share crap
+**.smbdelete*
+
 #Windows Matlab Autosaves
 **.asv
 
