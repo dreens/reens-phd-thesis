@@ -336,12 +336,12 @@
 	\let\endth@OldBib\endthebibliography
 	\renewenvironment*{thebibliography}[1]{
 		\begin{th@OldBib}{#1}
-		\ULforem%  set \em to underline
+		%\ULforem%  set \em to underline
 		\begin{singlespace}
 		\addcontentsline{toc}{part}{\bibnameToC}
 	}{
 		\end{singlespace}
-		\EmphReset% set \em back to the user-specified default.
+		%\EmphReset% set \em back to the user-specified default.
 		\end{th@OldBib}
 	}
 }
