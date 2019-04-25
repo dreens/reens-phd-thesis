@@ -4,9 +4,15 @@
 
 #Latex Extra Files
 **.log
+**.lof
 **.aux
 **.blg
 **Notes.bib
+**.toc
+**.tof
+**.lot
+**.bbl
+**.out
 
 #OSX/UNIX/LINUX Matlab Autosaves
 **.m~
