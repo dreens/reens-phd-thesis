@@ -1,3 +1,18 @@
+%\documentclass[defaultstyle,11pt]{thesis}
+%
+%\usepackage{amssymb}		% to get all AMS symbols
+%\usepackage{amsmath}		% to get equations to work right
+%\usepackage{graphicx}		% to insert figures
+%\usepackage{hyperref}		% PDF hyperreferences?? [backref=none]
+%\usepackage{natbib}
+%\usepackage[usenames,dvipsnames]{color}
+%%% To make \href colors more decent:
+%\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
+%\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
+%  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
+%}
+
+
 \chapter{Optimized Deceleration}
 
 Over the past two decades, Stark deceleration has enabled groundbreaking collisional~\cite{Sawyer2011,Kirste2012,Gao2018} and spectroscopic~\cite{Veldhoven2004,Hudson2006,Lev2006,Fast2018} studies of a variety of species~\cite{VanDeMeerakker2012}. 
@@ -187,7 +202,7 @@ This schematic illustrates alternate voltage configurations which can be used al
 
 
 Useful alternate configurations can be created by applying voltage in a way that is not balanced between adjacent pin pairs. 
-Once an imbalance exists, by charging up both pins in a pair to the same non-zero voltage, by only charging one pin in a pair, or even by unbalancing the decelerator power supplies~\cite{Hoekstra2018}, the field lines will run between pin-pairs. 
+Once an imbalance exists, by charging up both pins in a pair to the same non-zero voltage, by only charging one pin in a pair, or even by unbalancing the decelerator power supplies~\footnote{It was once noted that imbalancing the power supplies led to improved performance on a conventional pulsed Stark decelerator. S. Hoekstra, private communication.}, the field lines will run between pin-pairs. 
 Near the grounded pin-pair, these field lines create a focusing 2D quadrupole structure, much like this one used intentionally for trapping and controlling spin-flip losses~\cite{Reens2017}. 
 By implementing these configurations when the synchronous molecule is flying between the grounded pin pair, but retaining the use of the conventional configuration for hill climbing, the longitudinal behavior of the device is unaffected while the transverse behavior is vastly improved.
 Regarding spin-flip losses, use of these configurations is cause for concern, but not significant as far as early modeling is concerned. This is discussed further towards the end of this chapter.
@@ -247,3 +262,9 @@ For less strongly dipolar species however, VSF will more easily respect the low 
 \section{HV Isolation Strategies}
 
 \section{Manufacturing Considerations}
+
+
+
+%\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+%\bibliography{allrefs}		% Bib database in "allrefs.bib"
+%\end{document}
