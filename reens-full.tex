@@ -3,8 +3,9 @@
 \usepackage{amssymb}		% to get all AMS symbols
 \usepackage{amsmath}		% to get equations to work right
 \usepackage{graphicx}		% to insert figures
-\usepackage{hyperref}		% PDF hyperreferences?? [backref=none]
+\usepackage[pagebackref=true]{hyperref}		% PDF hyperreferences?? [backref=none]
 \usepackage{natbib}
+\setcitestyle{numbers,square,comma}
 \usepackage[usenames,dvipsnames]{color}
 %% To make \href colors more decent:
 \definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
@@ -70,7 +71,6 @@ Acknowledge spiritual conversations and describe some of my own developments in 
 
 %%%%%%%%%   then the Bibliography, if any   %%%%%%%%%
 \bibliographystyle{unsrtDR}	% custom BST which hides DOI, URL fields but makes the title a link itself. Also hides months, which weren't capitalizing.
-\setcitestyle{numbers}
 \bibliography{allrefs}		% Bib database in "allrefs.bib"
 
 %%%%%%%%%   then the Appendices, if any   %%%%%%%%%
