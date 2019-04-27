@@ -1,31 +1,31 @@
-\documentclass[defaultstyle,11pt]{thesis}
-
-\usepackage{amssymb}		% to get all AMS symbols
-\usepackage{amsmath}		% to get equations to work right
-\usepackage{graphicx}		% to insert figures
-\graphicspath{{../}{Slowing/}}
-\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
-\usepackage{natbib}
-\usepackage{caption}
-\setcitestyle{numbers,square,comma}
-\usepackage[usenames,dvipsnames]{color}
-%% To make \href colors more decent:
-\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
-\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
-  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
-}
-\renewcommand{\thefootnote}{\alph{footnote}}	
-\title{a}
-\abstract{a}
-\author{a}{a}
-\otherdegrees{a}
-\degree{a}{a}
-\dept{a}{a}
-\advisor{a}{a}
-\reader{a}
-\readerThree{a}
-\SuspendPrologue
-\begin{document}
+%\documentclass[defaultstyle,11pt]{thesis}
+%
+%\usepackage{amssymb}		% to get all AMS symbols
+%\usepackage{amsmath}		% to get equations to work right
+%\usepackage{graphicx}		% to insert figures
+%\graphicspath{{../}{Slowing/}}
+%\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
+%\usepackage{natbib}
+%\usepackage{caption}
+%\setcitestyle{numbers,square,comma}
+%\usepackage[usenames,dvipsnames]{color}
+%%% To make \href colors more decent:
+%\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
+%\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
+%  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
+%}
+%\renewcommand{\thefootnote}{\alph{footnote}}	
+%\title{a}
+%\abstract{a}
+%\author{a}{a}
+%\otherdegrees{a}
+%\degree{a}{a}
+%\dept{a}{a}
+%\advisor{a}{a}
+%\reader{a}
+%\readerThree{a}
+%\SuspendPrologue
+%\begin{document}
 
 
 \chapter{Optimized Deceleration}
@@ -69,7 +69,7 @@ Successive pairs are rotated ninety degrees relative to one another, which is re
 \begin{figure}[t!]
 \centering
 \includegraphics[width=8cm]{chargecartoon.png}%
-\caption{\label{fig:decelcartoon}
+\caption[Voltages, E-fields, and on-axis Energy]{\label{fig:decelcartoon}
 Voltages, electric fields, and on-axis potential energy in a conventional pin decelerator~\cite{Bethlem1999}. Pin rotation indicated by representation as slight ellipses rather than circles. Electric fields density corresponds to the potential experienced by molecules. The horizontal dashed line indicates the central axis of the device, and the potential energy of the target or synchronous molecule as it transits this axis is shown below the pin pairs. A' indicates the translation (and rotation) of the drawn configuration of fields and voltages to the next pin pair(s). 
 }
 \end{figure}
@@ -85,7 +85,7 @@ Thus there is a tradeoff between the deceleration capability of the device and t
 \begin{figure}[t!]
 \centering
 \includegraphics[width=\linewidth]{Slowing/phaseangles.png}%
-\caption{\label{fig:variousphaseangles}
+\caption[Phase Space for Different Final Velocities]{\label{fig:variousphaseangles}
 Longitudinal phase space plots of a Stark decelerator with varying final velocity. From left to right, $v_f=33, 50, 100, 200, 500, 800$~m/s. Note how the size of the populated area reduces as the final speed is reduced.  This is a direct reflection of how closely the synchronous molecule approaches the charged pin-pair, which in turn controls how far ahead a nonsynchronous molecule may be while still experiencing a restoring force. Note also how the size reduces much more significantly between $800-500-200$~m/s then for any of the other speed reductions. This is described further in the main text. 
 }
 \end{figure}
@@ -156,7 +156,7 @@ For typical operating conditions, $f\sim 1-2\text{ kHz}$.
 \begin{figure}[t!]
 \centering
 \includegraphics[width=\linewidth]{Slowing/many-bunching-plots.png}%
-\caption{\label{fig:bunchingphasespace311}
+\caption[Phase Space for S=1, S=3, and S=311]{\label{fig:bunchingphasespace311}
 Longitudinal phase space plots after several types of bunching for several decelerator lengths. Column-wise, operation is in $S=1$, $S=3$, and $S=311$. Indicated percentages are comparable by rows, but suffer from a pernicious simulation artifact. Some molecules are included which actually pass through decelerator pins. The effect adversely influences the comparative survival numbers, but not the observed projection of phase space onto the longitudinal direction.
 }
 \end{figure}
@@ -209,8 +209,8 @@ Conventionally, pins are always charged in bipolar pairs, in which case few fiel
 
 \begin{figure}[t!]
 \includegraphics[width=\linewidth]{Slowing/pinpairformal.png}%
-\caption{\label{fig:chargecartoon}
-This schematic illustrates alternate voltage configurations which can be used alongside the conventional one for greatly enhanced performance. Configurations B-D feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to S=1 mode and its S=3 overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced. Equipotentials of the effective trap during $\phi=45^\circ$ slowing are shown, with units appropriate for hydroxyl radicals.
+\caption[Definition and Explanation of Alternate Field Distributions]{\label{fig:chargecartoon}
+Alternate field distributions which can be used alongside the conventional one for greatly enhanced performance. Configurations B and C feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to S=1 mode and its S=3 overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced.
 }
 \end{figure}
 
@@ -227,7 +227,7 @@ This is especially significant for being realizable immediately on existing devi
 \begin{figure}[t!]
 \centering
 \includegraphics[width=10cm]{Slowing/speedvary.png}%
-\caption{\label{fig:speedvary}
+\caption[S=1 and F Mode Experimental Comparison]{\label{fig:speedvary}
 Experimental Data Comparing S=1 and F mode. Fourfold or greater improvements are found across many final velocities. F mode traces are shown with positive sign, and S=1 with negative for visual comparison. Simulations are performed and reported as solid lines; good agreement is obtained.
 }
 \end{figure}
@@ -246,7 +246,7 @@ Such couplings are in some contexts useful for maintaining ergodicity in a trapp
 
 \begin{figure}[t!]
 \includegraphics[width=\linewidth]{Slowing/full-three-panel.png}%
-\caption{\label{fig:efftrap}
+\caption[Traveling Potential Well Characteristics for different Modes]{\label{fig:efftrap}
 Characterizing the moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and focusing (F) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel~(a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel~(c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b). For TW a full simulation is not performed, since low speed losses are less significant, but the dashed line shows the value corresponding to 67 km/s/s in panel~(b). In panel~(d) equipotentials give a feeling for the effective trap as a whole, which is helpful for visualizing the derivation of the minimum trap depth in panel~(a). The effective traps shown correspond to $\phi=45^\circ$, about $180\text{ mK}$. The propagation axis is to the right, and transverse directions are up and diagonally outwards.}
 \end{figure}
 
@@ -273,7 +273,7 @@ This is a direct reflection of the fact that $\phi_2$ has been tuned for optimal
 
 \begin{figure}[t!]
 \includegraphics[width=\linewidth]{5x2-PSD-Compare.png}
-\caption{\label{full5x2phasespace}
+\caption[Longitudinal Phase Space for different Modes]{\label{full5x2phasespace}
 Longitudinal Phase Space Fillings are shown for several operation modes as labeled. 
 All modes are initialized with the same uniformly distributed phase space, and the surviving number of molecules is indicated for each pair of panels.
 Note dramatic improvements in homogeneity and planar density, without significant broadening to larger velocity classes except for VSF. 
@@ -314,7 +314,7 @@ This transverse trap may have various forms depending on the choice of field dis
 
 \begin{figure}[t!]
 \includegraphics[width=\linewidth]{Slowing/guiding_compilation.png}
-\caption{\label{fig:guiding_compilation}
+\caption[Transverse Guiding Potentials]{\label{fig:guiding_compilation}
 Transverse Traps formed by Different Field Distributions. Field distributions are generated in COMSOL, converted to internal potential energy, and then averaged longitudinally.}
 \end{figure}
 
@@ -362,7 +362,7 @@ The tapered pins may be a good choice for other designs, especially if a vendor 
 \includegraphics[width=8cm]{Slowing/MountingCageSystem1.png}
 \includegraphics[width=8cm]{Slowing/MountingCageSystem2.png}\\
 \includegraphics[width=\linewidth]{Slowing/MountingCageSystem3.png}
-\caption{\label{fig:decelmountingimages}
+\caption[Decelerator Mounting Structure]{\label{fig:decelmountingimages}
 Mounting structure of third generation Stark decelerator. Note large safety high voltage surface distance along glass rods, blue. (a). Clamping pieces grab on to the actual decelerator rods. A mounting flat, a vestige of an earlier design, is visible on the decelerator rod. (b) Decelerator rods hidden, cage connection rods shown. (c) Full view of the cage structure.}
 \end{figure}
 
@@ -398,7 +398,7 @@ Borosilicate glass rods were selected for their vacuum and insulating properties
 \centering
 \includegraphics[width=9cm]{Macor2.png}
 \includegraphics[width=7.11cm]{Macor1.png}
-\caption{\label{macorbad}
+\caption[MACOR Surface Arcs]{\label{macorbad}
 MACOR surface arcs. At left, arcing on an insulator original to the manufacture of the second generation device~\cite{Sawyer2007}. At right, arcing on a redesigned version, undertaken concurrently with a repolishing of the last twenty decelerator pins performed in the fall of 2014. Here it is evident that the path-length extension grooves are not helpful.}
 \end{figure}
 
@@ -464,6 +464,6 @@ Excellent suppression of Neon is observed, with an RGA mounted in the trap chamb
 
 
 
-\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
-\bibliography{allrefs}		% Bib database in "allrefs.bib"
-\end{document}
+%\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+%\bibliography{allrefs}		% Bib database in "allrefs.bib"
+%\end{document}

@@ -3,6 +3,7 @@
 \usepackage{amssymb}		% to get all AMS symbols
 \usepackage{amsmath}		% to get equations to work right
 \usepackage{graphicx}		% to insert figures
+\graphicspath{{./}{Slowing/}}
 \usepackage[pagebackref=true]{hyperref}		% PDF hyperreferences?? [backref=none]
 \usepackage{natbib}
 \usepackage{caption}
@@ -14,6 +15,7 @@
   urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
 }
 
+\renewcommand{\thefootnote}{\alph{footnote}}	
 %%%%%%%%%%%%   All the preamble material:   %%%%%%%%%%%%
 
 \title{Pushing the Limits for Directly Cooled Molecules}
@@ -66,7 +68,7 @@ Acknowledge spiritual conversations and describe some of my own developments in 
 \input Source/sourcing.tex
 \input Skim/skimming.tex
 \input Focus/focusing.tex
-\input Slowing/slowing.tex
+\input slowing.tex
 \input Trap/trapping.tex
 \input Collisions/colliding.tex
 
