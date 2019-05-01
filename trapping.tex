@@ -123,6 +123,9 @@ B(z) &=& \frac{1}{2}B_r\left( \frac{z+t}{R} - \frac{(z+t)^3}{2R^3}  - \frac{z-t}
 &=& \frac{1}{2}B_r\left(\frac{2t}{R} - \frac{3z^2t}{R^3} + \frac{t^3}{R^3} \right).
 \end{eqnarray} 
 So we see that as $R$ grows, $B(z)$ shrinks close to the magnet with $1/R$, but the flatness of the field increases, so that the term proportional to $z^2t/R^3$ which describes the second order fall off of the field away from the magnet reduces as $1/R^3$.
+In other words, the magnetic field just outside of a disk magnet does indeed shrink as one increases its radius, although the volume occupied by this smaller magnetic field increases.
+It is especially advantageous to have a small field from the large superimposed disk of the tricycle trap, since this extra field acts to shift the trap center into the hole of the ring and out of view of the detection laser.
+For this purpose, the Tricycle trap features a $19$~mm outer diameter ring magnet, up from $12$~mm in the Ring trap.
 
 %SUBSECTION LOADING IMPROVEMENTS
 \subsection{Loading Improvements}
@@ -208,12 +211,9 @@ When this is done, spectra such as shown in Fig.~\ref{RingTriSpectra.png} are ob
 \figdave{RingTriSpectrum.png}{Spectra in Ring and Tricycle Trap}{Spectra in the Ring and Tricycle traps after loading with no evaporation. The former was published in \citep[Fig.~3a]{stuhl2012evap}, the latter was collected on Feb.~24, 2014.}{\linewidth}
 
 % SUBSECTION LIMITATIONS TO SPECTROSCOPY
-\subsection{Limitations to Spectroscopy}
+\subsection{Limitations to Spectroscopy}\label{limitationsection}
 
-Inherent in the spectroscopic procedure just described are several key assumptions, which vary in their validity and deserve some further discussion.
-
-\subsubsection{Spatial Sensitivity Variations}
-
+One key limitation to microwave spectroscopy via the procedure described is the spatial variation of sensitivity of the technique.
 The influence on microwave frequency dependent intensity has already been claimed negligible, but microwave intensity at any given frequency varies significantly across the cloud.
 This goes against the rule of thumb that electromagnetic intensity shouldn't vary significantly on lengthscales below a wavelength, $18$~cm in this case.
 This is because the microwaves are in the near field regime with respect to the conductors that form the trapping potential.
@@ -231,12 +231,31 @@ The results were quite different from those performed along the $|f, \frac{3}{2}
 
 \figdave{sigmaspec.png}{Spectroscopy from $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$}{Depletion spectroscopy performed by microwave transfer from the $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$ state. The dip between $800-1000$~G is likely an artifact of coupling efficiency challenges.}{10cm}
 
-A final point is the spatial dependence of the fluorescence collection system. 
+Another point is the spatial dependence of the fluorescence collection system.
+Fig.~\ref{Collection.png} shows how the solid angle for photons to hit the lens varies with trap position, but beyond this there is of course the question of laser coverage.
+The laser is always optimized for signal, making it quite likely to be well overlapped with the trap center, but for the larger magnetic field ranges, there are regions of the trap that are likely not well exposed to the laser, especially inside the rings of the traps, since the laser impinges from the side.
 
-% SUBSECTION LOADED SPECTRA
-\subsection{Loaded Spectra}
+\figdave{Collection.png}{Ring and Tricycle Collection Solid Angle}{Collection solid angle for the Tricycle (left) and Ring (right) traps. Colors do not quite match between the two panels but are labeled in steradians. For the tricycle trap, the lens is located far below, while for the ring trap it is located far above. Electrodes are to the left and right of the plots. In both cases, solid angle variations within $500~\mu$m of the trap center are on the $10\%$ level only, although larger variations occur for molecules regularly reaching $3-5$~kG, a deviation of over $1$~mm from the trap center.}{16cm}
 
-The obtained spectra in the two traps are compared in Fig.~\ref{RingTriSpectrum.png}.
+Some of these spatial variations may be mitigated by an ergodic hypothesis.
+If the molecules can be assumed to be exploring all regions of phase space, then variations in detection efficiency may not significantly perturb the spectra or prevent it from representing the thermal state of the ensemble.
+Essentially, any blind spots in the spectroscopic procedure can be averaged away by the motion of the molecules themselves, since a molecule which is flipped from $|f, \frac{3}{2}\rangle$ to $|e, \frac{3}{2}\rangle$ by microwave outside of the view of the laser may after just a partial trap oscillation find its way back into view.
+Unfortunately, the ergodic hypothesis seems not well supported in this case, especially for the Ring trap where cylindrical symmetry guarantees angular momentum as a conserved quantity, unless strong elastic collisions capable of cross-dimensional thermalization were present.
+Since ideally spectroscopy would be a tool to help confirm the thermalization status of the ensemble, having this as an assumption becomes circular.
+
+In any case, a final limitation of the spectroscopy worth discussing is that in principle it ought to be performed in a regime where the distribution is not significantly altered by the spectroscopy.
+This is difficult to respect in practice, because the less significantly the population is perturbed, the smaller the resulting signal and the longer the averaging time.
+In practice, the spectroscopies performed in the Ring and Tricycle trap usually push the boundary with respect to the perturbation threshold, with points collected at the peak of the distribution often featuring $30\%$ population removal.
+Pushing this boundary threatens to add an artificial smoothing on top of the true magnetic field variation of the cloud, since even if one magnetic field were actually populated less fully than its neighboring magnetic field regions, so many microwave pulses are applied that even molecules which spend a small fraction of their time at that magnetic field end up having a decent likelihood of being removed.
+We can observe this effect to some extent by varying the number of microwave pulses used in the spectroscopic sequence, see Fig.~\ref{spec1317.png}.
+For the most part, the techniques agree with one another, but as far as the statistical likelihood of fitting to Maxwell-Boltzmann distributions, the single pulse spectra appears much more triangular, rising too far above the low and high field wings in the center.
+
+\figdave{spec1317.png}{Spectroscopy with Different Pulse Numbers}{Three spectra obtained with differing numbers of microwave pulses. General agreement is good, but the single pulse spectra deviates more noticeably. This is an indication of the potential smoothing effect of including many pulses as discussed in the text.}{10cm}
+
+% SUBSECTION RING AND TRICYCLE THERMOMETRY
+\subsection{Ring and Tricycle Thermometry}
+
+The obtained spectra in the two traps were shown above in Fig.~\ref{RingTriSpectrum.png}.
 Several important features are worth discussing here.
 First of all, the Ring trap fits nicely to a Maxwell-Boltzmann distribution, which in a linear trapping geometry should scale with magnetic field in the following way:
 \begin{equation}
@@ -245,27 +264,50 @@ p(B)\propto B^2e^{\mu_B B/kT}.
 \end{equation}
 The exponential term gives the expected Boltzmann suppression factor as a function of increasing potential energy, while the $B^2$ term is proportional to the volume degeneracy factor.
 In other words, the volume corresponding to a magnetic field $B$ within $dB$ is an ellipsoidal shell in the linear trap, whose surface area grows proportionally to $B^2$ since the trap is linear.
-Of course there is also the microwave polarization factor to keep in mind, but close to the center of the quadrupole trap, the volume degeneracy factor weighted by polarization selectivity should still grow as $B^2$ and be representative of the population distribution.
-Further away from the center however this is a different story.
-Molecules might be exploring the region between the central and toroidal traps, but this region is opaque due to polarization.
-In the region that is not opaque, close to the axis, there is also a significant change in field gradient that occurs between $1-2$~kG. Above $2$~kG, contour lines are much more closely spaced than below $1$~kG, so that in principle the volume degeneracy factor should be different for the two regions.
-One corollary is that a true Maxwell-Boltzmann distribution in this trap ought to feature reduced population in the region above $2$~kG relative to what one would get by fitting the functional form in Eq.~\ref{spectralform}.
+Of course there are already the limitations discussed above in Sec.~\ref{limitationsection}, but in fitting Eq.~\ref{spectralform} we must also account for deviations from the linear quadrupole geometry.
+Close to $1100$~G, molecules should be exploring the region between the central and toroidal traps, a plateau which ought to contribute a large volume degeneracy factor, although perhaps this should be suppressed due to polarization.
+Close to the axis however, there is also a significant change in field gradient that occurs above and below $\sim1.5$~kG. Contour lines are much more closely above  than below, so that in principle the volume degeneracy factor should be different for the two regions.
 
 In the tricycle trap, the fit is more dubious. 
 Points clearly fall below the fit at high magnetic fields, and also seem to lie below at the lowest fields as well.
 On the other hand, given that the tricycle trap opens to the environment above $3$~kG, it may be that falling below the Maxwell-Boltzmann fit line is the more natural thing to occur in this situation.
-Unlike in the Ring trap where there is no sign of the expected volume enhancement factor that would correspond to plateaus at $1100$~G, the Tricycle trap spectrum shows more agreement as far as its expected deviations from the pure thermal spectrum are concerned.
+Alternatively, there is another factor at play here worth mentioning- the influence of the nuclear spin of the molecule. 
+This comes not from the $^16O$, which has a spin nucleus, but from the hydrogen.
+It does not create any significant perturbation to the trapping potential experienced by the molecules at the energy scales we are considering here, but because the differential Zeeman shift between the $|f,\frac{3}{2}\rangle$ and $|e,\frac{3}{2}\rangle$ states is a hyperfine effect, some relevant features emerge.
+Specifically, at low magnetic fields we have to work in the coupled hyperfine basis $F=I+J$, and the $|f,m_\text{J}=\frac{3}{2}\rangle$ state actually includes two substates, $|F,m_F\rangle$ equal to $|2,2\rangle$ and $|2,1\rangle$.
+The former experiences a fixed differential Zeeman shift relative to its opposite parity partner, but the latter experiences a varying differential Zeeman shift at low fields, see Fig.~\ref{hyperfinespectra.png}a.
+This has a significant effect on how a Maxwell-Boltzmann spectra ought to look for a population uniformly split between the two substates, as ours ought to be.
+Essentially, the shift grows significantly closest to zero field, so that as the microwave is  scanned across what would correspond to a $500$~G for the $|2,2\rangle$ state, only a third of that is scanned for the $|2,1\rangle$ state.
+In the Tricycle trap, including this effect leads to an improvement in the fitting of the distribution relative to excluding it as shown in Fig.~\ref{hyperfinespectra.png}c, while in the Ring trap the reverse is likely the case.
 
-Regardless of the fitting of distributions, one thing is certain when comparing the Ring and Tricycle traps.
-In the latter, many more molecules are confined in a smaller volume.
+\figdave{hyperfinespectra.png}{Nuclear Spin effects in Microwave Spectroscopy}{Inclusion of nuclear spin in differential Zeeman shift calculations is shown to significantly influence microwave spectroscopy. (a) Microwave frequencies for targeting different states are shown as a function of magnetic field for the four substates of what in the $|J,m_\text{J}\rangle$ basis are the $|f,\frac{3}{2}\rangle$ and $|f,\frac{1}{2}\rangle$ states. (b) Distribution functions for the $|F=2,m_\text{F}=2\rangle$ state and for the $|F=2,m_\text{F}=2\rangle$ state versus microwave frequency. (c) Here the differential Zeeman shift of the $|2,2\rangle$ state is used to convert between microwave and magnetic field, and the green line shows what the Boltzmann distribution function accounting for the presence of both states would look like.}{\linewidth}
+
+\subsection{Conclusions}
+
+When considering the wealth of assumptions and deviations from the ideal, with respect to both the performance of the spectroscopy and the functional form of the expected distribution, the close fit of the microwave spectroscopy on the Ring trap at left in Fig.~\ref{RingTriSpectrum.png} to the functional form given in Eq.~\ref{spectralform} does not seem to be a reliable indication of the degree of thermalization of the ensemble.
+Furthermore, the lack of a close fit to the microwave spectroscopy on the Tricycle trap similarly does not seem to be a reliable indicator of any lack of thermalization in that ensemble.
+This spectroscopy should rather be used as a more general indicator, not pinning down the precise temperature to better than $50\%$ or so, at least at these temperatures where appreciable population samples regions of incomplete microwave and laser induced fluorescence coverage.
+
+With this in mind, one clear conclusion which may certainly be reached when comparing the Ring and Tricycle traps as far as their loaded spectra are concerned is that density is significantly increased in the Tricycle trap.
 The Tricycle trap improves upon the Ring by a factor of two in gradient, and both show the majority of their trapped populations lying below $2$~kG, indicating that for the same total population, the spatial density is eightfold enhanced in the Tricycle trap.
-As far as actual total numbers are concerned, they are remarkably similar between the two traps, with both featuring similar collection solid angles and similar final numbers of photons detected.
 
-\subsection{}
-
-
-\section{Spin-Flips During Loading}
+\section{Adiabatic Transitions during Loading}
 \label{loadingtransitions}
+
+In early 2014, we were startled to discover that $|e\rangle$ state molecules were able to survive the decelerator, and were appearing in significant numbers in our detection scheme at various final speeds and even after loading the trap, see Fig.~\ref{slowingtrapEF.png}
+This discovery led to a renaissance in our understanding of transitions between states.
+Essentially what is happening is that molecules which are in the $|f,-\frac{3}{2}\rangle$ state during the deceleration are able to adiabatically transition to the $|e\rangle$ state due to the presence of the magnetic field in the detection region, despite the fact that the molecules are not trapped and are only briefly flying through the trap.
+We realized that the magnitude of electric field required to allow adiabatic transitions between the $|f,-\frac{3}{2}\rangle$ and $|e,-\frac{1}{2}\rangle$ states was actually quite small, only a few V/cm.
+Since molecules pass through regions well in excess of $1200$~G where these states cross on their path into the trap region, all of the molecules in the $|f,-\frac{3}{2}\rangle$ state would deterministically make this transition assuming a rather small stray field.
+
+\figdave{slowingtrapEF.png}{Opposite Parities survive Deceleration}{$|e\rangle$ parity molecules are observed after two different decelerations. (a) $\phi=40^\circ$ deceleration. (b) $\phi=50^\circ$ deceleration. Insets zoom in on the decelerated packet. Note also the relative peak heights of the undecelerated and decelerated molecules.}{\linewidth}
+
+During the loading of the molecules, a similar fate may befall the $|f,-\frac{3}{2}\rangle$ molecules delivered by the decelerator.
+When the loading fields are finally switched off, these molecules do not maintain their $|f,-\frac{3}{2}\rangle$ character, but rather follow a tangle of adiabatic crossings, and therefore retain their energetic hierarchy.
+That is to say, $|f,-\frac{3}{2}\rangle$ molecules remain in the second highest energy state, which can be either $|f,\frac{1}{2}\rangle$ or $|e,\frac{3}{2}\rangle$ depending on the magnitude of the magnetic field at the molecule's location during the rapid turn-off of the electric fields used for loading.
+In light of this, statements such as the following, ``perfect OH rotational, $\Lambda$-doublet, and hyperfine state purity is achieved"~\citep[Page.~19061, Top Right]{Sawyer2011} become somewhat ironic.
+
+
 
 \section{Pin Trap}
 
