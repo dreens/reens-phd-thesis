@@ -39,6 +39,8 @@ Stark decelerated and electrostatic trapped ammonia followed soon later~\cite{Be
 Since then extensions to many species have occurred. 
 In this chapter we focus on OH molecules, whose strong Stark shift to mass ratios make them favorable for attempts to attain high enough densities to observe collisions between members of the ensemble.
 
+%% SECTION HISTORY OF OH TRAPS
+%% SECTION HISTORY OF OH TRAPS
 \section{History of OH traps}
 
 %Trap History Table
@@ -73,6 +75,8 @@ Later it was decided to trade the role of the fields used for loading, and great
 A key improvement occurred when it was discovered that patch charges on the Ultem mounts originally used for affixing the magnetic trap to the Stark decelerator could have a significant impact on spectroscopic efforts~\citep[Fig.~6]{Stuhl2012uwave}.
 This was addressed by designing primarily stainless steel mounts, so that molecules only had line of sight to grounded conductors, although still with insulators installed between the decelerator and trap but relocated elsewhere.
 
+% SECTION TRICYCLE OVER RING TRAP
+% SECTION TRICYCLE OVER RING TRAP
 \section{Tricycle over Ring Trap}
 
 In pursuit of increases in density and molecule number, an iteration on the Ring trap was performed, dubbed the ``Tricycle'' trap due to the three rectangles formed when examining planar cuts through the ring and rear magnets used to generate the trap, see Fig.~\ref{ringtricyclefigure}.
@@ -90,6 +94,7 @@ Cross Sections including the cylindrically symmetric axis for both the Ring and 
 }
 \end{figure}
 
+%SUBSECTION TOROIDAL DESTABILIZATION
 \subsection{Toroidal Destabilization}
 
 This first achievement was one of the primary goals of the iteration, since the influence of the toroidal minimum present in the Ring trap was difficult to ascertain. 
@@ -119,7 +124,7 @@ B(z) &=& \frac{1}{2}B_r\left( \frac{z+t}{R} - \frac{(z+t)^3}{2R^3}  - \frac{z-t}
 \end{eqnarray} 
 So we see that as $R$ grows, $B(z)$ shrinks close to the magnet with $1/R$, but the flatness of the field increases, so that the term proportional to $z^2t/R^3$ which describes the second order fall off of the field away from the magnet reduces as $1/R^3$.
 
-
+%SUBSECTION LOADING IMPROVEMENTS
 \subsection{Loading Improvements}
 
 The Tricycle trap features very significant loading improvements over the Ring trap, although the precise extent is difficult to pin down. 
@@ -159,9 +164,8 @@ The ideal fields would have a magnitude with the following spatial dependence:
 where $\omega_z$ and $\omega_r$ are the longitudinal and transverse trap frequencies.
 Neglecting the nonlinearity of the Stark shift for OH molecules close to zero field, such a harmonic potential could be generated transversely with a hexapole, but to do it simultaneously in the transverse and longitudinal directions would require an octupole moment, such as could be generated with three rings and two endcaps with the endcaps at $+V$, the outer rings grounded, and the inner one at $-V/2$ so as to approximate spherical boundary conditions following the second Legendre polynomial~\cite{jackson1999classical}.
 This would of course be very unlikely to be able to be crammed into the small space between the end of a decelerator and a trap, and unlikely to be able to be charged up to a high enough potential energy for stopping an appreciable speed $v$.
-
 It is much more likely that an efficient solution would be obtained by abandoning the harmonicity and instead focusing on the reduced criterion of loading fields that respect phase stability by having a slope at the location of what will be come the trap center and which also provide some transverse confinement.
-The slope of the loading field at the location of the trap center would ideally match the slope that the ideal harmonic trap with frequency $\omega$ would have at that point, $m_{OH}\omega v_0$.
+The slope of the loading field at the location of the trap center would ideally match the slope that the ideal harmonic trap with frequency $\omega$ would have at that point, $m_\text{OH}\omega v_0$.
 
 \begin{figure}[t!]
 \centering
@@ -175,22 +179,23 @@ In practice, Fig.~\ref{loadingringtrike} shows what we are able to obtain for lo
 Note the role of the magnetic field, which is non-negligible.
 The tricycle trap comes much closer to the harmonic ideal discussed above.
 For the ring trap, the extra effect of the magnetic field actually depresses the potential energy at the trap center below a wider plateau, making it formally impossible to bring the synchronous molecule to rest at the trap center.
-In practice, the experimentally determined ideal application time of loading fields likely corresponds to the synchronous molecule bringing brought close to rest but out in front of the trap center.
-
+In practice, the experimentally determined ideal application time of loading fields likely corresponds to the synchronous molecule being brought close to rest but out in front of the trap center.
 This unideal situation should result in a higher loaded temperature in the ring trap compared with the tricycle trap, $87$~mK compared with $61$~mK in simulation.
-In practice however, the measured spectra of molecules in the Ring trap fits better to a thermal distribution and to a lower temperature compared with the tricycle trap.
+In practice however, the measured spectra of molecules in the Ring trap fits better to a thermal distribution and to a lower temperature compared with the tricycle trap, see Fig.~\ref{RingTriSpectrum.png}.
 Before discussing this further, we first revisit the process of spectroscopy in these traps.
 
-\subsection{Ring and Tricycle Spectroscopy}
+% SUBSECTION MICROWAVE SPECTROSCOPY
+\subsection{Microwave Spectroscopy}
 
 A critical tool for understanding the behavior of populations in our magnetic traps is microwave spectroscopy performed on the parity changing transition between $|f, \frac{3}{2}\rangle$ and $|e, \frac{3}{2}\rangle$ states.
 This transition is ideal for spectroscopy, because it has a very small but nonetheless nonzero differential Zeeman shift of $26.6$~MHz/T, which allows molecules to be resolved according to their magnetic field, while also allowing the entire trap to be surveyed over a very narrow bandwidth of microwave frequencies.
 The narrowness of the band is crucial for avoiding the complexities associated with the delivery of microwaves to the trapping region.
-If it were necessary to instead use microwaves to transfer molecules directly from a trapped to an untrapped state by flipping their magnetic quantum number, $|f, \frac{3}{2}\rangle$ to $|f, -\frac{3}{2}\rangle$, scanning the trap would require scanning the applied microwave frequency between $1.7$ and $10$~GHz.
+If it were necessary to instead use microwaves to transfer molecules directly from a trapped to an untrapped state by flipping their magnetic quantum number, $|f, \frac{3}{2}\rangle$ to $|f, -\frac{3}{2}\rangle$, scanning the trap would require scanning the applied microwave frequency between $1.7$ and $16$~GHz.
 While this is no problem for the microwave synthesizer itself, obtaining a suitably level passband in the components responsible for delivering the microwaves to the molecules would be unfeasible.
-In particular, the microwaves are delivered to the trap using a bias tee setup, nicely described in~\citep[Fig.~5]{stuhl2012uwave}, and the transfer function through the isolation capacitors is particularly troublesome.
-Once an effort to measure the transfer function using a network analyzer was performed, and the transfer function was found to vary in the required frequency range by over $40$~dB.
-In contrast, with the entire population setting below $0.5$~T, only $13$~MHz needs to be scanned out of $1.7$~GHz, and no significant attenuation variation is expected or measured.
+In particular, the microwaves are delivered to the trap using a bias tee setup, nicely described in~\citep[Fig.~5]{stuhl2012uwave}, and the transfer function through the isolation capacitors is particularly troublesome, see Fig.~\ref{broadercoupling.png}.
+In contrast, with the entire population sitting below $0.5$~T, only $13$~MHz needs to be scanned out of $1.7$~GHz, and no significant attenuation variation is expected or measured.
+
+\figdave{broadercoupling.png}{Microwave Coupling through Bias Tee}{Microwave transfer function from vacuum feedthrough to magnet surfaces. Large variations are observed across the GHz scale required for performing spectroscopy along $m$-changing transitions, but not on the MHz scale required for $|f, \frac{3}{2}\rangle$ to $|e, \frac{3}{2}\rangle$ spectroscopy.}{10cm}
 
 In addition to the use of microwaves to transfer population, the spectroscopy relies on a few further steps.
 First, molecules in the $|e, \frac{3}{2}\rangle$ state remain trapped, and must be removed.
@@ -198,26 +203,37 @@ This is done by first applying a bias electric field to allow molecules to escap
 In~\cite{stuhl2012uwave}, it was nicely demonstrated that this is effective for removing molecules in the $|e\rangle$ state.
 Second, the process is repeated many times, with varying wait times so as to avoid any pathological resonance between the application of microwaves and the oscillation of molecules in the trap, which could result in certain privileged classes of molecule orbits always avoiding the microwaves.
 Third, comparison is made between the total laser induced fluorescence with and without the application of the spectroscopic sequence.
+When this is done, spectra such as shown in Fig.~\ref{RingTriSpectra.png} are obtained.
 
-Inherent in this procedure are several key assumptions:
-\begin{enumerate}
-\item Microwaves are equally efficient at transferring molecules at all locations.
-\item Microwaves are equally efficient at transferring molecules of all velocity classes.
-\item Laser induced fluorescence is equally efficient at all locations.
-\item The population is not significantly perturbed by the spectroscopy.
-\end{enumerate}
-These assumptions vary in their validity.
-For example, the influence on microwave frequency dependent intensity has already been claimed negligible above, but nonetheless microwave intensity varies significantly across the cloud.
-This goes against typical arguments pertaining to the wavelength of the microwave frequency (some $20$~cm) because the microwaves are in the near field regime with respect to the conductors that form the trapping potential.
-Because of this, microwave fields may to a good approximation be taken to be dominantly electric and equal to the DC electric field distribution generated during loading but with direction oscillating at the microwave frequency.
+\figdave{RingTriSpectrum.png}{Spectra in Ring and Tricycle Trap}{Spectra in the Ring and Tricycle traps after loading with no evaporation. The former was published in \citep[Fig.~3a]{stuhl2012evap}, the latter was collected on Feb.~24, 2014.}{\linewidth}
+
+% SUBSECTION LIMITATIONS TO SPECTROSCOPY
+\subsection{Limitations to Spectroscopy}
+
+Inherent in the spectroscopic procedure just described are several key assumptions, which vary in their validity and deserve some further discussion.
+
+\subsubsection{Spatial Sensitivity Variations}
+
+The influence on microwave frequency dependent intensity has already been claimed negligible, but microwave intensity at any given frequency varies significantly across the cloud.
+This goes against the rule of thumb that electromagnetic intensity shouldn't vary significantly on lengthscales below a wavelength, $18$~cm in this case.
+This is because the microwaves are in the near field regime with respect to the conductors that form the trapping potential.
+The microwave fields may to a good approximation be taken to be dominantly electric and equal to the DC electric field distribution generated during loading but with magnitude oscillating at the microwave frequency.
 This means that their intensity should vary as shown in Fig.~\ref{NearFieldUWave.png}ab.
 In particular, the microwave intensity falls off quickly as molecules approach the openings of the magnets of the Ring trap.
 Furthermore, the efficiency of microwave transfer also features a polarization dependence.
-Since the $|f,\frac{3}{2}$ to $|e,\frac{3}{2}$ transition has $\Delta m=0$, there is a dependence of the Rabi frequency describing the intensity of the microwave drive on the cosine of the angle $\theta$ between the electric and magnetic fields, see panel~(c) of Fig.~\ref{NearFieldUWave.png}.
+Since the $|f,\frac{3}{2}\rangle$ to $|e,\frac{3}{2}\rangle$ transition has $\Delta m=0$, there is a dependence of the Rabi frequency describing the intensity of the microwave drive on the cosine of the angle $\theta$ between the electric and magnetic fields, see panel~(c) of Fig.~\ref{NearFieldUWave.png}.
 This ends up favoring molecules on the axis of the trap.
 
-\figdave{NearFieldUWave.png}{Near Field Microwave Intensity in Ring and Tricycle Trap}{The near field intensity close to the (a) Tricycle trap and (b) Ring trap. Colors and contours are relative to the magnitude of the microwave drive, but may be thought of as ranging from $0$ to $100\%$ as color ranges from black to red to yellow to white, with contours at $5\%$ intervals. Colors are comparable between the two traps, assuming the same microwave intensity on the surface of the conductors. These are also the DC field distributions for loading the traps, in which case color ranges from $0$ to $200$~kV/cm with contours every $10$~kV/cm and $25$~kV applied across the magnet surfaces. Rings are $3$~mm apart for the Ring trap and in the Tricycle trap magnets are $2$~mm apart.}{10cm}
+\figdave{NearFieldUWave.png}{Near Field Microwave Intensity in Ring and Tricycle Trap}{The near field intensity close to the (a) Tricycle trap and (b) Ring trap. Colors and contours are relative to the magnitude of the microwave drive, but may be thought of as ranging from $0$ to $100\%$ as color ranges from black to red to yellow to white, with contours at $5\%$ intervals. Colors are comparable between the two traps, assuming the same microwave intensity on the surface of the conductors. These are also the DC field distributions for loading the traps, in which case color ranges from $0$ to $200$~kV/cm with contours every $10$~kV/cm and $25$~kV applied across the magnet surfaces. Rings are $3$~mm apart for the Ring trap and in the Tricycle trap magnets are $2$~mm apart. (c) The angle between electric and magnetic fields is shown, from red, $0$, to blue, $\pi/2$ radians. Magnetic field contours every $500$~G are superposed.}{\linewidth}
 
+In mid 2013, an effort was made to perform spectroscopy along the $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$ transition, with the goal of addressing the issue that $|e,\frac{3}{2}\rangle$-state molecules with total energies below the lowest crossing of the $|e,\frac{3}{2}\rangle$ and $|f,\frac{-3}{2}\rangle$ states at $410$~G are unable to find their way out of the trap, see Fig.~\ref{sigmaspec.png}.
+The results were quite different from those performed along the $|f, \frac{3}{2}\rangle$ to $|e, \frac{3}{2}\rangle$ transition, perhaps due to polarization differences since this transition would feature dependence on $sin(\theta)$, but more likely reflective of the microwave coupling bandwidth issues discussed above.
+
+\figdave{sigmaspec.png}{Spectroscopy from $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$}{Depletion spectroscopy performed by microwave transfer from the $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$ state. The dip between $800-1000$~G is likely an artifact of coupling efficiency challenges.}{10cm}
+
+A final point is the spatial dependence of the fluorescence collection system. 
+
+% SUBSECTION LOADED SPECTRA
 \subsection{Loaded Spectra}
 
 The obtained spectra in the two traps are compared in Fig.~\ref{RingTriSpectrum.png}.
@@ -235,10 +251,8 @@ Molecules might be exploring the region between the central and toroidal traps, 
 In the region that is not opaque, close to the axis, there is also a significant change in field gradient that occurs between $1-2$~kG. Above $2$~kG, contour lines are much more closely spaced than below $1$~kG, so that in principle the volume degeneracy factor should be different for the two regions.
 One corollary is that a true Maxwell-Boltzmann distribution in this trap ought to feature reduced population in the region above $2$~kG relative to what one would get by fitting the functional form in Eq.~\ref{spectralform}.
 
-\figdave{RingTriSpectrum.png}{Spectra in Ring and Tricycle Trap}{Spectra in the Ring and Tricycle traps after loading with no evaporation. The former was published in \citep[Fig.~3a]{stuhl2012evap}, the latter was collected on Feb.~24, 2014.}{\linewidth}
-
 In the tricycle trap, the fit is more dubious. 
-Points clearly fall below the fit at high magnetic fields, and also seem to lie below at the lowest fields as well, although the latter effect is clearly much less significant.
+Points clearly fall below the fit at high magnetic fields, and also seem to lie below at the lowest fields as well.
 On the other hand, given that the tricycle trap opens to the environment above $3$~kG, it may be that falling below the Maxwell-Boltzmann fit line is the more natural thing to occur in this situation.
 Unlike in the Ring trap where there is no sign of the expected volume enhancement factor that would correspond to plateaus at $1100$~G, the Tricycle trap spectrum shows more agreement as far as its expected deviations from the pure thermal spectrum are concerned.
 
