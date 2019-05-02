@@ -221,12 +221,12 @@ The microwave fields may to a good approximation be taken to be dominantly elect
 This means that their intensity should vary as shown in Fig.~\ref{NearFieldUWave.png}ab.
 In particular, the microwave intensity falls off quickly as molecules approach the openings of the magnets of the Ring trap.
 Furthermore, the efficiency of microwave transfer also features a polarization dependence.
-Since the $|f,\frac{3}{2}\rangle$ to $|e,\frac{3}{2}\rangle$ transition has $\Delta m=0$, there is a dependence of the Rabi frequency describing the intensity of the microwave drive on the cosine of the angle $\theta$ between the electric and magnetic fields, see panel~(c) of Fig.~\ref{NearFieldUWave.png}.
+Since the \f3 to \e3 transition has $\Delta m=0$, there is a dependence of the Rabi frequency describing the intensity of the microwave drive on the cosine of the angle $\theta$ between the electric and magnetic fields, see panel~(c) of Fig.~\ref{NearFieldUWave.png}.
 This ends up favoring molecules on the axis of the trap.
 
 \figdave{NearFieldUWave.png}{Near Field Microwave Intensity in Ring and Tricycle Trap}{The near field intensity close to the (a) Tricycle trap and (b) Ring trap. Colors and contours are relative to the magnitude of the microwave drive, but may be thought of as ranging from $0$ to $100\%$ as color ranges from black to red to yellow to white, with contours at $5\%$ intervals. Colors are comparable between the two traps, assuming the same microwave intensity on the surface of the conductors. These are also the DC field distributions for loading the traps, in which case color ranges from $0$ to $200$~kV/cm with contours every $10$~kV/cm and $25$~kV applied across the magnet surfaces. Rings are $3$~mm apart for the Ring trap and in the Tricycle trap magnets are $2$~mm apart. (c) The angle between electric and magnetic fields is shown, from red, $0$, to blue, $\pi/2$ radians. Magnetic field contours every $500$~G are superposed.}{\linewidth}
 
-In mid 2013, an effort was made to perform spectroscopy along the $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$ transition, with the goal of addressing the issue that $|e,\frac{3}{2}\rangle$-state molecules with total energies below the lowest crossing of the $|e,\frac{3}{2}\rangle$ and $|f,\frac{-3}{2}\rangle$ states at $410$~G are unable to find their way out of the trap, see Fig.~\ref{sigmaspec.png}.
+In mid 2013, an effort was made to perform spectroscopy along the $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$ transition, with the goal of addressing the issue that \e3-state molecules with total energies below the lowest crossing of the \e3 and $|f,\frac{-3}{2}\rangle$ states at $410$~G are unable to find their way out of the trap, see Fig.~\ref{sigmaspec.png}.
 The results were quite different from those performed along the $|f, \frac{3}{2}\rangle$ to $|e, \frac{3}{2}\rangle$ transition, perhaps due to polarization differences since this transition would feature dependence on $sin(\theta)$, but more likely reflective of the microwave coupling bandwidth issues discussed above.
 
 \figdave{sigmaspec.png}{Spectroscopy from $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$}{Depletion spectroscopy performed by microwave transfer from the $|f, \frac{3}{2}\rangle$ to $|e, \frac{1}{2}\rangle$ state. The dip between $800-1000$~G is likely an artifact of coupling efficiency challenges.}{10cm}
@@ -273,14 +273,14 @@ Points clearly fall below the fit at high magnetic fields, and also seem to lie 
 On the other hand, given that the tricycle trap opens to the environment above $3$~kG, it may be that falling below the Maxwell-Boltzmann fit line is the more natural thing to occur in this situation.
 Alternatively, there is another factor at play here worth mentioning- the influence of the nuclear spin of the molecule. 
 This comes not from the $^16O$, which has a spin nucleus, but from the hydrogen.
-It does not create any significant perturbation to the trapping potential experienced by the molecules at the energy scales we are considering here, but because the differential Zeeman shift between the $|f,\frac{3}{2}\rangle$ and $|e,\frac{3}{2}\rangle$ states is a hyperfine effect, some relevant features emerge.
+It does not create any significant perturbation to the trapping potential experienced by the molecules at the energy scales we are considering here, but because the differential Zeeman shift between the \f3 and \e3 states is a hyperfine effect, some relevant features emerge.
 Specifically, at low magnetic fields we have to work in the coupled hyperfine basis $F=I+J$, and the $|f,m_\text{J}=\frac{3}{2}\rangle$ state actually includes two substates, $|F,m_F\rangle$ equal to $|2,2\rangle$ and $|2,1\rangle$.
 The former experiences a fixed differential Zeeman shift relative to its opposite parity partner, but the latter experiences a varying differential Zeeman shift at low fields, see Fig.~\ref{hyperfinespectra.png}a.
 This has a significant effect on how a Maxwell-Boltzmann spectra ought to look for a population uniformly split between the two substates, as ours ought to be.
 Essentially, the shift grows significantly closest to zero field, so that as the microwave is  scanned across what would correspond to a $500$~G for the $|2,2\rangle$ state, only a third of that is scanned for the $|2,1\rangle$ state.
 In the Tricycle trap, including this effect leads to an improvement in the fitting of the distribution relative to excluding it as shown in Fig.~\ref{hyperfinespectra.png}c, while in the Ring trap the reverse is likely the case.
 
-\figdave{hyperfinespectra.png}{Nuclear Spin effects in Microwave Spectroscopy}{Inclusion of nuclear spin in differential Zeeman shift calculations is shown to significantly influence microwave spectroscopy. (a) Microwave frequencies for targeting different states are shown as a function of magnetic field for the four substates of what in the $|J,m_\text{J}\rangle$ basis are the $|f,\frac{3}{2}\rangle$ and $|f,\frac{1}{2}\rangle$ states. (b) Distribution functions for the $|F=2,m_\text{F}=2\rangle$ state and for the $|F=2,m_\text{F}=2\rangle$ state versus microwave frequency. (c) Here the differential Zeeman shift of the $|2,2\rangle$ state is used to convert between microwave and magnetic field, and the green line shows what the Boltzmann distribution function accounting for the presence of both states would look like.}{\linewidth}
+\figdave{hyperfinespectra.png}{Nuclear Spin effects in Microwave Spectroscopy}{Inclusion of nuclear spin in differential Zeeman shift calculations is shown to significantly influence microwave spectroscopy. (a) Microwave frequencies for targeting different states are shown as a function of magnetic field for the four substates of what in the $|J,m_\text{J}\rangle$ basis are the \f3 and \f1 states. (b) Distribution functions for the $|F=2,m_\text{F}=2\rangle$ state and for the $|F=2,m_\text{F}=2\rangle$ state versus microwave frequency. (c) Here the differential Zeeman shift of the $|2,2\rangle$ state is used to convert between microwave and magnetic field, and the green line shows what the Boltzmann distribution function accounting for the presence of both states would look like.}{\linewidth}
 
 \subsection{Conclusions}
 
@@ -291,25 +291,55 @@ This spectroscopy should rather be used as a more general indicator, not pinning
 With this in mind, one clear conclusion which may certainly be reached when comparing the Ring and Tricycle traps as far as their loaded spectra are concerned is that density is significantly increased in the Tricycle trap.
 The Tricycle trap improves upon the Ring by a factor of two in gradient, and both show the majority of their trapped populations lying below $2$~kG, indicating that for the same total population, the spatial density is eightfold enhanced in the Tricycle trap.
 
+% \SECTION{ADIABATIC TRANSITIONS DURING LOADING}
 \section{Adiabatic Transitions during Loading}
 \label{loadingtransitions}
 
 In early 2014, we were startled to discover that $|e\rangle$ state molecules were able to survive the decelerator, and were appearing in significant numbers in our detection scheme at various final speeds and even after loading the trap, see Fig.~\ref{slowingtrapEF.png}
 This discovery led to a renaissance in our understanding of transitions between states.
-Essentially what is happening is that molecules which are in the $|f,-\frac{3}{2}\rangle$ state during the deceleration are able to adiabatically transition to the $|e\rangle$ state due to the presence of the magnetic field in the detection region, despite the fact that the molecules are not trapped and are only briefly flying through the trap.
-We realized that the magnitude of electric field required to allow adiabatic transitions between the $|f,-\frac{3}{2}\rangle$ and $|e,-\frac{1}{2}\rangle$ states was actually quite small, only a few V/cm.
-Since molecules pass through regions well in excess of $1200$~G where these states cross on their path into the trap region, all of the molecules in the $|f,-\frac{3}{2}\rangle$ state would deterministically make this transition assuming a rather small stray field.
+Essentially what is happening is that molecules which are in the \fm3 state during the deceleration are able to adiabatically transition to the $|e\rangle$ state due to the presence of the magnetic field in the detection region, despite the fact that the molecules are not trapped and are only briefly flying through the trap.
+We realized that the magnitude of electric field required to allow adiabatic transitions between the \fm3 and $|e,-\frac{1}{2}\rangle$ states was actually quite small, only a few V/cm.
+Since molecules pass through regions well in excess of $1200$~G where these states cross on their path into the trap region, all of the molecules in the \fm3 state would deterministically make this transition assuming a rather small stray field.
 
 \figdave{slowingtrapEF.png}{Opposite Parities survive Deceleration}{$|e\rangle$ parity molecules are observed after two different decelerations. (a) $\phi=40^\circ$ deceleration. (b) $\phi=50^\circ$ deceleration. Insets zoom in on the decelerated packet. Note also the relative peak heights of the undecelerated and decelerated molecules.}{\linewidth}
 
-During the loading of the molecules, a similar fate may befall the $|f,-\frac{3}{2}\rangle$ molecules delivered by the decelerator.
-When the loading fields are finally switched off, these molecules do not maintain their $|f,-\frac{3}{2}\rangle$ character, but rather follow a tangle of adiabatic crossings, and therefore retain their energetic hierarchy.
-That is to say, $|f,-\frac{3}{2}\rangle$ molecules remain in the second highest energy state, which can be either $|f,\frac{1}{2}\rangle$ or $|e,\frac{3}{2}\rangle$ depending on the magnitude of the magnetic field at the molecule's location during the rapid turn-off of the electric fields used for loading.
+During the loading of the molecules, a similar fate may befall the \fm3 molecules delivered by the decelerator.
+When the loading fields are finally switched off, these molecules do not maintain their \fm3 character, but rather follow a tangle of adiabatic crossings, and therefore retain their energetic hierarchy.
+That is to say, \fm3 molecules remain in the second highest energy state, which can be either \f1 or \e3 depending on the magnitude of the magnetic field at the molecule's location during the rapid turn-off of the electric fields used for loading.
 In light of this, statements such as the following, ``perfect OH rotational, $\Lambda$-doublet, and hyperfine state purity is achieved"~\citep[Page.~19061, Top Right]{Sawyer2011} become somewhat ironic.
+An example of how significantly this turns out to be false is shown in Fig.~\ref{efieldonoff.png}.
+Many molecules are remaining in $|e\rangle$ parity states, regardless of whether an extra bias field is left on or off after loading.
+It is unclear whether this is a result of molecules regularly adiabatically transiting between \f1 and \e3, or whether something different is going on, such as a more complex orbital route including states of even lower energy.
+Either way, one clear way to address the problem is to include regular switching of the electric field to address any partially trapped orbitals including $|e\rangle$ parity segments.
+From Fig.~\ref{efieldonoff.png}, a single switching event already significantly reduces the problem.
 
+\figdave{efieldonoff.png}{Opposite Parities survive Trap Loading}{$|e\rangle$ parity molecules stably remain in the trap under either constant bias electric field or zero electric field, but not switching between the two.}{12cm}
 
+To complicate matters further, another kind of adiabatic transition, perhaps more appropriately termed a spin-flip, can also occur close to zero magnetic field in the presence of electric field.
+At zero magnetic field, there is also a degeneracy between states, not of opposite parity but of the same parity and differing $m$ number.
+Depending on the angle between the electric and magnetic field~\footnote{In fact, all of the opening and closings of avoided crossings between states have dependencies not only on the magnitude of the electric field but on this angle as well. Their exact functional form may be computed via perturbation theory on the OH ground state Hamiltonian, which is actually analytically solvable since its eigenvalues always come in pairs and therefore the system reduces to a quartic polynomial system, which has analytic expressions for its roots. The perturbation has to be taken to various orders depending on how different the $m$ number or the parity are of the two states that are interacting.}, these states are brought much closer together, facilitating spin-flips.
+This is described further in the Appendices of both~\cite{Stuhl2013} and~\citep[App.~A]{Reens2017}, and is also depicted visually in Fig.~\ref{SpinFlipsEBangle.png}
+The upshot for loading is that molecules which cross the plane including the magnetic zero almost certainly flip between \fpm3 given the very large magnitude of the loading fields.
+
+\figdave{SpinFlipsEBangle.png}{Trapped State and Spin-flip Partner}{The \f3 and \fm3 state with varying B-field and three E-field conditions. The states are squeezed together when the electric field is orthogonal to the magnetic, which in the Ring and Tricycle happens along the plane parallel to the magnet surfaces through the trap center.}{14cm}
+
+It therefore follows that many of the molecules which end up in the \f3 state after loading have in fact experienced the loading fields as \fm3 molecules, and therefore with a different on-axis potential than the two already shown in Fig.~\ref{loadingringtrike} which include or exclude the magnetic field.
+This on-axis potential is added in red in Fig.~\ref{tricycle-loading-transitions.png}.
+The magnetic field is seen to reduce the magnitude of the potential experienced by the \fm3 states relative to \f3 wherever the magnetic field is non-zero. 
+Although with near-unit flipping between the two across the trap center, the \fm3 states actually experience a larger stopping potential than the \f3.
+Because the \fm3 molecules experience a reduced potential except past the trap center, they should arrive earlier, having traveled at a larger speed than their \f3 counterparts.
+It should therefore be possible to deterministically load \f3 molecules just before the plane and \fm3 molecules just after, so that the latter actually convert to \f3 during the loading.
+It would be interesting to demonstrate this experimentally by sitting on the e-state LIF transition during the loading and seeing whether tuning of the time-length of application of the stopping fields actually varies the initial loading of the $|e\rangle$ state.
+It should be possible to observe variation, and it should be the case that a minimum in loading of the $|e\rangle$ state would correspond to an optimally deterministic transitioning of \fm3 molecules into \f3 during the loading sequence.
+
+\figdave{tricycle-loading-transitions.png}{Trap loading for \fm3 states.}{The potential for molecules in the \fm3 state during trap loading. The trap center can be seen close to $10$~mm based on the single-point overlap of the three traces indicating an isolated magnetic zero. Due to the spin-flip inducing behavior of superimposed electric and magnetic fields close to magnetic zeros, molecules in the \fm3 state to the left of the zero transition uniformly into \f3 to the right of the zero, and vice versa. The kink seen close to $7$~mm corresponds may at first come as a surprise. This occurs in all three traces and is therefore an electric field effect. It turns out to be the zero of a weak electric quadrupole trap formed by the loading fields at the center of the frontal ring magnet of the Tricycle trap, as can be seen more clearly by studying Fig.~\ref{NearFieldUWave.png}(a).}{15cm} 
 
 \section{Pin Trap}
+
+Originally motivated by an attempt to repeat the electric field inelastic collisions reported in~\cite{stuhl2013} in the tricycle trap, it was discovered that electric field induced single particle loss via spin-flips were in fact a dominant mechanism, overwhelming an effect attributable to inelastic collisions.
+In this section, we recapitulate the conversations also available in~\cite{reens2017}, which describe this mechanism in the most coherent way we were able to contrive.
+
+\subsection{Loss Mechanism}
 
 \section{Other traps in the field}
 

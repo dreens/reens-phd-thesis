@@ -23,6 +23,7 @@
 \newcommand{\threevec}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)}
 \newcommand{\twomatrix}[4]{\left(\begin{array}{cc} #1 & #2 \\ #3 & #4 \end{array}\right)}
 
+% dave's figure shortcut. arguments are 1, a dual label and filename, 2, the short caption for LOF, 3, the long caption, and 4, the width.
 \newcommand{\figdave}[4]{
 \begin{figure}[t!]
 \centering
@@ -31,3 +32,11 @@
 \caption[#2]{#3\label{#1}
 }
 \end{figure}}
+
+% shortcuts for OH ground state labels
+\newcommand{\f}[1]{$|f,\frac{{#1}}{2}\rangle$}
+\newcommand{\e}[1]{$|e,\frac{{#1}}{2}\rangle$}
+\newcommand{\fm}[1]{$|f,-\frac{{#1}}{2}\rangle$}
+\newcommand{\emm}[1]{$|e,-\frac{{#1}}{2}\rangle$}
+\newcommand{\fpm}[1]{$|f,\pm\frac{{#1}}{2}\rangle$}
+\newcommand{\epm}[1]{$|e,\pm\frac{{#1}}{2}\rangle$}
