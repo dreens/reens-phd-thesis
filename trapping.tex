@@ -195,7 +195,7 @@ This transition is ideal for spectroscopy, because it has a very small but nonet
 The narrowness of the band is crucial for avoiding the complexities associated with the delivery of microwaves to the trapping region.
 If it were necessary to instead use microwaves to transfer molecules directly from a trapped to an untrapped state by flipping their magnetic quantum number, \f3 to \fm3, scanning the trap would require scanning the applied microwave frequency between $1.7$ and $16$~GHz.
 While this is no problem for the microwave synthesizer itself, obtaining a suitably level passband in the components responsible for delivering the microwaves to the molecules would be unfeasible.
-In particular, the microwaves are delivered to the trap using a bias tee setup, nicely described in~\citep[Fig.~5]{stuhl2012uwave}, and the transfer function through the isolation capacitors is particularly troublesome, see Fig.~\ref{broadercoupling.png}.
+In particular, the microwaves are delivered to the trap using a bias tee setup, nicely described in~\citep[Fig.~5]{Stuhl2012uwave}, and the transfer function through the isolation capacitors is particularly troublesome, see Fig.~\ref{broadercoupling.png}.
 In contrast, with the entire population sitting below $0.5$~T, only $13$~MHz needs to be scanned out of $1.7$~GHz, and no significant attenuation variation is expected or measured.
 
 \figdave{broadercoupling.png}{Microwave Coupling through Bias Tee}{Microwave transfer function from vacuum feedthrough to magnet surfaces. Large variations are observed across the GHz scale required for performing spectroscopy along $m$-changing transitions, but not on the MHz scale required for \f3 to \e3 spectroscopy.}{10cm}
@@ -203,12 +203,12 @@ In contrast, with the entire population sitting below $0.5$~T, only $13$~MHz nee
 In addition to the use of microwaves to transfer population, the spectroscopy relies on a few further steps.
 First, molecules in the \e3 state remain trapped, and must be removed.
 This is done by first applying a bias electric field to allow molecules to escape via avoided crossings, as discussed in Chapter~\ref{chapter:Background}.
-In~\cite{stuhl2012uwave}, it was nicely demonstrated that this is effective for removing molecules in the $|e\rangle$ state.
+In~\cite{Stuhl2012uwave}, it was nicely demonstrated that this is effective for removing molecules in the $|e\rangle$ state.
 Second, the process is repeated many times, with varying wait times so as to avoid any pathological resonance between the application of microwaves and the oscillation of molecules in the trap, which could result in certain privileged classes of molecule orbits always avoiding the microwaves.
 Third, comparison is made between the total laser induced fluorescence with and without the application of the spectroscopic sequence.
-When this is done, spectra such as shown in Fig.~\ref{RingTriSpectra.png} are obtained.
+When this is done, spectra such as shown in Fig.~\ref{RingTriSpectrum.png} are obtained.
 
-\figdave{RingTriSpectrum.png}{Spectra in Ring and Tricycle Trap}{Spectra in the Ring and Tricycle traps after loading with no evaporation. The former was published in \citep[Fig.~3a]{stuhl2012evap}, the latter was collected on Feb.~24, 2014.}{\linewidth}
+\figdave{RingTriSpectrum.png}{Spectra in Ring and Tricycle Trap}{Spectra in the Ring and Tricycle traps after loading with no evaporation. The former was published in \citep[Fig.~3a]{Stuhl2012evap}, the latter was collected on Feb.~24, 2014.}{\linewidth}
 
 % SUBSECTION LIMITATIONS TO SPECTROSCOPY
 \subsection{Limitations to Spectroscopy}\label{limitationsection}
@@ -336,8 +336,8 @@ It should be possible to observe variation, and it should be the case that a min
 
 \section{Pin Trap}
 
-Originally motivated by an attempt to repeat the electric field inelastic collisions reported in~\cite{stuhl2013} in the tricycle trap, it was discovered that electric field induced single particle loss via spin-flips were in fact a dominant mechanism, overwhelming an effect attributable to inelastic collisions.
-In this section, we recapitulate the conversations also available in~\cite{reens2017}, which describe this mechanism in the most coherent way we were able to contrive.
+Originally motivated by an attempt to repeat the electric field inelastic collisions reported in~\cite{Stuhl2013} in the tricycle trap, it was discovered that electric field induced single particle loss via spin-flips were in fact a dominant mechanism, overwhelming an effect attributable to inelastic collisions.
+In this section, we recapitulate the conversations also available in~\cite{Reens2017}, which describe this mechanism in the most coherent way we were able to contrive.
 
 \subsection{Introduction}
 
@@ -364,7 +364,7 @@ The negative parity, electrically strong field seeking manifold sits $\Delta$ be
 The application of electric field generally drives these parities further apart, but within each parity manifold the exact modification depends on the relative field orientations\s(b-c).
 In panels (e-f), energy splitting contours are shown every $40\text{ MHz}$ near the zero of a $2\text{ T/cm}$ magnetic quadrupole trap for OH molecules~\cite{Stuhl2012uwave} with $\vec{E}\s {=}\s 0$\s(e), and with uniform $E\s {=}\s 150\text{ V/cm}$ along the strong axis of the quadrupole\s(f).
 The vectors are $d_\text{eff}\vec{E}\s {+}\s\text{sign}(\vec{E}\cdot\vec{B})\mu_\text{eff}\vec{B}$, the proper quantization axis for well-trapped molecules as described in the text.
-\label{fig:blocking}}{10cm}
+}{10cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     MECHANISM
@@ -401,22 +401,29 @@ By diagonalizing the approximate eight state ground molecular Hamiltonian for OH
 G(\mathcal{B}_\perp,\mathcal{B}_{||},\mathcal{E}) = 2\mathcal{B}_{||} + 4.3\!\cdot\!\mathcal{B}_\perp^3\frac{\Delta^2}{\mathcal{E}^4} + \mathcal{O}(\mathcal{B}_{||}^2,\mathcal{B}_\perp^4)
 \end{equation}
 Here $\mathcal{B}_{\perp,||}\s {=}\s\mu_\text{eff}\vec{B}\cdot\hat{e}_{\perp,||}$, where $\hat{e}$ is the unit vector in the labeled direction relative to the electric field.
-$\mathcal{E}\s {=}\s |d_\text{eff}\vec{E}|$, $\Delta$ is the lambda doubling (see Fig.~\ref{fig:blocking}d).
-The relevant splitting is not quite zero where \epb{} and $B_{||}\s {=}\s 0$ thanks to $\Delta$, but nonetheless reaches a deep minimum; the remaining Zeeman splitting is reduced from linear to cubic in magnetic field (Fig.~\ref{fig:blocking}).
+$\mathcal{E}\s {=}\s |d_\text{eff}\vec{E}|$, $\Delta$ is the lambda doubling (see Fig.~\ref{blocking_out.png}d).
+The relevant splitting is not quite zero where \epb{} and $B_{||}\s {=}\s 0$ thanks to $\Delta$, but nonetheless reaches a deep minimum; the remaining Zeeman splitting is reduced from linear to cubic in magnetic field (Fig.~\ref{blocking_out.png}).
 This Zeeman splitting suppression is in fact a known phenomenon in the precision measurement community~\cite{Player1970,Hudson2002},
 and experimentalists have exploited it to suppress the influence of magnetic fields in electron EDM measurements.
 However, in the case of applying mixed fields during trapping, this suppression is not beneficial but rather detrimental.
 
 
+To deduce the effect of this loss plane on the ensemble, we consider molecular trajectories in light of the Landau Zener formula:
+\begin{equation}
+\label{eqn:lz}
+P_\text{hop}=e^{-\pi\kappa^2/2\hbar\dot{G}},
+\end{equation}
+which relates the probability of diabatically hopping between two states $P_\text{hop}$ to their energetic coupling $\kappa$ and their rate of approach $\dot{G}\s {=}\s v_zdG/dz$.
+Here $z$ and $v_z$ are normal to the \epb{} plane, and we neglect the components of $\dot{G}$ due to the other coordinates since from Eqn.~\ref{eqn:energetics} it is clear that $G$ grows predominately in one direction.
+We can also set $\kappa$ to the minimum energy gap along the trajectory, which is found in the plane.
+This facilitates direct numerical computation of the loss rate ($\gamma$) by integrating the molecule flux through the plane for a thermal distribution, weighted by the hopping probability. The expression is more fully derived in Chapter~\ref{chapter:collisions}.
+We perform these integrations for OH over the velocity distribution in a $2\text{ T/cm}$ magnetic quadrupole~\cite{Sawyer2008} under various electric fields in Tab.~\ref{tab:rates}.
+
 \newcommand{\shiftright}[2]{\makebox[#1][r]{\makebox[0pt][l]{#2}}}
-\begin{table}[t]
-\caption{
-Enhancements ($\eta$) and loss rates ($\gamma$) for OH with typical applied fields.
-Zero field values are equivalent to traditional spin-flip loss.
-Electric field is required during evaporation and spectroscopy to open avoided crossings~\cite{Stuhl2012evap,Stuhl2012uwave}, or applied to polarize the molecules and study collisions~\cite{Stuhl2013}.
-}
+\begin{table}[t!]
+\centering
 \label{tab:rates}
-\begin{tabular*}{\linewidth}{l*{4}{@{\quad}c}@{\extracolsep{\fill}}l}
+\begin{tabular*}{12cm}{l*{4}{@{\quad}c}@{\extracolsep{\fill}}l}
 \hline\hline
  & \raisebox{-1.3ex}{\shiftright{4pt}{55 mK}} & & \raisebox{-1.3ex}{\shiftright{4pt}{5 mK}} & & \\
 \raisebox{1.5ex}{$E$ (V/cm)} & $\eta$ & $\gamma\s (s^{-1})$ & $\eta$ & $\gamma\s (s^{-1})$ & \raisebox{1.5ex}{Purpose} \\
@@ -427,18 +434,12 @@ Electric field is required during evaporation and spectroscopy to open avoided c
 3000 	& 1000 	& 19 		& 1600 	& 2000 	& Polarizing \\
 \hline\hline
 \end{tabular*}
+\caption{
+Enhancements ($\eta$) and loss rates ($\gamma$) for OH with typical applied fields.
+Zero field values are equivalent to traditional spin-flip loss.
+Electric field is required during evaporation and spectroscopy to open avoided crossings~\cite{Stuhl2012evap,Stuhl2012uwave}, or applied to polarize the molecules and study collisions~\cite{Stuhl2013}.
+}
 \end{table}
-
-To deduce the effect of this loss plane on the ensemble, we consider molecular trajectories in light of the Landau Zener formula:
-\begin{equation}
-\label{eqn:lz}
-P_\text{hop}=e^{-\pi\kappa^2/2\hbar\dot{G}},
-\end{equation}
-which relates the probability of diabatically hopping between two states $P_\text{hop}$ to their energetic coupling $\kappa$ and their rate of approach $\dot{G}\s {=}\s v_zdG/dz$.
-Here $z$ and $v_z$ are normal to the \epb{} plane, and we neglect the components of $\dot{G}$ due to the other coordinates since from Eqn.~\ref{eqn:energetics} it is clear that $G$ grows predominately in one direction.
-We can also set $\kappa$ to the minimum energy gap along the trajectory, which is found in the plane.
-This facilitates direct numerical computation of the loss rate ($\gamma$) by integrating the molecule flux through the plane for a thermal distribution, weighted by the hopping probability. See Eqn.~\ref{eq:fullInt} in App.~\ref{sec:eic} for the full expression.
-We perform these integrations for OH over the velocity distribution in a $2\text{ T/cm}$ magnetic quadrupole~\cite{Sawyer2008} under various electric fields in Tab.~\ref{tab:rates}.
 
 We have also developed an algebraic scaling law, which yields the electric field induced loss enhancement factor
 \begin{equation}
@@ -453,7 +454,7 @@ Instead it is $\sqrt{\kappa\Delta}$, which is in general much smaller; $\kappa\s
 
 Returning to the numerical approach, the direct integration of flux is a key improvement relative to our previous work~\cite{Stuhl2013}, where electric fields were applied to study collisions.
 The mechanism of molecular spin-flip loss was identified, and an attempt was made to deconvolve it from the collisional effect of the electric field.
-Revisiting this with the direct integration of flux, we find a three-fold larger loss magnitude, enough to explain a significant portion of the effect previously attributed to collisions, see App.~\ref{sec:eic}.
+Revisiting this with the direct integration of flux, we find a three-fold larger loss magnitude, enough to explain a significant portion of the effect previously attributed to collisions, see Chap.~\ref{chapter:collisions}.
 In light of this, it becomes especially important to perform direct, unconvolved experimental verification of both the magnitude of the loss effect and the validity of our loss-flux calculations.
 We now present the new trap where this is achieved.
 
@@ -463,6 +464,14 @@ We now present the new trap where this is achieved.
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Experiments and Results\label{sec:results}}
 
+Our idea is to use a pair of 2D quadrupole traps, one magnetic and the other electric, with orthogonal centerlines (Fig.~\ref{fig:CAD}):
+\begin{equation}
+\label{eqn:BE}
+\vec{B}=B'x\hat{y}-B'y\hat{x}\quad\quad\vec{E}=E'y\hat{y}-E'z\hat{z}
+\end{equation}
+We achieve these fields in a geometry that matches our Stark decelerator~\cite{Bochinski2003}.
+This geometry features large spin-flip loss, since \epb{} in both the $x\s {=}\s 0$ and $y\s {=}\s 0$ planes, and from Eqn.~\ref{eqn:energetics}, $G\s {=} \s \mathcal{B}_\perp^3\Delta^2/\mathcal{E}^4$ will be generally very small due to the large $\mathcal{E}$.
+However, by adding a small magnetic field $\vec{B}\s {=}\s B_\text{coil}\hat{z}$ along the centerline of the magnetic quadrupole with an external bias coil, a dramatic change can be made to the surfaces where \epb{} with minimal perturbation of the trapping potential.
 
 \figdave{geometry_out.png}{Pin Trap Geometry View}{
 The last six pins of our Stark decelerator~\cite{Sawyer2008} form the trap\s(a), which is $0.45\text{ K}$ deep with trap frequency $\nu\s {\approx}\s 4\text{ kHz}$\s(b).
@@ -473,15 +482,6 @@ The central pins are magnetized, with two domains each.
 Blue indicates magnetization along $+\hat{y}$, red along $-\hat{y}$.
 These domains produce a magnetic quadrupole trap with zero along the $z$-axis, shown in the $z\s {=}\s 0$ plane\s(d).
 \label{fig:CAD}}{10cm}
-
-Our idea is to use a pair of 2D quadrupole traps, one magnetic and the other electric, with orthogonal centerlines (Fig.~\ref{fig:CAD}):
-\begin{equation}
-\label{eqn:BE}
-\vec{B}=B'x\hat{y}-B'y\hat{x}\quad\quad\vec{E}=E'y\hat{y}-E'z\hat{z}
-\end{equation}
-We achieve these fields in a geometry that matches our Stark decelerator~\cite{Bochinski2003}.
-This geometry features large spin-flip loss, since \epb{} in both the $x\s {=}\s 0$ and $y\s {=}\s 0$ planes, and from Eqn.~\ref{eqn:energetics}, $G\s {=} \s \mathcal{B}_\perp^3\Delta^2/\mathcal{E}^4$ will be generally very small due to the large $\mathcal{E}$.
-However, by adding a small magnetic field $\vec{B}\s {=}\s B_\text{coil}\hat{z}$ along the centerline of the magnetic quadrupole with an external bias coil, a dramatic change can be made to the surfaces where \epb{} with minimal perturbation of the trapping potential.
 
 \bcl{} morphs the \epb{} surface from a pair of planes into the hyperbolic sheet given by
 $x\s {\cdot}\s y\s {=}\s  z\s {\cdot}\s B_\text{coil}/B'$
@@ -502,7 +502,7 @@ To further verify our understandings of the loss mechanism, we translated one of
 This pin translation disrupts the idealized 2D magnetic quadrupole by adding a small trapping field $\vec{B} \s {\propto}\s  B^\prime z\hat{z}$, which significantly alters the topology of the \epb{} surface and the overall loss rate in the trap. We also compute loss rates for all values of pin translation and \bcl{} by numerically integrating the loss flux through these unusual loss surfaces via the Landau-Zener formula, just as for the simpler quadrupole geometry discussed previously.  The calculated populations after $30\text{ ms}$ in the trap have a reasonable agreement with the measurements (Fig.~\ref{fig:WVplot}b).
 The direct integral calculation uses only the temperature of a purely thermal distribution as a free parameter, and does not involve computation of any trajectories.
 The temperature fits to $170\s {\pm}\s 20\s\text{mK}$\s\footnote{Calculation performed in COMSOL: \href{https://github.com/dreens/spin-flip-integration/}{Source Code}}.
-An intuitive explanation for the intriguing double well structure in Fig.~\ref{fig:blocking} is that \bcl{} first translates the magnetic zero along the z-axis, overlapping it with larger electric fields at first before moving it out of the trap.
+An intuitive explanation for the intriguing double well structure in Fig.~\ref{blocking_out.png} is that \bcl{} first translates the magnetic zero along the z-axis, overlapping it with larger electric fields at first before moving it out of the trap.
 
 \figdave{vwfig_out.png}{Pin Trap Loss Removal with Pin Translation}{
 Time traces\s(a) without bias field\s(black), with bias field\s(green dots), and with modulated density\s(green circles).
@@ -518,7 +518,7 @@ One way to avoid competition is for the fields to couple to unrelated parts of t
 In these states, which include most laser-cooled molecules thus far, the electric and magnetic fields couple to rotation and spin respectively, which are only related by the spin-rotation coupling constant.
 This constant is usually in the tens of MHz~\cite{Quemener2016}, so molecular spin-flip loss remains quite significant.
 The inclusion of hyperfine requires a careful case-by-case investigation. For OH, it would initially seem to add an extra splitting that could protect from spin-flips, but in fact the loss plane is only shifted slightly away from \epb{} and retains the same area.
-For YO\s\footnote{This is particularly relevant given the recently realized 3D MOT for YO}, certain hyperfine states can avoid spin-flip loss entirely when electric fields are applied.
+For Yttrium Monoxide~\cite{Collopy2018}, certain hyperfine states can avoid spin-flip loss entirely when electric fields are applied.
 These states are characterized by significant electron-spin-to-nuclear-spin dipolar coupling, which results in a protective gap regardless of field orientation.
 
 It is also instructive to consider the related case of a pure electrostatic trap.
@@ -530,9 +530,70 @@ The present trap, in addition to providing the desired experimental testing grou
 This is in contrast with other strategies for plugging the hole of a magnetic trap which often lead to a reduction in trap gradient.
 With loss removed, we observe a population trend whose initially fast decay rate decreases over time (Fig.~\ref{fig:WVplot}a, green dots), suggesting a two-body collisional effect.
 We test this by reducing the initial population fivefold but without changing its spatial or velocity distribution, and then scale the resulting trend by five (green circles).
-This technique is described further toward the end of App.~\ref{sec:evap}.
+This technique is described further in Chapter~\ref{chapter:collisions}.
 If collisions had contributed, this new trend would show less decay, but we observe no significant change.
-This seeming lack of collisions is likely due to the much higher initial temperature of $170\s\text{mK}$, in contrast to the earlier work at and below $50\s\text{mK}$~\cite{Stuhl2012evap}. An alternative hypothesis for the population trend is the existence of chaotic trap orbits with long escape times~\cite{Gonzalez-Ferez2014}.  The understanding of electric field enhanced spin-flip loss brings an important consequence to the use of RF knife under electric field employed in the forced evaporation, especially at low temperatures. We present the effect of evaporation at intermediate temperatures (${\sim}\,30\text{ mK}$) in App.~\ref{sec:evap}.  Moving forward, we aim to increase the density by means of several improvements~\cite{Even2015,Segev2017}.
+This seeming lack of collisions is likely due to the much higher initial temperature of $170\s\text{mK}$, in contrast to the earlier work at and below $50\s\text{mK}$~\cite{Stuhl2012evap}. An alternative hypothesis for the population trend is the existence of chaotic trap orbits with long escape times~\cite{Gonzalez-Ferez2014}.  The understanding of electric field enhanced spin-flip loss brings an important consequence to the use of RF knife under electric field employed in the forced evaporation, especially at low temperatures. We present the effect of evaporation at intermediate temperatures (${\sim}\,30\text{ mK}$) in Chapter~\ref{chapter:collisions}.  Moving forward, we aim to increase the density by means of several improvements~\cite{Even2015,Segev2017}.
+
+\subsection{Scaling Law Derivation\label{sec:der}}
+
+Here we derive the loss enhancement scaling law presented in Eqn.~\ref{eq:etaMT}, and repeated here:
+\begin{equation}
+\eta=\frac{3}{11} \left(\frac{d_\text{eff}E}{\sqrt{\kappa\Delta}}\right)^{8/3}.
+\end{equation}
+The key idea is to compare the surface areas of the loss regions with and without electric field.
+There is no exact loss region where a molecule is guaranteed to spin flip, but rather its velocity and direction contribute to the Landau-Zener probability (Eqn.~\ref{eqn:lz}).
+Nonetheless, for the purposes of a scaling law, we can assume the average thermal velocity $v_T$, and choose a probability threshold of $P>1/e$.
+These assumptions allow us to define the loss region as the contour surface of energy $\kappa$ where
+\begin{equation}
+\kappa=\sqrt{2\hbar\dot{G}/\pi}=\sqrt{4\hbar v_T B'/\pi}.
+\end{equation}
+Here $\dot{G}$ is the rate of change in the energy gap between the trapped state and its spin flip partner, and $B'$ is the magnetic field gradient along the strong axis of the trap.
+
+We assume that the electric field is applied parallel to the strong axis of the quadrupole trap, which makes the loss plane, as defined by $\vec{E}\perp\vec{B}$, perpendicular to this axis. This matches the geometry that has been realized in our experiment~\cite{Stuhl2013}, and is the worst case, but by no more than a constant factor of $2\sqrt{2}$ relative to other directions the electric field could have.
+
+Before application of electric field, the $\kappa$ valued energy contour is the surface of an oblate ellipsoid of long radius $r_0=2\kappa/\mu_\text{eff}B'$.
+Its area is then $2\pi\alpha\,r_0^2$, where $\alpha(e)=1+(1/e-e)\text{tanh}^{-1}(e)$ generally for eccentricity $e$, and $\alpha\sim 1.38$ for the present 2:1 ellipsoid.
+When electric field is applied, the energy gap near the trap zero takes an unusual functional form.
+To derive it, we first assign spatial coordinates $r$ and $z$ denoting directions within and normal to the loss plane, respectively.
+Next we diagonalize the ground state hamiltonian of OH in mixed fields, see App.~A of Ref.~\cite{Stuhl2012uwave}, or similarly for another species.
+Subtracting the energies of the trapped state and its spin-flip partner, and then series expanding the result yields:
+\begin{equation}
+\label{eqn:energy}
+G = 2\mu_\text{eff}B'|z| + \beta\frac{(\mu_\text{eff}B'r/2)^3\Delta^2}{(d_\text{eff}E)^4}f(d_\text{eff}E/\Delta),
+\end{equation}
+plus higher order terms in $r$ and $z$.
+Here $\beta=625/144=4.3$ and $f$ is a rational expression that approaches $1$ for small arguments: $f(x) = (1 + 1.28x^2)/\sqrt{1+1.44x^2}$.
+The key feature, as discussed in Sec.~\ref{sec:mech}, is the cubic dependence $G$ exhibits on $r$ which leads to much more severely oblate contours.
+
+Now we can use Eqn.~\ref{eqn:energy} to compute the surface area of the $G=\kappa$ contour.
+We specialize to the regime where $d_\text{eff}E<\Delta$, so that $f(d_\text{eff}E/\Delta)\sim 1$.
+The radial extent of the surface can be solved by inverting $\kappa=G|_{z=0}$:
+\begin{equation}
+\label{eqn:rE}
+r_E = \frac{1}{\mu_\text{eff}B'}\sqrt[3]{\frac{8\kappa(d_\text{eff}E)^4}{\beta\Delta^2}}.
+\end{equation}
+The axial extent remains $z=\kappa/\mu_\text{eff}B'$ for all $\vec{E}$.
+For large enough $E$, $r_E$ dominates over this axial extent, so that the area is effectively $2\pi r_E^2$ and the loss area enhancement becomes $\eta = r_E^2/(\alpha r_0^2)$.
+Putting everything together:
+\begin{equation}
+\begin{split}
+\label{eqn:eta}
+\eta\quad =&\quad \frac{1}{\alpha}\left(\frac{1}{\mu_\text{eff}B'}\sqrt[3]{\frac{8\kappa(d_\text{eff}E)^4}{\beta\Delta^2}}\right)^2\bigg/\left(\frac{2\kappa}{\mu_\text{eff}B'}\right)^2\\
+\quad=&\quad \frac{1}{\alpha\beta^{2/3}}\left(\frac{1}{2\kappa}\sqrt[3]{\frac{8\kappa(d_\text{eff}E)^4}{\Delta^2}}\right)^2\\
+\quad=&\quad\frac{3}{11}\left(\frac{d_\text{eff}E}{\sqrt{\kappa\Delta}}\right)^{8/3}.
+\end{split}
+\end{equation}
+
+Now we address the domain of validity of this result.
+When $E$ is small, Eqn.~\ref{eqn:energy} only has a narrow range of validity, since the electric field only dominates in a very small region near the trap center.
+Outside, $G$ retains a nearly linear dependence on $r$.
+This means that Eqn.~\ref{eqn:rE} only holds for $E$ above some threshold.
+For smaller $E$, $r_E$ will simply not be significantly perturbed from its zero electric field value of $r_0=2\kappa/\mu_\text{eff}B'$.
+The implication for the enhancement factor in Eqn.~\ref{eqn:eta} is simply that it is only valid when it predicts an enhancement significantly greater than unity.
+In other words, Eqn.~\ref{eqn:eta} holds when $d_\text{eff}E>1.6\!\cdot\!\sqrt{\kappa\Delta}$, but below this $\eta$ gradually returns to unity.
+Eventually when $d_\text{eff}E>\Delta$, the factor of $f(d_\text{eff}E/\Delta)$ in Eqn.~\ref{eqn:energy} is better approximated by $1.1\!\cdot\!d_\text{eff}E/\Delta$, which leads to the modification $\eta=0.26\!\cdot\!(d_\text{eff}E)^2/\kappa^{4/3}\Delta^{2/3}$.
+Thus for these larger E-fields, the enhancement factor reduces in its dependence on electric field from order $8/3$ to order $2$.
+At this point, the loss is typically too large for trapping, see Tab.~\ref{tab:rates}.
 
 \subsection{Conclusions}
 
@@ -541,13 +602,137 @@ We conclusively demonstrate and suppress this effect using our dual magnetic and
 Our calculation of the magnitude of spin-flip loss via flux through surfaces where \epb{} enables detailed predictions of how its location and magnitude ought to scale with bias field and trap alignment, which we experimentally verify.
 Our results correct existing predictions about molecular spin-flips in mixed fields and pave the way toward further improvements in molecule trapping and cooling.
 
+\section{Trap Escape and Dynamical Phenomenon}
 
-\section{Other traps in the field}
+Early during my thesis work, it was common to infer significant information pertaining to the collisional behavior of ensembles based on the observed loss rates of molecules from traps.
+One effect which significantly influences the observed trends is the behavior of molecules in the \f1 and \e3 states after loading.
+Molecules are loaded into these states from the \fm3 state which is decelerated, as described above in Sec.~\ref{loadingtransitions}.
+An additional important effect however is the escape of molecules from the expected \f3 state but with surprisingly long lifetimes.
+A common rule of thumb floating around in the atomic physics community is that molecules or atoms which are not well trapped ought to find their way out of the trap within a quarter trap oscillation.
+This viewpoint neglects the potential complexities associated with the dynamics of molecular orbits.
+In the effective moving trap which characterizes deceleration for example, almost all molecules lie above the true trap depth when operating in $S=1$ mode, but many survive the $\sim5$ oscillations they undergo in the $\sim3$~ms they spend in the decelerator, refer back to Chap.~\ref{chapter:slowing} for more information.
 
-\section{Dynamical Phenomenon}
+More generally, the stability of orbits in dynamical systems is an exciting question in classical physics, with applications to the planets of our solar system, chaotic systems, and so on~\cite{dumas2014kam}.
+One intriguing study applies tools of dynamical system analysis to the trapping of atoms in a crossed optical dipole trap~\cite{Gonzalez-Ferez2014}.
+Not only do they demonstrate chaotic behavior in this comparatively simple trapping geometry, but as a corollary they find single particle trajectories with very long escape times over $10^4$ times the oscillation period~\citep[Fig.~11]{Gonzalez-Ferez2014}.
+I studied the escape dynamics from the Ring, Tricycle, and Pin traps, generating the trajectory information shown in Fig.~\ref{escapes}.
+Energies of molecules are given in units of GHz, and there are $2.0$~GHz/kG for OH molecules.
+It is remarkable that molecules survive at these energies, which are therefore far above the minimum trap depth of $\sim5$~GHz in the Tricycle, similar in the Ring, and $\sim8$~GHz in the Pin trap.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=13cm]{ringescape.png}\\
+\includegraphics[width=13cm]{tricycleescape.png}\\
+\includegraphics[width=13cm]{pinescape.png}
+\caption[Escape Dynamics in the Ring, Tricycle and Pin traps.]{Molecules with the indicated total energy are initialized and their escape times indicated in grayscale. Position within a panel corresponds to initial position of the molecule in the transverse mid-plane of the trap.
+\label{escapes}}
+\end{figure}
+
+I therefore followed this up by studying chaos indicators for trajectories in the magnetic pin trap.
+This can be done by studying the evolution of orbits with infinitesimally varying initial conditions, in which case a new higher order equation of motion may be found which describes the evolution of the variation itself.
+Specifically, if the evolution of the system is described by:
+\begin{equation}
+\frac{\partial x}{\partial t} = F(x,t),
+\end{equation}
+where $x$ is a point in 6D phase space and $F$ describes the ``flow'' of the system, then it is possible to specify a modification to the initial position $\delta x$ and study:
+\begin{equation}
+\frac{\partial x+\delta x}{\partial t} - \frac{\partial x}{\partial t}= F(x+\delta x,t) - F(x,t),
+\end{equation}
+which after making various leading order subtractions and so on gives rise to:
+\begin{equation}
+\frac{\partial \delta x}{\partial t} = \frac{\partial f}{\partial x}\cdot\delta x.  \label{eqvar}
+\end{equation}
+
+Various chaos indicators based on variational equations such as that in Eq.~\ref{eqvar} may be studied, such as the perhaps more well-known Maximum Lyapunov Exponent~\cite{wolf1985}.
+Using a higher order variation called the $\text{OFLI}_2^{TT}$~\cite{Barrio2006}, I determined the pin trap to be a highly chaotic system, as the panels shown in Fig.~\ref{pinchaos} indicate.
+A few stable orbits exist, but the majority are not.
+It is also useful to verify that the software I developed for studying these indicators is in fact properly functioning.
+In Fig.~\ref{chaosproof.png} I show how my results compare with those in~\cite{Gonzalez-Ferez2014}.
+The comparison is nearly identical, which is especially remarkable given that I don't make use of the analytic expression for the crossed dipole trap~\citep[Eq.~6]{Gonzalez-Ferez2014}, since none is available for the magnetic pin trap.
+Instead I use a spline to represent the potential.
+This is described further in my publicly available code repository~\footnote{\href{https://github.com/dreens/ofli-OH-trapping}{Chaos Indicator Codebase}}.
+
+\begin{figure}
+\centering
+\includegraphics[width=9.5cm]{pin0p25xy.png}\includegraphics[width=2.5cm]{pin0p75xy.png}\\\includegraphics[width=5.4cm]{pin0p5xy.png}\includegraphics[width=7cm]{pin0p5yz.png}\\%pin0p75xy.png
+\caption[Chaos Indicators in the Pin Trap]{Chaos indicator $\text{OFLI}_{TT}^2$ is evaluated for trajectories beginning in the pin trap. Several islands of stability are engulfed within seas of chaos.}
+\label{pinchaos}
+\end{figure}
+
 
 \section{Next Generation Traps}
 
+At the time of this writing, an effort is underway to develop a next generation magnetic trap suitable for use with our $333$ stage decelerator.
+Thanks to the development of our engineering and manufacturing capabilities as far as cryogenics are concerned, I decided to push for a cryogenic trap.
+This has the added benefit of addressing the vacuum and blackbody lifetime limits for OH molecules and potentially enabling ten second study times.
+A number of features of this design are worth discussing here.
+
+\subsection{Pin Trap Farewell}
+
+We decided to move back to the 3D magnetic quadrupole design, despite the success of the magnetic pin trap for addressing spin flip losses.
+Reasons for this include the following:
+\begin{enumerate}
+\item Difficulty in correctly selecting and orienting the magnetic pins, which required an in-vacuum translation stage and associated high voltage concerns. We also had to carefully scan the field of the pins to identify a well-matched pair.
+\item Questions about the HV performance of the pins, which didn't condition very well. 
+No major arcs during normal operation were occurring, but the loaded temperature was triple that predicted by sims, a possible indication of arcing type effects during loading.
+\item Maintaining the Bias coil, which required a high pressure water boosting system~\cite{}
+\item Expectations about collisional behavior. The pin trap resolves spin-flip losses, but substates nonetheless come quite close to one another over a broad spatial range, making inelastic loss probable. At one point Goulven actually calculated inelastic cross sections for a map of fields and angles in the pin trap and confirmed this.
+\item Lifetime concerns for the magnetic pins themselves. We had a number of pins demagnetize during conditioning, leading us to install an in-vacuum temperature probe which could be made to touch the pins using a manipulator feedthrough or brought safely away from them during the application of voltage.
+\end{enumerate}
+
+\subsection{Magnets}
+
+Neodymium magnets reversibly demagnetize to $70\%$ of their room temperature strength when brought to temperatures in the $10$~K regime~\cite{}, but newer Praseodymium magnets actually enhance.
+I was able to coordinate the manufacture of these for our application by Vacuumschmelze at the suggestion of Ed Narevicius.
+
+An effort was undertaken to more systematically study the variation of the performance of the system as far as various dimensions are concerned.
+A tricycle style was selected, though with a bit of a reduction in gradient.
+Radiusing the rear electrode was considered, as well as variations in the thickness of extra surfaces designed to cover the imperfect surfaces of the magnets.
+In all cases, deceleration and loading dynamics were included, with the exception of \fm3 effects.
+I have only once made an attempt at including these effects, for the sake of more precisely fitting the escape dynamics of molecules in the tricycle trap with extra electric field turn-on events, described further in Chap.~\ref{chapter:collisions}.
+The final selected geometry is shown in Fig.~\ref{cryocycle.png}, and is dubbed the Cryocycle.
+
+\figdave{cryocycle.png}{Cryocycle Field Distributions}{Relevant information for the Cryocycle trap under manufacture at the time of this writing. (a) Magnetic field magnitude, $500$~G per contour, trap depth of $\sim2200$~G transversely. (b) Electric field magnitude during loading. $10$~kV/cm per contour. Curved rear surface acts to extend the region of steep trapping slope further towards the rear magnet relative to the Tricycle trap, see Fig.~\ref{NearFieldUWave.png}a. (c) Raytrace performed in COMSOL Multiphysics for determining collection solid angle close to $4$ for the Cryocycle.}{\linewidth}
+
+\subsection{Photon Collection}
+
+The cryocycle also features what will hopefully serve as an important improvement in fluorescence collection.
+Mounted together with the magnet is an elliptical reflector capable of directing much of the fluorescence from the trapped molecules onto a PMT outside the vacuum.
+Collection solid angles close to $4$~srad should be possible, an order of magnitude improvement over the previous traps, see Fig.~\ref{cryocycle.png}c.
+Of course this assumes a highly reflective surface, only obtainable in the UV thanks to Aluminum~\cite{}, which is fortunately a good choice for thermal conductivity.
+Aluminum may be a less ideal choice as far as high voltage is concerned however, since its surface oxide layer should enable the formation of patch charges and stray electric fields to some extent.
+This could prove especially problematic in the event of any sensitive long-term studies, since variations in the patch charges could lead to variations in the enhancement of spin-flip losses near the trap center.
+One technique to address this is to detect the magnitude of spectroscopy, see Fig.~\ref{strayhyperspec.png}.
+Because of the small magnitude of the differential Zeeman shift, slight perturbations of the electric fields on the magnetic field dependent lineshapes, especially in the vicinity of avoided crossings, are clearly discernable.
+Performing a full spectroscopic sequence would be slow, but similar observables could be designed to give sensitivity to stray electric fields, for example a two-point spectroscopy comparing the frequency of the dip to that of the peak.
+Another possibility would be to look for population transfer at a more distant frequency that would only address molecules close to avoided crossings.
+
+\figdave{strayhyperspec.png}{Stray Field Influences Spectroscopy}{Stray fields are seen to influence spectroscopy. 
+The black simulated line corresponds to $10$~V/cm. 
+The two dips correspond to the inability of microwaves to address molecules at those frequencies due to avoided crossings perturbing the lines at those locations. 
+Only one crossing is significantly perturbed by small fields, that between \e3 and \f1, but this crossing occurs in two different locations for the two nuclear spin substates of \f3.}{\linewidth}
+
+\subsection{Blackbody Absorption}
+
+In order to benefit from a lifetime extension with cryogenic temperatures, it is necessary to carefully control the radiation environment of the molecules. OH can absorb radiation primarily at $120~\mu$m ($2.5$~THz)~\cite{Hoekstra2007}, where typical radiation shielding conductors have near perfect reflection.
+In the case of an incomplete shield, as is required for our setup since the shield cannot approach to close to the high voltage decelerator, this can mean that the radiation relevant for the molecules is actually fully equilibrated to room temperature despite the cryogenic shield.
+Whatever the dominant absorbers are for the relevant wavelength will dominate the radiation environment, with conductive surfaces playing little to no role.
+Many materials are surprisingly transparent, including plastics such as Teflon which are actually used as lenses~\cite{}.
+To address this, I opted for the addition of ceramic plates on the inside of our radiation shield to influence the radiation environment by absorbing THz radiation otherwise reflected by the shields.
+
+\subsection{Cloverleaf Trapping}
+
+Of course it would be ideal to address the issue of electric field enhanced loss once and for all with a lifted magnetic trap.
+This is possible with permanent magnets, and a streamlined design was identified and simulated, see Fig.~\ref{cloverleaf}.
+Such a trap may one day be the right choice, but it would seem unwise to tackle this simultaneously with the changes already being introduced.
+Moreover, without collisional effects, it may not be worth the effort.
+These effects should be more clearly evidenced in the Cryocycle, which should feature at least an order of magnitude improvement over any cloverleaf style design in the densities which may be loaded.
+The reason for this is that cloverleaf type geometries always require a delicate competition between the strengths of different fields, and can never be generated with the same trap depths or gradients as the quadrupole trap.
+
+\section{Trapping of Water Isotopologues}
+
+One potentially exciting capability of our new lengthier decelerator system and advanced field distributions would be to apply it to a less Stark responsive molecule such as water~\citep[Sec.~2.4]{VanDeMeerakker2006thesis}.
+The precise feasibility depends a bit on 
 
 
 \bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
