@@ -654,8 +654,9 @@ This is described further in my publicly available code repository~\footnote{\hr
 
 \begin{figure}
 \centering
-\includegraphics[width=9.5cm]{pin0p25xy.png}\includegraphics[width=2.5cm]{pin0p75xy.png}\\\includegraphics[width=5.4cm]{pin0p5xy.png}\includegraphics[width=7cm]{pin0p5yz.png}\\%pin0p75xy.png
-\caption[Chaos Indicators in the Pin Trap]{Chaos indicator $\text{OFLI}_{TT}^2$ is evaluated for trajectories beginning in the pin trap. Several islands of stability are engulfed within seas of chaos.}
+\includegraphics[width=9.5cm]{pin0p25xy.png}\hspace{3.5mm}\includegraphics[width=2.5cm]{pin0p75xy.png}\\
+\vspace{1mm}\includegraphics[width=5.4cm]{pin0p5xy.png}\includegraphics[width=7cm]{pin0p5yz.png}\\%pin0p75xy.png
+\caption[Chaos Indicators in the Pin Trap]{Chaos indicator $\text{OFLI}_{TT}^2$ is evaluated for trajectories beginning in the pin trap. Several islands of stability are engulfed within seas of chaos. Chaotic trajectories red, periodic blue, quasiperiodic green. The latter two vary on a color gradient. (a) $1.94$~mm wide, all panels to the same scale. Energies in this panel are $7.5$~GHz above trap minimum. Trajectories begin in the $x-y$ plane with velocity in the $z$ direction and normal to this plane. (b) $2.5$~GHz, $x-y$ plane. (c) $5$~GHz, $x-y$ plane. (d) $5$~GHz, $y-z$ plane. }
 \label{pinchaos}
 \end{figure}
 
@@ -717,23 +718,44 @@ Only one crossing is significantly perturbed by small fields, that between \e3 a
 In order to benefit from a lifetime extension with cryogenic temperatures, it is necessary to carefully control the radiation environment of the molecules. OH can absorb radiation primarily at $120~\mu$m ($2.5$~THz)~\cite{Hoekstra2007}, where typical radiation shielding conductors have near perfect reflection.
 In the case of an incomplete shield, as is required for our setup since the shield cannot approach to close to the high voltage decelerator, this can mean that the radiation relevant for the molecules is actually fully equilibrated to room temperature despite the cryogenic shield.
 Whatever the dominant absorbers are for the relevant wavelength will dominate the radiation environment, with conductive surfaces playing little to no role.
-Many materials are surprisingly transparent, including plastics such as Teflon which are actually used as lenses~\cite{}.
+Many materials are surprisingly transparent, including plastics such as Teflon which are actually used as lenses~\footnote{\href{https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1627}{Teflon Lenses}}.
 To address this, I opted for the addition of ceramic plates on the inside of our radiation shield to influence the radiation environment by absorbing THz radiation otherwise reflected by the shields.
 
 \subsection{Cloverleaf Trapping}
 
 Of course it would be ideal to address the issue of electric field enhanced loss once and for all with a lifted magnetic trap.
-This is possible with permanent magnets, and a streamlined design was identified and simulated, see Fig.~\ref{cloverleaf}.
+This is possible with permanent magnets, and a streamlined design was identified and simulated, see Fig.~\ref{cloverleaf.png}.
 Such a trap may one day be the right choice, but it would seem unwise to tackle this simultaneously with the changes already being introduced.
 Moreover, without collisional effects, it may not be worth the effort.
 These effects should be more clearly evidenced in the Cryocycle, which should feature at least an order of magnitude improvement over any cloverleaf style design in the densities which may be loaded.
 The reason for this is that cloverleaf type geometries always require a delicate competition between the strengths of different fields, and can never be generated with the same trap depths or gradients as the quadrupole trap.
+The design shown in Fig.~\ref{cloverleaf.png} loads only $20\%$ of the Cryocycle, and is significantly less tight, likely at least twofold reduction in each direction, for a forty-fold reduction in density relative to the Cryocycle.
+
+\figdave{cloverleaf.png}{Permanent Magnetic Cloverleaf Trap}{
+(a) Earlier Design from Matt Hummon, $32$ one eighth arc segments. 
+(b) Updated design, $8$ quarter arc segments, $2$ rings, $1$ disk. $4$~mm gap between magnets.
+(c) Magnetic Trap. Much longer than wide, unlike 3D quadrupole traps. Up to $1200$~G deep or so, depending on tuning of extra disk magnet. 
+(d) Loading fields, much less ideal than Tricycle trap, concave up across trap center and steepest out front.}{\linewidth}
+
+If at some point it becomes necessary to pursue the Cloverleaf trap in earnest, a few points are worth mentioning.
+Firstly, always make sure to investigate cross sections through the trap in many planes, since often the three principal orthogonal planes can miss the actual weak points of the trap.
+It should be sufficient to add in planes with $\theta=\pi/4$ and including the $z$ axis, working in cylindrical coordinates, for the Cloverleaf shown in Fig.~\ref{cloverleaf.png}b, but for that in Fig.~\ref{cloverleaf.png}a, I believe the weak points may occur in the $\theta=\pi/8$ planes.
+Secondly, for any given geometry it is always worth varying the magnitude of an extra bias magnetic field in the z direction before making conclusions.
+This extra field can have a very significant effect on the tightness and depth of the trap, and in practice may even be tuned in the experiment with an external coil or a translatable permanent magnet.
+I had some success with removing a small divot from the rear electrode so as to reduce loss of molecules which can access that volume.
+It helps the loading significantly to add conductor between the magnets and touching the front magnets closest to the decelerator, so as to push the loading hill further back and overlap the trap center better.
+One problem with this is that then the collection solid angle is negatively impacted.
+Mounting the magnets in aluminum frames that are highly polished to better allow fluorescence to escape could help with this, as planned in the Cryocycle.
+Finally, it will be important to study this trap outside of the the vacuum somehow, especially in order to see how closely the magnets can be packed/glued together, what the resulting field strengths are, and especially to make sure that the trap is truly plugged.
+This will require a highly miniaturized magnetic field probe of some kind.
 
 \section{Trapping of Water Isotopologues}
 
 One potentially exciting capability of our new lengthier decelerator system and advanced field distributions would be to apply it to a less Stark responsive molecule such as water~\citep[Sec.~2.4]{VanDeMeerakker2006thesis}.
-The precise feasibility depends a bit on 
-
+The precise feasibility depends on just how slow the beam is when produced in Xenon in an Even-Lavie valve, which may be worth investigating in the near term.
+An electrostatic quadrupole trap would be most feasible, and this could be achieved in a very similar system to the one currently planned for the Cryocycle, but with magnet-less electrodes.
+The final pins of the decelerator can form one electrode of the quadrupole, which would then require an additional ring and endcap electrode.
+Detection could be performed with some sort of REMPI scheme, but for initial tests of decelerability the RGA may suffice.
 
 \bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
 \bibliography{allrefs}		% Bib database in "allrefs.bib"
