@@ -26,6 +26,7 @@
 %\readerThree{a}
 %\SuspendPrologue
 %\begin{document}
+%\input macros
 
 
 \chapter{Optimized Deceleration}
@@ -199,7 +200,40 @@ Their total phase space acceptance, at least for lower decelerations, is an incr
 
 There also exist a host of proposals for alternative pulsed geometries, including this one with interspersed quadrupole focusing stages~\cite{Sawyer2008a}, this one with charged wires for improved transverse behavior~\cite{Wang2016}, and even a magnetic device with interspersed hexapole stages for use with NH molecules~\cite{Plomp2019}. The first two may become less important thanks to the results discussed in the next section. Perhaps the earliest attempted device appears to have used actual parallel plates and relied on their fringing fields for focusing~\cite{Golub1967}, as would have been necessary given the speed of available switches at the time.
 
-\subsection{Alternative Field Distributions}
+I would be remiss if I did not introduce a few new geometry proposals of my own, as have my predecessors~\citep[Sec.~5.5]{SawyerThesis2010}, \citep[Sec.~7.3]{HudsonThesis2006}.
+The first, motivated by the trapping configuration discussed further in Sec.~\ref{sec:pintrap}, is to add magnetic focusing to each decelerator pin.
+The idea would be to use dual domain magnetic pins to superimpose 2D magnetic quadrupole focusing fields on top of the entire decelerator.
+This has the potential for vey substantial benefit as far as transverse performance is concerned, see the vastly enhanced phase space volume shown in Fig.~\ref{magneticdecel.png}.
+Unfortunately, this design would suffer from very significant spin flip losses due to the presence of orthogonal magnetic and electric fields.
+Molecules would likely shuffle back and forth between \f3 and \fm3, with any favorable focusing effect completely washed out.
+A molecule besides OH with a $J=\frac{1}{2}$ ground state (CH, CF, NO~\cite{VanDeMeerakker2006thesis, weibel1998hexapole}) could be much more likely to benefit from this scheme, since these molecules do not feature the electric field enhanced spin-flip behavior derived for $J=\frac{3}{2}$ OH molecules in Sec.~\ref{sec:der}.
+I do not provide a formal proof of this, but the path to the proof is that the spin-flip enhancement requires the Zeeman effect to have cubic order with orthogonal fields.
+This cubic order relates to the order of perturbation theory required to get a coupling between the \f3 and the \fm3 states, since their $m$ number differs by $3$. 
+In a $J=\frac{1}{2}$ molecule, the $m$ number differs by only one, so that the Zeeman effect would remain linear.
+I have also confirmed this by numerically diagonalizing sample Hamiltonians with $J=\frac{1}{2}$.
+
+\figdave{magneticdecel.png}{A Magnetic Pin Stark Decelerator}{By adding magnetic domains to the pins of a conventional Stark decelerator, dramatic gains in transverse performance can be obtained. Here a factor of three is found, even with dramatically under-filled simulated phase space is evident by the swirling structure in the longitudinal phase space.}{\linewidth}
+
+And secondly, it is my distinct pleasure to introduce the double-pin decelerator, a brand new design, specially featured thus far only here in this thesis.
+The double pin decelerator uses a pair of pins everywhere that a normal decelerator would feature only a single pin.
+Instead of overlapping each other, pairs of double pins point directly towards each other, with a well-controlled tip-to-tip spacing.
+Manufacturing of the device is therefore somewhat more sensitive, although the regions of the pins which need to be highly polished are reduced, and the tips of pins are by far the best polished portions when tumble polishing is performed.
+The key idea behind the use of pairs of pins is to try to obtain a focusing effect in both transverse directions each stage.
+It could also be thought of as a pulsed ring decelerator with each ring split in half to enable more significant deceleration forces by building up field between the two halves.
+The idea is to make use of two different field distributions obtained by charging the device up in different ways.
+One is like in conventional deceleration, when a pair of double pins are oppositely charged; the other occurs when the pair are charged to the same voltage, but preceding and following pairs of double pins are charged to an opposite voltage.
+The field distribution resulting in the latter case would ideally resemble that in a ring decelerator. 
+This concept is also very relevant for the conventional geometry, and discussed at length in the next Section, Sec.~\ref{sec:afd}.
+
+\figdave{doublepin.png}{The Double Pin Decelerator}{(a) Geometry view showing arangement of the double pins. (b-c) $x-y$ planar cuts through a pair of double pins showing the magnitude of the electric field, color axis kV/cm, contours every $10$~kV/cm. (b) The slowing hill with the pair oppositely charged. $40\%$ less height than conventional deceleration and some defocusing. (c) Now with the pair charged to the same voltage and unshown preceding and following pairs of double pins charged to the opposite voltage.}{\linewidth}
+
+The field distributions generated by the device are shown in Fig.~\ref{doublepin.png}.
+The transverse focusing effect when pairs of pairs are charged to the same voltage is a big win compared with conventional operation, and even a modest win over a conventional decelerator with alternative field distributions run in VSF mode, described further in Sec.~\ref{sec:afd}.
+However it features a good bit of asymmetry, and has much better focusing for molecules that deviate along $\pm\vec{x}\pm\vec{y}$ compared with $\pm\vec{x}$ or $\pm\vec{y}$, see Fig.~\ref{doublepin.png}c.
+It also has $40\%$ less slowing power than a conventional decelerator, and some defocusing in one direction while slowing.
+These drawbacks could be partially addressed by shaping the double pins more like half of a ring, but this would drastically reduce manufacturability.
+
+\subsection{Alternative Field Distributions}\label{sec:afd}
 
 As far as the canonical geometry is concerned, a much more effective route to improved performance is to mix alternate field distributions into the deceleration scheme that feature strong restoring force in the transverse directions, refer to Fig.~\ref{fig:chargecartoon}.
 %This restoring force averages into the effective moving trap, leading to the dramatic improvements over S=1 shown in Fig.~\ref{fig:efftrap}. 
@@ -223,7 +257,7 @@ Useful alternate configurations can be created by applying voltage in a way that
 Once an imbalance exists, by charging up both pins in a pair to the same non-zero voltage, by only charging one pin in a pair, or even by unbalancing the decelerator power supplies\footnote{It was once noted that imbalancing the power supplies led to improved performance on a conventional pulsed Stark decelerator. S. Hoekstra, private communication.}, the field lines will run between pin-pairs. 
 Near the grounded pin-pair, these field lines create a focusing 2D quadrupole structure, much like this one used intentionally for trapping and controlling spin-flip losses~\cite{Reens2017}. 
 By implementing these configurations when the synchronous molecule is flying between the grounded pin pair, but retaining the use of the conventional configuration for hill climbing, the longitudinal behavior of the device is unaffected while the transverse behavior is vastly improved.
-Regarding spin-flip losses, use of these configurations is cause for concern, but not significant as far as early modeling is concerned. This is discussed further in Chapter~\ref{chap:spinflip}.
+Regarding spin-flip losses, use of these configurations is cause for concern, but not significant as far as early modeling is concerned. This is discussed further in Sec.~\ref{sec:spinflipdecel}.
 Utilizing the field distribution that results when both pins in a pair are brought to the same voltage gives rise to a new strongly focusing operation mode (SF), and utilizing the distribution where the adjacent pin pair is also brought to the voltage opposite the first gives a very strongly focusing mode (VSF). 
 
 It is also possible to obtain some of these effects without the need for rods being charged to three different voltages, by making use of the field distribution generated by turning on only a single pin, a somewhat focused mode (F).
@@ -320,17 +354,19 @@ Despite the lack of experimental validation for SF and VSF mode at the time of t
 Brand new opportunities are opened up by the increased efficiency, such as more favorable outcomes for targeting heavier or less polar species, or even the deceleration of beams seeded in Helium.
 Alternate field distributions are sure to play a central role in Stark deceleration moving forwards.
 
-\section{Trap Oscillations}
+\section{Transverse Trap Oscillations}
 
 A common technique for characterizing any trapping apparatus is to intentionally perturb the population so as to directly observe oscillations caused by the trapping force. 
 This is performed for example in~\cite{Stuhl2012uwave}, see Fig.~4, to ascertain the trapping frequency.
 The same can in principle be performed for the effective moving trap formed by a given deceleration mode.
 We first investigated this with the goal of better understanding the behavior of OH molecules in the decelerator so as to extract the influence of collisions with Neon beams from single particle behavior.
 Experiments were performed with the goal of understanding and manipulating the trapping behavior formed by the two dimensional potential created by the decelerator operated in a guiding mode.
-The key idea is to initialize the trap with a broad position and low velocity distribution, so that a breathing mode is excited.
+The key idea is to initialize the trap with a broad position and low velocity distribution, so that a breathing mode is excited, see Fig.~\ref{oscillate.png}a-e.
 Some time later the trap is briefly switched off.
-Depending on whether this window corresponds to the outgoing or ingoing portion of the breathing mode, this brief lack of trapping will lead to more or less loss respectively.
-This transverse trap may be computed numerically, depending on the choice of field distribution, see Fig.~\ref{fig:guiding_compilation}.
+Depending on whether this window corresponds to the outgoing or ingoing portion of the breathing mode, this brief lack of trapping will lead to more or less loss respectively, see Fig.~\ref{oscillate.png}f-h.
+This transverse trap may also be computed numerically, depending on the choice of field distribution, and gives rise to transverse potentials as shown in Fig.~\ref{fig:guiding_compilation}.
+
+\figdave{oscillate.png}{Transverse Oscillation Diagram and Data}{Transverse Oscillations in the Decelerator. (a) Schematic timing diagram for the experiment. (b) Transverse temperature (velocity spread) as a function of propagation time. (c) Phase space views demonstrating the rotation that gives rise to velocity spread variations. (d) Schematic timing diagram for application of a detection off-window for time $\text{T}_\text{det}$ after a hold time of $\text{t}_\text{det}$. (e) Resulting signal in simulation. (f-h) Experimental data for guiding with $6$~kV (blue) or $2.2$~kV (green) applied voltage. (f) Sine (solid) and damped sine (dashed) fits to the experimental $6$~kV data (black dots). (g) Same for $2.2$~kV. (h) Fourier transforms of the experimental data with dashed lines indicating the simulated breathing mode frequency.}{\linewidth}
 
 \begin{figure}[t!]
 \includegraphics[width=\linewidth]{Slowing/guiding_compilation.png}
@@ -338,12 +374,87 @@ This transverse trap may be computed numerically, depending on the choice of fie
 Transverse Traps formed by Different Field Distributions. Field distributions are generated in COMSOL, converted to internal potential energy, and then averaged longitudinally.}
 \end{figure}
 
+
 Breathing modes were detected as expected, and an effort was undertaken to infer the initial population generated by the valve from the observed oscillations.
 This turned out to serve as a probe of skimmer interference, since it was found that a distant source of the expected temperature could not reproduce the shallowness of the oscillation amplitude observed, although there are of course other deviations between model and experiment which could lead to a reduction in fringe contrast.
 It was also found that by intentionally turning the trap off at the right moment could serve as a manipulation of the transverse phase space distribution for the sake of reduced transverse temperature.
 
-It would be ideal to use this technique also as a means of studying the transverse or longitudinal frequencies in the travelling potential well in deceleration mode, but this has not yet been undertaken. 
+It would be ideal to use this technique also as a means of studying the transverse or longitudinal frequencies in the traveling potential well in deceleration mode, but this has not yet been undertaken. 
 Greater signal to noise would be desirable, at the time of this writing unavailable due to intentional space added between the source and the decelerator for studying collisions between parallel plates.
+
+\section{Nonadiabatic Transitions}\label{sec:spinflipdecel}
+
+The Landau-Zener formula may be used to approximate the relevance of nonadiabatic transitions in a given situation:
+\begin{equation}
+P=e^{-\pi\Delta^2/\hbar\partial E/\partial t}.
+\end{equation}
+Working in frequency units, we can simplify this to say that nonadiabatic transitions are negligible provided that:
+\begin{equation}
+g >> \sqrt{e\cdot f},
+\end{equation}
+where $g$ is the closest approach of the states, $e$ is the average energy difference between the relevant states during the process of interest, and $f$ is the frequency characterizing the variation of the system over time.
+This is a convenient rule of thumb- just compare the minimum gap to the geometric mean of the typical energy scale and the inverse timescale.
+
+For example, in the absence of any magnetic field, parity flips from $|f\rangle$ to $|e\rangle$ are highly unlikely thanks to the lambda doublet spacing of $1.7$~GHz.
+Compare this with the geometric mean of $100$~GHz and $1$~MHz where the latter is appropriate for the microsecond turn-off of the fields during switching events and the former is the energy scale set by the magnitude of electric fields in the decelerator.
+We find $300$~MHz or so, getting close to $1.7$~GHz but still below.
+
+On the other hand, transitions between \f3 and \f1 are a much greater concern. and have been observed during propagation of molecules in decelerators~\cite{Meek2011}, and also during switching events of decelerators~\cite{Wall2010}.
+The Stark effect treats \fpm3 the same, and also \fpm1, but the latter have one third the response of the former, so transitions between them are essentially loss.
+Moreover, these states are degenerate at zero field and don't have any fixed barrier as do the states of different parity.
+Of course, states being degenerate does not necessarily lead to loss if the Hamiltonian driving their evolution does not have any amplitude connecting the states in question.
+For states of differing $m$ quantum number, the Hamiltonian will only couple them when molecules are experiencing a rotation of the electric field vector.
+In S=1 operation, suitably fast rotations, together with very small values of the electric field, cannot occur on-axis, but may occur for off-axis molecules that experience weaker fields close to the grounded decelerator pins.
+I investigated the loss probability for off-axis molecules, for the first time as far as I can tell, and the results I obtained are shown in Fig.~\ref{nonadiabatic1}.
+Only a small fraction of molecules are lost, perhaps something like $0.1\%$ over the length of the decelerator.
+Being more quantitative would require simulating a denser grid of trajectories close to the pins.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=8cm]{StarkGap.png}
+\includegraphics[width=8cm]{NonadTraj.png}\\
+\includegraphics[width=8cm]{SampleTISE.png}
+\includegraphics[width=8cm]{AllProb.png}
+\caption[Non-adiabatic Transitions Off-Axis]{\label{nonadiabatic1}
+(a) Minimum energy gap along straight line trajectories parallel to decelerator axis and intersecting the transverse plane as shown. (b) Resulting energy gap as a function of propagation distance for a grid of trajectories. (c) Sample solution of the time-independent Schr\:odinger equation for a trajectory that shows a $10\%$ chance of hopping to the \f1 state. Many sharp jumps are seen between \fpm3, these are irrelevant and an artifact of an unphysically small bias magnetic field. (d) Inferred hopping probability as a function of position in the transverse plane.
+}
+\end{figure}
+
+Even if free propagation doesn't lead to nonadiabatic transitions even off axis, there is still the question of nonadiabatic transitions during the switching of the electric fields.
+I also checked this, for the first time as best I can tell, for a 3D grid of possible positions relative to the synchronous molecule, see Fig.~\ref{nonadiabatic2}.
+I find that nonadiabatic transitions are possible only if the molecule is significantly behind the synchronous molecule, shielded by the grounded pins just prior to their being rapidly switched on.
+These positions are not longitudinally phase stable anyway, unless the decelerator is being operated in an acceleration mode, in which case some locations off axis do seem to feature a significant chance of nonadiabatic transitions.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=5.3cm]{switchloss1.png}
+\includegraphics[width=5.3cm]{switchloss2.png}
+\includegraphics[width=5.3cm]{switchloss3.png}\\
+\includegraphics[width=5.3cm]{switchloss4.png}
+\includegraphics[width=5.3cm]{switchloss5.png}
+\caption[Nonadiabatic Losses during Switching]{\label{nonadiabatic2}
+Loss per switching event in several $x-y$ planes of different $z$ coordinate parametrized by phase angle $\phi=90^\circ$, $45^\circ$, $0^\circ$, $-45^\circ$, and $-90^\circ$.}
+\end{figure}
+
+The real thing to do would be to repeat this study with alternate field distributions in mind.
+These would be likely to feature a significantly enhanced chance of free propagation transitions close to the electric quadrupole created by the alternate configurations between the grounded pin pair.
+As far as the chance of switch-induced nonadiabatic transitions, those would seem to be reduced by the alternate field distributions, since in S=1 mode they were worst with the molecules beginning in a region of small field, and the alternate distributions generally add electric field in the regions where it was previously small or absent.
+However significant the nonadiabatic transitions in the new operation modes, one way to address them is to intentionally vary the length of decelerator pins, so that one pin is longer than the other in a pair, see Fig.~\ref{offsetavoid}.
+What this does is push the electric field zero off of the decelerator axis, creating some extra protective energy splitting even for molecules passing dangerously close to the field minimum.
+At first pass, one might suspect that the field would be zero not at a point but along the line parallel to the grounded pin pair and in between the grounded pins.
+This is approximately true as shown in Fig.~\ref{offsetavoid}a, but not perfectly so, as seen by examining the $\hat{y}$ component of the electric field as shown in Fig.~\ref{offsetavoid}b.
+Thanks to the variation in length of our decelerator pins, an unintended side effect of tapered pin mounting as described in Sec.~\ref{sec:mechconsider}, our decelerator may benefit from reduced sensitivity to these spin-flip issues.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=8cm]{offset-avoid-loss.png}
+\includegraphics[width=8cm]{offset-avoid-loss-Ey.png}
+\caption[Fields Close to Zeros of SF Mode]{\label{offsetavoid}
+(a) Electric field magnitude in the transverse plane bisecting a pair of pins. A line of near-zero field is evident.
+(b) The $\hat{y}$ component of the Electric field vector, where $\hat{y}$ is upwards, the direction which breaks the 2D symmetry and lifts the line of Electric field zero. The checker-like structure close to the central axis shows that there is actually a 3D electric quadrupole, with very slight restoring force in the vertical direction. This is relevant to reducing nonadiabatic transitions through intentional misalignment.
+}
+\end{figure}
+
 
 
 \section{Decelerator Manufacturing}
@@ -369,7 +480,7 @@ Simulation results for deceleration and loading verses decelerator design parame
 
 
 
-\subsection{Mechanical Considerations}
+\subsection{Mechanical Considerations}\label{sec:mechconsider}
 
 In order to address manufacturing costs and installation time associated with such a long device (up from $142$ stages previously~\cite{Sawyer2007}, and $69$ before that~\cite{Bochinski2004}), we spent some time investigating the possibility of separate modules or of extensions mechanically affixed to the existing rods.
 Ultimately it was decided that the challenges associated with getting such things right were not warranted by our length, and that it would be best to tackle everything with one long set of rods, mounted in a cage made of several stages, see Fig.~\ref{fig:decelmountingimages}.
