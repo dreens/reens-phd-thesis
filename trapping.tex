@@ -654,9 +654,9 @@ This is described further in my publicly available code repository~\footnote{\hr
 
 \begin{figure}
 \centering
-\includegraphics[width=9.5cm]{pin0p25xy.png}\hspace{3.5mm}\includegraphics[width=2.5cm]{pin0p75xy.png}\\
-\vspace{1mm}\includegraphics[width=5.4cm]{pin0p5xy.png}\includegraphics[width=7cm]{pin0p5yz.png}\\%pin0p75xy.png
-\caption[Chaos Indicators in the Pin Trap]{Chaos indicator $\text{OFLI}_{TT}^2$ is evaluated for trajectories beginning in the pin trap. Several islands of stability are engulfed within seas of chaos. Chaotic trajectories red, periodic blue, quasiperiodic green. The latter two vary on a color gradient. (a) $1.94$~mm wide, all panels to the same scale. Energies in this panel are $7.5$~GHz above trap minimum. Trajectories begin in the $x-y$ plane with velocity in the $z$ direction and normal to this plane. (b) $2.5$~GHz, $x-y$ plane. (c) $5$~GHz, $x-y$ plane. (d) $5$~GHz, $y-z$ plane. }
+\includegraphics[width=11.4cm]{pin0p25xy.png}\hspace{4.5mm}\includegraphics[width=3cm]{pin0p75xy.png}\\
+\vspace{1mm}\includegraphics[width=6.5cm]{pin0p5xy.png}\includegraphics[width=8.4cm]{pin0p5yz.png}\\%pin0p75xy.png
+\caption[Chaos Indicators in the Pin Trap]{Chaos indicator $\text{OFLI}_{TT}^2$ is evaluated for trajectories beginning in the pin trap. Several islands of stability are engulfed within seas of chaos. Chaotic trajectories red, periodic blue, quasi-periodic green. The latter two vary on a color gradient. (a) $1.94$~mm wide, all panels to the same scale. Energies in this panel are $7.5$~GHz above trap minimum. Trajectories begin in the $x-y$ plane with velocity in the $z$ direction and normal to this plane. (b) $2.5$~GHz, $x-y$ plane. (c) $5$~GHz, $x-y$ plane. (d) $5$~GHz, $y-z$ plane. }
 \label{pinchaos}
 \end{figure}
 
@@ -676,15 +676,15 @@ Reasons for this include the following:
 \item Difficulty in correctly selecting and orienting the magnetic pins, which required an in-vacuum translation stage and associated high voltage concerns. We also had to carefully scan the field of the pins to identify a well-matched pair.
 \item Questions about the HV performance of the pins, which didn't condition very well. 
 No major arcs during normal operation were occurring, but the loaded temperature was triple that predicted by sims, a possible indication of arcing type effects during loading.
-\item Maintaining the Bias coil, which required a high pressure water boosting system~\cite{}
-\item Expectations about collisional behavior. The pin trap resolves spin-flip losses, but substates nonetheless come quite close to one another over a broad spatial range, making inelastic loss probable. At one point Goulven actually calculated inelastic cross sections for a map of fields and angles in the pin trap and confirmed this.
+\item Maintaining the Bias coil, which required a high pressure water boosting system~\cite{Reens2017booster}
+\item Expectations about collisional behavior. The pin trap resolves spin-flip losses, but substates nonetheless come quite close to one another over a broad spatial range, making inelastic loss probable. At one point Goulven Qu\'em\'ener actually calculated inelastic cross sections for a map of fields and angles in the pin trap and confirmed this.
 \item Lifetime concerns for the magnetic pins themselves. We had a number of pins demagnetize during conditioning, leading us to install an in-vacuum temperature probe which could be made to touch the pins using a manipulator feedthrough or brought safely away from them during the application of voltage.
 \end{enumerate}
 
 \subsection{Magnets}
 
-Neodymium magnets reversibly demagnetize to $70\%$ of their room temperature strength when brought to temperatures in the $10$~K regime~\cite{}, but newer Praseodymium magnets actually enhance.
-I was able to coordinate the manufacture of these for our application by Vacuumschmelze at the suggestion of Ed Narevicius.
+Neodymium magnets reversibly demagnetize to $70\%$ of their room temperature strength when brought to temperatures in the $10$~K regime, but newer Praseodymium magnets actually enhance~\cite{Shea2010}.
+I was able to coordinate the manufacture of these for our application\footnote{\href{https://www.vacuumschmelze.com}{Vacuumschmelze} manufactures these and has a US distribution team based in Kentucky. Thanks to Ed Narevicius for the referral. Grade 131 TP and 131 DTP.}.
 
 An effort was undertaken to more systematically study the variation of the performance of the system as far as various dimensions are concerned.
 A tricycle style was selected, though with a bit of a reduction in gradient.
@@ -693,14 +693,14 @@ In all cases, deceleration and loading dynamics were included, with the exceptio
 I have only once made an attempt at including these effects, for the sake of more precisely fitting the escape dynamics of molecules in the tricycle trap with extra electric field turn-on events, described further in Chap.~\ref{chapter:collisions}.
 The final selected geometry is shown in Fig.~\ref{cryocycle.png}, and is dubbed the Cryocycle.
 
-\figdave{cryocycle.png}{Cryocycle Field Distributions}{Relevant information for the Cryocycle trap under manufacture at the time of this writing. (a) Magnetic field magnitude, $500$~G per contour, trap depth of $\sim2200$~G transversely. (b) Electric field magnitude during loading. $10$~kV/cm per contour. Curved rear surface acts to extend the region of steep trapping slope further towards the rear magnet relative to the Tricycle trap, see Fig.~\ref{NearFieldUWave.png}a. (c) Raytrace performed in COMSOL Multiphysics for determining collection solid angle close to $4$ for the Cryocycle.}{\linewidth}
+\figdave{cryocycle.png}{Cryocycle Field Distributions}{Relevant information for the Cryocycle trap under manufacture at the time of this writing. (a) Magnetic field magnitude, $500$~G per contour, trap depth of $\sim2200$~G transversely. (b) Electric field magnitude during loading. $10$~kV/cm per contour. Curved rear surface acts to extend the region of steep trapping slope further towards the rear magnet relative to the Tricycle trap, see Fig.~\ref{NearFieldUWave.png}a. (c) Raytrace performed in COMSOL Multiphysics for determining collection solid angle close to $4$~sr for the Cryocycle.}{\linewidth}
 
 \subsection{Photon Collection}
 
 The cryocycle also features what will hopefully serve as an important improvement in fluorescence collection.
 Mounted together with the magnet is an elliptical reflector capable of directing much of the fluorescence from the trapped molecules onto a PMT outside the vacuum.
-Collection solid angles close to $4$~srad should be possible, an order of magnitude improvement over the previous traps, see Fig.~\ref{cryocycle.png}c.
-Of course this assumes a highly reflective surface, only obtainable in the UV thanks to Aluminum~\cite{}, which is fortunately a good choice for thermal conductivity.
+Collection solid angles close to $4$~sr should be possible, an order of magnitude improvement over the previous traps, see Fig.~\ref{cryocycle.png}c.
+Of course this assumes a highly reflective surface, only obtainable in the near ultraviolet with Aluminum~\cite{rumble2017crc}, which is fortunately a good choice for thermal conductivity as well.
 Aluminum may be a less ideal choice as far as high voltage is concerned however, since its surface oxide layer should enable the formation of patch charges and stray electric fields to some extent.
 This could prove especially problematic in the event of any sensitive long-term studies, since variations in the patch charges could lead to variations in the enhancement of spin-flip losses near the trap center.
 One technique to address this is to detect the magnitude of spectroscopy, see Fig.~\ref{strayhyperspec.png}.

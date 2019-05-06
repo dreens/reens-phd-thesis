@@ -1,3 +1,4 @@
+
 %% File: `unsrtnat.bst'
 %% A modification of `unsrt.bst' for use with natbib package 
 %%
@@ -445,9 +446,31 @@ FUNCTION {format.date}
   extra.label *
 }
 
+%FUNCTION {format.btitle}
+%{ title emphasize
+%}
+
 FUNCTION {format.btitle}
-{ title emphasize
+{ title empty$ 
+    { "" }
+    { title emphasize }
+  if$
+  url empty$
+    {
+    doi empty$
+      {
+      eprint empty$
+        { }
+        { "\href{http://arxiv.org/abs/" eprint * "}{" * swap$ * "}" * }
+      if$
+      }
+      { "\href{http://dx.doi.org/" doi * "}{" * swap$ * "}" * }
+    if$
+    }
+    { "\href{" url * "}{" * swap$ * "}" * }
+  if$
 }
+
 
 FUNCTION {tie.or.space.connect}
 { duplicate$ text.length$ #3 <
