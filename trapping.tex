@@ -1,36 +1,36 @@
-\documentclass[defaultstyle,11pt]{thesis}
-
-\usepackage{amssymb}		% to get all AMS symbols
-\usepackage{amsmath}		% to get equations to work right
-\usepackage{graphicx}		% to insert figures
-\graphicspath{{../}{Trap/}}
-\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
-\usepackage{natbib}
-\usepackage{array}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\usepackage{caption}
-\setcitestyle{numbers,square,comma}
-\usepackage[usenames,dvipsnames]{color}
-%% To make \href colors more decent:
-\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
-\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
-  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
-}
-\renewcommand{\thefootnote}{\alph{footnote}}	
-\title{a}
-\abstract{a}
-\author{a}{a}
-\otherdegrees{a}
-\degree{a}{a}
-\dept{a}{a}
-\advisor{a}{a}
-\reader{a}
-\readerThree{a}
-\SuspendPrologue
-\begin{document}
-\input macros.tex
+%\documentclass[defaultstyle,11pt]{thesis}
+%
+%\usepackage{amssymb}		% to get all AMS symbols
+%\usepackage{amsmath}		% to get equations to work right
+%\usepackage{graphicx}		% to insert figures
+%\graphicspath{{../}{Trap/}}
+%\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
+%\usepackage{natbib}
+%\usepackage{array}
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\usepackage{caption}
+%\setcitestyle{numbers,square,comma}
+%\usepackage[usenames,dvipsnames]{color}
+%%% To make \href colors more decent:
+%\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
+%\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
+%  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
+%}
+%\renewcommand{\thefootnote}{\alph{footnote}}	
+%\title{a}
+%\abstract{a}
+%\author{a}{a}
+%\otherdegrees{a}
+%\degree{a}{a}
+%\dept{a}{a}
+%\advisor{a}{a}
+%\reader{a}
+%\readerThree{a}
+%\SuspendPrologue
+%\begin{document}
+%\input macros.tex
 
 \chapter{Molecular Trapping}
 
@@ -334,6 +334,19 @@ It should be possible to observe variation, and it should be the case that a min
 
 \figdave{tricycle-loading-transitions.png}{Trap loading for \fm3 states.}{The potential for molecules in the \fm3 state during trap loading. The trap center can be seen close to $10$~mm based on the single-point overlap of the three traces indicating an isolated magnetic zero. Due to the spin-flip inducing behavior of superimposed electric and magnetic fields close to magnetic zeros, molecules in the \fm3 state to the left of the zero transition uniformly into \f3 to the right of the zero, and vice versa. The kink seen close to $7$~mm corresponds may at first come as a surprise. This occurs in all three traces and is therefore an electric field effect. It turns out to be the zero of a weak electric quadrupole trap formed by the loading fields at the center of the frontal ring magnet of the Tricycle trap, as can be seen more clearly by studying Fig.~\ref{NearFieldUWave.png}(a).}{15cm} 
 
+\subsection{Multi-pulse Loading}
+
+The field distributions used for loading the Ring trap feature an extra bump in between the end of the decelerator and the beginning of the trap, refer back to Fig.~\ref{loadingringtrike}.
+This bump could in principle be used to perform last minute slowing or bunching prior to trap loading, especially if it were strengthened in magnitude by also turning on the last decelerator electrodes to the same voltage.
+We attempted this in 2014, and obtained the disappointing results shown in Fig.~\ref{multistageloading.png}, among many other such datasets.
+This was also our first attempt at using Behlke switches in series, at least for serious tri-polar output voltages and not only trap-floating voltages, and in the end led to one of my first broken Behlke switches.
+At the time, we assumed HV issues, or perhaps that the bump was essential for transverse focusing, but the idea of loaded molecules actually existing as \fm3 during loading never occurred to us.
+With regards to \fm3 molecules, the extra switching events and extra flight time with varying magnetic field and no electric field out in front of the magnets where the extra bump is created could lead to those molecules being transferred to various other sublevels.
+This would reduce the flux of \fm3 molecules through the trap center to then spin-flip into trapped \f3 molecules.
+
+\figdave{multistageloading.png}{Multi-pulse Loading in the Ring trap}{Breaking up the loading pulse into an extra slowing pulse followed by loading only leads to a reduction in trapped molecules.}{10cm}
+
+
 \section{Pin Trap}
 
 Originally motivated by an attempt to repeat the electric field inelastic collisions reported in~\cite{Stuhl2013} in the tricycle trap, it was discovered that electric field induced single particle loss via spin-flips were in fact a dominant mechanism, overwhelming an effect attributable to inelastic collisions.
@@ -434,7 +447,7 @@ We perform these integrations for OH over the velocity distribution in a $2\text
 3000 	& 1000 	& 19 		& 1600 	& 2000 	& Polarizing \\
 \hline\hline
 \end{tabular*}
-\caption{
+\caption[E-field Enhanced Loss Rates]{
 Enhancements ($\eta$) and loss rates ($\gamma$) for OH with typical applied fields.
 Zero field values are equivalent to traditional spin-flip loss.
 Electric field is required during evaporation and spectroscopy to open avoided crossings~\cite{Stuhl2012evap,Stuhl2012uwave}, or applied to polarize the molecules and study collisions~\cite{Stuhl2013}.
@@ -652,10 +665,16 @@ The comparison is nearly identical, which is especially remarkable given that I 
 Instead I use a spline to represent the potential.
 This is described further in my publicly available code repository~\footnote{\href{https://github.com/dreens/ofli-OH-trapping}{Chaos Indicator Codebase}}.
 
-\begin{figure}
+\figdave{chaosproof.png}{Chaos Indicator Benchmarking.}{The chaos indicator $\text{OFLI}_{TT}^2$ nicely reproduced with a spline-based computational tool, compare with~\citep[Fig.~5b]{Gonzalez-Ferez2014}}{8cm}
+
+\begin{figure}[t!]
 \centering
-\includegraphics[width=11.4cm]{pin0p25xy.png}\hspace{4.5mm}\includegraphics[width=3cm]{pin0p75xy.png}\\
-\vspace{1mm}\includegraphics[width=6.5cm]{pin0p5xy.png}\includegraphics[width=8.4cm]{pin0p5yz.png}\\%pin0p75xy.png
+\includegraphics[width=11.4cm]{pin0p25xy.png}\hspace{4.5mm}
+\includegraphics[width=3cm]{pin0p75xy.png}\\
+\vspace{1mm}
+\includegraphics[width=6.5cm]{pin0p5xy.png}
+\includegraphics[width=8.4cm]{pin0p5yz.png}\\
+%pin0p75xy.png
 \caption[Chaos Indicators in the Pin Trap]{Chaos indicator $\text{OFLI}_{TT}^2$ is evaluated for trajectories beginning in the pin trap. Several islands of stability are engulfed within seas of chaos. Chaotic trajectories red, periodic blue, quasi-periodic green. The latter two vary on a color gradient. (a) $1.94$~mm wide, all panels to the same scale. Energies in this panel are $7.5$~GHz above trap minimum. Trajectories begin in the $x-y$ plane with velocity in the $z$ direction and normal to this plane. (b) $2.5$~GHz, $x-y$ plane. (c) $5$~GHz, $x-y$ plane. (d) $5$~GHz, $y-z$ plane. }
 \label{pinchaos}
 \end{figure}
@@ -753,13 +772,15 @@ This will require a highly miniaturized magnetic field probe of some kind.
 
 One potentially exciting capability of our new lengthier decelerator system and advanced field distributions would be to apply it to a less Stark responsive molecule such as water~\citep[Sec.~2.4]{VanDeMeerakker2006thesis}.
 The precise feasibility depends on just how slow the beam is when produced in Xenon in an Even-Lavie valve, which may be worth investigating in the near term.
+Some very relevant guiding work should prove a useful starting ground~\cite{Motsch2009}.
 An electrostatic quadrupole trap would be most feasible, and this could be achieved in a very similar system to the one currently planned for the Cryocycle, but with magnet-less electrodes.
+It is best to have at least the rear electrode bend inwards towards the others, as in this electrostatic trap~\cite{Veldhoven2006}.
 The final pins of the decelerator can form one electrode of the quadrupole, which would then require an additional ring and endcap electrode.
 Detection could be performed with some sort of REMPI scheme, but for initial tests of decelerability the RGA may suffice.
 
-\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
-\bibliography{allrefs}		% Bib database in "allrefs.bib"
-\end{document}
+%\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+%\bibliography{allrefs}		% Bib database in "allrefs.bib"
+%\end{document}
 
 
 
