@@ -1,32 +1,5 @@
 \ifx\justbeingincluded\undefined
-\documentclass[defaultstyle,11pt]{thesis}
-\usepackage{amssymb}		% to get all AMS symbols
-\usepackage{amsmath}		% to get equations to work right
-\usepackage{graphicx}		% to insert figures
-\graphicspath{{../}{Focusing/}}
-\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
-\usepackage{natbib}
-\usepackage{caption}
-\setcitestyle{numbers,square,comma}
-\usepackage[usenames,dvipsnames]{color}
-%% To make \href colors more decent:
-\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
-\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
-  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
-}
-\renewcommand{\thefootnote}{\alph{footnote}}	
-\title{a}
-\abstract{a}
-\author{a}{a}
-\otherdegrees{a}
-\degree{a}{a}
-\dept{a}{a}
-\advisor{a}{a}
-\reader{a}
-\readerThree{a}
-\SuspendPrologue
-\begin{document}
-\input macros
+\input chappreamble.tex
 \fi
 
 \chapter{Hexapole Focusing}
@@ -40,28 +13,31 @@ To understand the action and possible usefulness of a hexapole, it is essential 
 By phase space I simply mean the two dimensional space spanned by the position of molecules in the ensemble on one axis and their velocity on the other.
 Technically speaking phase space ought to refer to the position-momentum space, but for SI units and for our very light particles velocity makes much more sense.
 The usefulness of working in phase space stems from the straightforward correlation between the various transformations that may be applied to the ensemble and how they are manifested in phase space, as is summed up in Tab.~\ref{phasespacetable}.
+Free propagation results in molecules with larger velocity coordinate
 
-\renewcommand{\arraystretch}{1.5}
+\newcommand{\littlefig}[1]{\vspace{-3mm}\newline\includegraphics[clip,trim=1.5cm 2cm 1.2cm 1.7cm,width=3cm]{#1}\vspace{-1mm}}
+\renewcommand{\arraystretch}{1}
 \begin{table}[t!]
 \centering
-\caption{
-The Ye Group Molecule trapping endeavor.\label{trappingtable}
+\caption[Phase Space Manipulations]{
+Phase space manipulations are described and visualized. Velocity is the vertical axis, Position the horizontal. Gray shows the ensemble before the action, black afterwards. The first four actions are applied subsequently, the last two are applied directly after initialization.\label{trappingtable}
 }
 \label{tab:rates}
-\begin{tabular}{ L{2.5cm} | C{4.5cm} C{2.5cm} C{4.5cm} }
+\begin{tabular}{ C{5cm} | C{6cm} | C{5cm} }
 Action & Effect & Visualization \\
 \hline\hline
-Initialization & Some Approximately Gaussian Distribution 	& \includegraphics{} 	 \\
+Initialization 			& Some Approximately Gaussian Distribution 	& \littlefig{PSM1.png} 	 \\
 \hline
-Free Propagation 	& Upper region to the right, vice versa				& 100 	\\
+Free Propagation 		& Upper region to the right, vice versa		& \littlefig{PSM2.png} 	 \\
 \hline
-Ring 		& Above, but new mounts				& 100 	\\
+Hexapole Focusing 		& Clockwise Rotation					& \littlefig{PSM3.png} 	 \\
 \hline
-Tricycle 	& Magnetic Quadrupole 				& 300 	\\
+Additional Free Propagation	 	& Spatial Density Revival 					& \littlefig{PSM4.png} 	 \\
 \hline
-Pin  		& 2D Magnetic and Electric Quadrupoles 	& 500 	\\
+Free + Hex + Long Free   	& Velocity Compression 					& \littlefig{PSM5.png} 	 \\
 \hline
-Cryocycle 	& Magnetic Quadupole 				& 200 	\\
+Free + Hex + Short Free 	& Spatial Compression 					& \littlefig{PSM6.png} 	 \\
+\hline
 \end{tabular}
 \end{table}
 
