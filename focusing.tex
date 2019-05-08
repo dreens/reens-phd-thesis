@@ -1,9 +1,94 @@
-\chapter{Strenuous Exertion}
+\ifx\justbeingincluded\undefined
+\documentclass[defaultstyle,11pt]{thesis}
+\usepackage{amssymb}		% to get all AMS symbols
+\usepackage{amsmath}		% to get equations to work right
+\usepackage{graphicx}		% to insert figures
+\graphicspath{{../}{Focusing/}}
+\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
+\usepackage{natbib}
+\usepackage{caption}
+\setcitestyle{numbers,square,comma}
+\usepackage[usenames,dvipsnames]{color}
+%% To make \href colors more decent:
+\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
+\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
+  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
+}
+\renewcommand{\thefootnote}{\alph{footnote}}	
+\title{a}
+\abstract{a}
+\author{a}{a}
+\otherdegrees{a}
+\degree{a}{a}
+\dept{a}{a}
+\advisor{a}{a}
+\reader{a}
+\readerThree{a}
+\SuspendPrologue
+\begin{document}
+\input macros
+\fi
+
+\chapter{Hexapole Focusing}
+\label{chapter:hex}
 
 And it came to pass that all those molecules who contrived to survive the great segregation described in the previous chapter, were set about a grueling and strenuous exertion of the mental faculties. Indeed, the focus requested of them was of such a severity as to literally bend their wills and their trajectories. And in more modern terminology, the subject of this chapter is the focusing of molecular beams for optimized coupling between their source and any further scientific requirements downstream.
 
 \section{Phase Space Matching}
 
+To understand the action and possible usefulness of a hexapole, it is essential to become familiar with thinking and working in phase space.
+By phase space I simply mean the two dimensional space spanned by the position of molecules in the ensemble on one axis and their velocity on the other.
+Technically speaking phase space ought to refer to the position-momentum space, but for SI units and for our very light particles velocity makes much more sense.
+The usefulness of working in phase space stems from the straightforward correlation between the various transformations that may be applied to the ensemble and how they are manifested in phase space, as is summed up in Tab.~\ref{phasespacetable}.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[t!]
+\centering
+\caption{
+The Ye Group Molecule trapping endeavor.\label{trappingtable}
+}
+\label{tab:rates}
+\begin{tabular}{ L{2.5cm} | C{4.5cm} C{2.5cm} C{4.5cm} }
+Action & Effect & Visualization \\
+\hline\hline
+Initialization & Some Approximately Gaussian Distribution 	& \includegraphics{} 	 \\
+\hline
+Free Propagation 	& Upper region to the right, vice versa				& 100 	\\
+\hline
+Ring 		& Above, but new mounts				& 100 	\\
+\hline
+Tricycle 	& Magnetic Quadrupole 				& 300 	\\
+\hline
+Pin  		& 2D Magnetic and Electric Quadrupoles 	& 500 	\\
+\hline
+Cryocycle 	& Magnetic Quadupole 				& 200 	\\
+\end{tabular}
+\end{table}
+
+
 \section{History}
 
 \section{Modernity}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\ifx\justbeingincluded\undefined
+\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+\bibliography{allrefs}		% Bib database in "allrefs.bib"
+\end{document}
+\fi

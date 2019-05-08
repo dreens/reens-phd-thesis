@@ -1,36 +1,37 @@
-%\documentclass[defaultstyle,11pt]{thesis}
-%
-%\usepackage{amssymb}		% to get all AMS symbols
-%\usepackage{amsmath}		% to get equations to work right
-%\usepackage{graphicx}		% to insert figures
-%\graphicspath{{../}{Trap/}}
-%\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
-%\usepackage{natbib}
-%\usepackage{array}
-%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-%\usepackage{caption}
-%\setcitestyle{numbers,square,comma}
-%\usepackage[usenames,dvipsnames]{color}
-%%% To make \href colors more decent:
-%\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
-%\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
-%  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
-%}
-%\renewcommand{\thefootnote}{\alph{footnote}}	
-%\title{a}
-%\abstract{a}
-%\author{a}{a}
-%\otherdegrees{a}
-%\degree{a}{a}
-%\dept{a}{a}
-%\advisor{a}{a}
-%\reader{a}
-%\readerThree{a}
-%\SuspendPrologue
-%\begin{document}
-%\input macros.tex
+\ifx\justbeingincluded\undefined
+\documentclass[defaultstyle,11pt]{thesis}
+\usepackage{amssymb}		% to get all AMS symbols
+\usepackage{amsmath}		% to get equations to work right
+\usepackage{graphicx}		% to insert figures
+\graphicspath{{../}{Trap/}}
+\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
+\usepackage{natbib}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{caption}
+\setcitestyle{numbers,square,comma}
+\usepackage[usenames,dvipsnames]{color}
+%% To make \href colors more decent:
+\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
+\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
+  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
+}
+\renewcommand{\thefootnote}{\alph{footnote}}	
+\title{a}
+\abstract{a}
+\author{a}{a}
+\otherdegrees{a}
+\degree{a}{a}
+\dept{a}{a}
+\advisor{a}{a}
+\reader{a}
+\readerThree{a}
+\SuspendPrologue
+\begin{document}
+\input macros.tex
+\fi
 
 \chapter{Molecular Trapping}
 
@@ -42,6 +43,13 @@ In this chapter we focus on OH molecules, whose strong Stark shift to mass ratio
 %% SECTION HISTORY OF OH TRAPS
 %% SECTION HISTORY OF OH TRAPS
 \section{History of OH traps}
+
+The history of OH trapping in the Ye group has grown substantial enough to warrant a tabular environment~\ref{trappingtable}. 
+Each attempt has brought new challenges and experiences, and steady progress has been made in a number of key areas.
+The Magnetoelectrostatic Trap (MET) installed during Brian Sawyer's time~\cite{Sawyer2007} was a heroic first attempt that included a few-turn magnetic coil run at a startling $1400$~A, and $2000$~A briefly during loading.
+Later it was decided to trade the role of the fields used for loading, and great gains in magnetic field strength and simplicity were attained by switching to permanent magnets with the ``Ring'' trap~\cite{Sawyer2011}.
+A key improvement occurred when it was discovered that patch charges on the Ultem mounts originally used for affixing the magnetic trap to the Stark decelerator could have a significant impact on spectroscopic efforts~\citep[Fig.~6]{Stuhl2012uwave}.
+This was addressed by designing primarily stainless steel mounts, so that molecules only had line of sight to grounded conductors, although still with insulators installed between the decelerator and trap but relocated elsewhere.
 
 %Trap History Table
 \renewcommand{\arraystretch}{1.5}
@@ -68,12 +76,6 @@ Cryocycle 	& Magnetic Quadupole 				& 200 	& Lifetime, Fluorescence Enhancements
 \end{tabular}
 \end{table}
 
-The history of OH trapping in the Ye group has grown substantial enough to warrant a tabular environment~\ref{trappingtable}. 
-Each attempt has brought new challenges and experiences, and steady progress has been made in a number of key areas.
-The Magnetoelectrostatic Trap (MET) installed during Brian Sawyer's time~\cite{Sawyer2007} was a heroic first attempt that included a few-turn magnetic coil run at a startling $1400$~A, and $2000$~A briefly during loading.
-Later it was decided to trade the role of the fields used for loading, and great gains in magnetic field strength and simplicity were attained by switching to permanent magnets with the ``Ring'' trap~\cite{Sawyer2011}.
-A key improvement occurred when it was discovered that patch charges on the Ultem mounts originally used for affixing the magnetic trap to the Stark decelerator could have a significant impact on spectroscopic efforts~\citep[Fig.~6]{Stuhl2012uwave}.
-This was addressed by designing primarily stainless steel mounts, so that molecules only had line of sight to grounded conductors, although still with insulators installed between the decelerator and trap but relocated elsewhere.
 
 % SECTION TRICYCLE OVER RING TRAP
 % SECTION TRICYCLE OVER RING TRAP
@@ -707,11 +709,53 @@ Neodymium magnets reversibly demagnetize to $70\%$ of their room temperature str
 I was able to coordinate the manufacture of these for our application\footnote{\href{https://www.vacuumschmelze.com}{Vacuumschmelze} manufactures these and has a US distribution team based in Kentucky. Thanks to Ed Narevicius for the referral. Grade 131 TP and 131 DTP.}.
 
 An effort was undertaken to more systematically study the variation of the performance of the system as far as various dimensions are concerned.
+For each parameter of interest, the fields were exported to a MATLAB based deceleration, trap-loading, and trapping simulation to study their effectiveness.
+The results can be seen in Tab.~\ref{optimizecryo}, and the final selected dimensions in Tab.~\ref{finalchoices}.
 A tricycle style was selected, though with a bit of a reduction in gradient.
 Radiusing the rear electrode was considered, as well as variations in the thickness of extra surfaces designed to cover the imperfect surfaces of the magnets.
 In all cases, deceleration and loading dynamics were included, with the exception of \fm3 effects.
 I have only once made an attempt at including these effects, for the sake of more precisely fitting the escape dynamics of molecules in the tricycle trap with extra electric field turn-on events, described further in Chap.~\ref{chapter:collisions}.
 The final selected geometry is shown in Fig.~\ref{cryocycle.png}, and is dubbed the Cryocycle.
+
+\renewcommand{\arraystretch}{1}
+\begin{table}[t!]
+\centering
+\caption[Optimization Table for the Cryocycle Trap]{
+Various design parameters are studied in a loading and trapping simulation in order to make the best selection. Loading is specified as a triplet of voltage labels, which apply to the last pins, the front magnet, and the rear magnet respectively.\label{optimizecryo}
+}
+\label{tab:rates}
+\begin{tabular}{ L{1.5cm} | L{12cm} L{1.5cm} L{1.5cm} }
+Name & Description & N & T \\
+\hline\hline
+Cryo1 	& 1 mm Front Magnet Thickness, +G- loading, 1~mm hole curvature 		& 3151 	& 30\\
+\hline
+Cryo2 	& 2 mm Front Magnet Thickness, +-+ loading, 1.25~mm hole curvature		& 5007 	& 45\\
+\hline
+Cryo3	& Change Rear Magnet to NdFeB, +G- loading							& 4422 	& 41\\
+\hline
+Cryo4 	& +-+ loading, 0.6~mm hole curvature 								& 3961 	& 40\\
+\hline
+Cryo5  	& 1.5~mm hole curvature, center hole from 2.5 to 2~mm 					& 4430	& 40\\
+\hline
+Cryo6 	& 0.6~mm hole curvature, center hole 4~mm			 				& 4655	& 41\\
+\hline
+Cryo7 	& Remove Rear Cover			 								& 4058	& 42\\
+\hline
+Cryo8 	& Use 28 kV loading fields			 								& 4341	& 43\\
+\hline
+Cryo9 	& Rear Cover Protrusion			 								& 2739	& 35\\
+\hline
+Cryo10 	& Back to Cryo6, but finer mesh			 						& 4720	& 41\\
+\hline
+Cryo11 	& Try +G- again				 								& 4145	& 41\\
+\hline
+Cryo12 	& Back to +-+. Rear radii to 7~mm from 10~mm						& 4612	& 41\\
+\hline
+Cryo13 	& Front magnet OD to 16~mm from 25~mm							& 4620	& 41\\
+\hline
+Cryo14 	& Rear radii back to 10~mm			 							& 4710	& 42\\
+\end{tabular}
+\end{table}
 
 \figdave{cryocycle.png}{Cryocycle Field Distributions}{Relevant information for the Cryocycle trap under manufacture at the time of this writing. (a) Magnetic field magnitude, $500$~G per contour, trap depth of $\sim2200$~G transversely. (b) Electric field magnitude during loading. $10$~kV/cm per contour. Curved rear surface acts to extend the region of steep trapping slope further towards the rear magnet relative to the Tricycle trap, see Fig.~\ref{NearFieldUWave.png}a. (c) Raytrace performed in COMSOL Multiphysics for determining collection solid angle close to $4$~sr for the Cryocycle.}{\linewidth}
 
@@ -779,10 +823,11 @@ It is best to have at least the rear electrode bend inwards towards the others, 
 The final pins of the decelerator can form one electrode of the quadrupole, which would then require an additional ring and endcap electrode.
 Detection could be performed with some sort of REMPI scheme, but for initial tests of decelerability the RGA may suffice.
 
-%\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
-%\bibliography{allrefs}		% Bib database in "allrefs.bib"
-%\end{document}
-
+\ifx\justbeingincluded\undefined
+\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+\bibliography{allrefs}		% Bib database in "allrefs.bib"
+\end{document}
+\fi
 
 
 
