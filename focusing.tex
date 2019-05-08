@@ -13,22 +13,39 @@ To understand the action and possible usefulness of a hexapole, it is essential 
 By phase space I simply mean the two dimensional space spanned by the position of molecules in the ensemble on one axis and their velocity on the other.
 Technically speaking phase space ought to refer to the position-momentum space, but for SI units and for our very light particles velocity makes much more sense.
 The usefulness of working in phase space stems from the straightforward correlation between the various transformations that may be applied to the ensemble and how they are manifested in phase space, as is summed up in Tab.~\ref{phasespacetable}.
-Free propagation results in molecules with larger velocity coordinate
+Free propagation results in molecules with larger velocity coordinate deviating towards larger spatial coordinate, and vice versa.
+I always work in the frame of reference of the ensemble, so that the centroid of the initial ensemble is assigned the $(0,0)$ coordinate.
+The action of a hexapole is to create a spring-like harmonic restoring force in the transverse directions, in which case it may be proven that motion in phase space is circular, provided the velocity axis is scaled by the angular frequency of the harmonic restoring force into spatial units: $v` = v/\omega$.
+Beginning with the spring-like restoring force:
+\begin{equation}
+\ddot{x} = -kx/m_\text{OH} = -\omega^2x,
+\end{equation}
+and obtaining the solution for the position and velocity under simple harmonic motion:
+\begin{equation}
+x(t) = \sin(\omega t + \phi),\qquad v(t) =\dot{x}(t) = \omega\cos(\omega t + \phi).
+\end{equation}
+If we now scale the velocity units by $\omega$, we obtain:
+\begin{equation}
+\biggl(x(t)\biggr)^2 + \left(\frac{v(t)}{\omega}\right)^2\quad = \quad\sin^2(\omega t + \phi) + \cos^2(\omega t + \phi)\quad =\quad 1.
+\end{equation}
+By appropriately choosing the frequency of the hexapole and the length of time spent within, it is possible to prepare the ensemble for a revival of the initial distribution after some additional free propagation afterwards, see the third and fourth rows of Tab.~\ref{phasespacetable}.
 
 \newcommand{\littlefig}[1]{\vspace{-3mm}\newline\includegraphics[clip,trim=1.5cm 2cm 1.2cm 1.7cm,width=3cm]{#1}\vspace{-1mm}}
 \renewcommand{\arraystretch}{1}
 \begin{table}[t!]
 \centering
 \caption[Phase Space Manipulations]{
-Phase space manipulations are described and visualized. Velocity is the vertical axis, Position the horizontal. Gray shows the ensemble before the action, black afterwards. The first four actions are applied subsequently, the last two are applied directly after initialization.\label{trappingtable}
-}
-\label{tab:rates}
-\begin{tabular}{ C{5cm} | C{6cm} | C{5cm} }
+Phase space manipulations are described and visualized. 
+Velocity is the vertical axis, Position the horizontal. 
+Gray shows the ensemble before the action, black afterwards. 
+The first four actions are applied subsequently, the last two are applied directly after initialization.
+\label{phasespacetable}}
+\begin{tabular}{ C{5cm} | C{5.5cm} | C{4.5cm} }
 Action & Effect & Visualization \\
 \hline\hline
-Initialization 			& Some Approximately Gaussian Distribution 	& \littlefig{PSM1.png} 	 \\
+Initialization 			& Some approximately Gaussian Distribution 	& \littlefig{PSM1.png} 	 \\
 \hline
-Free Propagation 		& Upper region to the right, vice versa		& \littlefig{PSM2.png} 	 \\
+Free Propagation 		& Upper Region to Right, Lower to Left		& \littlefig{PSM2.png} 	 \\
 \hline
 Hexapole Focusing 		& Clockwise Rotation					& \littlefig{PSM3.png} 	 \\
 \hline
@@ -41,8 +58,53 @@ Free + Hex + Short Free 	& Spatial Compression 					& \littlefig{PSM6.png} 	 \\
 \end{tabular}
 \end{table}
 
+Furthermore, it is possible to engineer the applications of hexapole rotation and free flights to achieve compression along one axis, accopmanied by density preserving dilation in the opposite axis.
+These results parallel the magnification or demagnification of an image achieved by a lens between an image and object plane depending on whether the lens is positioned closer to the image or the object plane.
+One key distinction however between the behavior of an optical lens and that of a hexapolar lens is that the latter is almost never operated in the short-lens regime, which has a significant impact on how one thinks about its behavior.
+Molecules are often rapidly transiting a hexapole in the longitudinal direction, which means that the device needs to be long in order to apply the desired rotation of the transverse phase space.
+By carefully following an ABCD matrix approach, instead of a simple lens-maker equation for the locations of image and object planes, we obtain~\citep[Eq.~9]{Kirste2013}:
+\begin{equation}
+L_3 = \frac{L_1+\frac{1}{\kappa}\tan(\kappa L_2)}{L_1\kappa\tan(\kappa L_2)-1},
+\end{equation}
+where $\kappa=\omega/v$ is an inverse length unit directly related to the hexapole strength and inversely to the beam speed, and the $L_i$ are as described in Fig.~\ref{hexdefinitions.png}.
+In the limit of small $L_2$, this equation can be reduced to something more familiar.
+First, using $\tan(x)\sim x$,
+\begin{equation}
+L_3 = \frac{L_1+L_2}{L_1L_2\kappa^2-1}= \frac{L_1}{L_1L_2\kappa^2-1},
+\end{equation}
+and now inverting,
+\begin{equation}
+\frac{1}{L_3} = L_2\kappa^2 - \frac{1}{L_1},
+\end{equation}
+so that for $f_H=1/L_2\kappa^2$ we recover the lensmaker formula:
+\begin{equation}
+\frac{1}{L_1}+\frac{1}{L_3}=\frac{1}{f_H}.
+\end{equation}
+This focal length has the dependences we would expect, since it reduces (i.e. the lens strengthens) with larger $L_2$ or with larger $\omega$.
+
+\figdave{hexdefinitions.png}{Hexapole Focusing Variables}{Sample trajectories of molecules focused by a hexapole of length $L_2$ after traveling $L_1$ to arrive and an additional $L_3$ afterwards.}{12cm}
+
+This compression of velocity and dilation of position or vice versa is what is known as phase space matching, and is in principle useful for optimizing the transfer of molecules in an ensemble between a source and a device, or between devices.
+To flesh this out a bit further, all the devices worked with in the laboratory can be characterized by a phase space acceptance, in principal a six dimensional region but in practice only ever considered two dimensions at a time.
+The phase space acceptance typical of the Stark decelerator for example is indicated in Fig.~\ref{phasespaceexamp.png}, and discussed further in Chap.~\ref{chapter:slowing}.
+Unfortunately the phase space generated by a supersonic expansion is rather difficult to ascertain, as discussed previously in Chapt.~\ref{chapter:sourcing}.
+One thing which can be said for certain however is that the initial transverse velocity width generated by the supersonic expansion is much larger relative to anything else in the experiment.
+This follows from simple intuition as the supersonic expansion only generates a mildly directed beam, which therefore expands significantly transversely away from the valve.
+Projected onto transverse phase space, such an ensemble should have a variation of transverse velocity that is on the same order as the forward velocity of the beam, i.e. hundreds of m/s, compared with tens of m/s for the typical depths of devices made with laboratory electric fields.
+Nonetheless, the valve may still generate a distribution that is quite narrow in its initial transverse spatial spread.
+If the initial distribution is narrower spatially than the $2$~mm of the decelerator, there will be opportunities for an improved loading of the decelerator with appropriate magnification of the device designed to compress velocity and dilate position as in row 5 of Tab.~\ref{phasespacetable}.
+
+\figdave{phasespaceexamp.png}{Transverse Phase Space Acceptance Examples}{Transverse phase space acceptance of a Stark decelerator operated in various modes. Each mode has a different characteristic ratio of velocity width to spatial width. Some colors are hard to perceive, but all have a width close to $2$~mm and varying heights between $10$ and $30$~m/s.}{10cm}
 
 \section{History}
+
+In the first generation of the experiment, a $5$~cm hexapole was employed and successfully enhanced the molecule number just afterwards by as much as a factor of $16$~\citep[Fig.~6]{Bochinski2004}.
+What is less clear however is whether this enhancement really exceeds what could have been had by simply mounting the decelerator closer to the valve and skipping the hexapole entirely.
+By the time Hao and I were running the second generation of the experiment~\cite{Sawyer2007}, the hexapole was only providing a $17\%$ effect, as shown in Fig.~\ref{nohexeffect.png}.
+I can find no earlier record of the performance of this hexapole, so it is difficult to say whether this observation of no effect with the voltage on/off stems from some HV issue that developed later, from transition between Jordan and PZT valves, or some other effect.
+In any case, it seems reasonable to expect that in the presence of clogging effects, 
+
+\figdave{nohexeffect.png}{No Hexapole Effect in Generation Two}{Three traces showing OH population after bunching with the hexapole set at different voltages. A scant $17\%$ effect is observed.}{14cm}
 
 \section{Modernity}
 
