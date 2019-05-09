@@ -141,7 +141,7 @@ These sapphire tubes would in turn sit within a copper block, for maximal therma
 The fields generated in the planned configuration at its intended voltages are shown in Fig.~\ref{hex1fields.png}.
 In panel (a), note how the fields inside the sapphire are particularly small, a byproduct of its large dielectric constant close to $11$.
 In panel (b), the electric fields along two axes are shown, one through the electrodes and the other between them.
-A quadratic guiding curve is also shown, which correspends to an angular trapping frequency for OH radicals of $\omega=20.6$~kHz.
+A quadratic guiding curve is also shown, which corresponds to an angular trapping frequency for OH radicals of $\omega=20.6$~kHz.
 
 \figdave{hex1fields.png}{Electric Fields in Hexapole 1}{(a) Electric field magnitudes and geometric size of the first generation hexapole, composed of 1/16" steel electrodes mounted within 1/8" sapphire tubes mounted within a 1" copper block. Note how the fields inside the sapphire are particularly small, a byproduct of its large dielectric constant close to $11$. (b) Field Strength (also kV/cm) verse distance off axis along various axes as described in the main text.}{\linewidth}
 
@@ -149,8 +149,27 @@ This all of course requires patterning of a honeycomb-like structure on the insi
 Electric discharges between the wire and the metal being cut cause material to be removed, and the wire is constantly fed so as to avoid its disintegration.
 This was achieved according to our specifications without any hitches by the CIRES shop, a shop located at the time of this writing in the chemistry department at CU.
 
+Some of the thermal considerations pertinent to the design are illustrated in Fig.~\ref{hex1heatloads.png}.
+The final mechanical design differs slightly from what is shown in this figure, but the thermal considerations remain the same.
+The large copper block within which the hexapole sits has a skimmer affixed to the front and an aperture to the back, and a large clamp-like structure conveys sufficient thermal conductivity without requiring Indium solder.
+The emissivities guessed for the surfaces shown in panel (b) of Fig.~\ref{hex1heatloads.png} turned out to be optimistic, perhaps because they were approximate room temperature emissivities and not cryogenic, or maybe due to adsorbed gas layers further increasing emissivities.
 A key challenge of the design pertains to how voltage is to be fed into the electrodes located inside the sapphire tubes.
-A few iterations were made on the design before this was achieved with acceptable surface pathlength reduction and suitable mechanical rigidity.
+A few iterations were made on the design before this was achieved with acceptable surface path-length reduction and suitable mechanical rigidity.
+The HV distribution rings visible in Fig.~\ref{hex1heatloads.png} ended up having too much flexibility on their own, so plastic Ultem cuffs were glued directly onto the Sapphire rods, simultaneously increasing surface path length for arcs and adding the required rigidity.
+
+\figdave{hex1heatloads.png}{Heat Conduction and Radiative Loads for Cryo-Hex 1}{(a) Conduction of thermal joints in W/$^\circ$K. In the final design, two braids were used, for a total conductivity closer likely above 1 W/K. (b) Radiative heat loads on exposed surfaces in mW.}{\linewidth}
+
+An additional consideration for the hexapole is the matter of its alignment with the beamline.
+There are two primary ways that satisfactory alignment may be obtained:
+\begin{enumerate}
+\item Contrive a way for alignment to be tweaked from outside of the vacuum chamber, so that final alignment may be guided by actual system figures of merit such as molecule yield after the hexapole. \label{hexitem1}
+\item Provide in-vacuum fine-adjust knobs only, and engineer a protocol by which alignment may be obtained before pump-down, and not subsequently lost during either pump-down or cool-down. \label{hexitem2}
+\end{enumerate}
+Strategy~(\ref{hexitem1}) was employed for our cryogenic skimming work as described previously in Chap.~\ref{chapter:segregation}, but was deemed insufficient for this hexapole work, primarily due to unavailability of the requisite degrees of freedom.
+Unlike the skimmer, which only really requires two translational degrees of freedom in order to achieve beam alignment, the hexapole has four alignment parameters, and potentially five depending on whether it is desirable to translate the device along the beam.
+There seemed no straightforward way to achieve this across the vacuum envelope, especially given how far above the hexapole the tuning bellows sits.
+
+
 
 \subsection{Cryogenic Hexapole 2}
 
