@@ -5,7 +5,7 @@
 \chapter{Hexapole Focusing}
 \label{chapter:hex}
 
-And it came to pass that all those molecules who contrived to survive the great segregation described in the previous chapter, were set about a grueling and strenuous exertion of the mental faculties. Indeed, the focus requested of them was of such a severity as to literally bend their wills and their trajectories. And in more modern terminology, the subject of this chapter is the focusing of molecular beams for optimized coupling between their source and any further scientific requirements downstream.
+And it came to pass that all those molecules who contrived to survive the great segregation described in the previous chapter, were set about a grueling and strenuous exertion of the mental faculties. Indeed, the focus requested of them was of such a severity as to literally bend their wills and their trajectories. And in more modern terminology, the subject of this chapter is the focusing of molecular beams for optimized coupling between their source and any ensuing scientific apparatus.
 
 \section{Phase Space Matching}
 
@@ -58,7 +58,7 @@ Free + Hex + Short Free 	& Spatial Compression 					& \littlefig{PSM6.png} 	 \\
 \end{tabular}
 \end{table}
 
-Furthermore, it is possible to engineer the applications of hexapole rotation and free flights to achieve compression along one axis, accopmanied by density preserving dilation in the opposite axis.
+Furthermore, it is possible to engineer the applications of hexapole rotation and free flights to achieve compression along one axis, accompanied by density preserving dilation in the opposite axis.
 These results parallel the magnification or demagnification of an image achieved by a lens between an image and object plane depending on whether the lens is positioned closer to the image or the object plane.
 One key distinction however between the behavior of an optical lens and that of a hexapolar lens is that the latter is almost never operated in the short-lens regime, which has a significant impact on how one thinks about its behavior.
 Molecules are often rapidly transiting a hexapole in the longitudinal direction, which means that the device needs to be long in order to apply the desired rotation of the transverse phase space.
@@ -101,14 +101,62 @@ If the initial distribution is narrower spatially than the $2$~mm of the deceler
 In the first generation of the experiment, a $5$~cm hexapole was employed and successfully enhanced the molecule number just afterwards by as much as a factor of $16$~\citep[Fig.~6]{Bochinski2004}.
 What is less clear however is whether this enhancement really exceeds what could have been had by simply mounting the decelerator closer to the valve and skipping the hexapole entirely.
 By the time Hao and I were running the second generation of the experiment~\cite{Sawyer2007}, the hexapole was only providing a $17\%$ effect, as shown in Fig.~\ref{nohexeffect.png}.
-I can find no earlier record of the performance of this hexapole, so it is difficult to say whether this observation of no effect with the voltage on/off stems from some HV issue that developed later, from transition between Jordan and PZT valves, or some other effect.
-In any case, it seems reasonable to expect that in the presence of clogging effects, 
+I can find no earlier record of the performance of this hexapole, so it is difficult to say whether this observation of no effect with the voltage on/off stems from some HV issue that developed later, from transition between Jordan and PZT valves, or an alignment issue or some other effect.
 
 \figdave{nohexeffect.png}{No Hexapole Effect in Generation Two}{Three traces showing OH population after bunching with the hexapole set at different voltages. A scant $17\%$ effect is observed.}{14cm}
 
+If it is indeed the case that the hexapole in the second generation decelerator never had a significant effect, there are a few possible explanations.
+One relates to the influence of skimmer clogging, which can alter the trajectories of molecules so that they appear to have originated from the skimmer tip.
+The skimmer tip is too close to the hexapole relative to its focal length for it to have much influence, hence the observation of little effect.
+Another possibility is that the initial distribution of molecules in transverse phase space is simply much larger than the phase space acceptance of the decelerator, so that even with no hexapole and pure free propagation, the initial distribution still thoroughly overlaps the acceptance of the decelerator.
+This explanation would even jive with the observed influence of the hexapole in~\citep[Fig.~6]{Bochinski2004}, since that observation was made with a detector directly after the hexapole.
+This detector could have observed a legitimate hexapole induced spatial density enhancement, but entirely composed of molecules with transverse velocities above the threshold for decelerator acceptance.
+
+
 \section{Modernity}
 
+Against this dubious backdrop, we decided in the summer of 2018 to begin work on a new hexapole for use with the third generation decelerator.
+Our motivations were quite different however from those that motivated the poorly performing hexapole of the second generation.
+Instead of seeking to optimize coupling between the valve and decelerator, we were seeking to intentionally distance the two for the sake of reduced clogging potential, without sacrificing the gains in phase space density we had obtained by cryogenically cooling the skimmer.
+This was largely motivated by observation of significant decelerator clogging, as described previously in Chap.~\ref{chapter:segregation}.
+The new hexapole would this require cooling to cryogenic temperatures, so as to avoid the clogging observed in the decelerator.
+In a sense, one can think of the cryogenic hexapole as comparable to cryogenically cooling the decelerator, only much more practically attainable.
 
+I was able to rather quickly cycle through hexapole designs thanks to rapid manufacturing services and a well-integrated design for manufacturing approach.
+I begin by describing features common to the two and a half hexapoles tried out over the past year.
+Firstly, the obvious- a hexapole consists of six alternately charged poles, which generates close to the axis an electric field with the functional form:
+\begin{equation}
+\left|\vec{E}(r)\right| = 3V_0\left(\frac{r^2}{r_0^3}\right),
+\end{equation}
+where $V_0$ is the magnitude of the voltage to which each rod is charged, with alternating sign, and $r_0$ is the smallest radius which reaches from the axis to the surface of a pin.
+For a molecule with a linear response to the electric field, this quadratic dependence of the electric field magnitude results in a harmonic potential, with the exception of the relatively small region close to the axis where the field is too small to polarize the molecules.
+This exception causes a perturbation to the ideal focusing behavior, but is not very significant for OH~\citep[Fig.~2b]{Bochinski2004}, although more so for other species~\citep[Fig.~1]{Kirste2013}.
+Specifically, with $V_0=13$~kV and $r_0=5$~mm, which lead to the typical field strengths characteristic of our traps and decelerators, electric fields up to $100$~kV/cm are generated, compared to $3$~kV/cm for polarizing the radical.
+
+\subsection{Cryogenic Hexapole 1}
+
+My first attempt at a cryogenic hexapole design leveraged some rather complex technologies.
+Fearing the possibility of gas mediated discharge of the hexapole electrodes due to the high densities of molecules shortly after the skimmer, I planned to have the electrodes encased in sapphire tubes, so as to avoid the availability of conduction electrons at their surfaces.
+These sapphire tubes would in turn sit within a copper block, for maximal thermal conductivity, mechanical alignment, and to provide additional adsorbing surfaces for the Neon.
+The fields generated in the planned configuration at its intended voltages are shown in Fig.~\ref{hex1fields.png}.
+In panel (a), note how the fields inside the sapphire are particularly small, a byproduct of its large dielectric constant close to $11$.
+In panel (b), the electric fields along two axes are shown, one through the electrodes and the other between them.
+A quadratic guiding curve is also shown, which correspends to an angular trapping frequency for OH radicals of $\omega=20.6$~kHz.
+
+\figdave{hex1fields.png}{Electric Fields in Hexapole 1}{(a) Electric field magnitudes and geometric size of the first generation hexapole, composed of 1/16" steel electrodes mounted within 1/8" sapphire tubes mounted within a 1" copper block. Note how the fields inside the sapphire are particularly small, a byproduct of its large dielectric constant close to $11$. (b) Field Strength (also kV/cm) verse distance off axis along various axes as described in the main text.}{\linewidth}
+
+This all of course requires patterning of a honeycomb-like structure on the inside of a long copper block, something which may be readily achieved using a technique known as wire electric discharge machining, wherein a thin sacrificial wire at high voltage is used like a bandsaw blade, and is slowly moved through another metal.
+Electric discharges between the wire and the metal being cut cause material to be removed, and the wire is constantly fed so as to avoid its disintegration.
+This was achieved according to our specifications without any hitches by the CIRES shop, a shop located at the time of this writing in the chemistry department at CU.
+
+A key challenge of the design pertains to how voltage is to be fed into the electrodes located inside the sapphire tubes.
+A few iterations were made on the design before this was achieved with acceptable surface pathlength reduction and suitable mechanical rigidity.
+
+\subsection{Cryogenic Hexapole 2}
+
+\subsection{Cryogenic Hexapole 2.5}
+
+\subsection{Cryogenic Hexapole 3}
 
 
 
