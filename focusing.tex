@@ -160,7 +160,7 @@ The HV distribution rings visible in Fig.~\ref{hex1heatloads.png} ended up havin
 \figdave{hex1heatloads.png}{Heat Conduction and Radiative Loads for Cryo-Hex 1}{(a) Conduction of thermal joints in W/$^\circ$K. In the final design, two braids were used, for a total conductivity closer likely above 1 W/K. (b) Radiative heat loads on exposed surfaces in mW.}{\linewidth}
 
 An additional consideration for the hexapole is the matter of its alignment with the beamline.
-There are two primary ways that satisfactory alignment may be obtained:
+There are two primary strategies by which satisfactory alignment may be obtained:
 \begin{enumerate}
 \item Contrive a way for alignment to be tweaked from outside of the vacuum chamber, so that final alignment may be guided by actual system figures of merit such as molecule yield after the hexapole. \label{hexitem1}
 \item Provide in-vacuum fine-adjust knobs only, and engineer a protocol by which alignment may be obtained before pump-down, and not subsequently lost during either pump-down or cool-down. \label{hexitem2}
@@ -168,8 +168,30 @@ There are two primary ways that satisfactory alignment may be obtained:
 Strategy~(\ref{hexitem1}) was employed for our cryogenic skimming work as described previously in Chap.~\ref{chapter:segregation}, but was deemed insufficient for this hexapole work, primarily due to unavailability of the requisite degrees of freedom.
 Unlike the skimmer, which only really requires two translational degrees of freedom in order to achieve beam alignment, the hexapole has four alignment parameters, and potentially five depending on whether it is desirable to translate the device along the beam.
 There seemed no straightforward way to achieve this across the vacuum envelope, especially given how far above the hexapole the tuning bellows sits.
+Thus strategy~(\ref{hexitem2}) was pursued, and the problem of cool-down induced misalignment addressed via a flexible heat linkage\footnote{\href{https://www.techapps.com/}{Technology Applications Inc.}, braid P6-502. Tyler Link, at the time of this writing, is always ready to send long emails about his products, at any hour of the day. Contact him directly for a product manual.}.
 
-
+The principal challenge of utilizing a flexible heat linkage is finding a different way to achieve mechanical rigidity without violating thermal isolation.
+For this purpose, I selected Ultem (or PEI, polyetherimide), a dimensionally stable engineering thermoplastic with poor thermal conduction and good mechanical properties.
+Many polymers feature admirably low thermal conductivity, and the subject of polymer thermal conductivity is treated more fully in~\cite{Hartwig2013}, Chap.~5.
+The same selection was once made for cryostats at the RHIC~\cite{Sondericker1994}.
+In order to make estimations of the thermal conductivity for long, thin cylinders made of unfilled Ultem 1000 connected between room temperature and the cold apparatus, it is necessary to properly treat the thermal gradient which will necessarily build up within the material.
+I address this first in a very general sense.
+Suppose a material has a thermal conductivity $c(T)$ which varies with temperature $T$ and is connected as a cylindrical rod between reservoirs at temperatures $T_L$ and $T_H$.
+The total heat transfer rate, $\dot{Q}$, must be the same through every slice of the rod, neglecting radiative heat loads, and will induce a temperature change through a thin slice $dx$ of the rod of the amount
+\begin{equation}
+dT = \frac{\dot{Q}}{c(T)\cdot A / dx},
+\end{equation}
+where $A$ is the cross sectional area of the rod. Rearranging and integrating:
+\begin{equation}
+\int\limits_{T_L}^{T_H}c(T)dT=\int\limits_0^L\frac{\dot{Q}dx}{A},
+\end{equation}
+and then integrating:
+\begin{equation}
+\bar{c}\bigg|_{T_L}^{T_H} = \dot{Q}L/A,
+\end{equation}
+where $\bar{c}$ is the antiderivative of $c$.
+We may proceed using the data from~\cite{Sondericker1994} for slightly glass-filled Ultem 2100, which shows $0.04$~W/m$^\circ$K at $10\!~^\circ$K, $0.3$~W/m$^\circ$K at $3000\!~^\circ$K, and an approximately straight line on a log-log plot in between.
+This implies
 
 \subsection{Cryogenic Hexapole 2}
 
