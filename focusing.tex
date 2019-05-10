@@ -152,6 +152,25 @@ This was achieved according to our specifications without any hitches by the CIR
 Some of the thermal considerations pertinent to the design are illustrated in Fig.~\ref{hex1heatloads.png}.
 The final mechanical design differs slightly from what is shown in this figure, but the thermal considerations remain the same.
 The large copper block within which the hexapole sits has a skimmer affixed to the front and an aperture to the back, and a large clamp-like structure conveys sufficient thermal conductivity without requiring Indium solder.
+Confirming this required careful consideration of the force-dependent thermal contact between the clamp and the hexapole, and also between the braid and the clamp.
+Thermal conductivity across gold-gold and copper-copper pressure interfaces have been measured~\citep[Fig.~2.7]{Ekin2006}, and exceed grease joints above a certain pressure, see the discussion in~\citep[Sec.~2.6.4]{Ekin2006}.
+As can be observed below in Fig.~\ref{hex1view.png}, we settle for a gold-copper joint, which naively would fall somewhere between the gold-gold and copper-copper performances.
+Of course nothing is certain, see for example in~\citep[Fig.~5.8]{Hartwig2013} how mixing copper particles into epoxy can actually worsen its thermal conductivity in some temperature ranges.
+It is also important to figure out how tight the clamp should be made, so as to benefit from the pressure-dependent thermal conductivity, without irreversibly deforming the copper parts.
+I studied this using finite element analysis via Solidworks Premium Simulation package, see Fig.~\ref{hex1force.png}.
+One interesting point worth mentioning is that the geometry of the device leads to a factor of $2\pi$ hoop stress amplification, where the force between the clamp and the cylinder is actually $2\pi$ times bigger than the force applied to the bolts.
+This can be derived by conceptually dividing the geometry in half through the bolts and analyzing the static free body diagrams of each component, a standard exercise in statics.
+The conclusion is that $1000$~kg on each of two bolts would give $240$~W/\,$^\circ$K for gold-gold and $3$~W/\,$^\circ$K for copper-copper, found by taking the $10\,^\circ$K $50$~kg data in~\citep[Fig.~5.8]{Hartwig2013} and multiplying up to $12000$~kg including the hoop stress amplification.
+Of course, this brings to mind the question of validity of the linear scaling of conductivity all the way up to such large forces.
+In~\cite{Berman1956}, extremely high loads were investigated, and although their cryogenic hydraulic ram apparatus failed catastrophically during the investigation, they were able to confirm that conductivity increased $5$0-fold for forces increasing $20$-fold up to $4700$~lb, a superlinear scaling to very high forces.
+
+\figdave{hex1force}{Clamp Stress and Strain in Hexapole 1}{
+(a) Stress resulting from clamp tightening. 
+Annealed copper yields at only $70$~MPa or so, this indicates that $1000$~kg is on the upper end of what should be used on the bolts, and would accompany some yield on the edges of the block.
+(b) Strain in the vertical direction only, so as to view what happens to the clamped hexapole mounting copper rod. 
+Only $3~\mu$m radial compression is observed, small compared to the $3$~mm diameter sapphire tubes inserted into the rod.
+}{\linewidth}
+
 The emissivities guessed for the surfaces shown in panel (b) of Fig.~\ref{hex1heatloads.png} turned out to be optimistic, perhaps because they were approximate room temperature emissivities and not cryogenic, or maybe due to adsorbed gas layers further increasing emissivities.
 A key challenge of the design pertains to how voltage is to be fed into the electrodes located inside the sapphire tubes.
 A few iterations were made on the design before this was achieved with acceptable surface path-length reduction and suitable mechanical rigidity.
@@ -168,10 +187,11 @@ There are two primary strategies by which satisfactory alignment may be obtained
 Strategy~(\ref{hexitem1}) was employed for our cryogenic skimming work as described previously in Chap.~\ref{chapter:segregation}, but was deemed insufficient for this hexapole work, primarily due to unavailability of the requisite degrees of freedom.
 Unlike the skimmer, which only really requires two translational degrees of freedom in order to achieve beam alignment, the hexapole has four alignment parameters, and potentially five depending on whether it is desirable to translate the device along the beam.
 There seemed no straightforward way to achieve this across the vacuum envelope, especially given how far above the hexapole the tuning bellows sits.
-Thus strategy~(\ref{hexitem2}) was pursued, and the problem of cool-down induced misalignment addressed via a flexible heat linkage\footnote{\href{https://www.techapps.com/}{Technology Applications Inc.}, braid P6-502. Tyler Link, at the time of this writing, is always ready to send long emails about his products, at any hour of the day. Contact him directly for a product manual.}.
+Thus strategy~(\ref{hexitem2}) was pursued, and the problem of cool-down induced misalignment addressed via a flexible heat linkage\footnote{\href{https://www.techapps.com/}{Technology Applications Inc,} braid P6-502. Tyler Link, at the time of this writing, is always ready to send long emails about his products, at any hour of the day. Contact him directly for a product manual.}\!\!.
 
 The principal challenge of utilizing a flexible heat linkage is finding a different way to achieve mechanical rigidity without violating thermal isolation.
 For this purpose, I selected Ultem (or PEI, polyetherimide), a dimensionally stable engineering thermoplastic with poor thermal conduction and good mechanical properties.
+Ultem rods 1/8" wide and 7/8" long can be seen in Fig.~\ref{hex1view.png}(i), which also illustrates other pertinent details of the mounting assembly.
 Many polymers feature admirably low thermal conductivity, and the subject of polymer thermal conductivity is treated more fully in~\cite{Hartwig2013}, Chap.~5.
 The same selection was once made for cryostats at the RHIC~\cite{Sondericker1994}.
 In order to make estimations of the thermal conductivity for long, thin cylinders made of unfilled Ultem 1000 connected between room temperature and the cold apparatus, it is necessary to properly treat the thermal gradient which will necessarily build up within the material.
@@ -185,13 +205,41 @@ where $A$ is the cross sectional area of the rod. Rearranging and integrating:
 \begin{equation}
 \int\limits_{T_L}^{T_H}c(T)dT=\int\limits_0^L\frac{\dot{Q}dx}{A},
 \end{equation}
-and then integrating:
 \begin{equation}
-\bar{c}\bigg|_{T_L}^{T_H} = \dot{Q}L/A,
+\bar{c}\,\bigg|_{T_L}^{T_H} = \dot{Q}L/A,\label{qdoteq}
 \end{equation}
 where $\bar{c}$ is the antiderivative of $c$.
-We may proceed using the data from~\cite{Sondericker1994} for slightly glass-filled Ultem 2100, which shows $0.04$~W/m$^\circ$K at $10\!~^\circ$K, $0.3$~W/m$^\circ$K at $3000\!~^\circ$K, and an approximately straight line on a log-log plot in between.
-This implies
+We may proceed using the data from~\cite{Sondericker1994} for slightly glass-filled Ultem 2100, which shows $0.04$~W/m$^\circ$K at $10\!~^\circ$K, $0.4$~W/m$^\circ$K at $300\!~^\circ$K, and an approximately straight line on a log-log plot in between.
+It follows that $c(T)$ may be approximated as:
+\begin{equation}
+c(T) = \alpha T^\beta,\quad \beta = \frac{\log\left(\frac{0.4}{0.04}\right)}{\log\left(\frac{300}{10}\right)}=0.68,\quad \alpha = \frac{0.4}{300^{0.68}}=8.5\times10^{-3}\text{ W/m/}(^\circ\text{K})^{\beta+1},
+\end{equation}
+so that,
+\begin{equation}
+\bar{c}\,\bigg|_{T_L}^{T_H} = \frac{\alpha}{\beta+1} T^{\beta+1}\,\bigg|_{10^\circ\text{K}}^{300^\circ\text{K}} = 73\text{ W/m}\label{eq73},
+\end{equation}
+and finally with $A=7.9$~mm$^2$ and $L=20$~mm, we have rearranging Eq.~\ref{qdoteq}:
+\begin{equation}
+\dot{Q} = 73\text{ W/m}\times7.9\times10^-6\text{ m}^2/ (0.02\text{ m})=0.029\text{ W}.
+\end{equation}
+A table of thermal conductivity integrals with $T_L=4\,^\circ$K and various $T_H$ is provided in~\citep[App.~A2.1]{Ekin2006}. No value is included for Ultem, but the listed polymers have very similar values to that found above in Eq.~\ref{eq73}, for example Teflon is listed as $70$~W/m.
+It is also worth pointing out that the conductivity integral between room temperature and $4\,^\circ$K only differs from that between room temperature and $50\,^\circ$K by $10\%$. 
+This is symptomatic of the asymmetric distribution of thermal gradient, with most of it occurring in a very small section, and the majority of the plastic closer to room temperature since this is where the thermal conductivity is larger.
+
+\figdave{hex1view.png}{Assembled view of Hexapole 1}{
+A view of Hexapole 1 after assembly. 
+(i) 1/8" x 7/8" Ultem rods to insulate but support the structure. 
+(ii) Flexible heat linkage, $1.4$~W. 
+(iii) Springs enabling fine positioning, four in total. 
+(iv) Nichrome heater coil. 
+(v) Blurry HV distribution ring barely visible. 
+(vi) Invar plate spacers behind steel 1/4-28 nuts. 
+(vii) Custom Skimmer, $3$~mm opening. 
+(viii) Teflon kinematic cylinder visible for translating but allowing twist. 
+(ix) Fine adjust knob, 3/16-100, mounted in a phosphor bronze bushing, torr-sealed into a steel block.
+}{\linewidth}
+
+
 
 \subsection{Cryogenic Hexapole 2}
 
