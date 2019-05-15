@@ -113,7 +113,7 @@ This explanation would even jive with the observed influence of the hexapole in~
 This detector could have observed a legitimate hexapole induced spatial density enhancement, but entirely composed of molecules with transverse velocities above the threshold for decelerator acceptance.
 
 
-\section{Modernity}
+\section{Cryogenic Hexapole 1}
 
 Against this dubious backdrop, we decided in the summer of 2018 to begin work on a new hexapole for use with the third generation decelerator.
 Our motivations were quite different however from those that motivated the poorly performing hexapole of the second generation.
@@ -122,9 +122,9 @@ This was largely motivated by observation of significant decelerator clogging, a
 The new hexapole would this require cooling to cryogenic temperatures, so as to avoid the clogging observed in the decelerator.
 In a sense, one can think of the cryogenic hexapole as comparable to cryogenically cooling the decelerator, only much more practically attainable.
 
-I was able to rather quickly cycle through hexapole designs thanks to rapid manufacturing services and a well-integrated design for manufacturing approach.
-I begin by describing features common to the two and a half hexapoles tried out over the past year.
-Firstly, the obvious- a hexapole consists of six alternately charged poles, which generates close to the axis an electric field with the functional form:
+\subsection{Hexapole Fundamentals}
+
+A hexapole consists of six alternately charged poles, which generates close to the axis an electric field with the functional form:
 \begin{equation}
 \left|\vec{E}(r)\right| = 3V_0\left(\frac{r^2}{r_0^3}\right),
 \end{equation}
@@ -133,7 +133,7 @@ For a molecule with a linear response to the electric field, this quadratic depe
 This exception causes a perturbation to the ideal focusing behavior, but is not very significant for OH~\citep[Fig.~2b]{Bochinski2004}, although more so for other species~\citep[Fig.~1]{Kirste2013}.
 Specifically, with $V_0=13$~kV and $r_0=5$~mm, which lead to the typical field strengths characteristic of our traps and decelerators, electric fields up to $100$~kV/cm are generated, compared to $3$~kV/cm for polarizing the radical.
 
-\subsection{Cryogenic Hexapole 1}
+\subsection{Core Electrode Design}
 
 My first attempt at a cryogenic hexapole design leveraged some rather complex technologies.
 Fearing the possibility of gas mediated discharge of the hexapole electrodes due to the high densities of molecules shortly after the skimmer, I planned to have the electrodes encased in sapphire tubes, so as to avoid the availability of conduction electrons at their surfaces.
@@ -149,6 +149,8 @@ This all of course requires patterning of a honeycomb-like structure on the insi
 Electric discharges between the wire and the metal being cut cause material to be removed, and the wire is constantly fed so as to avoid its disintegration.
 This was achieved according to our specifications without any hitches by the CIRES shop, a shop located at the time of this writing in the chemistry department at CU.
 
+\subsection{Thermal Design}
+
 Some of the thermal considerations pertinent to the design are illustrated in Fig.~\ref{hex1heatloads.png}.
 The final mechanical design differs slightly from what is shown in this figure, but the thermal considerations remain the same.
 The large copper block within which the hexapole sits has a skimmer affixed to the front and an aperture to the back, and a large clamp-like structure conveys sufficient thermal conductivity without requiring Indium solder.
@@ -157,7 +159,7 @@ Thermal conductivity across gold-gold and copper-copper pressure interfaces have
 As can be observed below in Fig.~\ref{hex1view.png}, we settle for a gold-copper joint, which naively would fall somewhere between the gold-gold and copper-copper performances.
 Of course nothing is certain, see for example in~\citep[Fig.~5.8]{Hartwig2013} how mixing copper particles into epoxy can actually worsen its thermal conductivity in some temperature ranges.
 It is also important to figure out how tight the clamp should be made, so as to benefit from the pressure-dependent thermal conductivity, without irreversibly deforming the copper parts.
-I studied this using finite element analysis via Solidworks Premium Simulation package, see Fig.~\ref{hex1force.png}.
+I studied this using finite element analysis via Solidworks Premium Simulation package, see Fig.~\ref{hex1force}.
 One interesting point worth mentioning is that the geometry of the device leads to a factor of $2\pi$ hoop stress amplification, where the force between the clamp and the cylinder is actually $2\pi$ times bigger than the force applied to the bolts.
 This can be derived by conceptually dividing the geometry in half through the bolts and analyzing the static free body diagrams of each component, a standard exercise in statics.
 The conclusion is that $1000$~kg on each of two bolts would give $240$~W/\,$^\circ$K for gold-gold and $3$~W/\,$^\circ$K for copper-copper, found by taking the $10\,^\circ$K $50$~kg data in~\citep[Fig.~5.8]{Hartwig2013} and multiplying up to $12000$~kg including the hoop stress amplification.
@@ -188,6 +190,31 @@ Strategy~(\ref{hexitem1}) was employed for our cryogenic skimming work as descri
 Unlike the skimmer, which only really requires two translational degrees of freedom in order to achieve beam alignment, the hexapole has four alignment parameters, and potentially five depending on whether it is desirable to translate the device along the beam.
 There seemed no straightforward way to achieve this across the vacuum envelope, especially given how far above the hexapole the tuning bellows sits.
 Thus strategy~(\ref{hexitem2}) was pursued, and the problem of cool-down induced misalignment addressed via a flexible heat linkage\footnote{\href{https://www.techapps.com/}{Technology Applications Inc,} braid P6-502. Tyler Link, at the time of this writing, is always ready to send long emails about his products, at any hour of the day. Contact him directly for a product manual.}\!\!.
+
+\figdave{hex1view.png}{Assembled and Section Views of Hexapole 1}{
+(a) A view of Hexapole 1 after assembly. 
+(i) 1/8" x 7/8" Ultem rods to insulate but support the structure. 
+(ii) Flexible heat linkage, $1.4$~W. 
+(iii) Springs enabling fine positioning, four in total. 
+(iv) Nichrome heater coil. 
+(v) Blurry HV distribution ring barely visible. 
+(vi) Invar plate spacers behind steel 1/4-28 nuts. 
+(vii) Custom Skimmer, $3$~mm opening. 
+(viii) Teflon kinematic cylinder visible for translating but allowing twist. 
+(ix) Fine adjust knob, 3/16-100, mounted in a phosphor bronze bushing, torr-sealed into a steel block.
+(b) A mechanical section view focusing on the scientific portion of Hexapole 1.
+(i) A rear skimmer, one piece with an outer rim that allows grease-only installation.
+(ii) Drill holes for slip-fitting thermally insulating Ultem mounts.
+(iii) Recess drilled for increasing surface path between the open end of the sapphire rod and the mounting block.
+(iv) Plastic  caps glued onto the rods for further voltage safety.
+(v) One of six HV holes, \diameter1/2", used for feeding voltage to the electrodes.
+(vi) Plastic stubs for increasing surface arc distance in the vicinity of the feedthroughs.
+(vii) HV Pin which pokes down through the stubs and contacts electrodes.
+(viii) Distribution rings which HV pins thread into.
+(ix) Curved contact line where plastic stubs were glued to sapphire tubes.
+(x) Recessed solder joint for cryogenic skimmer.
+
+}{\linewidth}
 
 The principal challenge of utilizing a flexible heat linkage is finding a different way to achieve mechanical rigidity without violating thermal isolation.
 For this purpose, I selected Ultem (or PEI, polyetherimide), a dimensionally stable engineering thermoplastic with poor thermal conduction and good mechanical properties.
@@ -220,34 +247,107 @@ so that,
 \end{equation}
 and finally with $A=7.9$~mm$^2$ and $L=20$~mm, we have rearranging Eq.~\ref{qdoteq}:
 \begin{equation}
-\dot{Q} = 73\text{ W/m}\times7.9\times10^-6\text{ m}^2/ (0.02\text{ m})=0.029\text{ W}.
+\dot{Q} = 73\text{ W/m}\times7.9\times10^{-6}\text{ m}^2/ (0.02\text{ m})=0.029\text{ W}.
 \end{equation}
 A table of thermal conductivity integrals with $T_L=4\,^\circ$K and various $T_H$ is provided in~\citep[App.~A2.1]{Ekin2006}. No value is included for Ultem, but the listed polymers have very similar values to that found above in Eq.~\ref{eq73}, for example Teflon is listed as $70$~W/m.
 It is also worth pointing out that the conductivity integral between room temperature and $4\,^\circ$K only differs from that between room temperature and $50\,^\circ$K by $10\%$. 
 This is symptomatic of the asymmetric distribution of thermal gradient, with most of it occurring in a very small section, and the majority of the plastic closer to room temperature since this is where the thermal conductivity is larger.
 
-\figdave{hex1view.png}{Assembled view of Hexapole 1}{
-A view of Hexapole 1 after assembly. 
-(i) 1/8" x 7/8" Ultem rods to insulate but support the structure. 
-(ii) Flexible heat linkage, $1.4$~W. 
-(iii) Springs enabling fine positioning, four in total. 
-(iv) Nichrome heater coil. 
-(v) Blurry HV distribution ring barely visible. 
-(vi) Invar plate spacers behind steel 1/4-28 nuts. 
-(vii) Custom Skimmer, $3$~mm opening. 
-(viii) Teflon kinematic cylinder visible for translating but allowing twist. 
-(ix) Fine adjust knob, 3/16-100, mounted in a phosphor bronze bushing, torr-sealed into a steel block.
+\subsection{Performance}
+
+The hexapole did not even come close to performing as intended, particularly as far as high voltage is concerned, with arcing behavior observed at voltages only one third of targets.
+One of the first datasets is shown in Fig.~\ref{hexinverteffect.png}.
+A surprising effect was observed, whereby the signal was first decreased and then increased.
+At first it was suspected that this could relate to the focusing behavior of the device in some way, since by analogy with lenses over-focusing can be problematic.
+This does not make sense at such low voltages however, and does not explain the even more surprising observation of hysteretic behavior, where the signal with the hexapole off was observed to decrease dramatically after having operated the hexapole at voltage for a while.
+
+\figdave{hexinverteffect.png}{OH After the Hexapole}{
+Flight profiles of OH after the Hexapole. Voltage is seen to have an effect. 
+The effect is sometimes disordered, and shows strong hysteresis. 
+Note how for the $|e\rangle$ state, signal decreases monotonically with voltage, as one might expect, but for the $|f\rangle$ state, signal first decreases before increasing. 
+Upon returning to the $0$~kV trace, the value is larger than both the original $0$~kV and $2$~kV traces. 
+These traces were recorded chronologically in the same order as the legend.
+The data were collected on November 27, 2018, with a $16.5$~cm valve position setting, which in this setup corresponded to a $10$~cm true valve skimmer distance, a $9.7~^\circ$K hexapole temperature, and an ND1 filter on the fluorescence collection stack.
 }{\linewidth}
 
+Ultimately, these effects were attributed to the buildup of very significant patch charges on the surface of the sapphire, significant enough to simulate the hexapole having been charged to several kilovolts of voltage.
+This effect was in fact anticipated during the design stage, and a workaround developed- regular polarity reversal.
+In the design stage, it was expected that charges might buildup due to ionization of carrier gas upon interaction with the electric field and the cryogenic sapphire surface, but in fact a more potent mechanism exists, see Fig.~\ref{surfacemech.png}.
+Despite fillets designed for minimizing surface currents, conduction electrons from within the grounded copper block are likely able to migrate out onto the surface of the sapphire tubes.
+This also suggests that charging the hexapole with only negative voltage and ground could help reduce the effect, since the copper block only has negative charges to donate to the surface, not positive.
 
+\figdave{surfacemech.png}{Hexapole Surface Arcing Mechanism}{
+This schematic diagram illustrates how surface charges donated from the conductive grounded hexapole mounting block (blue) are able to rather efficiently coat the surface of the sapphire tubes insulating the positively charged hexapole electrodes (black). }{8cm}
 
-\subsection{Cryogenic Hexapole 2}
+While true voltage alternation requires complex tripolar switch output configuration, effective alternation may be achieved with a unipolar setup by connecting each set of three hexapole electrodes to the output of a switch which connects between ground and minus high voltage.
+The switches can then take turns charging the hexapole, so that the field direction reverses each time, rod polarity is always negative relative to the grounded copper block, and unipolar push-pull architecture is maintained.
+Operating in this manner did indeed resolve patch charge issues, and led to the data shown in Fig.~\ref{hexinvertsolve.png}.
+
+\figdave{hexinvertsolve.png}{OH post-Hexapole, Patch Charges Resolved}{
+Peak OH population, various valve-skimmer distances, several voltages.
+Much longer averaging and runtimes without hysteresis and with sensible trace ordering.
+Vertical axis is arbitrary, the numbers may be derived from an area integrating script applied to raw data traces akin to those in Fig.~\ref{hexinverteffect.png}.
+}{\linewidth}
+
+As far as the thermal performance of the device, a thermal conduction of $1.4$~W/$^\circ$K was achieved, based on the observed second stage cryostat temperature of $7.2~^\circ$K, which suggests via the capacity of the device that a $3$~W heat load is incurred.
+This, together with the measured temperature of $9.4~^\circ$K close to the hexapole suggests that $3$~W leads to $2.2~^\circ$K temperature rise, hence the stated $1.4$~W/$^\circ$K.
+While the thermal conductivity is as intended, the heat load is much higher than predicted.
+This prompted a thorough investigation that ultimately implicated blackbody radiation as the culprit.
+At one point we even disconnected the hexapole from its mounting structure so as to take away any heat load due to the thermally insulating mechanical Ultem mounts.
+These were completely exonerated, as the observed temperature after their removal did not detectably improve.
+
+\section{Cryogenic Hexapole 2}
+
+Primarily motivated by the failure of the first Hexapole to hold the desired voltages, we undertook a new hexapole with a completely different high voltage strategy.
+Fearing significant delays to our long term goals, I pushed for significant reuse of our earlier design, especially with regard to the mounting structure.
+The result is shown in Fig.~\ref{hex2cutview}.
+The mounting structure and thermal clamp are completely reused, but the copper hexapole mounting block is replaced with a thin copper sheath for transferring heat to the skimmer, inside of which sits an Ultem plastic mounting tube, and inside of that a more traditional stainless steel hexapole.
+The steel is allowed to reach some equilibrium temperature set by the balance between weak heat transfer through the Ultem tube to the cryogenic copper transfer tube, and radiative coupling of the high emissivity Ultem to the room temperature vacuum chamber.
+A room temperature skimmer is used as a back aperture, and HV distribution is simplified and achieved via steel setscrews that also fix the position of the internal hexapole.
+These screws sit in a plane orthogonal to the section plane and are thus not visible.
+
+\figdave{hex2cutview}{Section View of Hexapole 2}{
+This section view shows Hexapole 2, and how it was designed to fit inside of the same mounting structure used for Hexapole 1.}{14cm}
+
+Cryogenic hexapole 2 was a very quick turnaround relative to hexapole 1, with first tests occurring within one month of those for hexapole 1.
+The second hexapole performed significantly better as far as voltage application, by more than a factor of two.
+However it seemed to be clogging limited, showing an earlier falloff with respect to reducing valve-skimmer distance, and a weaker peak signal compared with hexapole 1.
+These results are summarized in Fig.~\ref{hex12comp}.
+One obvious explanation for this would be the increased temperature of the hexapole, a sacrifice made in light of the importance of first verifying voltage capability before anything else.
+It is unsettling however that the first hexapole appears to perform better even at larger distances where the clogging should not yet dominate.
+This could be attributed to differences in the alignment of the collection system and laser, but it is difficult to say.
+
+\figdave{hex12comp}{Comparing Hexapoles 1 \& 2}{
+Hexapoles 1 and 2 are compared regarding maximum signal with no applied voltage as a function of valve-skimmer distance. 
+The second hexapole turns over at larger distance and appears slightly lower in the large distance wing relative to the first.
+The original figure was generated on January 7th, 2019.
+}{\linewidth}
 
 \subsection{Cryogenic Hexapole 2.5}
 
-\subsection{Cryogenic Hexapole 3}
+Hoping to obtain the best of both worlds, an updated version of Hexapole 2 was created capable of reaching full cryogenic temperatures while leveraging the favorable voltage performance of Hexapole 2.
+A section view showing this is available in Fig.~\ref{hex2p5cutview}.
+Relative to Hexapole 2, Hexapole 2.5 features HV safety shoulders built together with the HV tube as a single piece, so that a cryogenic copper shield can slide over the entire Ultem HV tube instead of only covering a small portion and serving as an interconnect to the cryogenic skimmer.
+To our chagrin, the device featured a significantly worsened high voltage performance relative to Hexapole 2, which ultimately turned out to be a fault related to surface arcing on the Ultem tube itself, despite this not having limited behavior in Hexapole 2.
+
+\figdave{hex2p5cutview}{Section View of Hexapole 2}{
+This section view shows Hexapole 2.5.}{14cm}
+
+As far as cryogenics are concerned, hexapole 2.5 performed better than any other, validating the blackbody shielding technique incorporated.
+Surprisingly, this did not lead to significant clogging mitigation relative to hexapole 2 at zero electric field where the high voltage performance is not relevant.
+One explanation for this could be the negative influence of surfaces positioned orthogonally to the beamline, such as those formed by the HV distribution rings in Hexapoles 2 and 2.5 but not on Hexapole 1.
 
 
+\section{Cryogenic Hexapole 3}
+
+After a long interlude for attempts at collisional studies in the decelerator and between parallel plates, it was time to move on to other things, but the lessons learned on the first two and a half hexapoles could one day be brought to full fruition in a final iteration of the device.
+By abandoning the emphasis in Hexapoles 2 and 2.5 of reusing the mounting structure developed for Hexapole 1, it should be possible to further increase the surface path distance between electrodes, by say an additional factor of 3-5 beyond the factor of 3 already implemented between Hexapoles 1 and 2.
+In addition, by carefully following the principles of triple point shielding laid out in~\citep[Sec.~4.3.3]{Faircloth2013}, extra safety should be able to be obtained.
+In particular, true shielding of the triple points that exist between the Ultem tube and the internal HV distribution mounts of Hexapoles 2 and 2.5 is not really possible given the external copper tube and requirement of sliding installation inside.
+
+I'm pleased to present the design detailed in this section as a feasible future hexapole, with a fivefold surface arcing distance relative to Hexapole 2, comparable cryogenic shielding, and a significantly reduced cross section for surface reflection induced clogging.
+I estimate that this design could be manufactured in two months for about \$5,000.
+Given the observed enhancement of Hexapole 1 by a factor of two even with poor voltage performance, it seems that at least this value should be obtainable, and likely more for supersonic expansions in heavier carrier gases.
 
 
 
