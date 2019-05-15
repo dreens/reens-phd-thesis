@@ -1,32 +1,5 @@
 \ifx\justbeingincluded\undefined
-\documentclass[defaultstyle,11pt]{thesis}
-\usepackage{amssymb}		% to get all AMS symbols
-\usepackage{amsmath}		% to get equations to work right
-\usepackage{graphicx}		% to insert figures
-\graphicspath{{../}{Slowing/}}
-\usepackage[pagebackref = true]{hyperref}		% PDF hyperreferences?? [backref=none]
-\usepackage{natbib}
-\usepackage{caption}
-\setcitestyle{numbers,square,comma}
-\usepackage[usenames,dvipsnames]{color}
-%% To make \href colors more decent:
-\definecolor{MyDarkBlue}{rgb}{0,0.1,0.7}
-\hypersetup{pdfborder={0 0 0},colorlinks,breaklinks=true,
-  urlcolor={MyDarkBlue},citecolor={MyDarkBlue},linkcolor={MyDarkBlue}
-}
-\renewcommand{\thefootnote}{\alph{footnote}}	
-\title{a}
-\abstract{a}
-\author{a}{a}
-\otherdegrees{a}
-\degree{a}{a}
-\dept{a}{a}
-\advisor{a}{a}
-\reader{a}
-\readerThree{a}
-\SuspendPrologue
-\begin{document}
-\input macros
+\input chappreamble.tex
 \fi
 
 \chapter{Optimized Deceleration}
@@ -386,7 +359,7 @@ Greater signal to noise would be desirable, at the time of this writing unavaila
 
 The Landau-Zener formula may be used to approximate the relevance of nonadiabatic transitions in a given situation:
 \begin{equation}
-P=e^{-\pi\Delta^2/\hbar\partial E/\partial t}.
+P=e^{-\pi\Delta^2/\hbar\frac{\partial E}{\partial t}}.
 \end{equation}
 Working in frequency units, we can simplify this to say that nonadiabatic transitions are negligible provided that:
 \begin{equation}
@@ -399,7 +372,7 @@ For example, in the absence of any magnetic field, parity flips from $|f\rangle$
 Compare this with the geometric mean of $100$~GHz and $1$~MHz where the latter is appropriate for the microsecond turn-off of the fields during switching events and the former is the energy scale set by the magnitude of electric fields in the decelerator.
 We find $300$~MHz or so, getting close to $1.7$~GHz but still below.
 
-On the other hand, transitions between \f3 and \f1 are a much greater concern. and have been observed during propagation of molecules in decelerators~\cite{Meek2011}, and also during switching events of decelerators~\cite{Wall2010}.
+On the other hand, transitions between \f3 and \f1 are a much greater concern, and have been observed during propagation of molecules in decelerators~\cite{Meek2011}, and also during switching events of decelerators~\cite{Wall2010}.
 The Stark effect treats \fpm3 the same, and also \fpm1, but the latter have one third the response of the former, so transitions between them are essentially loss.
 Moreover, these states are degenerate at zero field and don't have any fixed barrier as do the states of different parity.
 Of course, states being degenerate does not necessarily lead to loss if the Hamiltonian driving their evolution does not have any amplitude connecting the states in question.
@@ -527,7 +500,7 @@ Based on the observation that we are able to shine a laser beam all the way thro
 With the new design, an effort was made to address challenges that had developed with the mounting of the previous generation, which had been facilitated by MACOR, a machinable glass ceramic material.
 The MACOR was found to allow surface currents, which also were un-phased by the surface path-length extension grooves that had been added to reduce their likelihood, as can be seen in Fig.~\ref{macorbad}.
 There was never a clear indication that these surface arcs were actually causing a reduction in molecule yield, but nevertheless it seemed wise to make an attempt at improving the situation.
-In reviewing literature and consulting other opinions, it was found that the previous geometry did not respect recommended considerations regarding so-called ``triple-points'' where vacuum, dielectric, and conductor meet. 
+In reviewing literature~\cite[Sec.~4.3.3]{Faircloth2013} and consulting other opinions, it was found that the previous geometry did not respect recommended considerations regarding so-called ``triple-points'' where vacuum, dielectric, and conductor meet. 
 These are advised to be recessed or otherwise manipulated so as to minimize the electric field at their location~\cite{Miller1989}.
 This is achieved in the new design, as well as increasing the safety distance and removing reliance on sharp insulator features, by the geometry visible in Fig.~\ref{fig:decelmountingimages} and heavily influenced by~\citep[Fig.~4]{VanDeMeerakker2006}.
 Borosilicate glass rods were selected for their vacuum and insulating properties, with alumina rods as a close second.
