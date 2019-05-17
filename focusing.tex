@@ -178,7 +178,7 @@ A key challenge of the design pertains to how voltage is to be fed into the elec
 A few iterations were made on the design before this was achieved with acceptable surface path-length reduction and suitable mechanical rigidity.
 The HV distribution rings visible in Fig.~\ref{hex1heatloads.png} ended up having too much flexibility on their own, so plastic Ultem cuffs were glued directly onto the Sapphire rods, simultaneously increasing surface path length for arcs and adding the required rigidity.
 
-\figdave{hex1heatloads.png}{Heat Conduction and Radiative Loads for Cryo-Hex 1}{(a) Conduction of thermal joints in W/$^\circ$K. In the final design, two braids were used, for a total conductivity closer likely above 1 W/K. (b) Radiative heat loads on exposed surfaces in mW.}{\linewidth}
+\figdave{hex1heatloads.png}{Heat Conduction and Radiative Loads for Cryo-Hex 1}{(a) Conduction of thermal joints in W/\,$^\circ$K. In the final design, two braids were used, for a total conductivity closer likely above 1 W/\,$^\circ$K. (b) Radiative heat loads on exposed surfaces in mW.}{\linewidth}
 
 An additional consideration for the hexapole is the matter of its alignment with the beamline.
 There are two primary strategies by which satisfactory alignment may be obtained:
@@ -282,6 +282,11 @@ This schematic diagram illustrates how surface charges donated from the conducti
 While true voltage alternation requires complex tripolar switch output configuration, effective alternation may be achieved with a unipolar setup by connecting each set of three hexapole electrodes to the output of a switch which connects between ground and minus high voltage.
 The switches can then take turns charging the hexapole, so that the field direction reverses each time, rod polarity is always negative relative to the grounded copper block, and unipolar push-pull architecture is maintained.
 Operating in this manner did indeed resolve patch charge issues, and led to the data shown in Fig.~\ref{hexinvertsolve.png}.
+One downside of this mode of operation is the reduced maximum hexapole voltage which may be applied, assuming that availability of MOSFET switches limits the maximum absolute value of voltage which may be applied.
+There is also the important question of what influence the non-bipolar hexapole voltages have on fringing field distributions.
+Generally speaking, the fringe field magnitude should become much larger, since now on average the hexapole rods are charged instead of neutral.
+To some extent, this may be a welcome effect as far as maintaining polarization is concerned, since without any electric field, the well focused \fpm3 molecules would be liable to re-project into \fpm1 after spending time in a region of little or no field.
+
 
 \figdave{hexinvertsolve.png}{OH post-Hexapole, Patch Charges Resolved}{
 Peak OH population, various valve-skimmer distances, several voltages.
@@ -335,6 +340,15 @@ Hoping to obtain the best of both worlds, an updated version of Hexapole 2 was c
 A section view showing this is available in Fig.~\ref{hex2p5cutview}.
 Relative to Hexapole 2, Hexapole 2.5 features HV safety shoulders built together with the HV tube as a single piece, so that a cryogenic copper shield can slide over the entire Ultem HV tube instead of only covering a small portion and serving as an interconnect to the cryogenic skimmer.
 To our chagrin, the device featured a significantly worsened high voltage performance relative to Hexapole 2, which ultimately turned out to be a fault related to surface arcing on the Ultem tube itself, despite this not having limited behavior in Hexapole 2.
+This was confirmed by successively disassembling the device, pumping back down, and applying high voltage.
+Even with all of the shielding and even the mounting structure removed, leaving only the Ultem mount and the steel hexapole within, the arcing persisted.
+
+The reason for the poor performance of the Ultem remains a mystery.
+Organic polymers are not inherently bad, as evidenced by the ubiquitous use of polymethacrylate, or acrylic, in HV situations~\cite{Miller1989}.
+In fact, organic polymers often outperform glasses and ceramics, possibly due to their reduced dielectric constant, which controls field amplifications near voids and triple points~\citep[pp.~776]{Miller1989}.
+Another possible explanation of the difference in performance between Hexapoles 2 and 2.5 relates to their surface treatment, with the latter much more smooth than the former.
+Evidence exists for a benefit to surface roughness~\citep[Sec.~8.3.11]{Miller1995}.
+It is also possible that cryogenic temperatures negatively influence performance, as observed for some polymers~\citep[Sec.~14.4]{Mazurek2007}.
 
 \figdave{hex2p5cutview}{Section View of Hexapole 2}{
 This section view shows Hexapole 2.5.
@@ -349,8 +363,32 @@ This section view shows Hexapole 2.5.
 
 As far as cryogenics are concerned, hexapole 2.5 performed better than any other, validating the blackbody shielding technique incorporated.
 Surprisingly, this did not lead to significant clogging mitigation relative to hexapole 2 at zero electric field where the high voltage performance is not relevant.
+In fact, by varying temperatures, the magnitude of the cryogenic benefit was directly investigated, and found to be far smaller than anticipated, see Fig.~\ref{hex25clogging}.
 One explanation for this could be the negative influence of surfaces positioned orthogonally to the beamline, such as those formed by the HV distribution rings in Hexapoles 2 and 2.5 but not on Hexapole 1.
+Another explanation could relate to the adsorptive properties of the materials involved in the two hexapoles.
+In Hexapole 1, the surfaces presented to the molecules were lightly greased sapphire and semi-rough copper from the wire-EDM process, while in Hexapole 2 and 2.5 the surfaces are ungreased highly polished steel.
+It is conceivable that the former would perform better, in which case one simple test would be to lightly grease the stainless steel.
+Another possibility could be to reduce the radius of the hexapole rods, which would introduce some dodecapolar deviations from the ideal hexapole fields, but much more importantly reduce the cross sectional area presented for interaction.
 
+
+\figdave{hex25clogging}{Clogging Behavior of Hexapole 2.5}{
+Time of flight traces for different valve-skimmer distances and at two temperatures elucidate the clogging performance of Hexapole 2.5.
+}{\linewidth}
+
+Some of the technologies involved in the cryogenic performance of Hexapole 2.5 are worth some further discussion.
+Firstly, the plastic component visible in Fig.~\ref{hex2p5cutview}(iv) demonstrates the power of 3D printable thermoplastics for custom thermally insulating structures with good mechanical rigidity.
+Thermal simulations of this part indicate conductance in the vicinity of $10\,^\circ$K/mW, which includes a factor of $2.5$ achieved by the convenient removal of material in a hole pattern~\ref{hex25thermiso}
+This patterning not only reduces thermal conductivity, but also aids in the removal of 3D printing scaffold material and reduces print time.
+It is also possible to reduce the thermal conductivity of 3D printed parts by reducing infill, so that voids are intentionally left inside of a structure.
+This seems inadvisable given the likelihood of virtual leaks to the vacuum chamber, although this may not be relevant for parts that will sit between two cryostat stages and therefore lie entirely below the freezing point of all relevant gases after cool-down.
+Secondly, the radiation shields are manufactured using sheet-metal bending techniques.
+Sheet-metal bending techniques are not often utilized in the laboratory, often reserved for high throughput manufacturing, but in Hexapole 2.5 they really enable geometries that would be vastly more challenging to achieve with traditional fastener-based methodologies.
+Using appropriate design modules in Solidworks, the radiation shields are designed to be folded into the desired shape after first being water-jetted out of copper sheet.
+At the time of this writing, water-jetting is available in the physics shop with nearly next-day service and only 1-2 hour operator costs.
+Bending is hard to do accurately, but this is generally not required for radiation shielding, and if accuracy is required, commercial CNC bending is available with 0.005" tolerances on hole positions for the final folded part\footnote{\href{https://rapidmanufacturing.com/rapid-sheet-metal/}{Rapid Sheet Metal} offers 10-day service and something like \$500 per design, way less with quantity.}.
+The act of bending reduces thermal conductivity by work-hardening the joint, but where conductivity is critical, this can be addressed by annealling.
+
+\figdave{hex25thermiso}{Hexapole 2.5 Radiation Shielding Isolator}{Thermal simulations of an Ultem isolator used as a mechanical interconnect between Hexapole 2.5 and its radiation shields, with (b) and without (a) extra holes. In each case, a $1$~mW load is applied across the device, and the base is fixed at $0\,^\circ$K, so that the reported temperature on the upper surface of the device rises with smaller conductance.}{\linewidth}
 
 \section{Cryogenic Hexapole 3}
 
