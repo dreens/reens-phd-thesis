@@ -1,12 +1,110 @@
+\ifx\justbeingincluded\undefined
+\input chappreamble.tex
+\fi
+
 \chapter{Background}
 \label{chapter:Background}
 
 All of our ability to successfully exploit and manipulate OH radicals is underpinned by a robust understanding of its internal structure undergirded by decades of careful spectroscopy.
+Early spectroscopic results are still directly useful in determining where to set detection lasers~\cite{Meerts1975}, although many of these parameters are now more usefully catalogued in the NIST webbook~\cite{Huber2018}.
+As in many areas of modern quantum physics, careful understanding begins with classical Hamiltonians followed by quantization and then a perturbative approach to better and better models of the system. 
 
 \section{Molecular Hamiltonians}
+
+Much like the well studied progression from classical descriptions of electrons orbiting a hydrogen nucleus to semiclassical angular momentum quantization and on to the exact Hydrogen quantum mechanical wave-function solution~\citep[Sec.~4.2]{Griffiths2018}, molecules may be understood beginning with the simplified quantum mechanics of springs and rigid rotors.
+
+\subsection{The Rigid Rotor}
+
+For the rigid rotor, we imagine some extended rigid body with moment of inertia $I_z$ about its center of mass in a particular direction $z$, which may be calculated in the usual way:
+\begin{equation}
+I_z = \int\limits_V\rho r^2 dAdz,\label{izsimp}
+\end{equation}
+where the integral covers the whole volume of the body with density $\rho$, and $r$ gives the distance from the infinitesimal volume element to the axis parallel to $z$ through the center of mass of the body.
+Classically, lacking any environmental coupling, this body may indefinitely rotate about its axis of rotation with any angular velocity $\omega$, and posses a rotational kinetic energy given by:
+\begin{equation}
+U=\frac{1}{2}I\omega^2,
+\end{equation}
+and an angular momentum given by:
+\begin{equation}
+L= I\omega
+\end{equation}
+Semiclassically, we require the angular momentum to be quantized in units of $\hbar$, leading to the diophantine equation:
+\begin{equation}
+L = l\hbar = I\omega,
+\end{equation}
+with $l$ an integer, so that the allowed values of the angular velocity and energy become:
+\begin{equation}
+\omega = l\hbar/I, \qquad U = \frac{1}{2I}l^2\hbar^2
+\end{equation}
+with the natural consequence that for larger inertia $I$, the spectrum of allowed rotations becomes increasingly continuous.
+This turns out to differ only slightly from the true situation, at least as it pertains to the specific case of linear rotors and diatomic molecules, where we find:
+\begin{equation}
+U = \frac{1}{2I}(l^2 + l)\hbar^2.
+\end{equation}
+
+It is instructive to follow this through more thoroughly~\citep[Sec.~2.8]{Brown2003}.
+For the case of a linear rotor, where the body's mass is essentially confined to a single axis in space, a single momentum of inertia $I$ characterizes the system, and for the even simpler case where the mass is located at only two points separated by $R$, we can evaluate Eq.~\ref{izsimp} but with the following density distribution:
+\begin{equation}
+\rho(r)=m_1\,\delta\!\left(r-R\frac{m_2}{m_1+m_2}\right)+m_2\,\delta\!\left(r+R\frac{m_1}{m_1+m_2}\right),
+\end{equation}
+where $m_1$ and $m_2$ are the two masses separated by a distance $R$, and the values in the delta functions create the situation where the radial coordinate $r$ attains its zero value at the center of mass of the distribution.
+Evaluating Eq.~\ref{izsimp} then leads to the result:
+\begin{equation}
+I = \frac{m_1m_2^2+m_2m_1^2}{(m_1+m_2)^2}R^2 = \frac{m_1m_2}{m_1+m_2}R^2 = \mu R^2,\label{eqdefI}
+\end{equation}
+where $\mu$ is the reduced mass of the system.
+Now the Hamiltonian for this system is simply the rotational energy:
+\begin{equation}
+\hat{H} = \frac{1}{2\mu}\nabla^2
+\end{equation}
+which upon moving ahead with the Schr\"{o}dinger Equation, gives the spherical harmonic eigenfunctions:
+\begin{equation}
+\hat{H}Y_{lm}(\theta,\phi) = E_lY_{lm}(\theta,\phi),\qquad E_l = Bl(l+1),\qquad B=\frac{\hbar^2}{2I}.\label{eqdefb}
+\end{equation}
+Here $B$ is referred to as the rotational constant, and $\theta$, $\phi$ give physicist spherical coordinates relative to an axis orthogonal to the axis of the linear rotor, i.e. an axis along which the system has angular momentum $I$, \emph{not} the axis of the rotor itself.
+It is interesting to note that the wave-functions associated with these eigen-energies are quite bizarre from the perspective of classical physics, especially given that relative to the quantum mechanics of the light electron, these coordinates describe the locations of heavy atomic nuclei.
+For example, in the case of $l=0$, quantum mechanically the molecule is in a spherically symmetric state with equal probability of finding either nuclei anywhere on the surface of the two spherical shells correspending to their generally different radii away from the center of mass.
+
+It is interesting to compare the values of $B$ calculated na\:{i}vely from Eqs.~\ref{eqdefb},~\ref{eqdefI} to the spectroscopically determined values, as shown in Tab.~\ref{bbbtable}. 
+Very good agreement is obtained, at least when using the spectroscopically determined internuclear distance, which is therefore not quite fair as far as theory experiment predictions are concerned.
+Nonetheless, it is reasonable to conclude that the rigid linear rotor model is a good description of the situation for diatomic molecules.
+The bulk of the remaining deviations relate to centrifugal affects, by which I broadly refer to the interaction between the rotational and the vibrational components of the Hamiltonian, a nice segue into the following section.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[t!]
+\centering
+\caption[Molecular Rotational Constants]{
+Parameters leading to the value of the rotational constant $B$ are shown, together with its semi-classically inferred value.
+Spectroscopically determined values agree quite well. Radii and spectroscopically determined rotational constants from~\cite{Huber2018}, except RbCs from~\cite{Fellows1999} and YbCs from~\cite{Meyer2009}.
+\label{bbbtable}}
+\begin{tabular}{ C{2cm} | C{2cm} | C{2cm} | C{2.2cm} | C{2cm} |}
+Molecule & $\mu$~(amu) & $R$~(\AA) & $B_\text{semi}$~(GHz) & $B$~(GHz) \\
+\hline
+H$_\text{2}$		& 0.5 & 0.74 & 1850 & 1820 \\
+OH 		& 0.94 & 0.97 & 573 & 567 \\
+LiH 		& 0.88 & 1.60 & 227 & 225 \\
+YO   		& 13.6 & 1.79 & 11.6 & 11.6 \\
+CaF 		& 12.9 & 1.97 & 10.1 & 10.1 \\
+SrF		& 15.6 & 2.08 & 7.52 & 7.51 \\
+YbF 		& 17.1 & 2.02 & 7.24 & 7.22 \\
+RbCs 	& 51.9 & 4.4 & 0.503 & 0.497 \\
+YbCs	& 75.2 & 5.4 & 0.230 & 0.207 \\
+\end{tabular}
+\end{table}
+
+\subsection{The Vibrational Hamiltonian}
 
 \section{Angular Momentum Coupling}
 
 In addition to the nice descriptions available in earlier theses, I'd like to leave my mark by including for the first time animations of molecular angular motion that are faithful to the real thing except for time rescaling.
 
+
 \section{Molecular Collisions}
+
+
+
+\ifx\justbeingincluded\undefined
+\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+\bibliography{allrefs}		% Bib database in "allrefs.bib"
+\end{document}
+\fi
