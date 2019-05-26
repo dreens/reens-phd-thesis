@@ -1,8 +1,79 @@
+\ifx\justbeingincluded\undefined
+\input chappreamble.tex
+\fi
+
 \chapter{Collisions}
 \label{chapter:collisions}
 
 \section{Molecular Collision Theory}
 
+Collisions are in principle very interesting things to study for low temperature molecular systems. 
+Quantization of intermolecular degrees of freedom leads to a host of interesting dynamics, which until relatively recently could only be discerned via their contribution to measured integrated cross sections including averaging over many initial states and many partial waves of the interaction potential.
+However, with the ability to isolate single quantum states thanks to selective manipulation techniques, and with the reduction of collision energies afforded by deceleration and trapping, new resolution on quantum mechanical interference type effects is now achievable.
+
+In our experiment, collisions are understood as of some interest in and of themselves, but are primarily seen as a stepping stone along the route to even lower temperatures achieved by evaporative cooling.
+With this in mind, state resolving takes second seat to the ensemble integrated elastic to inelastic cross section ratio, a key figure of merit for successful evaporation.
+
 \section{Experimental Detection Techniques}
 
+In any case, a key challenge that has emerged during the course of my thesis work has been the verification collisional behavior of any kind.
+For this purpose, several very general techniques exist, which are now described in detail.
+
+\subsection{Controlled Density Reductions}
+
+Collisional effects always influence a population in proportion to the likelihood of such collisions, which in turn scale with the square of the number density of the population.
+It therefore follows that as one were to scale an experimental control parameter tuning the number density of the population, collisional effects would grow quadratically in that parameter, while single-particle effects would grow linearly.
+The challenge lies in whether it is really possible to achieve a tuning of this parameter which does not inadvertently lead to an unwanted change of a different nature.
+Several different strategies have been pursued in this regard.
+The molecule source is perhaps the most logically natural place to begin, but in practice all ways of tuning the initial molecule density risk disturbing the experiment in unwanted ways.
+For example, tuning the current of the discharge filament can easily reduce the measured number of molecules, and is simple to control and manipulate, but its most likely method of action is to make the discharging process more sporadic, in which case the measured reduction may actually be dominated by cases where no molecules are generated at all.
+In this scenario, densities remain as always, but some fraction of the time the discharge fails to ignite and no molecules are produced at all.
+This situation may masquerade as a density tuning, but in fact does not at all investigate the physics of interest.
+
+Other source parameters include the stagnation pressure in the pulsed valve; parameters influencing the flux of the opening event such as coil current, coil voltage, pulse duration; or valve temperature.
+In all of these cases, there is the risk that changes in the number of molecules generated can change the efficiency of the supersonic expansion process, thereby changing the molecule distribution function across the population, and not only its number density.
+If we were verifiably operating in a regime where the valve dramatically overfills the decelerator's phase space acceptance, these effects could more plausibly be neglected, but this assertion is not justified, especially when seeking small effects and when using the relatively narrow initial distribution of the Even-Lavie valve.
+To be more concrete, let us parametrize the most likely way that phase space distributions resulting from different source parameter changes may vary from one another.
+Assuming that in all cases we at least maximize the signal loaded into the decelerator as far as it depends on timing parameters, we can approximate the phase space distribution downstream in the decelerator where many rotations have cleaned out variations in the angular coordinate as follows:
+\begin{equation}
+\delta(r) = e^{-\frac{r^2}{2\sigma_r^2}},\label{eqbaddist}
+\end{equation}
+where $r$ is defined for a planar space-velocity slice of phase space as:
+\begin{equation}
+r^2 = (z-z_0)^2 + (v_z-v_0)^2/\omega^2,
+\end{equation}
+$z_0$ and $v_0$ are the center coordinates of the phase space distribution, and $\sigma_r$ parametrizes the width of the distribution.
+
+Variations in this $\sigma_r$ can eventually contribute to subtle influences in the observed lifetime of the gas, since $\sigma_r$ in turn influences the extent to which the outer reaches of the trap are populated after loading.
+Source variations which change the initial temperature of the supersonic expansion are likely to increase the value of $\sigma_r$, leading to greater population in the wings, and faster decay rates early on during loading, a classic indicator of collisional effects, which also lead to faster decays early on which later turn off as the population reduces.
+The distribution proposed in Eq.~\ref{eqbaddist} is in fact a more benign representation of what is possible.
+Loading a narrow distribution off of center can easily lead the radially averaged phase space distribution to actually peak away from center for example.
+
+Another possibility for achieving density variations without changing the distribution $\delta(r)$ of molecules delivered eventually to the trap is to perturb some aspect of the deceleration process, but leave the source untouched.
+Any phase space manipulation based technique, such as operating in different deceleration modes or introducing gaps in the coverage of the traveling potential, would have the same possibility of disturbing the distribution ultimately loaded into the trap as just described for the case of source variations.
+However, in the decelerator, the population is already state selected, opening up the different possibility of directly reducing the density by spectroscopic means.
+Were a second LIF laser available and a region of good optical access before the trapping region, this would serve as a reliable means to achieve a $50\%$ density reduction for example, although at the expense of writing intensity noise and other shot-to-shot variation issues of the pulsed dye laser onto the number density of the ensemble.
+Microwave transfer is a more compelling possibility, especially since it affords the possibility of directly transferring molecules to an un-trapped state.
+Applying them during deceleration presents a bit of a challenge however, especially given the usual engineering constraints imposed by the high voltage system.
+In the past, we've addressed this using the biased tee strategy described further in~\cite{Stuhl2012uwave}, but hoping for a simpler workaround, we attempted a microwave near-field probe style coupler as shown in 
+
 \section{Elastic v Inelastic}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\ifx\justbeingincluded\undefined
+\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+\bibliography{allrefs}		% Bib database in "allrefs.bib"
+\end{document}
+\fi

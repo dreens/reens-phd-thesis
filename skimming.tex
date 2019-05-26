@@ -1,7 +1,57 @@
-\chapter{Segregation}
+\ifx\justbeingincluded\undefined
+\input chappreamble.tex
+\fi
+
+
+
+\chapter{Skimming}
 
 As in many physical chemistry setups, the creation is all too soon marred and cast into disarray by a form of original sin, in this case segregation. Not all molecules are created equally, and so it is necessary to separate the wheat from the chaff, to separate those which are propagating in a nearly straight line from those for which the allure of the broad way that leadeth unto destruction has proven too strong. Typically, this is achieved by what is known as a molecular beam skimmer.
 
 \section{Aerodynamic Skimming}
 
+Traditional skimming techniques focus on shaping a trumpet-like structure in just the right way so as to minimize the chance of rejected molecules subsequently reentering the beam after interacting with the structure.
+Under the assumption of full accomodation upon interaction with the surface, a molecule may be assumed to leave the surface with a cosine distribution of trajectories, i.e. favoring exit in a direction perpendicular to the surface.
+For this reason it is advantageous to have the surface strongly tipped away from the beam, and to have the surface razor thin around its opening, so that as much as possible the molecules which interact with the skimmer are directed strongly away from the beamline.
+With this way of thinking, it might seem ideal to separate the beam with a very long hypodermic tube, but interactions with the inner surface of the skimming structure are also a concern.
+Molecules impinge on the inner surfaces due to the inherent transverse temperature and spreading of the unperturbed beam, and also due to molecules which interact unfavorably with the tip of the skimmer, and for this region it is better to have the inside of the skimmer open up and not be shaped like a tube.
+The precise details of the shape can be exactly computed in the case of a continuum flow of molecules, but since the advent of pulsed supersonic expansions, these details are no longer relevant since skimmers are no longer positioned in the regime of continuum flow of the valve, which only made sense with the much higher overall fluxes and much lower instantaneous fluxes of continuous beam sources.
+
 \section{Cryogenic Skimming}
+
+Cryogenic skimming can make a significant improvement to the situation thanks to the high probability of adsorption of molecules directly onto a cold surface, which much more thoroughly addresses the problem of separating unwanted molecules without their having an opportunity to negatively influence the others.
+This work is thoroughly described in both our PCCP publication~\cite{Wu2018} and in Hao's thesis~\citep[Chap.~5]{WuThesis2019}.
+I will focus here on the question of how theses gains may best be transferred to the loading and operation of a Stark decelerator.
+
+\section{Decelerator Coupling}
+
+Our first attempt at coupling molecules into the decelerator was not highly successful, with the cooling leading to far less significant gains than previously, a strong indication of decelerator clogging effects.
+We first sought to address this through the use of modified skimmer geometries, which I will describe here, before moving on to more advanced strategies involving hexapolar focusing and described in the next chapter.
+
+\subsection{Volcano Skimming}
+
+One obvious way to reduce the flux of molecules encountering the high temperature surfaces of the decelerator pins is to require the molecules of interest to go through a longer, narrower hole than previously.
+To achieve this, we installed a modified skimmer which was essentially just a cone with a hole drilled through.
+Using na\:{i}eve solid angle arguments, this ought to have reduced flux onto the decelerator rods by more than an order of magnitude relative to the previous design.
+In practice, the volcano skimmer performed poorly, likely only transferring clogging issues to itself from the decelerator pins.
+To assess the relative contribution of volcano skimmer clogging and decelerator pin clogging, we also performed tests with Argon as a carrier gas.
+This ought to have a significantly improved adsorption probability relative to Neon, and could have lead to a performance enhancement if cloging in the skimmer were truly to blame.
+A comparable ratio of hot and cold temperatures with Argon was observed, suggesting that either both gases had rather poor first-bounce adsorption probabilities or that clogging on the decelerator pins remained the primary issue.
+
+\subsection{Double Skimmer}
+
+Suspecting clogging in the volcano structure, we designed an alternative with similar flux reductions as far as the decelerator was concerned, but with much better egress options for limiting any clogging within the structure itself.
+The device was designed to occupy a small space and integrate seamlessly with our existing mounting structure for quick turnaround.
+Essentially, a miniature skimmer was machined in one piece with an outer ring for soldering directly on to the back of another skimmer.
+
+
+
+
+
+
+
+\ifx\justbeingincluded\undefined
+\bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
+\bibliography{allrefs}		% Bib database in "allrefs.bib"
+\end{document}
+\fi
