@@ -10,18 +10,30 @@ As in many physical chemistry setups, the creation is all too soon marred and ca
 
 \section{Aerodynamic Skimming}
 
-Traditional skimming techniques focus on shaping a trumpet-like structure in just the right way so as to minimize the chance of rejected molecules subsequently reentering the beam after interacting with the structure.
+Traditional skimming techniques focus on shaping a trumpet-like structure in just the right way so as to minimize the chance of rejected molecules subsequently reentering the beam after interacting with the structure~\cite{Bossel1971,Bossel1974}.
 Under the assumption of full accomodation upon interaction with the surface, a molecule may be assumed to leave the surface with a cosine distribution of trajectories, i.e. favoring exit in a direction perpendicular to the surface.
-For this reason it is advantageous to have the surface strongly tipped away from the beam, and to have the surface razor thin around its opening, so that as much as possible the molecules which interact with the skimmer are directed strongly away from the beamline.
+For this reason it is advantageous to have the surface strongly tipped away from the beam, and to have the surface razor thin around its opening, so that as much as possible the molecules which interact with the skimmer are directed strongly away from the beam-line.
 With this way of thinking, it might seem ideal to separate the beam with a very long hypodermic tube, but interactions with the inner surface of the skimming structure are also a concern.
-Molecules impinge on the inner surfaces due to the inherent transverse temperature and spreading of the unperturbed beam, and also due to molecules which interact unfavorably with the tip of the skimmer, and for this region it is better to have the inside of the skimmer open up and not be shaped like a tube.
-The precise details of the shape can be exactly computed in the case of a continuum flow of molecules, but since the advent of pulsed supersonic expansions, these details are no longer relevant since skimmers are no longer positioned in the regime of continuum flow of the valve, which only made sense with the much higher overall fluxes and much lower instantaneous fluxes of continuous beam sources.
+Molecules impinge on the inner surfaces due to the inherent transverse temperature and spreading of the unperturbed beam, and also due to molecules which interact unfavorably with the tip of the skimmer, and for this region it is better to have the inside of the skimmer open up and not be shaped like a tube~\citep[Sec.~2.4]{Bossel1971}.
+The precise details of the shape can be exactly computed in the case of a continuum flow of molecules~\cite{Campargue1984}, but since the advent of pulsed supersonic expansions, these details are no longer relevant since skimmers are no longer positioned in the regime of continuum flow of the valve, which only made sense with the much higher overall fluxes and much lower instantaneous fluxes of continuous beam sources.
 
 \section{Cryogenic Skimming}
 
-Cryogenic skimming can make a significant improvement to the situation thanks to the high probability of adsorption of molecules directly onto a cold surface, which much more thoroughly addresses the problem of separating unwanted molecules without their having an opportunity to negatively influence the others.
+Cryogenic skimming can make a significant improvement to the situation thanks to the high probability of adsorption of molecules directly onto a cold surface, which much more thoroughly addresses the problem of separating unwanted molecules without their having an opportunity to negatively influence the others~\cite{Segev2017}.
+Even in the case of incomplete sticking, even partial accommodation of molecules to the low temperature surface reduces their ability to make it back into the beam before it has zoomed by.
 This work is thoroughly described in both our PCCP publication~\cite{Wu2018} and in Hao's thesis~\citep[Chap.~5]{WuThesis2019}.
-I will focus here on the question of how theses gains may best be transferred to the loading and operation of a Stark decelerator.
+I will focus here on the question of how these gains may best be transferred to the loading and operation of a Stark decelerator.
+For this purpose, the key result worth recapitulating from our skimmer cooling work concerns the absolute comparison between the state of the art in room temperature skimming and that in cryogenic skimming, see Fig.~\ref{cryocommercial}.
+A gain of nearly a factor of thirty is found in the improvement that results from the use of the cryogenic technique.
+This gain may be understood to arise from a combination of ``geometric" and ``cryogenic'' gains, where the former refer to the reduction in valve-detector distance afforded by the reduced valve-skimmer distance and correspondingly increased solid angle, and the latter refers to the remaining gain directly associated with clogging mitigation.
+It should be noted that this geometric gain is potentially suspect in the sense that at some point these gains correspond to molecules which may contribute to the increased spatial density observed after the skimmer but are too hot transversely to be loaded into the decelerator anyway.
+To first order, this is not the case for the molecules which contribute to the observation in Fig.~\ref{cryocommercial}, since with a minimal detector transverse size for optimum density measurement, and an assumed $\sim\!2$~mm transverse effective initial source size, molecules hit the detector with a transverse velocity spread of:
+\begin{equation}
+\frac{2\text{ mm}}{8.4\text{ cm}}\times810\text{ m/s} = 19\text{ m/s}.
+\end{equation}
+By comparison, traditional deceleration accepts a spread closer to $10$~m/s, but $SF$ mode pushes this out to $18$~m/s, and $VSF$ out to $24$~m/s, see Fig.~\ref{phasespaceexamp}.
+
+\figdave{cryocommercial}{Cryogenic Commercial Skimmer Comparison}{(a) Experimental diagram for the skimmer comparison. The ``X" marks the location of LIF detection. (b) Spatial hydroxyl radical density is measured after cryogenic and commercial skimmers with the valve-skimmer distance optimized for greatest density in both cases. A factor of thirty enhancement is observed.}{\linewidth}
 
 \section{Decelerator Coupling}
 
@@ -30,21 +42,49 @@ We first sought to address this through the use of modified skimmer geometries, 
 
 \subsection{Volcano Skimming}
 
+\figdave{volcanoskim}{Volcano Skimmer Mechanical Drawing}{Mechanical drawing of the volcano skimmer, units are inches, $0.079" = 2$~mm. With a valve mounted right at $2-3$~cm from the skimmer tip, the optimum found with no decelerator, 9x reduced flux from $50\%$ hole diameter reduction and doubled distance of aperture to valve.}{\linewidth}
+
 One obvious way to reduce the flux of molecules encountering the high temperature surfaces of the decelerator pins is to require the molecules of interest to go through a longer, narrower hole than previously.
-To achieve this, we installed a modified skimmer which was essentially just a cone with a hole drilled through.
-Using na\:{i}eve solid angle arguments, this ought to have reduced flux onto the decelerator rods by more than an order of magnitude relative to the previous design.
+To achieve this, we installed a modified skimmer which was essentially just a cone with a hole drilled through, see the mechanical drawing shown in Fig.~\ref{volcanoskim}.
+Using na\"ieve solid angle arguments, this ought to have reduced flux onto the decelerator rods by more than an order of magnitude relative to the previous design.
 In practice, the volcano skimmer performed poorly, likely only transferring clogging issues to itself from the decelerator pins.
 To assess the relative contribution of volcano skimmer clogging and decelerator pin clogging, we also performed tests with Argon as a carrier gas.
-This ought to have a significantly improved adsorption probability relative to Neon, and could have lead to a performance enhancement if cloging in the skimmer were truly to blame.
+This ought to have a significantly improved adsorption probability relative to Neon, and could have lead to a performance enhancement if clogging in the skimmer were truly to blame.
 A comparable ratio of hot and cold temperatures with Argon was observed, suggesting that either both gases had rather poor first-bounce adsorption probabilities or that clogging on the decelerator pins remained the primary issue.
 
-\subsection{Double Skimmer}
+\subsection{Double Skimming}
 
-Suspecting clogging in the volcano structure, we designed an alternative with similar flux reductions as far as the decelerator was concerned, but with much better egress options for limiting any clogging within the structure itself.
-The device was designed to occupy a small space and integrate seamlessly with our existing mounting structure for quick turnaround.
+\figdave{doubleskim}{Double Skimmer Mechanical Drawing}{Mechanical drawing of the second skimmer attachment component of the double skimmer. This rather complex design was machined via CNC from a single block of 99.9995 (5N5) copper for high thermal conductivity. Dimensions are in inches, $0.039'' = 1$~mm.}{\linewidth}
+
+Suspecting clogging in the volcano structure, we designed an alternative with similar flux reductions as far as the decelerator was concerned, but with much better egress options for limiting any clogging within the structure itself, see the mechanical drawing shown in Fig.~\ref{doubleskim}.
+The device was designed to occupy a small space and integrate seamlessly with our existing mounting structure for quick manufacturing turnaround.
 Essentially, a miniature skimmer was machined in one piece with an outer ring for soldering directly on to the back of another skimmer.
+Any clogging associated with internal wall reflection in the volcano skimmer should be greatly reduced in the device, while enacting even stricter flux limitations thanks to the further reduced $1$~mm opening hole.
+In practice, the device performed only slightly better than the volcano skimmer.
+Our key figure of merit for performance is shown in Fig.~\ref{skimtodecelcomp}.
+Here the detected OH molecules after guiding through the length of the decelerator are shown comparing the commercial skimmer to the volcano and double skimmers.
+In stark contrast to Fig.~\ref{cryocommercial}, here only a loss is found between the commercial and cryogenic devices.
 
+\figdave{skimtodecelcomp}{Skimmer Variations for Decelerator Coupling}{Several Skimmers are attempted, and none are found to improve upon the best guided molecule flux obtained via commercial skimming. The variation in arrival time of the measurements correspond to the different valve skimmer distances used in the various cases, and also to the variation in the initial speed of carrier gases between the case where Argon is used and the others. These data were collected on March 16 and April 26 of 2018.}{\linewidth}
 
+\section{Lower Temperatures}
+
+Some of our results suggested a performance that was still strongly improving as a function of further reduced temperature by the time our limiting pulsed tube cryostat capabilities were reached, see Fig.~\ref{lowtempsat}.
+This motivated us to pursue a liquid Helium cooled skimmer, so as to achieve a further factor of two in temperature, and potentially expose an even more dramatic gain in molecule number relative to what had already been observed.
+These attempts did not lead to an improved performance, and were not reported in~\cite{Wu2018}, but some lessons worth sharing were learned.
+
+\figdave{lowtempsat}{Low Temperature Trends for Cryogenic Skimming}{The low temperature behavior for cryogenic skimming shows a distinct lack of saturation, and a broadening of signal variation. Binning data by phase of the pulse tube cooler temperature variation reveals the strong role this plays. Results are somewhat encouraging of prospects for a lower temperature measurement.}{12cm}
+
+One of our most surprising early observations was the wildly varying variance of the observed signal as a function of skimmer temperature. 
+In fact, at first the observation was even more bizarre than what is shown in Fig.~\ref{lowtempsat}, where three distinct data branches were visible in the region between $35--20^\circ\!$K, as can still be seen in the experiment logbook.
+This turned out to be an artifact of $60$~Hz noise on the thermometer spectrum, and is an interesting example of the ways that noise sources can interfere with data interpretation especially on a parametric plot.
+In any case, with this issue easily filtered away, it also became clear that the broad variation in signal variance, especially between $20--8^\circ\!$K, was induced by the rather large $2--3^\circ\!$K amplitude temperature oscillations of the second stage of our Cryomech PT807 pulsed tube cooler.
+Such fluctuations are not untypical of a purely copper system, which has a negligible heat capacitance in these temperature ranges, and therefore directly writes the fluctuating temperature of the cryogenic fluid onto the system of interest.
+We found a very strong dependence of the observed flux through the skimmer on not only the instantaneous temperature of the skimmer but whether it was in the midst of becoming colder or hotter.
+It is a bit of a mystery why such a dependence would exist.
+I spent some time searching for any reason that a time-lag might exist between the collection of OH signal and of cryostat temperature data, since this could masquerade as such a dependence, but nothing turned up.
+Assuming the dependence is in fact real, one reason could relate to details of the adsorption process and of the surface layer on the cryogenic skimmer.
+For example, bringing the adsorbed neon back up from its lowest temperature could function as an annealling step which changes the spring constant of the solid in a way that is more favorable for further adsorption.
 
 
 
