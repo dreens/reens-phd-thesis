@@ -76,9 +76,9 @@ These attempts did not lead to an improved performance, and were not reported in
 \figdave{lowtempsat}{Low Temperature Trends for Cryogenic Skimming}{The low temperature behavior for cryogenic skimming shows a distinct lack of saturation, and a broadening of signal variation. Binning data by phase of the pulse tube cooler temperature variation reveals the strong role this plays. Results are somewhat encouraging of prospects for a lower temperature measurement.}{12cm}
 
 One of our most surprising early observations was the wildly varying variance of the observed signal as a function of skimmer temperature. 
-In fact, at first the observation was even more bizarre than what is shown in Fig.~\ref{lowtempsat}, where three distinct data branches were visible in the region between $35--20^\circ\!$K, as can still be seen in the experiment logbook.
+In fact, at first the observation was even more bizarre than what is shown in Fig.~\ref{lowtempsat}, where three distinct data branches were visible in the region between $35-20^\circ$K, as can still be seen in the experiment logbook.
 This turned out to be an artifact of $60$~Hz noise on the thermometer spectrum, and is an interesting example of the ways that noise sources can interfere with data interpretation especially on a parametric plot.
-In any case, with this issue easily filtered away, it also became clear that the broad variation in signal variance, especially between $20--8^\circ\!$K, was induced by the rather large $2--3^\circ\!$K amplitude temperature oscillations of the second stage of our Cryomech PT807 pulsed tube cooler.
+In any case, with this issue easily filtered away, it also became clear that the broad variation in signal variance, especially between $20-8^\circ$K, was induced by the rather large $2-3^\circ$K amplitude temperature oscillations of the second stage of our Cryomech PT807 pulsed tube cooler.
 Such fluctuations are not untypical of a purely copper system, which has a negligible heat capacitance in these temperature ranges, and therefore directly writes the fluctuating temperature of the cryogenic fluid onto the system of interest.
 We found a very strong dependence of the observed flux through the skimmer on not only the instantaneous temperature of the skimmer but whether it was in the midst of becoming colder or hotter.
 It is a bit of a mystery why such a dependence would exist.
@@ -113,6 +113,34 @@ This poor choice led to the freezing and failing of said gasket due to the cold 
 A workaround was to use a 1" ultratorr fitting to bridge the vacuum barrier and provide some position tunability, and connect a 1" tube to the thin walled 1/2" SS tube with the cold cryogen running through it via Swagelok, thereby leaving plenty of room to apply a heater for the gasket in between.
 Further details are labeled in Fig.~\ref{flowcryoskimview}.
 
+Several of the first attempts at transferring Helium to this device were fraught with major challenges, particularly with regard to temperature stabilization, which are worth discussing further here.
+In our experiments with the pulse tube cooled skimmer, we often detected a strong sensitivity to whether or not the valve was left on during cooldown.
+In particular, it was found that leaving the valve on was actually crucial to the resulting performance of the system.
+We were usually unable to recover the performance of the system without first heating somewhat close to room temperature.
+This strongly suggests that the performance relates to the influence of water or other high temperature freezing species on the cryoadsorption process for Neon onto the copper skimmer.
+For example, suppose that a layer of solid ice is actually detrimental to Neon adsorption, and the formation of such a layer is the key process leading to reduced performance under some operating conditions.
+This could explain the observed requirement of operating the valve during cooldown, provided the regular bombardment of the skimmer surface with Neon was sufficient to disturb the formation of such a layer.
+It could also explain the observed failure to restore performance by partial warming, since warming only above the Neon freezing point could actually be a very efficient way to help the water mixed in with the Neon to settle down into a solid layer.
+
+\figdave{lhebounce}{Liquid Helium Cooled Skimmer Bouncing}{
+Neon flux and temperature are monitored during the cooldown procedure for a liquid helium cooled skimmer. 
+(a) Neon signal, measured by fast ion gauge, creates a voltage dip on the collector of the indicated magnitude over the measured timespan. 
+(b) Temperature, measured via DT-670 Lakeshore Silicon diode, exhibits an erratic quasi-periodic temporal variation, likely driven by highly nonlinear characteristics of the liquid Helium flow including bubble formation and surface tension inhibiting heat transfer. 
+(c) Parametric plot showing strong hysteresis behavior in the sense that the observed signal depends not only on the instantaneous temperature but its time history.}{\linewidth}
+
+In any case, during our first attempts with the Helium cooled skimmer, we inadvertently created a temperature bouncing phenomenon, see Fig.~\ref{lhebounce}.
+The system temperature was found to erratically vary between $20^\circ\!$K and $5^\circ\!$K, as shown in panel (b) of Fig.~\ref{lhebounce}.
+We hypothesize that this resulted from the situation where the narrow size of the copper reservoir allowed a bubble of Helium gas to sit between the base of the copper reservoir and the liquid Helium above.
+The bubble would grow in size as the heat load on the skimmer continues to transfer to the Helium, until eventually the bubble would interrupt the flow of liquid helium out of the transfer tube and into the thin-walled stainless steel tube.
+At this point, the liquid Helium working its way up between the transfer line and the thin-walled tube would quickly evaporate, allowing Helium gas to escape from the bubble above the reservoir and allowing new liquid helium to drop suddenly down on to the reservoir once more.
+By increasing the pressure of Helium gas applied to the Helium dewar during the transfer, we were able to overcome this temperature bouncing mode of operation, although the pressures required ($5$~psi or so above room pressure) are very high as far as Helium dewars are concerned, which usually have relief valves at $10$~psi and very stern warnings about the dangers of overpressure.
+The high pressures used for transfer also limit the temperature obtained at the skimmer, since the evaporation temperature of liquid Helium has a significant pressure dependence~\citep[Sec.~A]{Jensen1980}.
+
+\section{Conclusions}
+
+Although we have successfully demonstrated very significant gains associated with skimmer cooling on its own, leveraging these gains for deceleration has proven elusive.
+A more reliable and robust method is desired for mitigating clogging not only in the skimmer but also in the ensuing coupling process to the decelerator.
+While cooling of the decelerator itself certainly comes to mind as a possibility, the best blend of manufacturing plausibility and prospects for clogging mitigation were determined to be a cryogenic focusing hexapole, described further in the next chapter.
 
 \ifx\justbeingincluded\undefined
 \bibliographystyle{unsrtDR}	% or "siam", or "alpha", etc.
