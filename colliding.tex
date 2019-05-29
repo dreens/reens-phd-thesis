@@ -49,6 +49,13 @@ Source variations which change the initial temperature of the supersonic expansi
 The distribution proposed in Eq.~\ref{eqbaddist} is in fact a more benign representation of what is possible.
 Loading a narrow distribution off of center can easily lead the radially averaged phase space distribution to actually peak away from center for example.
 
+\figdave{uwprobe}{Microwave Free Space Coupling Probe}{
+A microwave free space coupling probe used for addressing OH molecules even in the midst of the Stark decelerator.
+The brass structure is in good mechanical and electrical contact with the center pin of a coaxial vacuum feedthrough mounted in a 2.75" conflat vacuum connector.
+This is achieved with the 0-80 setscrew just visible towards the base of the brass structure.
+The thin region of the Brass structure has a 1/4" diameter, and the thick region is closer to 3/4" diameter.
+}{12cm}
+
 Another possibility for achieving density variations without changing the distribution $\delta(r)$ of molecules delivered eventually to the trap is to perturb some aspect of the deceleration process, but leave the source untouched.
 Any phase space manipulation based technique, such as operating in different deceleration modes or introducing gaps in the coverage of the traveling potential, would have the same possibility of disturbing the distribution ultimately loaded into the trap as just described for the case of source variations.
 However, in the decelerator, the population is already state selected, opening up the different possibility of directly reducing the density by spectroscopic means.
@@ -57,15 +64,15 @@ Microwave transfer is a more compelling possibility, especially since it affords
 Applying them during deceleration presents a bit of a challenge however, especially given the usual engineering constraints imposed by the high voltage system.
 In the past, we've addressed this using the biased tee strategy described further in~\cite{Stuhl2012uwave}, but hoping for a simpler workaround, we attempted a microwave near-field probe coupler as shown in Fig.~\ref{uwprobe}.
 
-\figdave{uwprobe}{Microwave Free Space Coupling Probe}{
-A microwave free space coupling probe used for addressing OH molecules even in the midst of the Stark decelerator.
-The brass structure is in good mechanical and electrical contact with the center pin of a coaxial vacuum feedthrough mounted in a 2.75" conflat vacuum connector.
-This is achieved with the 0-80 setscrew just visible towards the base of the brass structure.
-The thin region of the Brass structure has a 1/4" diameter, and the thick region is closer to 3/4" diameter.
-}{12cm}
+\figdave{uwaveproof}{Successful Coupling of Free-Space Microwave Cavity Modes}{Microwaves are successfully coupled into our vacuum chamber using the probe shown in Fig.~\ref{uwprobe}, as evidenced by the response of hydroxyl radicals to increasing powers shown here.
+These molecules were slowed to $43$~m/s and then allowed to fly through the detection region with no trap loading.
+These data were collected on June 14th, 2016.
+Microwave powers are as measured at the vacuum feedthrough.
+At a later point, we were able to apply even higher RF powers by instead applying them in a pulsed manner so as to remain within the capabilities of our microwave equipment.}{\linewidth}
 
 In the microwave engineering literature~\cite[Sec.~4.7]{Pozar2009}, a probe is a near-field device used either for driving a waveguide or measuring its local field behavior. 
 The chamber in which our decelerator sits has a $20$~cm diameter, comparable to the microwave frequencies relevant for driving \f3 to \e3 transitions, where in zero field $1.7$~GHZ corresponds to $18$~cm wavelengths, so it is reasonable to expect that a simple current probe might successfully drive microwave modes of the vacuum chamber.
+This indeed turns out to be the case, and we successfully used this probe, not only for microwave removal of population during deceleration, as shown in Fig.~\ref{uwaveproof}, but also to perform the same in-trap spectroscopy described in the previous chapter.
 
 \section{Elastic v Inelastic}
 
