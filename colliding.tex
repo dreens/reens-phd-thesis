@@ -74,10 +74,59 @@ In the microwave engineering literature~\cite[Sec.~4.7]{Pozar2009}, a probe is a
 The chamber in which our decelerator sits has a $20$~cm diameter, comparable to the microwave frequencies relevant for driving \f3 to \e3 transitions, where in zero field $1.7$~GHZ corresponds to $18$~cm wavelengths, so it is reasonable to expect that a simple current probe might successfully drive microwave modes of the vacuum chamber.
 This indeed turns out to be the case, and we successfully used this probe, not only for microwave removal of population during deceleration, as shown in Fig.~\ref{uwaveproof}, but also to perform the same in-trap spectroscopy described in the previous chapter.
 
+\subsection{Trap Decay Curves}
+
+Another competing technique for observing the influence of collisions relates to the functional form of the decay that is exhibited from a trapping geometry as a function of time.
+If we make the simple na\"{i}ve assumption that collisions lead to loss uniformly over a population regardless of other parameters, this can be described by the following differential equation:
+\begin{equation}
+\frac{dN}{dt} = - \beta N^2  -\alpha N,
+\end{equation}
+where the magnitude of the two-body process is parametrized by $\beta$, and single-particle effects such as collisions with background gas molecules are included in the model and parametrized by $\alpha$.
+This can in turn be solved by the factorization method for rational polynomial functions:
+\begin{eqnarray}
+\int\frac{dN}{N(\alpha+\beta N)} &=&- t + C,\\
+\int\frac{1}{\alpha}\left(\frac{1}{N} - \frac{\beta}{\alpha +\beta N}  \right)dN &=& -t+C\\
+\log{N} - \log{\left(\alpha + \beta N\right)} &=& -\alpha t + C'\\
+\frac{N}{\alpha + \beta N} &=& C''e^{-\alpha t}\\
+\frac{1}{\alpha/N + \beta} &=& C''e^{-\alpha t}\\
+\alpha/N + \beta &=& C'''e^{\alpha t}\\
+N(t) &=& \frac{\alpha}{C'''e^{\alpha t}-\beta}
+\end{eqnarray}
+Now by requiring that $N(0)=N_0$, we have:
+\begin{eqnarray}
+N_0 = \frac{\alpha}{C'''-\beta}\\
+C''' = \frac{\alpha}{N_0}+\beta.
+\end{eqnarray}
+Substituting and moving around:
+\begin{eqnarray}
+N(t) &=& \frac{\alpha}{(\frac{\alpha}{N_0}+\beta)e^{\alpha t}-\beta}\\
+&=& \frac{N_0 e^{-\alpha t}}{1 +\beta N_0(1-e^{-\alpha t})/\alpha}\label{eq12body}
+\end{eqnarray}
+This equation is rather ugly, but it can be seen to reduce to the more well known formulas describing the decay of a population subject to either single or double particle effects but not both.
+To see this, we simply take the corresponding $\alpha$ or $\beta$ parameters in Eq.~\ref{eq12body} to zero:
+\begin{eqnarray}
+\lim_{\beta\rightarrow 0} \left(\frac{N_0 e^{-\alpha t}}{1 +\beta N_0(1-e^{-\alpha t})/\alpha}\right) &=& N_0 e^{-\alpha t}\\
+\lim_{\alpha\rightarrow 0} \left(\frac{N_0 e^{-\alpha t}}{1 +\beta N_0(1-e^{-\alpha t})/\alpha}\right) = \frac{N_0}{1+\beta N_0 \left( te^{-\alpha t}|_{\alpha=0} \right)} &=& \frac{N_0}{1+\beta N_0 t}
+\end{eqnarray}
+where the penultimate step for the two-body formula is achieved via L'H\^{o}pital's rule.
+
+With these functional forms in hand, it is now possible to use the fitting of measured trap decays as an observable giving indication of the presence of collisional effects.
+Historically, this procedure was used in our experiment in both the Ring and Tricycle traps, but never in the Pin trap due to unreliabilities identified in this procedure and discussed below in the context of specific types of collisional processes.
+For now, it is useful to be a bit more explicit about the domain of validity of these kinds of loss expressions.
+
+First and foremost, it is essential that these observations are made in the absence of any time varying single-particle loss processes, such as the potentially slow escape dynamics of some classes of molecules from the trap geometry.
+In the Ring trap for example, we have direct experimental confirmation that molecules do not explore the toroidal region of the trap, although they have access to it.
+This confirms that the ensemble loaded in this trap is in a potentially dangerous regime for the application of loss functional forms, since there should certainly be a timescale for molecules to explore the toroid which has not been easily satisfied in the first few milliseconds after trap loading.
+
 \section{Elastic v Inelastic}
 
+\subsection{History}
 
-
+In the early period of my thesis work, the fitting of trap decays was frequently relied upon as a sort of gold standard for assessing the collision rate of the trapped sample.
+Not only fitted decays, but also comparisons to simulated decays with varying collision rates were frequently presented and discussed.
+An example of this is shown in Fig.~\ref{}.
+It is seen that larger numbers of molecules are much more successful at fitting the shapes observed in the trapping geometry.
+In light of more recent experiences, I now consider these approaches to be extremely suspect and unreliable, primarily due to the invalidity 
 
 
 
