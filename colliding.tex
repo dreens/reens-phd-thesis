@@ -5,7 +5,7 @@
 \chapter{Collisions}
 \label{chapter:collisions}
 
-\section{Molecular Collision Theory}
+%\section{Molecular Collision Theory}
 
 Collisions are in principle very interesting things to study for low temperature molecular systems. 
 Quantization of intermolecular degrees of freedom leads to a host of interesting dynamics, which until relatively recently could only be discerned via their contribution to measured integrated cross sections including averaging over many initial states and many partial waves of the interaction potential.
@@ -115,22 +115,25 @@ Historically, this procedure was used in our experiment in both the Ring and Tri
 For now, it is useful to be a bit more explicit about the domain of validity of these kinds of loss expressions.
 
 First and foremost, it is essential that these observations are made in the absence of any time varying single-particle loss processes, such as the potentially slow escape dynamics of some classes of molecules from the trap geometry.
-In the Ring trap for example, we have direct experimental confirmation that molecules do not explore the toroidal region of the trap, although they have access to it.
+In the Ring trap for example, we have experimental indications that molecules do not explore the toroidal region of the trap, although they have access to it.
 This confirms that the ensemble loaded in this trap is in a potentially dangerous regime for the application of loss functional forms, since there should certainly be a timescale for molecules to explore the toroid which has not been easily satisfied in the first few milliseconds after trap loading.
 
-\section{Elastic v Inelastic}
-
-\subsection{History}
+\section{History}
 
 In the early period of my thesis work, the fitting of trap decays was frequently relied upon as a sort of gold standard for assessing the collision rate of the trapped sample.
 Not only fitted decays, but also comparisons to simulated decays with varying collision rates were frequently presented and discussed.
-An example of this is shown in Fig.~\ref{}.
-It is seen that larger numbers of molecules are much more successful at fitting the shapes observed in the trapping geometry.
-In light of more recent experiences, I now consider these approaches to be extremely suspect and unreliable, primarily due to the invalidity 
+An example of this is shown in Fig.~\ref{decayfitex}.
+It is seen that large collision rates are rather successful at fitting the shapes observed in the trapping geometry.
+In light of more recent experiences, I now consider these approaches to be extremely suspect and unreliable, primarily due to the invalidity of the assumption of time-independence of the single particle loss rates.
 
+\figdave{decayfitex}{Extracting Collision Rates from Decay Fits}{
+The fitting of the decays of molecules from the trap with direct monte-carlo simulations including collision rates are shown. 
+Large collision rates of $130$/s are found to fit best, primarily due to the initially fast decay exhibited by the population.
+These data were collected on June 26th, 2013.
+}{\linewidth}
 
-
-
+We also commonly generated entire panels of simulation data where simulation parameters were varied in order to determine the best fitting to the experiment.
+Examples are shown in Fig.~\ref{}.
 
 
 
