@@ -15,6 +15,9 @@
 **.bbl
 **.out
 
+#Sometimes I wish I could keep these, but its getting too cluttered and they can be locally recompiled:
+**.pdf
+
 #OSX/UNIX/LINUX Matlab Autosaves
 **.m~
 
@@ -37,14 +40,3 @@
 #OSX Directory Stuff
 **.DS_Store
 
-#Cluster Directory. Note ignoring the whole thing saves lots of clutter.
-# Occasionally there may be files in it worth holding on to.
-# In this case they should be moved into the main directory.
-Cluster/
-
-#The autosave feature predates version control, and should be unnecessary
-# moving forward. It will still be useful while working locally.
-autosaves/
-
-#Fields Directory. No need to save generated .mat files, as this can occur in a few minutes time at a given location
-Fields/*.mat
