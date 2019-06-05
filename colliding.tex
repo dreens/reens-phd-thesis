@@ -3,24 +3,32 @@
 \input foolthesis.tex
 \fi
 
-\chapter{Collisions}
+\chapter{Detecting Collisions}
 \label{chapter:collisions}
 
 %\section{Molecular Collision Theory}
 
 Collisions are in principle very interesting things to study for low temperature molecular systems. 
 Quantization of intermolecular degrees of freedom leads to a host of interesting dynamics, which until relatively recently could only be discerned via their contribution to measured integrated cross sections including averaging over many initial states and many partial waves of the interaction potential.
-However, with the ability to isolate single quantum states thanks to selective manipulation techniques, and with the reduction of collision energies afforded by deceleration and trapping, new resolution on quantum mechanical interference type effects is now achievable.
+However, with the ability to isolate single quantum states thanks to selective manipulation techniques, and with the reduction of collision energies afforded by deceleration, new state-resolved effects~\cite{Greenberg2018}, and new resolution on quantum mechanical interference type effects are now achievable~\cite{Zastrow2014,Klein2016}.
+It is even possible to study effects directly pertaining to the orientation or stereodynamics of molecular interactions~\cite{Perreault2017}.
+Simultaneously, studies of collisions in traps have evolved from total cross section measurements~\cite{Sawyer2008,Wiederkehr2012}, to lower temperature determinations directly relevant to inelastic-elastic ratios~\cite{Marx2015,Wu2017,Segev2019}.
 
-In our experiment, collisions are understood as of some interest in and of themselves, but are primarily seen as a stepping stone along the route to even lower temperatures achieved by evaporative cooling.
-With this in mind, state resolving takes second seat to the ensemble integrated elastic to inelastic cross section ratio, a key figure of merit for successful evaporation.
+This last result~\cite{Segev2019} from the Narevicius group is particularly exciting, as it compares quite directly with our own work, including cryogenic skimming techniques, decelerator optimization, and cryogenic trapping optimization, and is worth further discussion here.
+Realizing a similar observation would be an exciting outcome of the research in this thesis, though at the time of this writing it remains unclear whether the optimizations we have pursued will achieve densities comparable to~\cite{Segev2019}. 
+In their Zeeman deceleration of oxygen, benefit is taken from oxygen's much more direct sourcing, and from the better integration of skimmer cooling with Zeeman deceleration thanks to the possibility of affixing long cryogenic Sapphire tubes within the bore of the decelerator~\footnote{In private communication with Yair Segev, we discussed the application of skimmer cooling to deceleration, and the use of such tubes in the Narevicius group was discussed.}.
+In contrast, for OH our discharging yield from water may be only $1-10$\%, and skimmer cooling has only led to two-fold gains with the hexapole~\ref{chapter:focusing}.
 
-\section{Experimental Detection Techniques}
+Another alternative strategy for phase space compression of molecules applicable to a wide array of species is found in the combination of centrifugal deceleration and optoelectric cooling~\cite{Prehn2016}.
+The deceleration technique has also directly enabled collisional studies on its own~\cite{Wu2017}, of $\text{CH}_3\text{F}$ and ND$_3$.
+The optoelectric sisyphus technique requires low spatial density flat-bottomed trap geometries, but the velocity space compression is quite impressive, $420^\circ~\!\mu$K is reached.
+Laser-based techniques are also beginning to enable similar molecular collisional studies, notably the recently observed sympathetic cooling of NaLi molecules by sodium~\cite{Park2019}, the first successful sympathetic cooling of a molecule by an atom.
+Work on laser-cooled molecules has also recently progressed to the collisional stage, with the Doyle group reporting on collisions between pairs of CaF molecules loaded into optical tweezers~\cite{Anderegg2019}.
 
-In any case, a key challenge that has emerged during the course of my thesis work has been the verification collisional behavior of any kind.
+A key challenge that has emerged during the course of my thesis work has been the verification of collisional behavior of any kind.
 For this purpose, several very general techniques exist, which are now described in detail.
 
-\subsection{Controlled Density Reductions}
+\section{Controlled Density Reductions}
 
 Collisional effects always influence a population in proportion to the likelihood of such collisions, which in turn scale with the square of the number density of the population.
 It therefore follows that as one were to scale an experimental control parameter tuning the number density of the population, collisional effects would grow quadratically in that parameter, while single-particle effects would grow linearly.
@@ -69,16 +77,17 @@ In the past, we've addressed this using the biased tee strategy described furthe
 These molecules were slowed to $43$~m/s and then allowed to fly through the detection region with no trap loading.
 These data were collected on June 14th, 2016.
 Microwave powers are as measured at the vacuum feedthrough.
-At a later point, we were able to apply even higher RF powers by instead applying them in a pulsed manner so as to remain within the capabilities of our microwave equipment.}{\linewidth}
+At a later point, we were able to apply even higher RF powers by instead applying them in a pulsed manner so as to remain within the capabilities of our microwave equipment.
+Fitted FWHM values in $\mu$s are reported in the legend and found not to vary with power.}{\linewidth}
 
 In the microwave engineering literature~\cite[Sec.~4.7]{Pozar2009}, a probe is a near-field device used either for driving a waveguide or measuring its local field behavior. 
 The chamber in which our decelerator sits has a $20$~cm diameter, comparable to the microwave frequencies relevant for driving \f3 to \e3 transitions, where in zero field $1.7$~GHZ corresponds to $18$~cm wavelengths, so it is reasonable to expect that a simple current probe might successfully drive microwave modes of the vacuum chamber.
 This indeed turns out to be the case, and we successfully used this probe, not only for microwave removal of population during deceleration, as shown in Fig.~\ref{uwaveproof}, but also to perform the same in-trap spectroscopy described in the previous chapter.
 
-\subsection{Trap Decay Curves}
+\section{Trap Decay Curves}
 
 Another competing technique for observing the influence of collisions relates to the functional form of the decay that is exhibited from a trapping geometry as a function of time.
-If we make the simple na\"{i}ve assumption that collisions lead to loss uniformly over a population regardless of other parameters, this can be described by the following differential equation:
+If we make the na\"{i}ve assumption that collisions lead to loss uniformly over a population regardless of other parameters, this can be described by the following differential equation:
 \begin{equation}
 \frac{dN}{dt} = - \beta N^2  -\alpha N,
 \end{equation}
@@ -107,31 +116,118 @@ This equation is rather ugly, but it can be seen to reduce to the more well know
 To see this, we simply take the corresponding $\alpha$ or $\beta$ parameters in Eq.~\ref{eq12body} to zero:
 \begin{eqnarray}
 \lim_{\beta\rightarrow 0} \left(\frac{N_0 e^{-\alpha t}}{1 +\beta N_0(1-e^{-\alpha t})/\alpha}\right) &=& N_0 e^{-\alpha t}\\
-\lim_{\alpha\rightarrow 0} \left(\frac{N_0 e^{-\alpha t}}{1 +\beta N_0(1-e^{-\alpha t})/\alpha}\right) = \frac{N_0}{1+\beta N_0 \left( te^{-\alpha t}|_{\alpha=0} \right)} &=& \frac{N_0}{1+\beta N_0 t}
+\lim_{\alpha\rightarrow 0} \left(\frac{N_0 e^{-\alpha t}}{1 +\beta N_0(1-e^{-\alpha t})/\alpha}\right) = \frac{N_0}{1+\beta N_0 \left( te^{-\alpha t}|_{\alpha=0} \right)} &=& \frac{N_0}{1+\beta N_0 t} \label{2bodyeq}
 \end{eqnarray}
 where the penultimate step for the two-body formula is achieved via L'H\^{o}pital's rule.
 
 With these functional forms in hand, it is now possible to use the fitting of measured trap decays as an observable giving indication of the presence of collisional effects.
-Historically, this procedure was used in our experiment in both the Ring and Tricycle traps, but never in the Pin trap due to unreliabilities identified in this procedure and discussed below in the context of specific types of collisional processes.
-For now, it is useful to be a bit more explicit about the domain of validity of these kinds of loss expressions.
-
-First and foremost, it is essential that these observations are made in the absence of any time varying single-particle loss processes, such as the potentially slow escape dynamics of some classes of molecules from the trap geometry.
+Historically, this procedure was used in our experiment in both the Ring and Tricycle traps, but never in the Pin trap due to thanks to the development of our capability of performing controlled density reductions.
+When using decay fits, it is essential that these observations are made in the absence of any time varying single-particle loss processes, such as the potentially slow escape dynamics of some classes of molecules from the trap geometry.
 In the Ring trap for example, we have experimental indications that molecules do not explore the toroidal region of the trap, although they have access to it.
 This confirms that the ensemble loaded in this trap is in a potentially dangerous regime for the application of loss functional forms, since there should certainly be a timescale for molecules to explore the toroid which has not been easily satisfied in the first few milliseconds after trap loading.
 
-\section{History}
+I can take this a step further by approximating a trap with slow escape dynamics for some populations as one characterized by two different single-particle decay times:
+\begin{equation}
+N(t)=A_1e^{-\alpha_1 t} + A_2e^{-\alpha_2 t}
+\end{equation}
+Now consider a trap where half the population decays with a background pressure limited lifetime of $500$~ms and the other half escapes the trap on a timescale that is slow relative to a $300~\mu$s oscillation time but faster than the background limit, say $50$~ms.
+These numbers are somewhat representative of historical values in our traps.
+In the absence of any collisional effects, fitting this bi-exponential decay with Eq.~\ref{eq12body} is optimal with a zero-valued $\alpha$, and with $\beta=9.9\pm0.1$/s/mol. 
+Not only does the hypothesis of decay according to Eq.~\ref{eq12body} give a strong slant in favor of two-body effects, it does so with high fidelity, fitting the data with an $R^2=0.99$, see Fig.~\ref{biexp2body}.
+I should mention that in this fitting I fix the initial population to one, which reduces the ability of Eq.~\ref{eq12body} to fit any arbitrary shape.
 
-In the early period of my thesis work, the fitting of trap decays was frequently relied upon as a sort of gold standard for assessing the collision rate of the trapped sample.
-Not only fitted decays, but also comparisons to simulated decays with varying collision rates were frequently presented and discussed.
-An example of this is shown in Fig.~\ref{decayfitex}.
+\figdave{biexp2body}{Decay Fitting for Collision Rate Extraction}{A biexponential decay curve is well fit by a two body, demonstrating the importance of either removing single-particle effects or ensuring that they occur on only a single timescale.}{\linewidth}
+
+Of course one contributing factor to the success of the two-body fit in matching the biexponential decay curve is the timescale probed in the experiment.
+One more effective way for distinguishing true two-body effects could be to use a long-time measurement to fix the one-body decay rate, since at long enough times the two-body effects reduce in relevance while the one-body rates remain fixed.
+In practice, this approach can lead to more trouble, since at about $3$~s~\cite{Hoekstra2007}, an additional one-body process kicks in, but as long as one-body effects are well-known, pushing to long timescales can improve the reliability of the decay-fitting method for detecting collisions.
+
+\subsection{Electric Field Induced Losses}
+
+One area where the fitting of decay curves played a very large roll was in the study of what was thought to be electric field induced inelastic loss.
+In the experiment~\cite{Stuhl2013}, it was found that application of electric field led to loss from the trap. 
+It was further found that initiating the loss after different hold times in the trap was a way of varying the initial density so as to probe the two-body process in different parameter regimes.
+Some example fits from~\cite{Stuhl2013} are shown in Fig.~\ref{efielddecay}a.
+At the time, it was known that a single particle loss due to electric field existed, discussed in the appendix of~\cite{Stuhl2013}.
+Its magnitude was approximated, and fixed in Eq.~\ref{eq12body} when fitting decay curves.
+It was argued that this strategy of fitting Eq.~\ref{eq12body} while varying initial population would lend robustness to the procedure despite the known difficulties of relying on Eq.~\ref{eq12body}~\citep[Page.~1800, bottom right]{Stuhl2013}.
+
+\begin{figure}[t!]
+\centering
+\vspace{0.5mm}
+\includegraphics[width=10cm]{stuhlinelastic}
+\includegraphics[width=14cm]{reensinelastic}
+\caption[Electric Field Induced Decays]{
+Electric field induced decays with different turn-on times of the electric field are shown.
+(a) Fits to decays initiated after application of a $3$~kV/cm electric field after different wait times yield two body parameters $\beta$ of (i) $40.4\pm3.0$, (ii) $41.2\pm4.2$, (iii) $48.4\pm8.1$, and (iv) $45.4\pm5.5$ (photons/shot)$^{-1}$s$^{-1}$. 
+Intrigued by the data shown in panel (a) from~\cite{Stuhl2013}, we took data with an emphasis on simultaneous collection for reduced systematics at longer timescales for all datasets, resulting in panel (b), collected in March of 2014 in the Tricycle trap with a similar electric field magnitude.
+\label{efielddecay}}
+\end{figure}
+
+During our reinvestigation, we pushed the decay measurements out to long times, and found the results shown in Fig.~\ref{efielddecay}b.
+These results are a big challenge to the hypothesis of a fixed single particle loss timescale, and strongly suggest a time-dependence of the single particle loss, since there is no reason that either a one-body or two-body effect, initiated after various wait times, should lead to nearly overlapped traces in the long term.
+Note how near $180$~ms in Fig.~\ref{efielddecay}b, the $50$, $100$, and $150$~ms traces all approach the same level.
+Intrigued by this observation of what seemed like a fixed magnitude trap-loss induced by the turn-on of the electric field, we also experimented with the application of multiple pulses of electric field, and obtained the results shown in Fig.~\ref{efieldmulti}.
+This presents an additional challenge to the hypothesis of simple electric field dependent loss parameters, which ought to respond only to the time integrated electric field application, and not whether it is pulsed or continuous.
+In contrast, in Fig.~\ref{efieldmulti} we find that applying the electric field for the entirety of the time sequence (red) causes far less loss than applying it for half of the time, but in a switched manner (yellow).
+This is strongly suggestive of a dynamical effect, i.e. an effect which concerns the short term dynamics of molecule trajectories in their trapping potential, and not a collisional effect which ought to respond generally speaking to thermodynamically and temporally averaged quantities.
+
+\figdave{efieldmulti}{Multiple Electric Field Applications}{
+Trap decay curves under various conditions related to the timing of application of electric field.
+The conditions are (blue) no electric field applied, (red) constant electric field applied, (yellow) $5$~ms pulses of electric field every $10$~ms.
+Lines are five point running averages.
+Data collected in March of 2014.
+}{\linewidth}
+
+Specifically, one obvious dynamical effect would be the behavior of the population in the presence of a spin-flip loss region, discussed at length in Sec.~\ref{sec:mech}.
+Molecules whose orbits regularly intersect the loss region are lost, but molecules may exist whose orbits never intersect the loss region.
+Indeed, such a class of molecules is mathematically guaranteed, thanks to the cylindrical symmetry of the ring and tricycle trap. 
+This symmetry enforces the conservation of angular momentum about the axis of cylindrical symmetry under the evolution of the classical Hamiltonian governing molecular trap orbits.
+Since the loss region occurs close to this axis, molecules with enough azimuthal angular momentum never intersect the loss region under classical Hamiltonian trajectory evolution.
+With some collisional thermalization however, trajectories which intersect the loss region should gradually be repopulated, but at a rate that is slow relative to the initial escape dynamics.
+We can conclude that if thermalization is slow, electric field enhanced spin-flip loss can cause a decay rate that decreases over time.
+If thermalization is slow even compared to the total experiment runtime, spin-flip loss should lead to the removal of a fixed subset of the population over a certain dynamical timescale, regardless of any hold-time, exactly as observed in the long-term behavior in Fig.~\ref{efielddecay}b.
+
+\section{Comparison to Simulation}
+
+Comparison to simulations is a potentially favorable strategy for detecting the roll of collisions in an experiment.
+Fast mean-field based approaches to simulating collisional gases exist, with that due to Bird~\cite{Bird1976} quite common in the literature.
+In the course of this thesis, significant simulation endeavors were pursued, often exactly with this goal of elucidating the relative contribution of single and double particle effects.
+Simulation is particularly promising in light of the role of dynamical effects described in the previous section, since any analytical forms are hopeless to shed light on dynamics, while the simulation should serve well with a suitably meshed trapping potential.
+
+Firstly, a note of caution is in order.
+Similar to the fitting of decay curves, comparison to simulations can be plagued by the same sorts of fundamental flaws as are the comparison to decay fits discussed in the last section.
+The simulation should certainly perform better than analytic decay fits in that it does not need to make any homogeneous population or related assumptions, but at the expense of abandoning these homogeneity assumptions the simulation becomes dependent on many additional tuning parameters.
+Extracted collisional contributions can strongly depend on these tuning parameters.
+As a thought experiment, suppose that an experimental parameter like the trap strength, which may easily deviate between simulation and experiment due to manufacturing defects or variability in the permanent magnets for example, is indeed different between the simulation and the experiment. 
+Suppose further that the simulation overestimates the trap depth by $10$\%.
+This parameter is important for the short-time dynamics of molecules from the trap, and an overestimate would result in a reduced roll of these dynamics, leading the simulation to underestimate the initial decay rate due to dynamics.
+Consequentially, it is likely that the best match between simulation and experiment would occur for a simulation with a larger number of collisions than the experiment, since these extra collisions would boost the initial decay rats to compensate for the trap depth overestimate.
+
+These issues could be behind the incredibly large collision rates predicted in the simulation decay fitting shown in Fig.~\ref{decayfitex} for example.
+These are not unperturbed decays, but occur during the application of various forced microwave evaporation sequences.
 It is seen that large collision rates are rather successful at fitting the shapes observed in the trapping geometry.
-In light of more recent experiences, I now consider these approaches to be extremely suspect and unreliable, primarily due to the invalidity of the assumption of time-independence of the single particle loss rates.
+A key parameter governing the comparison of simulation to experiment is the removal efficiency of the microwave knife, which could have dependencies on polarization and position in the trap that are not treated, dependence on molecule velocity, etc.
+If this parameter is too small, the simulation will predict greater numbers of molecules remaining, and the collision rate will be reduced to match this, since the collision rate also influences molecule number remaining by influencing how successful the evaporation is.
+I believe the match of microwave knife between simulation and experiment is responsible for the simulation landing at the large collision rate match of $130$~s$^{-1}$mol$^{-1}$ in Fig.~\ref{decayfitex}.
 
 \figdave{decayfitex}{Extracting Collision Rates from Decay Fits}{
-The fitting of the decays of molecules from the trap with direct monte-carlo simulations including collision rates are shown. 
+The fitting of the decays of molecules from the trap with direct Monte-Carlo simulations including collision rates are shown. 
 Large collision rates of $130$/s are found to fit best, primarily due to the initially fast decay exhibited by the population.
 These data were collected on June 26th, 2013.
+The legend describes some details of the microwave knife, 
 }{\linewidth}
+
+In addition to parameter tuning, there is also the question of whether the simulation correctly includes all relevant effects, since simplifying assumptions are often essential for reasonable runtimes and development times.
+Specifically, the influence of other substates of OH other than the doubly stretched one are pervasive and pernicious.
+As discussed in Sec.~\ref{loadingtransitions}, molecules in the \fm3 state end up in either \f1 or \e3, and the dynamics of these molecules should also influence the dynamical escape processes involved during early trap decay.
+
+In conclusion, simulation fitting is a powerful tool, but great care must be taken that single particle deviations between simulation and experiment are not falsely pulling the best fit collision rate one way or the other.
+Such pulls are not surprising, but can be understood by straightforward logic to follow from rather commonplace deviations.
+
+\section{Forward - Backward Evaporation}
+
+During our careful reinvestigation of the results reported in~\cite{Stuhl2012evap}, 
 
 We also commonly generated entire panels of simulation data where simulation parameters were varied in order to determine the best fitting to the experiment.
 An example is shown in Fig.~\ref{forbackcontour}.

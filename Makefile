@@ -72,12 +72,12 @@ trap:
 
 col:
 	make draft
-	pdflatex collisions
-	bibtex collisions || true
-	pdflatex collisions
+	pdflatex colliding
+	bibtex colliding || true
+	pdflatex colliding
 	make figs
-	pdflatex collisions
-	open -a TexShop collisions.pdf
+	pdflatex colliding
+	open -a TexShop colliding.pdf
 
 draft:
 	cp chappreambleD.tex chappreamble.tex
