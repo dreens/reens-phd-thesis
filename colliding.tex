@@ -233,7 +233,7 @@ The blue data points and shaded region are repeated from Fig.~3 of~\cite{Stuhl20
 The very close agreement highlights the ability of dynamical effects to masquerade as two-body decay curves.
 }{10cm}
 We can also examine the match of individual experiments, instead of only looking at the full collection.
-An example of the simulated trajectories arising from a specific electric field is also shown in fig.~\ref{fig:eil}.
+An example of the simulated trajectories arising from a specific electric field is also shown in fig.~\ref{eilout}.
 It is seen that the simulation overestimates the initial decay rate, but agrees fairly well with the total eventual loss.
 
 \figdave{eilout}{Simulating Escape Dynamics After E-field}{
@@ -250,11 +250,16 @@ This can be seen by viewing the energy of substates as a function of position in
 \centering
 \vspace{0.5mm}
 \includegraphics[width=8cm]{ohz0}
-\includegraphics[width=8cm]{ohz1}\\
-\includegraphics[width=8cm]{ohz3}
-\includegraphics[width=8cm]{ohz9}
+\includegraphics[width=8cm]{ohz2}\\
+\includegraphics[width=8cm]{ohz4}
+\includegraphics[width=8cm]{ohz6}
 \caption[Partially Trapped Substates in Electric and Magnetic Fields]{
-Some Caption.
+Eight ground states of OH as a function of position in a magnetic quadrupole trap with $3$~kV/cm applied.
+In the top left, the energies of these eigenstates are plotted as a function of their position along the cylindrical axis through the quadrupole trap.
+The doubly stretched state appears as a dark blue V near the center, and the other states may be identified based on their Zeeman effect at larger distances.
+The red state is \e3, and has the same slope as the dark blue, yellow is \f1, purple \e1, etc.
+In the other panels, position is plotted not along the axis, but parallel to it and offset by the distance labeled in the title of the panel, increasing in steps of $200~\mu$s.
+The avoided crossings open up even for very small deviations from the axis, demonstrating that except for a few small openings, really the top four substates are predominantly trapped.
 \label{manysubstates}}
 \end{figure}
 Along the axis, all states are connected, but as the radial coordinate increases, mostly trapped states separate away from the others.
@@ -264,7 +269,10 @@ This is made especially challenging by the fact that the location of hopping poi
 Secondly, the detection probability of molecules in other states features strong position dependence, since these states have a positional dependence to their parity character.
 This also increases the possibility of discrepancies between simulation and experiment associated with the power and frequency of the laser, since these will determine how much \f character is required for detection.
 Despite all of this, the key idea is that the treatment of secondary and higher order partially trapped states should lead to a reduction in the dynamical decay timescale after application of electric field, and this is indeed observed when including the secondary trapped state, as shown in Fig.~\ref{decay2state}.
-\figdave{decay2state}{Simulated Electric Field Loss with Secondary Substates}{Some Caption}{14cm}
+\figdave{decay2state}{Simulated Electric Field Loss with Secondary Substates}{
+Decays after electric field turn-on are shown with and without the electric field and under varying conditions.
+In the legend, final fractional differences between the cases with and without electric fields are shown.
+}{14cm}
 This figure also shows a few other tuning parameters that were considered in the simulation, such as laser beam diameter and initial molecular ensemble center of mass velocity.
 Comparing to Fig.~\ref{eilout}, it is clear that a slower dynamical timescale has been obtained, and we can conclude that the remaining discrepancy in that figure is capable of being explained by the inclusion of higher order trapped states.
 
@@ -293,7 +301,7 @@ As far as the cross sections are concerned, we can take Goulven's calculations~\
 
 Now at this stage it is a bit tricky to decide what exactly to put into Eq.~\ref{eqsigmant}, because the density in the trap is not homogeneous, and in fact varies rather strongly given the tightly confining linear quadrupole geometry.
 For this reason, I simulated this exact question by initializing a thermal distribution of molecules in a linear quadrupole trap and studying the collision frequency per molecule, leading to the results shown in Fig.~\ref{trikencol}.
-\figdave{trikencol}{Mapping Molecule Number to Collisions}{Collision rates are simulated as a function of molecule number. With $1000$ molecules, a rate of $0.068$ /s/mol is found.}{14cm}
+\figdave{trikencol}{Mapping Molecule Number to Collisions}{Collision rates are simulated as a function of molecule number. With $1000$ molecules, a rate of $0.068~\text{s}^{-1}\text{mol}^{-1}$ is found.}{14cm}
 These results are essentially a mapping that gives the relationship between molecule number and collision rate for the geometry.
 The fitted value scales directly with molecule number, so that in an ensemble with $10^6$ molecules, each molecule would have $68$ collisions per second for example.
 This simulation was actually performed with a more ideal value of the collision cross section, $\sigma = 2\cdot10^{-11}\text{ cm}^2$, taken from the low temperature limiting value computed by Goulvon in~\citep[Fig.~1b]{Stuhl2012evap}.
@@ -308,38 +316,43 @@ Our collection system ought to detect something like one photon per three hundre
 During our careful reinvestigation of the results reported in~\cite{Stuhl2012evap}, we developed a rather sensitive technique for probing the presence of slight but potentially nonzero collision rates in the experiment.
 The essence of our technique is to subtract the molecule number after an evaporation sequence from the number we obtained by time-reversing the  microwave frequency chirp, so that the population cut goes backwards from deep to shallow in the trap.
 This comparison subjects all molecules to the same integrated microwave power, and thus the two conditions should be equivalent in a situation with only single particle effects.
-With respect to collisional effects, the time-reversed case functions like a truncation, preventing molecules that would otherwise have collisionally thermalized to lower temperatures from doing so.
+With respect to collisional effects, the time-reversed case functions like a truncation, preventing molecules that would otherwise have collisionally thermalized to lower temperatures from doing so, see~\cite{Luiten1996} for a discussion of the usual behavior of an evaporation.
 To whatever extent an evaporation is successful in facilitating beneficial thermalizing collisions, the time-reversed condition should yield fewer molecules.
-We consistently observe this at the $(6\,{\pm}\,2)\%$ level, pointing to an evaporative effect despite the negative influence of spin-flip losses.
+We consistently observed this in the Ring trap at the $(6\,{\pm}\,2)\%$ level, pointing to an evaporative effect despite the negative influence of spin-flip losses.
 
 It is also interesting to look at the spectra of molecules in the trap after such sequences. 
 This is shown in~\citep[App.~B]{Reens2017} only for a forwards sequence, but I wish here to expand a bit on the conversation offered there, and to include a spectra from the backward evaporation as well, see Fig.~\ref{specfb}.
 \figdave{specfb}{Forward - Backward Spectra}{Microwave depletion spectra are shown with no evaporation, with evaporation, and with a backward evaporation sequence.}{12cm}
 Both forwards and backwards evaporations show a single point well separated from the unevaporated spectra, and are remarkably similar overall.
-This similarity suggests that the two sequences are not significantly different from one another thermodynamically, and leaves one wondering whether any systematic artifact in the forwards - backwards comparison could be playing an additional role.
+This similarity suggests that the two sequences are not significantly different from one another thermodynamically, and leaves one wondering whether any systematic artifact in the forward - backward comparison could be contributing to the measured difference in molecule number.
 
 I spent awhile investigating this possibility, and eventually realized that any dynamical timescale for the escape of molecules removed by the microwave knife could indeed lead to a false positive result of the forwards - backwards evaporation. 
 Since the backwards evaporation removes its molecules earlier than the forwards, any extra dynamical time for their escape could result in the forwards evaporation artificially showing a larger remaining molecule number.
 The same kinds of multi-substate dynamics discussed above in Sec.~\ref{sefil} could also lead to an increased dynamical timescale relative to expectations.
+The na\:{i}ve expectation would be escape on the order of a few trap oscillations, characterized by a single exponential decay, as discussed in~\cite{Stuhl2012uwave} for $|e\rangle$-state molecules.
+From~\citep[Fig.~4]{Stuhl2012uwave}, the electric field applied during evaporation of $300$~V/cm should be sufficient for removing $|e\rangle$-state molecules in a few milliseconds.
+However, even in that work, signatures of the slow escape of some molecules are evident although not discussed, note for example the inset of~\citep[Fig.~3]{Stuhl2012uwave}, where a single exponential is supposedly fit, but reaches a nonzero baseline value of $0.1$.
+If the dynamical timescale were slower for some molecules, say $10$~ms or beyond, the forwards minus backwards observable could skew positive by single particle means.
 
+To simulate this possibility, I did the hard work of including all substates in a Monte-Carlo simulation, including their differential Zeeman shifts so as to include the influence of the microwave knife on other substates and other transitions besides the \f3 to \e3 transition directly targeted.
+In Fig.~\ref{substatesevap}, the difference between forwards and backwards evaporation ramps for all substates as a fucntion of time is reported in this simulation.
+\figdave{substatesevap}{Simulating All Substates During Evaporation}{
+All eight substates of the OH ground state are included in a simulation of evaporation.}{14cm}
+Note how molecules persist in \f1 at the final step, and how there are actually fewer molecules in \f3 with forwards evaporation at the last step, at least in this realization of the Monte-Carlo simulation.
 
-
-
-We can think about the implications of this observable by first reviewing the behavior of a correctly functioning evaporation sequence~\cite{Luiten1996}.
-By maintaining a fixed ratio between the average energy of the trapped molecules and the depth of the trap, often parametrized as $\eta$ and fixed in the range of $5-15$, the situation can be contrived that each molecule which leaves the trap carries away a disproportionate fraction of the kinetic energy of the ensemble.
-For molecules which are not 
-
-
-We also commonly generated entire panels of simulation data where simulation parameters were varied in order to determine the best fitting to the experiment.
-An example is shown in Fig.~\ref{forbackcontour}.
-
+After setting up on the JILA computer cluster, I performed a suite of similar simulations aimed at studying the forward minus backward collision observable, culminating in several panels of data similar to that shown in Fig.~\ref{forbackcontour}.
 \figdave{forbackcontour}{Simulation of Forwards-Backwards Evaporations}{
 Contour plot indicating the percentage gain of forwards evaporation compared with backwards as a function of evaporation length and molecule number. Slower evaporations with large initial numbers show the most significant gains. 
 Even very tiny numbers of molecules still show a forwards-backwards difference, indicating a small, single-particle contribution to this collisional indicator.
 }{\linewidth}
+As one would expect, the forward minus backward observable really starts displaying a strong effect for the largest molecule numbers and the longest evaporation sequences.
+At lower molecule numbers, we see exactly the predicted effect- the forward minus backward observable reaches a small but nonzero limiting value of approximately $5\%$ difference.
 
+\section{Conclusions}
 
-
+The detection of collisions is a challenging task, especially in the absence of a background-free exit channel as for the collisions between OH molecules discussed in this chapter.
+Several methods have been carefully investigated with regard to their potential for systematic effects when employed in the detection of small effects.
+With the possibility of enhanced molecule numbers in the near future, these methods should prove very relevant for elucidating the full collisional story of the next generation of trapped OH radicals.
 
 
 \ifx\justbeingincluded\undefined
