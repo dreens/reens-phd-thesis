@@ -84,7 +84,7 @@ In the microwave engineering literature~\cite[Sec.~4.7]{Pozar2009}, a probe is a
 The chamber in which our decelerator sits has a $20$~cm diameter, comparable to the microwave frequencies relevant for driving \f3 to \e3 transitions, where in zero field $1.7$~GHZ corresponds to $18$~cm wavelengths, so it is reasonable to expect that a simple current probe might successfully drive microwave modes of the vacuum chamber.
 This indeed turns out to be the case, and we successfully used this probe, not only for microwave removal of population during deceleration, as shown in Fig.~\ref{uwaveproof}, but also to perform the same in-trap spectroscopy described in the previous chapter.
 
-\section{Trap Decay Curves}
+\section{Fitting Trap Decay Curves}
 
 Another competing technique for observing the influence of collisions relates to the functional form of the decay that is exhibited from a trapping geometry as a function of time.
 If we make the na\"{i}ve assumption that collisions lead to loss uniformly over a population regardless of other parameters, this can be described by the following differential equation:
@@ -142,7 +142,7 @@ Of course one contributing factor to the success of the two-body fit in matching
 One more effective way for distinguishing true two-body effects could be to use a long-time measurement to fix the one-body decay rate, since at long enough times the two-body effects reduce in relevance while the one-body rates remain fixed.
 In practice, this approach can lead to more trouble, since at about $3$~s~\cite{Hoekstra2007}, an additional one-body process kicks in, but as long as one-body effects are well-known, pushing to long timescales can improve the reliability of the decay-fitting method for detecting collisions.
 
-\subsection{Electric Field Induced Losses}
+\subsection{Electric Field Induced Losses}\label{sec:efil}
 
 One area where the fitting of decay curves played a very large roll was in the study of what was thought to be electric field induced inelastic loss.
 In the experiment~\cite{Stuhl2013}, it was found that application of electric field led to loss from the trap. 
@@ -222,12 +222,113 @@ In addition to parameter tuning, there is also the question of whether the simul
 Specifically, the influence of other substates of OH other than the doubly stretched one are pervasive and pernicious.
 As discussed in Sec.~\ref{loadingtransitions}, molecules in the \fm3 state end up in either \f1 or \e3, and the dynamics of these molecules should also influence the dynamical escape processes involved during early trap decay.
 
-In conclusion, simulation fitting is a powerful tool, but great care must be taken that single particle deviations between simulation and experiment are not falsely pulling the best fit collision rate one way or the other.
-Such pulls are not surprising, but can be understood by straightforward logic to follow from rather commonplace deviations.
+\subsection{Simulating Electric Field Induced Loss}\label{sefil}
+
+One key success achieved during my thesis work was the use of simulations to demonstrate the dynamical effects suggested by the experiments discussed above in Sec.~\ref{sec:efil}.
+By carefully including the electric field enhanced spin flip loss in simulations but with no appreciable collision rate, and then applying the same fitting paradigm used in~\cite{Stuhl2013} to the decay traces obtained by simulation, a very close match is obtained to the experimental data, see Fig.~\ref{betaout}.
+Each point corresponds to the fitting of a suite of decays occurring after different hold times at a specific electric field.
+\figdave{betaout}{Successful Simulation of Electric Field Induced Loss}{
+Two body fits from~\cite{Stuhl2013} to experimental data like that in Fig.~\ref{efielddecay} but at various electric fields. 
+The blue data points and shaded region are repeated from Fig.~3 of~\cite{Stuhl2013}, where the shading indicates the variation that would be brought about by two-fold changes in the assumed one-body loss $\alpha$ from spin-flip losses.
+The very close agreement highlights the ability of dynamical effects to masquerade as two-body decay curves.
+}{10cm}
+We can also examine the match of individual experiments, instead of only looking at the full collection.
+An example of the simulated trajectories arising from a specific electric field is also shown in fig.~\ref{fig:eil}.
+It is seen that the simulation overestimates the initial decay rate, but agrees fairly well with the total eventual loss.
+
+\figdave{eilout}{Simulating Escape Dynamics After E-field}{
+Experimental data on electric field-induced loss with an attempted overlap to spin-flip loss simulations. 
+The case of no electric field (black, solid, circles) is compared to electric fields of $3\text{ kV/cm}$ turned on after a wait time indicated in the legend.
+}{10cm}
+
+At first it is perhaps tempting to attribute this discrepancy to the possible continued role of collisions.
+However, there is no reason that collisions should influence this short time discrepancy, which is much more likely a higher order dynamical effect, especially since the dynamical effects were just seen to so nicely explain the observation of fixed total electric field induced loss.
+And indeed, just such a higher order dynamical effect is available through the more careful inclusion of other substates of the OH ground state.
+Electric field induced spin-flip loss does not directly remove molecules from the trap, but instead transfers them to lower lying states, some of which remain fairly well trapped.
+This can be seen by viewing the energy of substates as a function of position in the trap, animated in Fig.~\ref{manysubstates}.
+\begin{figure}[t!]
+\centering
+\vspace{0.5mm}
+\includegraphics[width=8cm]{ohz0}
+\includegraphics[width=8cm]{ohz1}\\
+\includegraphics[width=8cm]{ohz3}
+\includegraphics[width=8cm]{ohz9}
+\caption[Partially Trapped Substates in Electric and Magnetic Fields]{
+Some Caption.
+\label{manysubstates}}
+\end{figure}
+Along the axis, all states are connected, but as the radial coordinate increases, mostly trapped states separate away from the others.
+Simulating this has several associated challenges.
+Firstly, the dynamics associated with hopping between substates must be carefully treated.
+This is made especially challenging by the fact that the location of hopping points between the second trapped substate and lower states varies with the magnitude of applied electric field, unlike the hopping point between the primary trapped state and the second, which is always located at the trap center.
+Secondly, the detection probability of molecules in other states features strong position dependence, since these states have a positional dependence to their parity character.
+This also increases the possibility of discrepancies between simulation and experiment associated with the power and frequency of the laser, since these will determine how much \f character is required for detection.
+Despite all of this, the key idea is that the treatment of secondary and higher order partially trapped states should lead to a reduction in the dynamical decay timescale after application of electric field, and this is indeed observed when including the secondary trapped state, as shown in Fig.~\ref{decay2state}.
+\figdave{decay2state}{Simulated Electric Field Loss with Secondary Substates}{Some Caption}{14cm}
+This figure also shows a few other tuning parameters that were considered in the simulation, such as laser beam diameter and initial molecular ensemble center of mass velocity.
+Comparing to Fig.~\ref{eilout}, it is clear that a slower dynamical timescale has been obtained, and we can conclude that the remaining discrepancy in that figure is capable of being explained by the inclusion of higher order trapped states.
+
+Simulation fitting is a powerful tool, but great care must be taken that single particle deviations between simulation and experiment are not falsely influencing the reported collision rate.
+Such influences are not surprising, since often single particle deviations yield the same signature as collisions.
+One way to address this is to explicitly study the influence of parameter variation on the best fit collisional simulation parameter.
+Another is to use alternative means to constrain the collision rate, such as density calibration~\citep[Chapter~4]{WuThesis2019}. 
+
+\section{Anticipated Collision Rates}
+
+Given the challenges associated with each of the collision detection techniques discussed thus far, it is especially useful to develop alternative means of anticipating reasonable collision rates in a system of interest.
+One key way to do this is to estimate the molecule number via the experimental detection scheme, use theory to approximate the collision cross section, and then rely on the well-known and easily motivated expression to get an order of magnitude estimate for the collision rate:
+\begin{equation}
+\beta = n\sigma v_\text{rel},\label{eqsigmant}
+\end{equation}
+where $n$ is a number density, $\sigma$ a collision cross section, $\beta$ the collision rate per molecule, and $v_\text{rel}$ the average relative velocity.
+
+As far as the molecule number, density calibration suggests $1.9\times10^-5\text{ cm}^{-3}$ molecule density in free flight~\citep[Sec.~4.6]{WuThesis2019}. Assuming that the laser beam fills a $2\text{ mm}^3$ volume or so, and detects $0.3$~photons/shot during free flight, $1.5$~photons/shot during trapping, we find:
+\begin{equation}
+N = 2\cdot10^{-3}\text{ cm}^3\quad\times\quad 1.9\cdot10^-5\text{ cm}^{-3}\quad\times\quad 1.5/0.3 \quad=\quad 1900.
+\end{equation}
+As far as the cross sections are concerned, we can take Goulven's calculations~\citep[Inset of Fig.~1b]{Stuhl2012evap} at $50$~mK giving an elastic cross section: 
+\begin{equation}
+\sigma = 2.5\times10^{-12}\text{ cm}^2.
+\end{equation}
+
+Now at this stage it is a bit tricky to decide what exactly to put into Eq.~\ref{eqsigmant}, because the density in the trap is not homogeneous, and in fact varies rather strongly given the tightly confining linear quadrupole geometry.
+For this reason, I simulated this exact question by initializing a thermal distribution of molecules in a linear quadrupole trap and studying the collision frequency per molecule, leading to the results shown in Fig.~\ref{trikencol}.
+\figdave{trikencol}{Mapping Molecule Number to Collisions}{Collision rates are simulated as a function of molecule number. With $1000$ molecules, a rate of $0.068$ /s/mol is found.}{14cm}
+These results are essentially a mapping that gives the relationship between molecule number and collision rate for the geometry.
+The fitted value scales directly with molecule number, so that in an ensemble with $10^6$ molecules, each molecule would have $68$ collisions per second for example.
+This simulation was actually performed with a more ideal value of the collision cross section, $\sigma = 2\cdot10^{-11}\text{ cm}^2$, taken from the low temperature limiting value computed by Goulvon in~\citep[Fig.~1b]{Stuhl2012evap}.
+It follows that for $50$~mK temperatures, the expected mapping from number to collision rate would be $8.5~\text{s}^{-1}\text{mol}^{-1}$ with $10^6$ molecules in the tricycle trap.
+
+With these numbers, the discussion surrounding the collision rates in Fig.~\ref{decayfitex} can be placed in much better context.
+We can anticipate that the molecule number required to achieve a collision rate of $130\text{ s}^{-1}$ would be $1.5\cdot10^7$.
+Our collection system ought to detect something like one photon per three hundred molecules, or in this case $50,000$ photons, when in practice we detect only a few photons per realization of the experiment.
 
 \section{Forward - Backward Evaporation}
 
-During our careful reinvestigation of the results reported in~\cite{Stuhl2012evap}, 
+During our careful reinvestigation of the results reported in~\cite{Stuhl2012evap}, we developed a rather sensitive technique for probing the presence of slight but potentially nonzero collision rates in the experiment.
+The essence of our technique is to subtract the molecule number after an evaporation sequence from the number we obtained by time-reversing the  microwave frequency chirp, so that the population cut goes backwards from deep to shallow in the trap.
+This comparison subjects all molecules to the same integrated microwave power, and thus the two conditions should be equivalent in a situation with only single particle effects.
+With respect to collisional effects, the time-reversed case functions like a truncation, preventing molecules that would otherwise have collisionally thermalized to lower temperatures from doing so.
+To whatever extent an evaporation is successful in facilitating beneficial thermalizing collisions, the time-reversed condition should yield fewer molecules.
+We consistently observe this at the $(6\,{\pm}\,2)\%$ level, pointing to an evaporative effect despite the negative influence of spin-flip losses.
+
+It is also interesting to look at the spectra of molecules in the trap after such sequences. 
+This is shown in~\citep[App.~B]{Reens2017} only for a forwards sequence, but I wish here to expand a bit on the conversation offered there, and to include a spectra from the backward evaporation as well, see Fig.~\ref{specfb}.
+\figdave{specfb}{Forward - Backward Spectra}{Microwave depletion spectra are shown with no evaporation, with evaporation, and with a backward evaporation sequence.}{12cm}
+Both forwards and backwards evaporations show a single point well separated from the unevaporated spectra, and are remarkably similar overall.
+This similarity suggests that the two sequences are not significantly different from one another thermodynamically, and leaves one wondering whether any systematic artifact in the forwards - backwards comparison could be playing an additional role.
+
+I spent awhile investigating this possibility, and eventually realized that any dynamical timescale for the escape of molecules removed by the microwave knife could indeed lead to a false positive result of the forwards - backwards evaporation. 
+Since the backwards evaporation removes its molecules earlier than the forwards, any extra dynamical time for their escape could result in the forwards evaporation artificially showing a larger remaining molecule number.
+The same kinds of multi-substate dynamics discussed above in Sec.~\ref{sefil} could also lead to an increased dynamical timescale relative to expectations.
+
+
+
+
+We can think about the implications of this observable by first reviewing the behavior of a correctly functioning evaporation sequence~\cite{Luiten1996}.
+By maintaining a fixed ratio between the average energy of the trapped molecules and the depth of the trap, often parametrized as $\eta$ and fixed in the range of $5-15$, the situation can be contrived that each molecule which leaves the trap carries away a disproportionate fraction of the kinetic energy of the ensemble.
+For molecules which are not 
+
 
 We also commonly generated entire panels of simulation data where simulation parameters were varied in order to determine the best fitting to the experiment.
 An example is shown in Fig.~\ref{forbackcontour}.
@@ -237,16 +338,7 @@ Contour plot indicating the percentage gain of forwards evaporation compared wit
 Even very tiny numbers of molecules still show a forwards-backwards difference, indicating a small, single-particle contribution to this collisional indicator.
 }{\linewidth}
 
-\section{Inelastic}
 
-Some discussion of Ben's results and the fitting of decays after E-field turn-on after various hold times.
-The attempt to simulate leads to observed increases in the loss rate relative to earlier models.
-Predicted amplitude matches, but loss timescale too fast for observations.
-Including secondary trapped states results in the loss timescale becoming too slow.
-
-\section{Elastic}
-
-Evaporation, cross-dimensional thermalization
 
 
 
