@@ -9,7 +9,88 @@
 
 \section{Supersonic Expansion}
 
-Discussion of relevant thermodynamics. Enthalpy conserved along flowlines. Energetics, etc.
+Suppose that an ideal gas is trapped in a certain volume $V_1$ and at a pressure $P_1$, when a wall of the volume is suddenly removed, and the gas is allowed to expand into a much larger volume $V_2$.
+To determine the long term properties of the system, one can use the fact that neither heat nor work were transferred out of the gas, so that its temperature $T$ must remain fixed.
+It would follow that $P_2$ = $P_1\cdot V_1/V_2$, and that the entropy would be significantly increased.
+To determine by how much, we can use the thermodynamic relation:
+\begin{equation}
+dE = TdS - PdV,
+\end{equation}
+which since $dE=0$ for the process, leads us to:
+\begin{equation}
+\Delta S = \frac{1}{T}\int PdV = \frac{1}{T}\int\limits_{V_1}^{V_2}\frac{P_1V_1}{V}dV = Nk_B\log{\left(\frac{V_2}{V_1}\right)},
+\end{equation}
+Since $P(V) = P_1V_1/V$ for fixed $T$ and since $P_1V_1 = Nk_BT$.
+This is also intuitively valid, since the entropy ought to correspond to the logarithm of accessible states.
+With nothing changing about the momentum distribution before and after the event, only the system size contributes to an increase in accessible microstates, by an amount given by the ratio of volumes before and after.
+
+Although the foregoing example is ubiquitous in the problem sets assigned to physicists and mechanical engineers during thermodynamics classes, the corresponding short term behavior is rarely if ever treated.
+At first glance, it may seem that the short term behavior would be intractable to the methods of statistical physics, owing to the suddenness of the event and its obvious lack of reversibility.
+To the contrary, much progress can be made once some additional details and assumptions are specified.
+Suppose that the initial volume is allowed to expand into a much larger volume, but only through a rather small opening.
+Suppose further that the expansion process is in a flow equilibrium, so that gas is constantly supplied to the initial volume in order to maintain a constant pressure, and gas is constantly pumped out of the back of the much larger volume.
+These assumptions create a very similar environment to the one realized in many molecular beam apparatuses, known as a supersonic expansion.
+Now consider a small sub-volume $V_1$ within the high pressure volume, close to the small opening.
+Since the speed of egress is fast compared to diffusion timescales, we may assume that this volume is isolated from the rest of the gas, and consider its fate as the molecules within follow the flow lines of the fluid.
+As we follow the flow lines, this volume expands, performing work on the surrounding environment, but not exchanging any heat with it.
+Paradoxically, the process is then adiabatic, despite the significant and non-zero $\Delta S$ calculated above for the long term behavior.
+Of course an adiabatic process should be reversible, and indeed, were one to continuously flow gas through a small hole into a vacuum chamber, provided the flow remained in the continuum regime and the chamber were somehow aerodynamically shaped so as to prevent turbulence, there is no conceptual reason the vacuum pumps could not be reversed and some suction applied to the gas reservoir so as to suck the flow back through the nozzle.
+
+As the gas expands, it continues to work on the environment until it has exchanged all of its internal energy, in principle reaching $T=0$ and satisfying Bernoulli's flow equation by converting its initial enthalpy entirely to kinetic energy:
+\begin{equation}
+H_i = C_PNk_BT_i = \frac{N}{2}mv_f^2.
+\end{equation}
+For a monoatomic ideal gas, $C_P = 5/2$, and we have:
+\begin{equation}
+v_f = \sqrt{\frac{5k_BTi}{m}}.\label{eqfinalv}
+\end{equation}
+The final velocities obtained from this equation for noble gas carriers are shown in Tab.~\ref{tabfinal}.
+\begin{table}[t!]
+\centering
+\caption[Final Supersonic Expansion Velocities]{Final supersonic expansion velocities for noble gas carriers according to Eq.~\ref{eqfinalv}, using $T=300^\circ$K.\label{tabfinal}}
+\begin{tabular}{r|l}
+Gas & Speed (m/s)\\
+\hline
+H$_2$ & 2490\\
+$^3$He & 2030 \\
+$^4$He & 1760 \\
+Ne & 790 \\
+Ar & 560 \\
+Kr & 380 \\
+Xe & 310 \\
+UF$_6$ & 190
+\end{tabular}
+\end{table}
+In practice, these speeds are not always obtained by the species of interest within a noble gas buffer, often due to velocity slippage in cases of significant mass imbalance between the carrier and the species of interest.
+Another source of discrepancy comes from excess heating, either due to the mechanism of operation of the valve~\citep[Sec.~3.1.3.1]{SawyerThesis2010}, or the mechanism of generating the species of interest, see Sec.~\ref{secdisch} below.
+
+In practice, as the gas rarifies, the continuum flow hypothesis breaks down, and the mean free path between collisions of molecules becomes long enough that the assumption of an isolated sub-volume of the flow becomes invalid.
+What this means is that below a certain pressure, the gas can no longer perform work on itself during expansion, and a limiting nonzero expansion temperature is reached.
+In practice, the remaining internal energy of the gas associated with this nonzero final temperature is not a significant perturbation on the final velocity of the beam, but it does influence the phase space density available for later use.
+The remaining internal energy of the gas manifests most measurably as an extra spread on the final velocity obtained during the expansion.
+Also known as the translational temperature, its direct calculation is possible but complex~\cite{Montero2017}, but it is not overly difficult to measure, at least approximately, using a pulsed source and measuring at a near and distant point along the propagation of the pulsed expansion.
+When this is done with a miniaturized solenoidal Even-Lavie valve~\cite{Even2014}, the values shown in Tab.~\ref{tabtrans} are obtained for a selection of rare gases.
+\begin{table}[t!]
+\centering
+\caption[Final Supersonic Expansion Temperatures]{Final supersonic expansion temperatures for noble gas carriers in an Even-Lavie valve according to Ref.~\citep[Fig.~12]{Even2014}, using $T=300^\circ$K.\label{tabtrans}}
+\begin{tabular}{r|l}
+Gas & Temp ($^\circ$mK)\\
+\hline
+$^4$He & 33 \\
+Ne & 180 \\
+Ar & 930 \\
+Kr & 2400 \\
+\end{tabular}
+\end{table}
+
+
+
+
+\subsection{Longitudinal Temperature}
+
+
+
+
 
 \section{Pulsed Valves}
 
@@ -39,7 +120,7 @@ The lorentz force exerted on a wire by a permanent magnet induced field containi
 The key advantage of this is the reduced obstruction of the required hardware for gas flow.
 This style was designed in Nijmegen in the Netherlands, and a similar design was undertaken in our shop, though not yet completed or tested at the time of this writing.
 
-\section{Discharge}
+\section{Discharge}\label{secdisch}
 
 Photolysis of HNO3, electric discharge in H2O, H2O2. RF v DC. Conversion Efficiency.
 

@@ -93,9 +93,7 @@ supp:
 	open -a TexShop ${sname}.pdf
 
 clean:
-	rm -f ${filename}.{ps,pdf,log,aux,out,dvi,bbl,blg}
-	rm -f ${sname}.{ps,pdf,log,aux,out,dvi,bbl,blg}
-	rm -f diff.{ps,pdf,log,aux,out,dvi,bbl,blg}
+	rm -f *.{ps,pdf,log,aux,out,dvi,bbl,blg,brf,lof,lot,toc}
 
 all:
 	make clean
