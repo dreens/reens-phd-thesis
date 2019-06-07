@@ -25,7 +25,7 @@ back:
 	pdflatex background
 	open -a TexShop background.pdf
 
-source:
+sourc:
 	make draft 
 	pdflatex sourcing
 	bibtex sourcing || true
