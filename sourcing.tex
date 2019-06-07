@@ -5,36 +5,40 @@
 
 \chapter{Creation}
 
-%Like all good things under and including the sun, Jun's hydroxyl radical experiment also begins with creation. Specifically, we create a beam by briefly allowing a high pressure gas into the vacuum chamber and allowing it to supersonically expand.
+Like all things, Jun Ye's hydroxyl radical experiment also begins with creation; specifically, the creation of said radicals via pulsed supersonic expansion. 
+Such a supersonic expansion occurs when gas at pressure is allowed to escape into vacuum via a small orifice.
+No better resource on the supersonic expansion or free jet seems to exist besides~\cite{Miller1988}, although a more modern compendium of results does also exist~\cite{Campargue2000}.
+I will begin with supersonic expansions and the thermodynamics thereof, before moving to the implications for our work and some specific valve technology.
 
 \section{Supersonic Expansion}
 
-Suppose that an ideal gas is trapped in a certain volume $V_1$ and at a pressure $P_1$, when a wall of the volume is suddenly removed, and the gas is allowed to expand into a much larger volume $V_2$.
-To determine the long term properties of the system, one can use the fact that neither heat nor work were transferred out of the gas, so that its temperature $T$ must remain fixed.
+Suppose that an ideal gas is trapped in a certain volume $V_1$ and at a certain pressure $P_1$, when one of the walls enclosing the volume is suddenly removed, and the gas is allowed to expand into a much larger volume $V_2$.
+To determine the long term properties of the system, one can use the fact that neither heat nor work were transferred out of the gas, so that its energy $E$ must remain fixed, and therefore also its temperature, following the well-known intrinsic formula relating the temperature of an ideal gas to its internal energy, $E = C_VNT$.
 It would follow that $P_2$ = $P_1\cdot V_1/V_2$, and that the entropy would be significantly increased.
-To determine by how much, we can use the thermodynamic relation:
+To determine by how much, we can use the thermodynamic relation for the internal energy $E$ of the system:
 \begin{equation}
 dE = TdS - PdV,
 \end{equation}
-which since $dE=0$ for the process, leads us to:
+which since $\Delta E=0$ for this process since it transfers , leads us to:
 \begin{equation}
 \Delta S = \frac{1}{T}\int PdV = \frac{1}{T}\int\limits_{V_1}^{V_2}\frac{P_1V_1}{V}dV = Nk_B\log{\left(\frac{V_2}{V_1}\right)},
 \end{equation}
 Since $P(V) = P_1V_1/V$ for fixed $T$ and since $P_1V_1 = Nk_BT$.
-This is also intuitively valid, since the entropy ought to correspond to the logarithm of accessible states.
-With nothing changing about the momentum distribution before and after the event, only the system size contributes to an increase in accessible microstates, by an amount given by the ratio of volumes before and after.
+This is also intuitively valid, since the entropy ought to correspond to the logarithm of accessible micro-states.
+With nothing else changing about the momentum distribution before and after the event, only the system size contributes to an increase in accessible micro-states, by an amount given by the ratio of volumes before and after.
 
 Although the foregoing example is ubiquitous in the problem sets assigned to physicists and mechanical engineers during thermodynamics classes, the corresponding short term behavior is rarely if ever treated.
 At first glance, it may seem that the short term behavior would be intractable to the methods of statistical physics, owing to the suddenness of the event and its obvious lack of reversibility.
 To the contrary, much progress can be made once some additional details and assumptions are specified.
 Suppose that the initial volume is allowed to expand into a much larger volume, but only through a rather small opening.
 Suppose further that the expansion process is in a flow equilibrium, so that gas is constantly supplied to the initial volume in order to maintain a constant pressure, and gas is constantly pumped out of the back of the much larger volume.
+This supposition includes what is known as the continuum hypothesis, which stipulates that the gas may be treated as a fluid of smoothly varying density on all scales, and essentially requires a short mean-free path and a suitably high local density~\citep[Sec.~1.2]{Batchelor1967}.
 These assumptions create a very similar environment to the one realized in many molecular beam apparatuses, known as a supersonic expansion.
 Now consider a small sub-volume $V_1$ within the high pressure volume, close to the small opening.
 Since the speed of egress is fast compared to diffusion timescales, we may assume that this volume is isolated from the rest of the gas, and consider its fate as the molecules within follow the flow lines of the fluid.
 As we follow the flow lines, this volume expands, performing work on the surrounding environment, but not exchanging any heat with it.
 Paradoxically, the process is then adiabatic, despite the significant and non-zero $\Delta S$ calculated above for the long term behavior.
-Of course an adiabatic process should be reversible, and indeed, were one to continuously flow gas through a small hole into a vacuum chamber, provided the flow remained in the continuum regime and the chamber were somehow aerodynamically shaped so as to prevent turbulence, there is no conceptual reason the vacuum pumps could not be reversed and some suction applied to the gas reservoir so as to suck the flow back through the nozzle.
+%Of course an adiabatic process should be reversible, and indeed, were one to continuously flow gas through a small hole into a vacuum chamber, provided the flow remained in the continuum regime and the chamber were somehow aerodynamically shaped so as to prevent turbulence, there is no conceptual reason the vacuum pumps could not be reversed and some suction applied to the gas reservoir so as to suck the flow back through the nozzle.
 
 As the gas expands, it continues to work on the environment until it has exchanged all of its internal energy, in principle reaching $T=0$ and satisfying Bernoulli's flow equation by converting its initial enthalpy entirely to kinetic energy:
 \begin{equation}
@@ -42,12 +46,12 @@ H_i = C_PNk_BT_i = \frac{N}{2}mv_f^2.
 \end{equation}
 For a monoatomic ideal gas, $C_P = 5/2$, and we have:
 \begin{equation}
-v_f = \sqrt{\frac{5k_BTi}{m}}.\label{eqfinalv}
+v_f = \sqrt{\frac{5k_BT_i}{m}}.\label{eqfinalv}
 \end{equation}
 The final velocities obtained from this equation for noble gas carriers are shown in Tab.~\ref{tabfinal}.
 \begin{table}[t!]
 \centering
-\caption[Final Supersonic Expansion Velocities]{Final supersonic expansion velocities for noble gas carriers according to Eq.~\ref{eqfinalv}, using $T=300^\circ$K.\label{tabfinal}}
+\caption[Final Supersonic Expansion Velocities]{Final supersonic expansion velocities for various gases according to Eq.~\ref{eqfinalv}, using $T=300^\circ$K. For H$_2$ I have used the ideal gas heat constant since rotations are hardly populated at room temperature. For UF$_6$, inclusion in this chart is largely fanciful in any case, but rovibrations are unlikely to be efficiently cooled so I have again used the ideal gas heat constant.\label{tabfinal}}
 \begin{tabular}{r|l}
 Gas & Speed (m/s)\\
 \hline
@@ -64,7 +68,7 @@ UF$_6$ & 190
 In practice, these speeds are not always obtained by the species of interest within a noble gas buffer, often due to velocity slippage in cases of significant mass imbalance between the carrier and the species of interest.
 Another source of discrepancy comes from excess heating, either due to the mechanism of operation of the valve~\citep[Sec.~3.1.3.1]{SawyerThesis2010}, or the mechanism of generating the species of interest, see Sec.~\ref{secdisch} below.
 
-In practice, as the gas rarifies, the continuum flow hypothesis breaks down, and the mean free path between collisions of molecules becomes long enough that the assumption of an isolated sub-volume of the flow becomes invalid.
+As the gas rarifies, the continuum flow hypothesis breaks down, and the mean free path between collisions of molecules becomes long enough that the assumption of an isolated sub-volume of the flow becomes invalid.
 What this means is that below a certain pressure, the gas can no longer perform work on itself during expansion, and a limiting nonzero expansion temperature is reached.
 In practice, the remaining internal energy of the gas associated with this nonzero final temperature is not a significant perturbation on the final velocity of the beam, but it does influence the phase space density available for later use.
 The remaining internal energy of the gas manifests most measurably as an extra spread on the final velocity obtained during the expansion.
@@ -83,12 +87,33 @@ Kr & 2400 \\
 \end{tabular}
 \end{table}
 
+\subsection{Rovibrational Temperatures}
 
+An additional effect requiring careful accounting is the degree of thermalization of the particles in their frame of reference after the expansion.
+One piece of this is the degree of thermalization of the rotational and vibrational degrees of freedom of molecules seeded in the beam with the translational degrees of freedom.
+Generally it is found that these degrees of freedom do not thermalize as well as translation, with vibrations thermalizing much worse than rotations.
+Much attention has been given to this subject, particularly given its very clear manifestation in an experimental observable, namely the relative population of the various rovibrational levels as probed by laser induced fluorescence or other state selective means.
+It has even been found that the rotational levels fail to be well described by any meaningful temperature, even towards the beginning of the expansion~\cite{Hulsman2001}.
+Studies specific to hydrides and even to the hydroxyl radical have been performed~\cite{Belikov2001}. 
 
+\subsection{Translational Disequilibrium}
 
-\subsection{Longitudinal Temperature}
+Compared to rovibrational levels where nearly complete information is available, it is rather difficult to measure the translational temperature of the beam in the direction transverse (orthogonal) to the beamline. 
+Evidence exists for a disequilibrium between transverse and longitudinal frame of reference temperatures~\cite{beijerinck1981,Toennies1977,Miller1988}.
+This is especially important for consideration of the effective initial size of the beam as seen by devices downstream.
+In the continuum flow region of a supersonic expansion, the fluid obeys a kind of hyperbolic flow pattern, which has the property that after a few nozzle diameters flow-lines actually appear to originate from a single point~\cite{Miller1988}.
+As the molecules leave the continuum regime and the cooling process halts at nonzero temperature, this breaks down, so that individual molecules no longer appear to originate from a single point.
 
+A useful way to understand these phenomena is to work in transverse phase space, where the velocity of molecules in one of the directions transverse to the beam is plotted against their position in that same direction.
+If the cooling were to continue indefinitely and all molecules appeared to originate from a single point, the transverse phase space distribution function describing the ensemble at a fixed large time $t$ after passing through the orifice would look like an infinitely thin diagonal line with infinite phase space density. 
+This is because particles having some transverse coordinate $x$ after traveling time $t$, if they originated exactly at $x=0$, must then have $v$ given exactly by $v = x/t$.
+The nonzero final transverse temperature contributes extra spread in the velocity direction over this infinitely dense diagonal line, which is relevant for the use of hexapole focusers as discussed in Chapter~\ref{chapter:hex}.
 
+\subsection{Experimental Transverse Temperature}
+
+It is possible to access some of this information experimentally by observing the angular distribution of a beam, especially downstream of some additional collimating aperture.
+In the same way that light diffracts through a pinhole, a beam with nonzero transverse temperature, when imaged on a far field detector after passing an aperture, will appear as a disk with some blurry boundary, where the blurriness is proportional to this transverse temperature.
+We detected this effect during our work on skimmer cooling~\cite{Wu2018}, with the caveat that any aperture has the potential to interfere with the beam, so that the blurriness observed could be an artifact caused by the aperture, and not a true representation of the original beam.
 
 
 
