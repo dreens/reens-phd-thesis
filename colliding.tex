@@ -8,7 +8,7 @@
 
 %\section{Molecular Collision Theory}
 
-Collisions are in principle very interesting things to study for low temperature molecular systems. 
+Collisions are an exciting area of study for low temperature molecular systems. 
 Quantization of intermolecular degrees of freedom leads to a host of interesting dynamics, which until relatively recently could only be discerned via their contribution to measured integrated cross sections including averaging over many initial states and many partial waves of the interaction potential.
 However, with the ability to isolate single quantum states thanks to selective manipulation techniques, and with the reduction of collision energies afforded by deceleration, new state-resolved effects~\cite{Greenberg2018}, and new resolution on quantum mechanical interference type effects are now achievable~\cite{Zastrow2014,Klein2016}.
 It is even possible to study effects directly pertaining to the orientation or stereodynamics of molecular interactions~\cite{Perreault2017}.
@@ -16,7 +16,7 @@ Simultaneously, studies of collisions in traps have evolved from total cross sec
 
 This last result~\cite{Segev2019} from the Narevicius group is particularly exciting, as it compares quite directly with our own work, including cryogenic skimming techniques, decelerator optimization, and cryogenic trapping optimization, and is worth further discussion here.
 Realizing a similar observation would be an exciting outcome of the research in this thesis, though at the time of this writing it remains unclear whether the optimizations we have pursued will achieve densities comparable to~\cite{Segev2019}. 
-In their Zeeman deceleration of oxygen, benefit is taken from oxygen's much more direct sourcing, and from the better integration of skimmer cooling with Zeeman deceleration thanks to the possibility of affixing long cryogenic Sapphire tubes within the bore of the decelerator\footnote{In private communication with Yair Segev, we discussed the application of skimmer cooling to deceleration, and the use of such tubes in the Narevicius group was discussed.}~.
+In their Zeeman deceleration of oxygen, benefit is taken from oxygen's much more direct sourcing, and from the better integration of skimmer cooling with Zeeman deceleration thanks to the possibility of affixing a long cryogenic Sapphire tube within the bore of the decelerator\footnote{In private communication with Yair Segev, we discussed the application of skimmer cooling to deceleration, and the use of such tubes in the Narevicius group.}~.
 In contrast, for OH our discharging yield from water may be only $1-10$\%, and skimmer cooling has only led to two-fold gains with the hexapole~\ref{chapter:focusing}.
 
 Another alternative strategy for phase space compression of molecules applicable to a wide array of species is found in the combination of centrifugal deceleration and optoelectric cooling~\cite{Prehn2016}.
@@ -25,7 +25,7 @@ The optoelectric sisyphus technique requires low spatial density flat-bottomed t
 Laser-based techniques are also beginning to enable similar molecular collisional studies, notably the recently observed sympathetic cooling of NaLi molecules by sodium~\cite{Park2019}, the first successful sympathetic cooling of a molecule by an atom.
 Work on laser-cooled molecules has also recently progressed to the collisional stage, with the Doyle group reporting on collisions between pairs of CaF molecules loaded into optical tweezers~\cite{Anderegg2019}.
 
-A key challenge that has emerged during the course of my thesis work has been the verification of collisional behavior of any kind.
+A key challenge that has emerged during the course of my thesis work has been the verification of collisional behavior of all kinds.
 For this purpose, several very general techniques exist, which are now described in detail.
 
 \section{Controlled Density Reductions}
@@ -329,7 +329,7 @@ This similarity suggests that the two sequences are not significantly different 
 I spent awhile investigating this possibility, and eventually realized that any dynamical timescale for the escape of molecules removed by the microwave knife could indeed lead to a false positive result of the forwards - backwards evaporation. 
 Since the backwards evaporation removes its molecules earlier than the forwards, any extra dynamical time for their escape could result in the forwards evaporation artificially showing a larger remaining molecule number.
 The same kinds of multi-substate dynamics discussed above in Sec.~\ref{sefil} could also lead to an increased dynamical timescale relative to expectations.
-The na\:{i}ve expectation would be escape on the order of a few trap oscillations, characterized by a single exponential decay, as discussed in~\cite{Stuhl2012uwave} for $|e\rangle$-state molecules.
+The na\"{i}ve expectation would be escape on the order of a few trap oscillations, characterized by a single exponential decay, as discussed in~\cite{Stuhl2012uwave} for $|e\rangle$-state molecules.
 From~\citep[Fig.~4]{Stuhl2012uwave}, the electric field applied during evaporation of $300$~V/cm should be sufficient for removing $|e\rangle$-state molecules in a few milliseconds.
 However, even in that work, signatures of the slow escape of some molecules are evident although not discussed, note for example the inset of~\citep[Fig.~3]{Stuhl2012uwave}, where a single exponential is supposedly fit, but reaches a nonzero baseline value of $0.1$.
 If the dynamical timescale were slower for some molecules, say $10$~ms or beyond, the forwards minus backwards observable could skew positive by single particle means.
@@ -347,6 +347,23 @@ Even very tiny numbers of molecules still show a forwards-backwards difference, 
 }{\linewidth}
 As one would expect, the forward minus backward observable really starts displaying a strong effect for the largest molecule numbers and the longest evaporation sequences.
 At lower molecule numbers, we see exactly the predicted effect- the forward minus backward observable reaches a small but nonzero limiting value of approximately $5\%$ difference.
+
+\section{Spatial Density Enhancements by Microwave Spectroscopy}
+
+This last technique for detecting collisions plays a key role in the final claims of the legitimacy of the observation of some degree of thermalization presented in~\citep[App.~B]{Reens2017}.
+The idea is to compare normalized microwave spectroscopies in order to determine whether there is any region close to the center of the trap that ends up with a greater spatial density of molecules than it had originally.
+This is not a necessary condition for either collisions or evaporation, since phase space density increase could happen primarily through the velocity dimensions of phase space.
+It is also possible to enhance spatial density at the expense of velocity density, often referred to as adiabatic compression, but this cannot happen by mistake and requires work to be performed on the ensemble via the trapping potential.
+In this sense, the observation of a spatial density enhancement is an undisputable observable of elastic collisions in an ensemble.
+
+A normalized spectroscopically determined density enhancement is indeed observed for the region near $500$~G in both forwards and backwards evaporation as evident in Fig.~\ref{specfb}.
+Nevertheless, a few additional caveats should be kept in mind, see Sec.~\ref{limitationsection} for additional discussion.
+First of all, it would be ideal if a way could be found to eliminate some of the complexities of the normalization procedure.
+To briefly recapitulate, depletion spectroscopy transfers only a fraction of molecules to the lower parity state at a specific magnetic field value, so we integrate the total area enclosed by the spectroscopy curve, which is scaled according to the observed total population by laser induced fluorescence.  
+This is necessary because depletion spectroscopy is performed with a train of short microwave pulses lasting over a total time of about a quarter of a trap oscillation, so that molecules are not at all frozen in place. 
+Relative to a very brief spectroscopy pulse that would only deplete molecules in a given region at that particular instant, the use of a train of pulses over a longer period of time allows us to sample molecules more widely to boost the signal to noise ratio of spectroscopy. 
+The spectroscopy gives a value that is proportional to the true instantaneous population in a specific magnetic field region, but with a scaling factor that allows the signal to be constrained with the measured total number of molecules in the trap.
+Nevertheless, in any future experiments, I would submit that claims of absolute density enhancement should be confirmed by means of a single transfer ARP spanning the low magnetic field region, and thus serving as a direct witness on the spatial density in that region at that time, with no need to perform any careful accounting of the total molecule distribution function.
 
 \section{Conclusions}
 
