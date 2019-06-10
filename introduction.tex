@@ -62,7 +62,7 @@ First proposed in titanium monoxide by Benjamin Stuhl during his dissertation wo
 Since then, numerous molecules have been successfully slowed and trapped, including strontium fluoride~\cite{Steinecker2016} and calcium fluoride~\cite{Anderegg2019}, with the latter even loaded into optical tweezer arrays.
 Recently, it has been exciting to observe the application of various advanced techniques to these molecules for rapid further progress in cooling, such as lambda-enhanced gray molasses~\cite{Anderegg2018} and blue-detuned magneto optical trapping~\cite{Jarvis2018}.
 These advances have been particularly satisfying for the community given the long time spent waiting for these groups to master the molecule slowing process in order to load magneto optical traps, something which all groups involved spent something like four years achieving.
-So far no group has brought these laser coolable species below about $5~\mu$K, although the yttrium oxide has prospects for doing so via narrowline cooling~\cite{Collopy2015}.
+So far no group has brought these laser cool-able species below about $5~\mu$K, although the yttrium oxide has prospects for doing so via narrow-line cooling~\cite{Collopy2015}.
 
 Another related but distinct technique that could in principle apply to a much broader class of molecules but still relies on lasers is sawtooth-wave adiabatic passage (SWAP) cooling~\cite{Bartolotta2018}.
 Somewhat controversial in its reliance on stimulated emission and the opaque role of spontaneous emission in the process, swap cooling is nevertheless a valid technique which may be useful for some species.
@@ -70,12 +70,12 @@ For a time, the YO experiment considered its implementation, or a modification u
 
 \subsection{Direct Cooling}
 
-Although sometimes used to refer to any technique other than the association of ultracold molecules, I will use the term ``Direct Cooling'' to refer to those cooling techniques which do not rely on lasers to transfer entropy, but instead make use of conventional and more broadly applicable collisionally cooling mechanisms.
+Although sometimes used to refer to any technique other than the association of ultracold molecules, I will use the term ``Direct Cooling'' to refer to those cooling techniques which do not rely on lasers to transfer entropy, but instead make use of conventional and more broadly applicable collision-based cooling mechanisms.
 Two primary directions in this regard are the supersonic expansion~\cite{Miller1988} and the cryogenic buffer gas beam~\cite{Hutzler2011a}.
 Although both rely on thermalization by collisions between noble gas buffer atoms and the species of interest, their principles of operation and the characteristics of the molecules they generate are quite different.
 The supersonic expansion technique is ideal for generating a high phase space density with a large lab frame velocity offset, and the cooling happens all in one shot right from room temperature thanks to an expansive flow process described further in Sec.~\ref{secsuperexp}.
 The cryogenic buffer gas beam generates molecules with greater breadth in velocity space but a much lower initial kinetic energy~\citep[Fig.~1]{Hutzler2011a}.
-These properties make the cryogenic buffer gas beam ideal for experiments with good prospects for further phase space compression by laser cooling, but with difficulty in performing slowing, exactly the case for the laser coolable diatomics.
+These properties make the cryogenic buffer gas beam ideal for experiments with good prospects for further phase space compression by laser cooling, but with difficulty in performing slowing, exactly the case for the laser cool-able diatomics.
 In contrast, the supersonic expansion is ideal for experiments with no clear path to higher phase space densities, but robust options for removing lab frame velocity in a phase-stable manner, i.e. Stark or Zeeman deceleration.
 These techniques, though general compared to laser based methods, require a careful understanding of the molecule of interest, for which purpose we now transition into more directly practicable background information.
 
@@ -105,7 +105,7 @@ and an angular momentum given by:
 \begin{equation}
 L= I\omega
 \end{equation}
-Semiclassically, we require the angular momentum to be quantized in units of $\hbar$, leading to the diophantine equation:
+Semi-classically, we require the angular momentum to be quantized in units of $\hbar$, leading to the diophantine equation:
 \begin{equation}
 L = l\hbar = I\omega,
 \end{equation}
@@ -139,10 +139,10 @@ which upon moving ahead with the Schr\"{o}dinger Equation, gives the spherical h
 \hat{H}Y_{lm}(\theta,\phi) = E_lY_{lm}(\theta,\phi),\qquad E_l = Bl(l+1),\qquad B=\frac{\hbar^2}{2I}.\label{eqdefb}
 \end{equation}
 Here $B$ is referred to as the rotational constant, and $\theta$, $\phi$ give physicist spherical coordinates relative to an axis orthogonal to the axis of the linear rotor, i.e. an axis along which the system has angular momentum $I$, \emph{not} the axis of the rotor itself.
-It is interesting to note that the wave-functions associated with these eigen-energies are quite bizarre from the perspective of classical physics, especially given that relative to the quantum mechanics of the light electron, these coordinates describe the locations of heavy atomic nuclei.
-For example, in the case of $l=0$, quantum mechanically the molecule is in a spherically symmetric state with equal probability of finding either nuclei anywhere on the surface of the two spherical shells correspending to their generally different radii away from the center of mass.
+It is interesting to note that the wave-functions associated with these eigenvalues are quite bizarre from the perspective of classical physics, especially given that relative to the quantum mechanics of the light electron, these coordinates describe the locations of heavy atomic nuclei.
+For example, in the case of $l=0$, quantum mechanically the molecule is in a spherically symmetric state with equal probability of finding either nuclei anywhere on the surface of the two spherical shells corresponding to their generally different radii away from the center of mass.
 
-It is interesting to compare the values of $B$ calculated na\:{i}vely from Eqs.~\ref{eqdefb},~\ref{eqdefI} to the spectroscopically determined values, as shown in Tab.~\ref{bbbtable}. 
+It is interesting to compare the values of $B$ calculated na\"{i}vely from Eqs.~\ref{eqdefb},~\ref{eqdefI} to the spectroscopically determined values, as shown in Tab.~\ref{bbbtable}. 
 Very good agreement is obtained, at least when using the spectroscopically determined internuclear distance, which is therefore not quite fair as far as theory experiment predictions are concerned.
 Nonetheless, it is reasonable to conclude that the rigid linear rotor model is a good description of the situation for diatomic molecules.
 The bulk of the remaining deviations relate to centrifugal affects, by which I broadly refer to the interaction between the rotational and the vibrational components of the Hamiltonian, a nice segue into the following section.
@@ -173,7 +173,7 @@ YbCs	& 75.2 & 5.4 & 0.230 & 0.207 \\
 
 In much the same way as the canonical simple harmonic oscillator problem in quantum mechanics, at its core the vibrational Hamiltonian may be represented as a harmonic potential describing the energetics of the internuclear distance of the molecule.
 This potential may be specified in a more formal way beginning with the full Hamiltonian describing all of the electrons and nuclei in a molecule, and then separating the electronic and nuclear portions based on a hierarchy of timescales known as the Born-Oppenheimer approximation~\citep[Sec.~8.1]{Atkins2005}.
-Essentially, the nuclear positions are taken as parameters to the computation of the electronic wavefunctions, and so by parametrically solving the electronic Hamiltonian for all nuclear distances and rotations, the energetic landscape governing the dynamics of the nuclei emerges.
+Essentially, the nuclear positions are taken as parameters to the computation of the electronic wave functions, and so by parametrically solving the electronic Hamiltonian for all nuclear distances and rotations, the energetic landscape governing the dynamics of the nuclei emerges.
 It is therefore somewhat difficult to directly specify the form of the interatomic potential experienced by the nuclei, but the results from this procedure turn out to be closely represented by the Morse potential:
 \begin{equation}
 V(x) = D\left(1-e^{-\beta x}\right)^2.\label{eqmorse}
@@ -226,7 +226,7 @@ The various sources of angular momentum in the molecule are often described usin
 \subsection{Revisiting J=L+S}
 
 Before diving in, we begin with the simplest angular momentum coupling example, but with an eye toward its generalization to the molecular situation.
-Electrons have orbit and spin in the hydrogen atom, but a state of definite orbit and definite spin is not necessarily an eigenstate of the Hamiltonian, because of ``coupling'' that may exist between these states by the Hamiltonian governing the evolution of the sytem.
+Electrons have orbit and spin in the hydrogen atom, but a state of definite orbit and definite spin is not necessarily an eigenstate of the Hamiltonian, because of ``coupling'' that may exist between these states by the Hamiltonian governing the evolution of the system.
 Specifically, the orbit and the spin influence one another via the magnetic fields they generate, so that the Hamiltonian has a term proportional to their dot product.
 This classic problem may be resolved by defining true eigenstates of the Hamiltonian using a different quantum number which describes the total angular momentum of the system.
 We say that L is ``weakly'' coupled to S in the sense that the energy changes caused by the L quantum number and the S quantum number are both rather large compared to the energy of their coupling.

@@ -28,7 +28,6 @@ This was addressed by designing primarily stainless steel mounts, so that molecu
 \caption{
 The Ye Group Molecule trapping endeavor.\label{trappingtable}
 }
-\label{tab:rates}
 \begin{tabular}{ L{2.5cm} | C{4.5cm} C{2.5cm} C{4.5cm} }
 Name & Type & Depth (mK) & Uses \\
 \hline\hline
@@ -42,7 +41,7 @@ Tricycle 	& Magnetic Quadrupole 				& 300 	& 10x density, spin-flip loss \\
 \hline
 Pin  		& 2D Magnetic and Electric Quadrupoles 	& 500 	& Solved spin-flip loss~\cite{Reens2017}\\
 \hline
-Cryocycle 	& Magnetic Quadupole 				& 200 	& Lifetime, Fluorescence Enhancements\\
+Cryocycle 	& Magnetic Quadrupole 				& 200 	& Lifetime, Fluorescence Enhancements\\
 \end{tabular}
 \end{table}
 
@@ -137,7 +136,7 @@ The ideal fields would have a magnitude with the following spatial dependence:
 |E(x,y,z)| = \frac{1}{2}m_{OH}\left(\omega_z^2z^2 + \omega_r^2r^2\right)
 \end{equation}
 where $\omega_z$ and $\omega_r$ are the longitudinal and transverse trap frequencies.
-Neglecting the nonlinearity of the Stark shift for OH molecules close to zero field, such a harmonic potential could be generated transversely with a hexapole, but to do it simultaneously in the transverse and longitudinal directions would require an octupole moment, such as could be generated with three rings and two endcaps with the endcaps at $+V$, the outer rings grounded, and the inner one at $-V/2$ so as to approximate spherical boundary conditions following the second Legendre polynomial~\cite{jackson1999classical}.
+Neglecting the nonlinearity of the Stark shift for OH molecules close to zero field, such a harmonic potential could be generated transversely with a hexapole, but to do it simultaneously in the transverse and longitudinal directions would require an octopole moment, such as could be generated with three rings and two end-caps with the end-caps at $+V$, the outer rings grounded, and the inner one at $-V/2$ so as to approximate spherical boundary conditions following the second Legendre polynomial~\cite{jackson1999classical}.
 This would of course be very unlikely to be able to be crammed into the small space between the end of a decelerator and a trap, and unlikely to be able to be charged up to a high enough potential energy for stopping an appreciable speed $v$.
 It is much more likely that an efficient solution would be obtained by abandoning the harmonicity and instead focusing on the reduced criterion of loading fields that respect phase stability by having a slope at the location of what will be come the trap center and which also provide some transverse confinement.
 The slope of the loading field at the location of the trap center would ideally match the slope that the ideal harmonic trap with frequency $\omega$ would have at that point, $m_\text{OH}\omega v_0$.
@@ -146,7 +145,7 @@ The slope of the loading field at the location of the trap center would ideally 
 \centering
 \includegraphics[width=14cm]{LoadingFieldsEB.png}
 \caption[On-Axis Loading for Ring and Tricycle]{\label{loadingringtrike}
-Potential energy along axis for Ring and Tricycle traps. The trap center is located at $z=10$~mm in both cases. Note the more favorable slope of the loading potential in the vicinity of the trap center for the tricycle trap. Field magnitudes arise from application of $\pm12.5\text{ kV}$ for the Ring trap and also for the Tricycle. In practice almost half this voltage was applied on the Tricycle for optimal operation, perhaps due to arcing effects or nonadiabatic transitions during loading discussed below in Sec.~\ref{loadingtransitions}.
+Potential energy along axis for Ring and Tricycle traps. The trap center is located at $z=10$~mm in both cases. Note the more favorable slope of the loading potential in the vicinity of the trap center for the tricycle trap. Field magnitudes arise from application of $\pm12.5\text{ kV}$ for the Ring trap and also for the Tricycle. In practice almost half this voltage was applied on the Tricycle for optimal operation, perhaps due to arcing effects or non-adiabatic transitions during loading discussed below in Sec.~\ref{loadingtransitions}.
 }
 \end{figure}
 
@@ -165,7 +164,7 @@ Before discussing this further, we first revisit the process of spectroscopy in 
 A critical tool for understanding the behavior of populations in our magnetic traps is microwave spectroscopy performed on the parity changing transition between \f3 and \e3 states.
 This transition is ideal for spectroscopy, because it has a very small but nonetheless nonzero differential Zeeman shift of $26.6$~MHz/T, which allows molecules to be resolved according to their magnetic field, while also allowing the entire trap to be surveyed over a very narrow bandwidth of microwave frequencies.
 The narrowness of the band is crucial for avoiding the complexities associated with the delivery of microwaves to the trapping region.
-If it were necessary to instead use microwaves to transfer molecules directly from a trapped to an untrapped state by flipping their magnetic quantum number, \f3 to \fm3, scanning the trap would require scanning the applied microwave frequency between $1.7$ and $16$~GHz.
+If it were necessary to instead use microwaves to transfer molecules directly from a trapped to an un-trapped state by flipping their magnetic quantum number, \f3 to \fm3, scanning the trap would require scanning the applied microwave frequency between $1.7$ and $16$~GHz.
 While this is no problem for the microwave synthesizer itself, obtaining a suitably level passband in the components responsible for delivering the microwaves to the molecules would be unfeasible.
 In particular, the microwaves are delivered to the trap using a bias tee setup, nicely described in~\citep[Fig.~5]{Stuhl2012uwave}, and the transfer function through the isolation capacitors is particularly troublesome, see Fig.~\ref{broadercoupling.png}.
 In contrast, with the entire population sitting below $0.5$~T, only $13$~MHz needs to be scanned out of $1.7$~GHz, and no significant attenuation variation is expected or measured.
@@ -187,7 +186,7 @@ When this is done, spectra such as shown in Fig.~\ref{RingTriSpectrum.png} are o
 
 One key limitation to microwave spectroscopy via the procedure described is the spatial variation of sensitivity of the technique.
 The influence on microwave frequency dependent intensity has already been claimed negligible, but microwave intensity at any given frequency varies significantly across the cloud.
-This goes against the rule of thumb that electromagnetic intensity shouldn't vary significantly on lengthscales below a wavelength, $18$~cm in this case.
+This goes against the rule of thumb that electromagnetic intensity shouldn't vary significantly on length-scales below a wavelength, $18$~cm in this case.
 This is because the microwaves are in the near field regime with respect to the conductors that form the trapping potential.
 The microwave fields may to a good approximation be taken to be dominantly electric and equal to the DC electric field distribution generated during loading but with magnitude oscillating at the microwave frequency.
 This means that their intensity should vary as shown in Fig.~\ref{NearFieldUWave.png}ab.
@@ -272,7 +271,7 @@ Essentially what is happening is that molecules which are in the \fm3 state duri
 We realized that the magnitude of electric field required to allow adiabatic transitions between the \fm3 and \emm1 states was actually quite small, only a few V/cm.
 Since molecules pass through regions well in excess of $1200$~G where these states cross on their path into the trap region, all of the molecules in the \fm3 state would deterministically make this transition assuming a rather small stray field.
 
-\figdave{slowingtrapEF.png}{Opposite Parities survive Deceleration}{$|e\rangle$ parity molecules are observed after two different decelerations. (a) $\phi=40^\circ$ deceleration. (b) $\phi=50^\circ$ deceleration. Insets zoom in on the decelerated packet. Note also the relative peak heights of the undecelerated and decelerated molecules.}{\linewidth}
+\figdave{slowingtrapEF.png}{Opposite Parities survive Deceleration}{$|e\rangle$ parity molecules are observed after two different decelerations. (a) $\phi=40^\circ$ deceleration. (b) $\phi=50^\circ$ deceleration. Insets zoom in on the decelerated packet. Note also the relative peak heights of the un-decelerated and decelerated molecules.}{\linewidth}
 
 During the loading of the molecules, a similar fate may befall the \fm3 molecules delivered by the decelerator.
 When the loading fields are finally switched off, these molecules do not maintain their \fm3 character, but rather follow a tangle of adiabatic crossings, and therefore retain their energetic hierarchy.
@@ -312,7 +311,7 @@ This bump could in principle be used to perform last minute slowing or bunching 
 We attempted this in 2014, and obtained the disappointing results shown in Fig.~\ref{multistageloading.png}, among many other such datasets.
 This was also our first attempt at using Behlke switches in series, at least for serious tri-polar output voltages and not only trap-floating voltages, and in the end led to one of my first broken Behlke switches.
 At the time, we assumed HV issues, or perhaps that the bump was essential for transverse focusing, but the idea of loaded molecules actually existing as \fm3 during loading never occurred to us.
-With regards to \fm3 molecules, the extra switching events and extra flight time with varying magnetic field and no electric field out in front of the magnets where the extra bump is created could lead to those molecules being transferred to various other sublevels.
+With regards to \fm3 molecules, the extra switching events and extra flight time with varying magnetic field and no electric field out in front of the magnets where the extra bump is created could lead to those molecules being transferred to various other sub-levels.
 This would reduce the flux of \fm3 molecules through the trap center to then spin-flip into trapped \f3 molecules.
 
 \figdave{multistageloading.png}{Multi-pulse Loading in the Ring trap}{Breaking up the loading pulse into an extra slowing pulse followed by loading only leads to a reduction in trapped molecules.}{10cm}
@@ -440,7 +439,7 @@ Instead it is $\sqrt{\kappa\Delta}$, which is in general much smaller; $\kappa\s
 Returning to the numerical approach, the direct integration of flux is a key improvement relative to our previous work~\cite{Stuhl2013}, where electric fields were applied to study collisions.
 The mechanism of molecular spin-flip loss was identified, and an attempt was made to deconvolve it from the collisional effect of the electric field.
 Revisiting this with the direct integration of flux, we find a three-fold larger loss magnitude, enough to explain a significant portion of the effect previously attributed to collisions, see Chap.~\ref{chapter:collisions}.
-In light of this, it becomes especially important to perform direct, unconvolved experimental verification of both the magnitude of the loss effect and the validity of our loss-flux calculations.
+In light of this, it becomes especially important to perform direct, un-convolved experimental verification of both the magnitude of the loss effect and the validity of our loss-flux calculations.
 We now present the new trap where this is achieved.
 
 
@@ -595,7 +594,7 @@ Molecules are loaded into these states from the \fm3 state which is decelerated,
 An additional important effect however is the escape of molecules from the expected \f3 state but with surprisingly long lifetimes.
 A common rule of thumb floating around in the atomic physics community is that molecules or atoms which are not well trapped ought to find their way out of the trap within a quarter trap oscillation.
 This viewpoint neglects the potential complexities associated with the dynamics of molecular orbits.
-In the effective moving trap which characterizes deceleration for example, almost all molecules lie above the true trap depth when operating in $S=1$ mode, but many survive the $\sim5$ oscillations they undergo in the $\sim3$~ms they spend in the decelerator, refer back to Chap.~\ref{chapter:slowing} for more information.
+In the effective moving trap which characterizes deceleration for example, almost all molecules lie above the true trap depth when operating in S\,=\,1 mode, but many survive the $\sim5$ oscillations they undergo in the $\sim3$~ms they spend in the decelerator, refer back to Chap.~\ref{chapter:slowing} for more information.
 
 More generally, the stability of orbits in dynamical systems is an exciting question in classical physics, with applications to the planets of our solar system, chaotic systems, and so on~\cite{dumas2014kam}.
 One intriguing study applies tools of dynamical system analysis to the trapping of atoms in a crossed optical dipole trap~\cite{Gonzalez-Ferez2014}.
@@ -726,7 +725,7 @@ Cryo14 	& Rear radii back to 10~mm			 							& 4710	& 42\\
 \end{tabular}
 \end{table}
 
-\figdave{cryocycle.png}{Cryocycle Field Distributions}{Relevant information for the Cryocycle trap under manufacture at the time of this writing. (a) Magnetic field magnitude, $500$~G per contour, trap depth of $\sim2200$~G transversely. (b) Electric field magnitude during loading. $10$~kV/cm per contour. Curved rear surface acts to extend the region of steep trapping slope further towards the rear magnet relative to the Tricycle trap, see Fig.~\ref{NearFieldUWave.png}a. (c) Raytrace performed in COMSOL Multiphysics for determining collection solid angle close to $4$~sr for the Cryocycle.}{\linewidth}
+\figdave{cryocycle.png}{Cryocycle Field Distributions}{Relevant information for the Cryocycle trap under manufacture at the time of this writing. (a) Magnetic field magnitude, $500$~G per contour, trap depth of $\sim2200$~G transversely. (b) Electric field magnitude during loading. $10$~kV/cm per contour. Curved rear surface acts to extend the region of steep trapping slope further towards the rear magnet relative to the Tricycle trap, see Fig.~\ref{NearFieldUWave.png}a. (c) Ray-trace performed in COMSOL Multiphysics for determining collection solid angle close to $4$~sr for the Cryocycle.}{\linewidth}
 
 \subsection{Photon Collection}
 
@@ -737,7 +736,7 @@ Of course this assumes a highly reflective surface, only obtainable in the near 
 Aluminum may be a less ideal choice as far as high voltage is concerned however, since its surface oxide layer should enable the formation of patch charges and stray electric fields to some extent.
 This could prove especially problematic in the event of any sensitive long-term studies, since variations in the patch charges could lead to variations in the enhancement of spin-flip losses near the trap center.
 One technique to address this is to detect the magnitude of spectroscopy, see Fig.~\ref{strayhyperspec.png}.
-Because of the small magnitude of the differential Zeeman shift, slight perturbations of the electric fields on the magnetic field dependent lineshapes, especially in the vicinity of avoided crossings, are clearly discernable.
+Because of the small magnitude of the differential Zeeman shift, slight perturbations of the electric fields on the magnetic field dependent line-shapes, especially in the vicinity of avoided crossings, are clearly discernible.
 Performing a full spectroscopic sequence would be slow, but similar observables could be designed to give sensitivity to stray electric fields, for example a two-point spectroscopy comparing the frequency of the dip to that of the peak.
 Another possibility would be to look for population transfer at a more distant frequency that would only address molecules close to avoided crossings.
 
@@ -792,7 +791,7 @@ This is symptomatic of an inefficient supersonic expansion process, but good new
 Some very relevant guiding work should prove a useful starting ground~\cite{Motsch2009}.
 An electrostatic quadrupole trap would be most feasible, and this could be achieved in a very similar system to the one currently planned for the Cryocycle, but with magnet-less electrodes.
 It is best to have at least the rear electrode bend inwards towards the others, as in this electrostatic trap~\cite{Veldhoven2006}.
-The final pins of the decelerator can form one electrode of the quadrupole, which would then require an additional ring and endcap electrode.
+The final pins of the decelerator can form one electrode of the quadrupole, which would then require an additional ring and end-cap electrode.
 Detection could be performed with some sort of REMPI scheme, but for initial tests of decelerability the RGA may suffice.
 
 \ifx\justbeingincluded\undefined

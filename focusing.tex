@@ -77,7 +77,7 @@ and now inverting,
 \begin{equation}
 \frac{1}{L_3} = L_2\kappa^2 - \frac{1}{L_1},
 \end{equation}
-so that for $f_H=1/L_2\kappa^2$ we recover the lensmaker formula:
+so that for $f_H=1/L_2\kappa^2$ we recover the lens-maker formula:
 \begin{equation}
 \frac{1}{L_1}+\frac{1}{L_3}=\frac{1}{f_H}.
 \end{equation}
@@ -165,7 +165,7 @@ One interesting point worth mentioning is that the geometry of the device leads 
 This can be derived by conceptually dividing the geometry in half through the bolts and analyzing the static free body diagrams of each component, a standard exercise in statics.
 The conclusion is that $1000$~kg on each of two bolts would give $240$~W/\,$^\circ$K for gold-gold and $3$~W/\,$^\circ$K for copper-copper, found by taking the $10\,^\circ$K $50$~kg data in~\citep[Fig.~5.8]{Hartwig2013} and multiplying up to $12000$~kg including the hoop stress amplification.
 Of course, this brings to mind the question of validity of the linear scaling of conductivity all the way up to such large forces.
-In~\cite{Berman1956}, extremely high loads were investigated, and although their cryogenic hydraulic ram apparatus failed catastrophically during the investigation, they were able to confirm that conductivity increased $5$0-fold for forces increasing $20$-fold up to $4700$~lb, a superlinear scaling to very high forces.
+In~\cite{Berman1956}, extremely high loads were investigated, and although their cryogenic hydraulic ram apparatus failed catastrophically during the investigation, they were able to confirm that conductivity increased $5$0-fold for forces increasing $20$-fold up to $4700$~lb, a super-linear scaling to very high forces.
 
 \figdave{hex1force}{Clamp Stress and Strain in Hexapole 1}{
 (a) Stress resulting from clamp tightening. 
@@ -181,7 +181,7 @@ The HV distribution rings visible in Fig.~\ref{hex1heatloads.png} ended up havin
 
 \figdave{hex1heatloads.png}{Heat Conduction and Radiative Loads for Cryo-Hex 1}{(a) Conduction of thermal joints in W/\,$^\circ$K. In the final design, two braids were used, for a total conductivity closer likely above 1 W/\,$^\circ$K. (b) Radiative heat loads on exposed surfaces in mW.}{\linewidth}
 
-An additional consideration for the hexapole is the matter of its alignment with the beamline.
+An additional consideration for the hexapole is the matter of its alignment with the beam-line.
 There are two primary strategies by which satisfactory alignment may be obtained:
 \begin{enumerate}
 \item Contrive a way for alignment to be tweaked from outside of the vacuum chamber, so that final alignment may be guided by actual system figures of merit such as molecule yield after the hexapole. \label{hexitem1}
@@ -260,7 +260,7 @@ The hexapole did not even come close to performing as intended, particularly as 
 One of the first datasets is shown in Fig.~\ref{hexinverteffect.png}.
 A surprising effect was observed, whereby the signal was first decreased and then increased.
 At first it was suspected that this could relate to the focusing behavior of the device in some way, since by analogy with lenses over-focusing can be problematic.
-This does not make sense at such low voltages however, and does not explain the even more surprising observation of hysteretic behavior, where the signal with the hexapole off was observed to decrease dramatically after having operated the hexapole at voltage for a while.
+This does not make sense at such low voltages however, and does not explain the even more surprising observation of hysteresis behavior, where the signal with the hexapole off was observed to decrease dramatically after having operated the hexapole at voltage for a while.
 
 \figdave{hexinverteffect.png}{OH After the Hexapole}{
 Flight profiles of OH after the Hexapole. Voltage is seen to have an effect. 
@@ -280,7 +280,7 @@ This also suggests that charging the hexapole with only negative voltage and gro
 \figdave{surfacemech.png}{Hexapole Surface Arcing Mechanism}{
 This schematic diagram illustrates how surface charges donated from the conductive grounded hexapole mounting block (blue) are able to rather efficiently coat the surface of the sapphire tubes insulating the positively charged hexapole electrodes (black). }{8cm}
 
-While true voltage alternation requires complex tripolar switch output configuration, effective alternation may be achieved with a unipolar setup by connecting each set of three hexapole electrodes to the output of a switch which connects between ground and minus high voltage.
+While true voltage alternation requires complex tri-polar switch output configuration, effective alternation may be achieved with a unipolar setup by connecting each set of three hexapole electrodes to the output of a switch which connects between ground and minus high voltage.
 The switches can then take turns charging the hexapole, so that the field direction reverses each time, rod polarity is always negative relative to the grounded copper block, and unipolar push-pull architecture is maintained.
 Operating in this manner did indeed resolve patch charge issues, and led to the data shown in Fig.~\ref{hexinvertsolve.png}.
 One downside of this mode of operation is the reduced maximum hexapole voltage which may be applied, assuming that availability of MOSFET switches limits the maximum absolute value of voltage which may be applied.
@@ -359,15 +359,15 @@ This section view shows Hexapole 2.5.
 (iv) An Ultem part directly mounts the radiation shield to the second stage thermal clamp, but with extremely low thermal conduction thanks to a 3D printed hole array.
 (v) A smaller shield boxes covers the front of the hexapole, except for the skimmer cone. This screws into the larger shield box.
 (vi) Another shield box covers the rear, except for an egress hole for the beam. These shield parts are all bent to shape and then annealed.
-(vii) Macor bushings insulate \diameter 1/2" holes for HV feedthroughs. The other sits inside the smaller rear shield box in the unshown sector.
+(vii) Macor bushings insulate \diameter 1/2" holes for HV feedthroughs. The other sits inside the smaller rear shield box in the un-shown sector.
 }{14cm}
 
 As far as cryogenics are concerned, hexapole 2.5 performed better than any other, validating the blackbody shielding technique incorporated.
 Surprisingly, this did not lead to significant clogging mitigation relative to hexapole 2 at zero electric field where the high voltage performance is not relevant.
 In fact, by varying temperatures, the magnitude of the cryogenic benefit was directly investigated, and found to be far smaller than anticipated, see Fig.~\ref{hex25clogging}.
-One explanation for this could be the negative influence of surfaces positioned orthogonally to the beamline, such as those formed by the HV distribution rings in Hexapoles 2 and 2.5 but not on Hexapole 1.
+One explanation for this could be the negative influence of surfaces positioned orthogonally to the beam-line, such as those formed by the HV distribution rings in Hexapoles 2 and 2.5 but not on Hexapole 1.
 Another explanation could relate to the adsorptive properties of the materials involved in the two hexapoles.
-In Hexapole 1, the surfaces presented to the molecules were lightly greased sapphire and semi-rough copper from the wire-EDM process, while in Hexapole 2 and 2.5 the surfaces are ungreased highly polished steel.
+In Hexapole 1, the surfaces presented to the molecules were lightly greased sapphire and semi-rough copper from the wire-EDM process, while in Hexapole 2 and 2.5 the surfaces are un-greased highly polished steel.
 It is conceivable that the former would perform better, in which case one simple test would be to lightly grease the stainless steel.
 
 
@@ -386,7 +386,7 @@ Sheet-metal bending techniques are not often utilized in the laboratory, often r
 Using appropriate design modules in Solidworks, the radiation shields are designed to be folded into the desired shape after first being water-jetted out of copper sheet.
 At the time of this writing, water-jetting is available in the physics shop with nearly next-day service and only 1-2 hour operator costs.
 Bending is hard to do accurately, but this is generally not required for radiation shielding, and if accuracy is required, commercial CNC bending is available with 0.005" tolerances on hole positions for the final folded part\footnote{\href{https://rapidmanufacturing.com/rapid-sheet-metal/}{Rapid Sheet Metal} offers 10-day service and something like \$500 per design, way less with quantity.}.
-The act of bending reduces thermal conductivity by work-hardening the joint, but where conductivity is critical, this can be addressed by annealling.
+The act of bending reduces thermal conductivity by work-hardening the joint, but where conductivity is critical, this can be addressed by annealing.
 
 \figdave{hex25thermiso}{Hexapole 2.5 Radiation Shielding Isolator}{Thermal simulations of an Ultem isolator used as a mechanical interconnect between Hexapole 2.5 and its radiation shields, with (b) and without (a) extra holes. In each case, a $1$~mW load is applied across the device, and the base is fixed at $0\,^\circ$K, so that the reported temperature on the upper surface of the device rises with smaller conductance.}{\linewidth}
 
@@ -395,7 +395,7 @@ The act of bending reduces thermal conductivity by work-hardening the joint, but
 \section{Guided Flux}\label{gflux}
 
 One important way to gauge the performance of these hexapoles is to study the flux of molecules which they are able to couple into the decelerator when it is run in a guiding mode.
-We can use this to compare the hexapoles together with earlier measurements without a hexapole to get at the key question of whether a cryogenic hexapole is capable of improving performance relative to the noncryogenic, hexapole-free, commercial skimmer approach.
+We can use this to compare the hexapoles together with earlier measurements without a hexapole to get at the key question of whether a cryogenic hexapole is capable of improving performance relative to the non-cryogenic, hexapole-free, commercial skimmer approach.
 A selection of several measured fluxes in guiding spanning the hexapoles discussed here are shown in Tab.~\ref{hexguidetable}.
 In all cases, the skimmer used features a $3$~mm opening diameter, and the DC guiding voltage used is $6$~kV, a value which gives a transverse phase space acceptance comparable to that of F mode decelerator operation, see Sec.~\ref{sec:afd}.
 Overall, only Hexapole 1 is seen to outperform the commercial skimmer option, and that by less than a factor of two.
@@ -437,7 +437,7 @@ By abandoning the emphasis in Hexapoles 2 and 2.5 of reusing the mounting struct
 In addition, by carefully following the principles of triple point shielding laid out in~\citep[Sec.~4.3.3]{Faircloth2013}, extra safety should be able to be obtained.
 In particular, true shielding of the triple points that exist between the Ultem tube and the internal HV distribution mounts of Hexapoles 2 and 2.5 is not really possible given the external copper tube and requirement of sliding installation inside.
 
-In addition to making a further dramatic increase in surface arcing path-length and triple point shielding, the next generation hexapole will need to address the observation of limited cryoadsorption performance.
+In addition to making a further dramatic increase in surface arcing path-length and triple point shielding, the next generation hexapole will need to address the observation of limited cryo-adsorption performance.
 In addition to the reduction or removal of orthogonal surfaces and the investigation of surface materials and the performance of grease, another possibility would be to reduce all surfaces, even parallel ones, presented to the beam-line.
 One way to move in this direction would be to reduce the radius of the hexapole rods, which would introduce some dodecapolar deviations from the ideal hexapole fields, likely a minor effect on top of the clogging behavior.
 Another rather drastic possibility would be to remove the front skimmer entirely.
