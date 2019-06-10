@@ -12,9 +12,10 @@ As in many areas of modern quantum physics, careful understanding begins with cl
 
 \section{Molecular Hamiltonians}
 
-Much like the well studied progression from classical descriptions of electrons orbiting a hydrogen nucleus to semiclassical angular momentum quantization and on to the exact Hydrogen quantum mechanical wave-function solution~\citep[Sec.~4.2]{Griffiths2018}, molecules may be understood beginning with the simplified quantum mechanics of rigid rotors and springs.
+A well trodden pedagogical progression exists for the problem of the Hydrogen atom. 
+One begins with classical descriptions of electrons orbiting a hydrogen nucleus, moves to semiclassical angular momentum quantization, and finally on to the exact Hydrogen quantum mechanical wave-function solution~\citep[Sec.~4.2]{Griffiths2018}. 
+A similar progression exists for Molecules, and begins with the simplified quantum mechanics of rigid rotors and springs.
 The former end up applying well to the rotational degrees of freedom of the molecules, and the latter to their vibrational degrees of freedom.
-
 
 \subsection{The Rigid Rotor}
 
@@ -102,15 +103,45 @@ This potential may be specified in a more formal way beginning with the full Ham
 Essentially, the nuclear positions are taken as parameters to the computation of the electronic wavefunctions, and so by parametrically solving the electronic Hamiltonian for all nuclear distances and rotations, the energetic landscape governing the dynamics of the nuclei emerges.
 It is therefore somewhat difficult to directly specify the form of the interatomic potential experienced by the nuclei, but the results from this procedure turn out to be closely represented by the Morse potential:
 \begin{equation}
-V(x) = \left(1-e^{-\alpha x}\right)^2.
+V(x) = D\left(1-e^{-\beta x}\right)^2.\label{eqmorse}
 \end{equation}
-This potential has a minimum at $x=0$, tends to infinity as $x\rightarrow-\infty$, and to $1$ as $x\rightarrow\infty$. For small $x$, expanding near zero gives a harmonic form as we would expect:
+This potential has a minimum at $x=0$, defined to be the equilibrium distance of the vibrational oscillation. It tends to infinity as $x\rightarrow-\infty$, and to $D$ the dissociation energy as $x\rightarrow\infty$. For small $x$, expanding near zero gives a harmonic form as we would expect:
 \begin{equation}
-V(x) \approx \left(1-(1-\alpha x + \alpha^2 x^2 / 2 - ...)\right)^2 \approx \alpha^2 x^2.
+V(x) \approx D\left(1-(1-\beta x + \beta^2 x^2 / 2 - ...)\right)^2 \approx \beta^2 x^2.
 \end{equation}
 This potential is therefore an anharmonic oscillator, with the nature of the anharmonicity being such that the restoring force weakens for larger deviations, so that higher energy levels are more closely spaced.
-Another important property of the Morse oscillator is that only a finite number of levels are supported, which is also the case for true molecular potentials, unlike electronic energy levels.
+Another important property of the Morse oscillator is that only a finite number of levels are supported, which is also the case for true molecular potentials, unlike electronic energy levels, for which the so-called Rydberg series of their energy levels is countably infinite.
 
+The Morse oscillator is a close enough match to true molecular potentials, that the results of molecular spectroscopy are often expressed in terms of the coefficients that describe the Morse oscillator whose rovibrational energies best match the actual level spacings of the molecule.
+It is useful therefore to write down the rovibrational level spacings predicted by the Morse oscillator:
+\begin{eqnarray}
+E(v,J)/hc = w_e(v+1/2)-x_ew_e(v+1/2)^2 \\+B_eJ(J+1)- D_eJ^2(J+1)^2\\- \alpha_e(v+1/2)J(J+1)
+\end{eqnarray}
+These energies come by using Eq.~\ref{eqmorse} in the rovibrational hamiltonian one can obtain by applying the Born-Oppenheimer approximation~\citep[Eq.~2.157]{Brown2003} to the full molecular Hamiltonian.
+The value of each of the parameters $w_e$, $x_e$, $B_e$, $D_e$, and $\alpha_e$ may be written in terms of the $\beta$ and $D$ of Eq.~\ref{eqmorse}, and the reduced mass $\mu$ and equilibrium nuclear distance $R_e$ of the molecule, see~\citep[Eq.~2.183]{Brown2003}.
+The value of the vibrational parameters $w_e$ and $x_ew_e$ for a few molecules of interest are shown in Tab.~\ref{vvvtable}.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[t!]
+\centering
+\caption[Molecular Vibrational Constants]{
+Spectroscopically determined vibrational constants are shown for several molecules of interest~\cite{Huber2018}.
+\label{vvvtable}}
+\begin{tabular}{ C{2cm} | C{2cm} | C{2cm} | C{2.2cm} | C{2cm} |}
+Molecule & $\mu$~(amu) & $R_e$~(\AA) & $w_e$~(THz) & $w_ex_e$~(GHz) \\
+\hline
+H$_\text{2}$		& 0.5 & 0.74 & 132 & 3640 \\
+FH 		& 0.95 & 0.92 & 124 & 2700 \\
+OH 		& 0.94 & 0.97 & 112 & 2550 \\
+N$_\text{2}$		& 7 & 1.10 & 70.8 & 427 \\
+LiH 		& 0.88 & 1.60 & 42.2 & 696 \\
+YO   		& 13.6 & 1.79 & 25.8 & 87.0 \\
+CaF 		& 12.9 & 1.97 & 17.4 & 82.2 \\
+SrF		& 15.6 & 2.08 & 15.1 & 66.0 \\
+YbF 		& 17.1 & 2.02 & 15.1 & 66.0 \\
+RbCs 	& 51.9 & 4.4 & 1.48 & - \\
+\end{tabular}
+\end{table}
 
 \section{Angular Momentum Coupling}
 

@@ -6,23 +6,257 @@
 \chapter{Introduction}
 \label{iii}
 
-%In the beginning, God created hydroxyl radicals, through a complex expansion and condensation process beginning with higher energy forms of matter such as quark gluon plasma that thankfully are no longer relevant to anything.
+In the beginning, God created hydroxyl radicals, through a complex expansion and condensation process beginning with higher energy forms of matter such as quark gluon plasma that thankfully are no longer relevant to anything.
+Later on, God created atomic physicists, who neither know anything nor are aware of this.
+Fortunately, through centuries of ``serendipitous'' discovery and other unscrupulous tactics, God managed to orchestrate that this same group of physicists would continue to make dramatic advances relevant to life, the universe, and the obtaining of PhD's, right up to the present day.
+
+\section{Atomic Physics}
+
+Atomic physics is a very exciting branch of physics, concerned with atoms or molecules as a whole and not their subatomic constituents, and especially the interaction of atoms with one another and with light.
+Some of the core questions of the field have in some sense been solved for quite some time, such as the nature of an atom and all the finest details of the energy levels of atoms and molecules.
+In other areas, the field has greatly matured only much more recently, such as in the ability to cool an ensemble of atoms into a regime where not only their internal degrees of freedom are quantized, but their external motional degrees of freedom as well, thereby enabling the realization of Bose-Einstein Condensation~\cite{Anderson1995,Davis1995}.
+Another even more recent example of the development of the field can be found in the detection of gravitational waves~\cite{Abbott2016}, more specifically the interferometer used for this purpose. 
+This device relies on coherent and high power laser sources and the finest understanding and management of the interaction between light and materials, especially optical coatings, and even the quantum mechanical manipulation of quadratures to reduce noise sources by spin-squeezing.
+
+A significant contingent within atomic physics has in recent years moved in the direction of quantum information science, especially with regard to the trapped ion modality of quantum computing, where two or several states within a trapped ion serve as a quantum bit of information~\cite{Zoller1995,Haffner2008}.
+While still only boasting rather modest near-term gains, such as the noisy, intermediate-scale quantum (NISQ) regime~\cite{Preskill2018}, this direction of atomic physics boasts some unique opportunities for atomic and condensed matter physicists to compete.
+Keeping a focus on scientific rather than technological aspects, quantum information science boasts unique opportunities for application to scientific computing, and early quantum computation demonstrations have focused on analog quantum simulations of real scientific phenomena~\cite{Kassal2008,Lu2011}.
+
+Lastly I'll mention precision measurement, an amusing avenue of advancement whereby atomic physicists leverage our measurement accuracy to learn something completely fundamental by understanding something simple to death and beyond.
+This branch of atomic physics has been around since the beginning and is in some sense a natural evolution out of the spectroscopic beginnings of the discipline~\cite{Drake2018}.
+Some of the highlights include the electron magnetic moment~\cite{Hanneke2008}, providing a part per trillion comparison between standard model quantum field theory and experiment, and the measurement of time itself, which has seen incredible advances in the modern era~\cite{Bloom2014}.
+
+\section{Molecules}
+
+Against this brief smattering of more modern directions of atomic physics, I am now pleased to delve with more focus into the molecular subfield of atomic physics.
+Molecules boast a number of exciting realized and hypothetical contributions, across all of the major focus areas of atomic physics~\cite{Carr2009}.
+The recurring theme is that their rotational and vibrational degrees of freedom introduce new features that are both challenging to control and very useful if controlled.
+For example, in trapped ion quantum computing, the most realistic pathways to scalability demonstrated thus far involve the performing of 2-qubit gates via the mechanical motion of the trapped ions.
+Though advantageous as far as scalability is concerned since such manipulations can be achieved with conventional electronics, many challenges including heating issues, fidelities, and gate times exist~\cite{Bruzewicz2019}.
+Molecular trapped ions offer new opportunities for circumventing the need for motional manipulation, such as dipole-dipole couplings for gates~\cite{Schuster2011}.
+
+In the study of quantum gases, manipulation of interactions between atoms have long enabled studies of pairing and BEC-BCS crossover~\cite{Zwierlein2003}.
+Nevertheless, availability of a quantum gas with constituent particles themselves possessing anisotropic interactions has long attracted great interest in the field.
+Already great strides have been made in this direction, especially with magnetic atoms with unusually strong magnetic dipole moments such as Erbium and Dysprosium, which are already cutting into the territory once hoped for by molecular cooling enthusiasts with the startling discoveries of self-bound quantum droplets~\cite{Schmitt2016} and liquid-He reminiscent roton modes~\cite{Chomaz2018}.
+Still, it could be argued that these unexpected results connected to the dipolar character of the underlying particle only confirm the validity of the quest for quantum degenerate systems of an ever widened pool of candidate particles.
+
+With regard to precision measurement, molecules offer a number of exciting possibilities, perhaps most notably with respect to measurements of the electric dipole moment of the electron, recently measured to zero within $10^{-28} e\text{ cm}$~\cite{Cairncross2017} and $10^{-29} e\text{ cm}$\cite{Andreev2018}.
+These results are fundamentally enabled by the internal electric fields present inside molecules.
+Additional possibilities include extending such studies to polyatomics~\cite{Kozyryev2017}, studying time variations~\cite{Zelevinsky2008}, or studying nuclear effects~\cite{DeMille2008}.
+
+
+
 
 %Cold and Ultracold molecules have long promised a wealth of new opportunity to the AMO physics community, and are now truly blossoming in this regard. Associated ultracold atoms are available at unprecedented phase space densities, as are directly laser-coolable molecules. This in turn imposes some welcome pressure on experiments with species directly cooled and decelerated to finally deliver on promises of high density and in-trap collisions.
 
-\section{Direct Cooling}
+\section{Molecular Cooling}
 
-%Direct cooling refers to the preparation of molecules of interest at typical temperatures and subsequent additional cooling. This is in contrast to associative type methods which first cool constituents atoms.
+Several strategies exist for getting molecules cold, which is the primary challenge associated with their further usefulness to atomic physics.
+Firstly there is the possibility of using already ultracold alkali molecules, associating them together loosely via scattering resonance techniques, but then utilizing precise spectroscopy of high-lying molecular states to coherently transfer them to ground states.
+A nice survey of these techniques is available here~\citep[Sec.~1.3]{HudsonThesis2006}, and exciting recent work with polar potassium rubidium molecules produced in this manner is being performed right here in the Ye group~\cite{DeMarco2019}.
 
-\section{Laser Cooling}
+\subsection{Laser Cooling}
 
-%Much progress has been made using laser cooling methods directly on molecules.
+A different approach is to instead select a molecule with some favorability for traditional laser cooling techniques.
+First proposed in titanium monoxide by Benjamin Stuhl during his dissertation work on this experiment~\cite{Stuhl2008}, and later realized with yttrium monoxide~\cite{Collopy2018}, more advanced magneto-optical trapping schemes exist which are amenable for use with molecules.
+Since then, numerous molecules have been successfully slowed and trapped, including strontium fluoride~\cite{Steinecker2016} and calcium fluoride~\cite{Anderegg2019}, with the latter even loaded into optical tweezer arrays.
+Recently, it has been exciting to observe the application of various advanced techniques to these molecules for rapid further progress in cooling, such as lambda-enhanced gray molasses~\cite{Anderegg2018} and blue-detuned magneto optical trapping~\cite{Jarvis2018}.
+These advances have been particularly satisfying for the community given the long time spent waiting for these groups to master the molecule slowing process in order to load magneto optical traps, something which all groups involved spent something like four years achieving.
+So far no group has brought these laser coolable species below about $5~\mu$K, although the yttrium oxide has prospects for doing so via narrowline cooling~\cite{Collopy2015}.
 
-\subsection{SWAP Cooling}
+Another related but distinct technique that could in principle apply to a much broader class of molecules but still relies on lasers is sawtooth-wave adiabatic passage (SWAP) cooling~\cite{Bartolotta2018}.
+Somewhat controversial in its reliance on stimulated emission and the opaque role of spontaneous emission in the process, swap cooling is nevertheless a valid technique which may be useful for some species.
+For a time, the YO experiment considered its implementation, or a modification using triangular waves, but this may have been superseded by opportunities with the techniques described above.
 
-\section{Association}
+\subsection{Direct Cooling}
 
+Although sometimes used to refer to any technique other than the association of ultracold molecules, I will use the term ``Direct Cooling'' to refer to those cooling techniques which do not rely on lasers to transfer entropy, but instead make use of conventional and more broadly applicable collisionally cooling mechanisms.
+Two primary directions in this regard are the supersonic expansion~\cite{Miller1988} and the cryogenic buffer gas beam~\cite{Hutzler2011a}.
+Although both rely on thermalization by collisions between noble gas buffer atoms and the species of interest, their principles of operation and the characteristics of the molecules they generate are quite different.
+The supersonic expansion technique is ideal for generating a high phase space density with a large lab frame velocity offset, and the cooling happens all in one shot right from room temperature thanks to an expansive flow process described further in Sec.~\ref{secsuperexp}.
+The cryogenic buffer gas beam generates molecules with greater breadth in velocity space but a much lower initial kinetic energy~\citep[Fig.~1]{Hutzler2011a}.
+These properties make the cryogenic buffer gas beam ideal for experiments with good prospects for further phase space compression by laser cooling, but with difficulty in performing slowing, exactly the case for the laser coolable diatomics.
+In contrast, the supersonic expansion is ideal for experiments with no clear path to higher phase space densities, but robust options for removing lab frame velocity in a phase-stable manner, i.e. Stark or Zeeman deceleration.
+These techniques, though general compared to laser based methods, require a careful understanding of the molecule of interest, for which purpose we now transition into more directly practicable background information.
 
+\section{The OH Molecular Hamiltonian}
+
+All of our ability to successfully exploit and manipulate OH radicals is underpinned by a robust understanding of its internal structure undergirded by decades of careful spectroscopy.
+Early spectroscopic results are still directly useful in determining where to set detection lasers~\cite{Meerts1975}, although many of these parameters are now more usefully catalogued in the NIST webbook~\cite{Huber2018}.
+As in many areas of modern quantum physics, careful understanding begins with classical Hamiltonians followed by quantization and then a perturbative approach to better and better models of the system. 
+
+A well trodden pedagogical progression exists for the problem of the Hydrogen atom. 
+One begins with classical descriptions of electrons orbiting a hydrogen nucleus, moves to semiclassical angular momentum quantization, and finally on to the exact Hydrogen quantum mechanical wave-function solution~\citep[Sec.~4.2]{Griffiths2018}. 
+A similar progression exists for Molecules, and begins with the simplified quantum mechanics of rigid rotors and springs.
+The former end up applying well to the rotational degrees of freedom of the molecules, and the latter to their vibrational degrees of freedom.
+
+\subsection{The Rigid Rotor}
+
+For the rigid rotor, we imagine some extended rigid body with moment of inertia $I_z$ about its center of mass in a particular direction $z$, which may be calculated in the usual way:
+\begin{equation}
+I_z = \int\limits_V\rho r^2 dAdz,\label{izsimp}
+\end{equation}
+where the integral covers the whole volume of the body with density $\rho$, and $r$ gives the distance from the infinitesimal volume element to the axis parallel to $z$ through the center of mass of the body.
+Classically, lacking any environmental coupling, this body may indefinitely rotate about its axis of rotation with any angular velocity $\omega$, and posses a rotational kinetic energy given by:
+\begin{equation}
+U=\frac{1}{2}I\omega^2,
+\end{equation}
+and an angular momentum given by:
+\begin{equation}
+L= I\omega
+\end{equation}
+Semiclassically, we require the angular momentum to be quantized in units of $\hbar$, leading to the diophantine equation:
+\begin{equation}
+L = l\hbar = I\omega,
+\end{equation}
+with $l$ an integer, so that the allowed values of the angular velocity and energy become:
+\begin{equation}
+\omega = l\hbar/I, \qquad U = \frac{1}{2I}l^2\hbar^2
+\end{equation}
+with the natural consequence that for larger inertia $I$, the spectrum of allowed rotations becomes increasingly continuous.
+This turns out to differ only slightly from the true situation, at least as it pertains to the specific case of linear rotors and diatomic molecules, where we find:
+\begin{equation}
+U = \frac{1}{2I}(l^2 + l)\hbar^2.
+\end{equation}
+
+It is instructive to follow this through more thoroughly~\citep[Sec.~2.8]{Brown2003}.
+For the case of a linear rotor, where the body's mass is essentially confined to a single axis in space, a single momentum of inertia $I$ characterizes the system, and for the even simpler case where the mass is located at only two points separated by $R$, we can evaluate Eq.~\ref{izsimp} but with the following density distribution:
+\begin{equation}
+\rho(r)=m_1\,\delta\!\left(r-R\frac{m_2}{m_1+m_2}\right)+m_2\,\delta\!\left(r+R\frac{m_1}{m_1+m_2}\right),
+\end{equation}
+where $m_1$ and $m_2$ are the two masses separated by a distance $R$, and the values in the delta functions create the situation where the radial coordinate $r$ attains its zero value at the center of mass of the distribution.
+Evaluating Eq.~\ref{izsimp} then leads to the result:
+\begin{equation}
+I = \frac{m_1m_2^2+m_2m_1^2}{(m_1+m_2)^2}R^2 = \frac{m_1m_2}{m_1+m_2}R^2 = \mu R^2,\label{eqdefI}
+\end{equation}
+where $\mu$ is the reduced mass of the system.
+Now the Hamiltonian for this system is simply the rotational energy:
+\begin{equation}
+\hat{H} = \frac{1}{2\mu}\nabla^2
+\end{equation}
+which upon moving ahead with the Schr\"{o}dinger Equation, gives the spherical harmonic eigenfunctions:
+\begin{equation}
+\hat{H}Y_{lm}(\theta,\phi) = E_lY_{lm}(\theta,\phi),\qquad E_l = Bl(l+1),\qquad B=\frac{\hbar^2}{2I}.\label{eqdefb}
+\end{equation}
+Here $B$ is referred to as the rotational constant, and $\theta$, $\phi$ give physicist spherical coordinates relative to an axis orthogonal to the axis of the linear rotor, i.e. an axis along which the system has angular momentum $I$, \emph{not} the axis of the rotor itself.
+It is interesting to note that the wave-functions associated with these eigen-energies are quite bizarre from the perspective of classical physics, especially given that relative to the quantum mechanics of the light electron, these coordinates describe the locations of heavy atomic nuclei.
+For example, in the case of $l=0$, quantum mechanically the molecule is in a spherically symmetric state with equal probability of finding either nuclei anywhere on the surface of the two spherical shells correspending to their generally different radii away from the center of mass.
+
+It is interesting to compare the values of $B$ calculated na\:{i}vely from Eqs.~\ref{eqdefb},~\ref{eqdefI} to the spectroscopically determined values, as shown in Tab.~\ref{bbbtable}. 
+Very good agreement is obtained, at least when using the spectroscopically determined internuclear distance, which is therefore not quite fair as far as theory experiment predictions are concerned.
+Nonetheless, it is reasonable to conclude that the rigid linear rotor model is a good description of the situation for diatomic molecules.
+The bulk of the remaining deviations relate to centrifugal affects, by which I broadly refer to the interaction between the rotational and the vibrational components of the Hamiltonian, a nice segue into the following section.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[t!]
+\centering
+\caption[Molecular Rotational Constants]{
+Parameters leading to the value of the rotational constant $B$ are shown, together with its semi-classically inferred value.
+Spectroscopically determined values agree quite well. Radii and spectroscopically determined rotational constants from~\cite{Huber2018}, except RbCs from~\cite{Fellows1999} and YbCs from~\cite{Meyer2009}.
+\label{bbbtable}}
+\begin{tabular}{ C{2cm} | C{2cm} | C{2cm} | C{2.2cm} | C{2cm} |}
+Molecule & $\mu$~(amu) & $R$~(\AA) & $B_\text{semi}$~(GHz) & $B$~(GHz) \\
+\hline
+H$_\text{2}$		& 0.5 & 0.74 & 1850 & 1820 \\
+OH 		& 0.94 & 0.97 & 573 & 567 \\
+LiH 		& 0.88 & 1.60 & 227 & 225 \\
+YO   		& 13.6 & 1.79 & 11.6 & 11.6 \\
+CaF 		& 12.9 & 1.97 & 10.1 & 10.1 \\
+SrF		& 15.6 & 2.08 & 7.52 & 7.51 \\
+YbF 		& 17.1 & 2.02 & 7.24 & 7.22 \\
+RbCs 	& 51.9 & 4.4 & 0.503 & 0.497 \\
+YbCs	& 75.2 & 5.4 & 0.230 & 0.207 \\
+\end{tabular}
+\end{table}
+
+\subsection{The Vibrational Hamiltonian}
+
+In much the same way as the canonical simple harmonic oscillator problem in quantum mechanics, at its core the vibrational Hamiltonian may be represented as a harmonic potential describing the energetics of the internuclear distance of the molecule.
+This potential may be specified in a more formal way beginning with the full Hamiltonian describing all of the electrons and nuclei in a molecule, and then separating the electronic and nuclear portions based on a hierarchy of timescales known as the Born-Oppenheimer approximation~\citep[Sec.~8.1]{Atkins2005}.
+Essentially, the nuclear positions are taken as parameters to the computation of the electronic wavefunctions, and so by parametrically solving the electronic Hamiltonian for all nuclear distances and rotations, the energetic landscape governing the dynamics of the nuclei emerges.
+It is therefore somewhat difficult to directly specify the form of the interatomic potential experienced by the nuclei, but the results from this procedure turn out to be closely represented by the Morse potential:
+\begin{equation}
+V(x) = D\left(1-e^{-\beta x}\right)^2.\label{eqmorse}
+\end{equation}
+This potential has a minimum at $x=0$, defined to be the equilibrium distance of the vibrational oscillation. It tends to infinity as $x\rightarrow-\infty$, and to $D$ the dissociation energy as $x\rightarrow\infty$. For small $x$, expanding near zero gives a harmonic form as we would expect:
+\begin{equation}
+V(x) \approx D\left(1-(1-\beta x + \beta^2 x^2 / 2 - ...)\right)^2 \approx \beta^2 x^2.
+\end{equation}
+This potential is therefore an anharmonic oscillator, with the nature of the anharmonicity being such that the restoring force weakens for larger deviations, so that higher energy levels are more closely spaced.
+Another important property of the Morse oscillator is that only a finite number of levels are supported, which is also the case for true molecular potentials, unlike electronic energy levels, for which the so-called Rydberg series of their energy levels is countably infinite.
+
+The Morse oscillator is a close enough match to true molecular potentials, that the results of molecular spectroscopy are often expressed in terms of the coefficients that describe the Morse oscillator whose rovibrational energies best match the actual level spacings of the molecule.
+It is useful therefore to write down the rovibrational level spacings predicted by the Morse oscillator:
+\begin{eqnarray}
+E(v,J)/hc = w_e(v+1/2)-x_ew_e(v+1/2)^2 \\+B_eJ(J+1)- D_eJ^2(J+1)^2\\- \alpha_e(v+1/2)J(J+1)
+\end{eqnarray}
+These energies come by using Eq.~\ref{eqmorse} in the rovibrational hamiltonian one can obtain by applying the Born-Oppenheimer approximation~\citep[Eq.~2.157]{Brown2003} to the full molecular Hamiltonian.
+The value of each of the parameters $w_e$, $x_e$, $B_e$, $D_e$, and $\alpha_e$ may be written in terms of the $\beta$ and $D$ of Eq.~\ref{eqmorse}, and the reduced mass $\mu$ and equilibrium nuclear distance $R_e$ of the molecule, see~\citep[Eq.~2.183]{Brown2003}.
+The value of the vibrational parameters $w_e$ and $x_ew_e$ for a few molecules of interest are shown in Tab.~\ref{vvvtable}.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[t!]
+\centering
+\caption[Molecular Vibrational Constants]{
+Spectroscopically determined vibrational constants are shown for several molecules of interest~\cite{Huber2018}.
+\label{vvvtable}}
+\begin{tabular}{ C{2cm} | C{2cm} | C{2cm} | C{2.2cm} | C{2cm} |}
+Molecule & $\mu$~(amu) & $R_e$~(\AA) & $w_e$~(THz) & $w_ex_e$~(GHz) \\
+\hline
+H$_\text{2}$		& 0.5 & 0.74 & 132 & 3640 \\
+FH 		& 0.95 & 0.92 & 124 & 2700 \\
+OH 		& 0.94 & 0.97 & 112 & 2550 \\
+N$_\text{2}$		& 7 & 1.10 & 70.8 & 427 \\
+LiH 		& 0.88 & 1.60 & 42.2 & 696 \\
+YO   		& 13.6 & 1.79 & 25.8 & 87.0 \\
+CaF 		& 12.9 & 1.97 & 17.4 & 82.2 \\
+SrF		& 15.6 & 2.08 & 15.1 & 66.0 \\
+YbF 		& 17.1 & 2.02 & 15.1 & 66.0 \\
+RbCs 	& 51.9 & 4.4 & 1.48 & - \\
+\end{tabular}
+\end{table}
+
+\section{Angular Momentum Coupling}
+
+By far the most significant challenge to understanding and working with molecules relates to their complex angular momentum coupling. 
+The various sources of angular momentum in the molecule are often described using a hierarchy of successively weaker couplings which specifies the Hund's case of the molecule, or rather of one particular state of the molecule.
+
+%In addition to the nice descriptions available in earlier theses, I'd like to leave my mark by including for the first time animations of molecular angular motion that are faithful to the real thing except for time rescaling.
+
+\subsection{Revisiting J=L+S}
+
+Before diving in, we begin with the simplest angular momentum coupling example, but with an eye toward its generalization to the molecular situation.
+Electrons have orbit and spin in the hydrogen atom, but a state of definite orbit and definite spin is not necessarily an eigenstate of the Hamiltonian, because of ``coupling'' that may exist between these states by the Hamiltonian governing the evolution of the sytem.
+Specifically, the orbit and the spin influence one another via the magnetic fields they generate, so that the Hamiltonian has a term proportional to their dot product.
+This classic problem may be resolved by defining true eigenstates of the Hamiltonian using a different quantum number which describes the total angular momentum of the system.
+We say that L is ``weakly'' coupled to S in the sense that the energy changes caused by the L quantum number and the S quantum number are both rather large compared to the energy of their coupling.
+Another consequence of this is that the level shift caused by including or ignoring the coupling term is small compared to the effects of the L and S terms independently.
+
+\subsection{Coupling Many Spins}
+
+Every atomic nucleus or unpaired electron in the molecule may contribute angular momentum to the coupling story, either intrinsic or extrinsic.
+The latter is known as orbital angular momentum when carried by electrons, and simply rotation when carried by nuclei.
+The coupling story is then addressed essentially by writing terms down in order of the magnitude of their effect on the energy of states.
+These terms can either be coupling terms or specific terms, and we are free to treat them in order, defining as appropriate a combined quantum number to include a given coupling effect before moving on to higher order, lower energy coupling effects later on down the line.
+One way this is often indicated is to draw diagrams that indicate the magnitude of an effect by the length of a vector, and indicate the use of a coupled basis by the definition of a new vector which is the sum of the other two.
+Thinking too hard about what these vectors really mean is generally not advised.
+The ordering of these sources of angular and their coupling strengths generally follow one of a few set patterns which are known as Hund's cases.
+These are well enumerated and diagrammed in~\citep[Sec.~2.2.1-4]{StuhlThesis2012}.
+
+\section{Stark and Zeeman Effects}
+
+\figdave{levelpositions}{Level Positions with 96 State Hamiltonian}{
+Inclusion of higher lying states of the OH Hamiltonian in~\cite{Maeda2015} accounts for the mixed Hund's case and gives a significant $20\%$ level correction to level crossings.
+A snippet from~\cite[Fig.~1]{Stuhl2012evap} is shown in (a), and panel (b) has the results from~\cite{Maeda2015}.
+}{\linewidth}
+
+These effects may be well understood on their own, as described in~\citep[Sec.~2.3.1-2.1]{SawyerThesis2010}, but combining them can be a very challenging thing to do properly.
+During my thesis, it was discovered that use of the Hund's case (a) assumption, considered valid at least for the lowest rotational states of OH~\citep[Sec.~2.2]{HudsonThesis2006}, led to significant errors in the location of avoided crossings between states.
+Essentially, the magnetic moment of the molecule is not quite perfectly coupled to the internuclear axis, so that rotational averaging of the molecule's angular momentum from the molecule frame to the lab frame does not reduce the magnetic moment from $2~\mu_\text{B}$ to $1.2~\mu_\text{B}$ as one would calculate for Hund's Case (a), but instead only to $1.4~\mu_\text{B}$. 
+One way to describe this is to simply include more terms in the Hamiltonian used for computing the Stark and Zeeman effect of the molecule.
+This was done in~\cite{Maeda2015}, where direct reference was made to one of the figures in our earlier work~\cite{Stuhl2012evap}, see~\cite[Fig.~12]{Maeda2015}, reproduced here as well~\ref{levelpositions}.
+We had in fact discovered the correction much earlier in 2013, but did not have a good way to publish our findings on their own.
+For future work, wherever it counts, the full Hamiltonian has been implemented in Matlab and is available for future use in the experiment.
 
 
 \ifx\justbeingincluded\undefined
@@ -30,4 +264,3 @@
 \bibliography{allrefs}		% Bib database in "allrefs.bib"
 \end{document}
 \fi
-

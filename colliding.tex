@@ -290,9 +290,9 @@ One key way to do this is to estimate the molecule number via the experimental d
 \end{equation}
 where $n$ is a number density, $\sigma$ a collision cross section, $\beta$ the collision rate per molecule, and $v_\text{rel}$ the average relative velocity.
 
-As far as the molecule number, density calibration suggests $1.9\times10^-5\text{ cm}^{-3}$ molecule density in free flight~\citep[Sec.~4.6]{WuThesis2019}. Assuming that the laser beam fills a $2\text{ mm}^3$ volume or so, and detects $0.3$~photons/shot during free flight, $1.5$~photons/shot during trapping, we find:
+As far as the molecule number, density calibration suggests $1.9\times10^{-5}\text{ cm}^{-3}$ molecule density in free flight~\citep[Sec.~4.6]{WuThesis2019}. Assuming that the laser beam fills a $2\text{ mm}^3$ volume or so, and detects $0.3$~photons/shot during free flight, $1.5$~photons/shot during trapping, we find:
 \begin{equation}
-N = 2\cdot10^{-3}\text{ cm}^3\quad\times\quad 1.9\cdot10^-5\text{ cm}^{-3}\quad\times\quad 1.5/0.3 \quad=\quad 1900.
+N \quad = \quad 2\cdot10^{-3}\text{ cm}^3\quad\times\quad 1.9\cdot10^-5\text{ cm}^{-3}\quad\times\quad 1.5/0.3 \quad=\quad 1900.
 \end{equation}
 As far as the cross sections are concerned, we can take Goulven's calculations~\citep[Inset of Fig.~1b]{Stuhl2012evap} at $50$~mK giving an elastic cross section: 
 \begin{equation}
@@ -311,7 +311,7 @@ With these numbers, the discussion surrounding the collision rates in Fig.~\ref{
 We can anticipate that the molecule number required to achieve a collision rate of $130\text{ s}^{-1}$ would be $1.5\cdot10^7$.
 Our collection system ought to detect something like one photon per three hundred molecules, or in this case $50,000$ photons, when in practice we detect only a few photons per realization of the experiment.
 
-\section{Forward - Backward Evaporation}
+\section{Forward Minus Backward Evaporation}
 
 During our careful reinvestigation of the results reported in~\cite{Stuhl2012evap}, we developed a rather sensitive technique for probing the presence of slight but potentially nonzero collision rates in the experiment.
 The essence of our technique is to subtract the molecule number after an evaporation sequence from the number we obtained by time-reversing the  microwave frequency chirp, so that the population cut goes backwards from deep to shallow in the trap.
@@ -321,29 +321,29 @@ To whatever extent an evaporation is successful in facilitating beneficial therm
 We consistently observed this in the Ring trap at the $(6\,{\pm}\,2)\%$ level, pointing to an evaporative effect despite the negative influence of spin-flip losses.
 
 It is also interesting to look at the spectra of molecules in the trap after such sequences. 
-This is shown in~\citep[App.~B]{Reens2017} only for a forwards sequence, but I wish here to expand a bit on the conversation offered there, and to include a spectra from the backward evaporation as well, see Fig.~\ref{specfb}.
-\figdave{specfb}{Forward - Backward Spectra}{Microwave depletion spectra are shown with no evaporation, with evaporation, and with a backward evaporation sequence.}{12cm}
-Both forwards and backwards evaporations show a single point well separated from the unevaporated spectra, and are remarkably similar overall.
-This similarity suggests that the two sequences are not significantly different from one another thermodynamically, and leaves one wondering whether any systematic artifact in the forward - backward comparison could be contributing to the measured difference in molecule number.
+This is shown in~\citep[App.~B]{Reens2017} only for a forward sequence, but I wish here to expand a bit on the conversation offered there, and to include a spectra from the backward evaporation as well, see Fig.~\ref{specfb}.
+\figdave{specfb}{Forward Minus Backward Spectra}{Microwave depletion spectra are shown with no evaporation, with evaporation, and with a backward evaporation sequence.}{12cm}
+Both forward and backward evaporations show a single point well separated from the unevaporated spectra, and are remarkably similar overall.
+This similarity suggests that the two sequences are not significantly different from one another thermodynamically, and leaves one wondering whether any systematic artifact in the forward minus backward comparison could be contributing to the measured difference in molecule number.
 
-I spent awhile investigating this possibility, and eventually realized that any dynamical timescale for the escape of molecules removed by the microwave knife could indeed lead to a false positive result of the forwards - backwards evaporation. 
-Since the backwards evaporation removes its molecules earlier than the forwards, any extra dynamical time for their escape could result in the forwards evaporation artificially showing a larger remaining molecule number.
+I spent some time investigating this possibility, and eventually realized that any dynamical timescale for the escape of molecules removed by the microwave knife could indeed lead to a false positive result of the forward minus backward evaporation. 
+Since the backward evaporation removes its molecules earlier than the forward, any extra dynamical time for their escape could result in the forward evaporation artificially showing a larger remaining molecule number.
 The same kinds of multi-substate dynamics discussed above in Sec.~\ref{sefil} could also lead to an increased dynamical timescale relative to expectations.
 The na\"{i}ve expectation would be escape on the order of a few trap oscillations, characterized by a single exponential decay, as discussed in~\cite{Stuhl2012uwave} for $|e\rangle$-state molecules.
 From~\citep[Fig.~4]{Stuhl2012uwave}, the electric field applied during evaporation of $300$~V/cm should be sufficient for removing $|e\rangle$-state molecules in a few milliseconds.
 However, even in that work, signatures of the slow escape of some molecules are evident although not discussed, note for example the inset of~\citep[Fig.~3]{Stuhl2012uwave}, where a single exponential is supposedly fit, but reaches a nonzero baseline value of $0.1$.
-If the dynamical timescale were slower for some molecules, say $10$~ms or beyond, the forwards minus backwards observable could skew positive by single particle means.
+If the dynamical timescale were slower for some molecules, say $10$~ms or beyond, the forward minus backward observable could skew positive by single particle means.
 
 To simulate this possibility, I did the hard work of including all substates in a Monte-Carlo simulation, including their differential Zeeman shifts so as to include the influence of the microwave knife on other substates and other transitions besides the \f3 to \e3 transition directly targeted.
-In Fig.~\ref{substatesevap}, the difference between forwards and backwards evaporation ramps for all substates as a fucntion of time is reported in this simulation.
+In Fig.~\ref{substatesevap}, the difference between forward and backward evaporation ramps for all substates as a function of time is reported in this simulation.
 \figdave{substatesevap}{Simulating All Substates During Evaporation}{
 All eight substates of the OH ground state are included in a simulation of evaporation.}{14cm}
-Note how molecules persist in \f1 at the final step, and how there are actually fewer molecules in \f3 with forwards evaporation at the last step, at least in this realization of the Monte-Carlo simulation.
+Note how molecules persist in \f1 at the final step, and how there are actually fewer molecules in \f3 with forward evaporation at the last step, at least in this realization of the Monte-Carlo simulation.
 
 After setting up on the JILA computer cluster, I performed a suite of similar simulations aimed at studying the forward minus backward collision observable, culminating in several panels of data similar to that shown in Fig.~\ref{forbackcontour}.
-\figdave{forbackcontour}{Simulation of Forwards-Backwards Evaporations}{
-Contour plot indicating the percentage gain of forwards evaporation compared with backwards as a function of evaporation length and molecule number. Slower evaporations with large initial numbers show the most significant gains. 
-Even very tiny numbers of molecules still show a forwards-backwards difference, indicating a small, single-particle contribution to this collisional indicator.
+\figdave{forbackcontour}{Simulation of Forward Minus Backward Evaporations}{
+Contour plot indicating the percentage gain of forward evaporation compared with backward as a function of evaporation length and molecule number. Slower evaporations with large initial numbers show the most significant gains. 
+Even very tiny numbers of molecules still show a forward minus backward difference, indicating a small, single-particle contribution to this collisional indicator.
 }{\linewidth}
 As one would expect, the forward minus backward observable really starts displaying a strong effect for the largest molecule numbers and the longest evaporation sequences.
 At lower molecule numbers, we see exactly the predicted effect- the forward minus backward observable reaches a small but nonzero limiting value of approximately $5\%$ difference.
@@ -356,7 +356,7 @@ This is not a necessary condition for either collisions or evaporation, since ph
 It is also possible to enhance spatial density at the expense of velocity density, often referred to as adiabatic compression, but this cannot happen by mistake and requires work to be performed on the ensemble via the trapping potential.
 In this sense, the observation of a spatial density enhancement is an undisputable observable of elastic collisions in an ensemble.
 
-A normalized spectroscopically determined density enhancement is indeed observed for the region near $500$~G in both forwards and backwards evaporation as evident in Fig.~\ref{specfb}.
+A normalized spectroscopically determined density enhancement is indeed observed for the region near $500$~G in both forward and backward evaporation as evident in Fig.~\ref{specfb}.
 Nevertheless, a few additional caveats should be kept in mind, see Sec.~\ref{limitationsection} for additional discussion.
 First of all, it would be ideal if a way could be found to eliminate some of the complexities of the normalization procedure.
 To briefly recapitulate, depletion spectroscopy transfers only a fraction of molecules to the lower parity state at a specific magnetic field value, so we integrate the total area enclosed by the spectroscopy curve, which is scaled according to the observed total population by laser induced fluorescence.  
