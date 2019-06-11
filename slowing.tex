@@ -367,18 +367,19 @@ Greater signal to noise would be desirable, at the time of this writing unavaila
 
 The Landau-Zener formula may be used to approximate the relevance of non-adiabatic transitions in a given situation:
 \begin{equation}
-P=e^{-\pi\Delta^2/\hbar\frac{\partial E}{\partial t}}.
+P=e^{-\pi\Delta^2/\left(\hbar\frac{\partial E}{\partial t}\right)}.
 \end{equation}
+Here $\Delta$ gives the minimum energy gap between two approaching eigenstates, and $\partial E / \partial t$ gives their rate of approach.
 Working in frequency units, we can simplify this to say that non-adiabatic transitions are negligible provided that:
 \begin{equation}
-\Delta >> \sqrt{e\cdot f},
+G >> \sqrt{E \cdot \nu},
 \end{equation}
-where $g$ is the closest approach of the states, $e$ is the average energy difference between the relevant states during the process of interest, and $f$ is the frequency characterizing the variation of the system over time.
-This is a convenient rule of thumb-- just compare the minimum gap to the geometric mean of the typical energy scale and the inverse timescale.
+where $G$ is the closest approach of the states in frequency units, $E$ is the initial energy spacing between the states in frequency units , and $\nu$ is the frequency characterizing the variation speed of the system.
+This is a convenient rule of thumb-- just compare the minimum gap to the geometric mean of the inverse timescale and the typical energyscale.
 
 For example, in the absence of any magnetic field, parity flips from $|f\rangle$ to $|e\rangle$ are highly unlikely thanks to the lambda doublet spacing of $1.7$~GHz.
 Compare this with the geometric mean of $100$~GHz and $1$~MHz where the latter is appropriate for the microsecond turn-off of the fields during switching events and the former is the energy scale set by the magnitude of electric fields in the decelerator.
-We find $300$~MHz or so, getting close to $1.7$~GHz but still below.
+The geometric mean is $300$~MHz or so, below $1.7$~GHz indicating that these transitions are not a concern.
 
 On the other hand, transitions between \f3 and \f1 are a much greater concern, and have been observed during propagation of molecules in decelerators~\cite{Meek2011}, and also during switching events of decelerators~\cite{Wall2010}.
 The Stark effect treats \fpm3 the same, and also \fpm1, but the latter have one third the response of the former, so transitions between them are essentially loss.
@@ -401,7 +402,7 @@ Being more quantitative would require simulating a denser grid of trajectories c
 }
 \end{figure}
 
-Even if free propagation doesn't lead to non-adiabatic transitions even off axis, there is still the question of non-adiabatic transitions during the switching of the electric fields.
+Although free propagation doesn't lead to non-adiabatic transitions off axis, there is still the question of non-adiabatic transitions during the switching of the electric fields.
 I also checked this, for the first time as best I can tell, for a 3D grid of possible positions relative to the synchronous molecule, see Fig.~\ref{nonadiabatic2}.
 I find that non-adiabatic transitions are possible only if the molecule is significantly behind the synchronous molecule, shielded by the grounded pins just prior to their being rapidly switched on.
 These positions are not longitudinally phase stable anyway, unless the decelerator is being operated in an acceleration mode, in which case some locations off axis do seem to feature a significant chance of non-adiabatic transitions.
@@ -420,19 +421,24 @@ Significant loss only in the $-90^\circ$ plane, where phase stable molecules do 
 The real thing to do would be to repeat this study with alternate field distributions in mind.
 These would be likely to feature a significantly enhanced chance of free propagation transitions close to the electric quadrupole created by the alternate configurations between the grounded pin pair.
 As far as the chance of switch-induced non-adiabatic transitions, those would seem to be reduced by the alternate field distributions, since in S\,=\,1 mode they were worst with the molecules beginning in a region of small field, and the alternate distributions generally add electric field in the regions where it was previously small or absent.
-However significant the non-adiabatic transitions in the new operation modes, one way to address them is to intentionally vary the length of decelerator pins, so that one pin is longer than the other in a pair, see Fig.~\ref{offsetavoid}.
-What this does is push the electric field zero off of the decelerator axis, creating some extra protective energy splitting even for molecules passing dangerously close to the field minimum.
-At first pass, one might suspect that the field would be zero not at a point but along the line parallel to the grounded pin pair and in between the grounded pins.
-This is approximately true as shown in Fig.~\ref{offsetavoid}a, but not perfectly so, as seen by examining the $\hat{y}$ component of the electric field as shown in Fig.~\ref{offsetavoid}b.
-Thanks to the variation in length of our decelerator pins, an unintended side effect of tapered pin mounting as described in Sec.~\ref{sec:mechconsider}, our decelerator may benefit from reduced sensitivity to these spin-flip issues.
+However significant the non-adiabatic transitions in the new operation modes, one way to address them is to intentionally vary the length of decelerator pins, so that one pin is longer than the other in a pair.
+What this does is push the electric field zero off of the decelerator axis, creating some extra protective energy splitting even for molecules passing dangerously close to the electric field zero.
+It is not obvious that there is a single point of zero electric field, something I endeavor to demonstrate in Fig.~\ref{offsetavoid}.
+In panel (a), there appears to be not a point but a line between the pins where the electric field is zero valued.
+However, if we zoom in on the energy axis (Fig.~\ref{offsetavoid}b) and consider the coefficient of the field which points along this seeming linear electric field zero, we find that this component is in fact nonzero except in a single point.
+Of course it comes very close to zero, but not much of an extra protective field is required to reduce the effect of the spin-flip loss significantly.
+Thanks to the variation in length of our decelerator pins, a known side effect of tapered pin mounting as described in Sec.~\ref{sec:mechconsider}, our decelerator may benefit from reduced sensitivity to these spin-flip issues.
 
 \begin{figure}[t!]
 \centering
 \includegraphics[width=8cm]{offset-avoid-loss.png}
 \includegraphics[width=8cm]{offset-avoid-loss-Ey.png}
 \caption[Fields Close to Zeros of SF Mode]{\label{offsetavoid}
+Together these panels demonstrate that the electric field is zero not along a line but only at a single point.
 (a) Electric field magnitude in the transverse plane bisecting a pair of pins. A line of near-zero field is evident.
-(b) The $\hat{y}$ component of the Electric field vector, where $\hat{y}$ is upwards, the direction which breaks the 2D symmetry and lifts the line of Electric field zero. The checker-like structure close to the central axis shows that there is actually a 3D electric quadrupole, with very slight restoring force in the vertical direction. This is relevant to reducing non-adiabatic transitions through intentional misalignment.
+(b) Electric field in the same plane, but only its projection on the line of near-zero field, and zoomed in a few orders of magnitude in the grayscale axis.
+The checker-like structure close to the central axis shows that there is not a line of zero field but actually a 3D electric quadrupole structure, with very slight restoring force in the vertical direction. 
+This is relevant to reducing non-adiabatic transitions through intentional misalignment.
 }
 \end{figure}
 
@@ -469,8 +475,8 @@ One significant change that was developed out of a partnership with a local manu
 This halved manufacturing costs for the rods, and removed the need for setscrews, which created a serious galling hazard on the previous device and led to several near-disasters when re-polishing pins.
 A special tool was developed for pressing the tapered pins into their holes, or removing them, without scratching any polished surfaces\footnote{The design is publicly available on \href{https://www.instructables.com/id/Scratch-Free-Press-Tool/}{Instructables}}.
 We had also run into high voltage issues when using $MoS_2$ powder dissolved in isopropyl alcohol as a lubricating agent for said setscrews.
-A key downside of the tapers was that they ended up creating a large sensitivity of final installed pin length on pin polishing procedure, since an extra unit thickness removed from the outside of the tapered pin causes the pin to sit $48$ units deeper into its hole (since the standard taper rate for tapered pins is a quarter inch per foot).
-Fortunately this dimension is not critical for a pin-style Stark decelerator.
+A key downside of the tapers was that they ended up creating a large sensitivity of final installed pin length on pin polishing procedure, since an extra unit thickness removed from the outside of the tapered pin causes the pin to sit $48$ units deeper into its hole (since the standard taper rate for locking tapered pins is a quarter inch per foot).
+Fortunately the length of pins along their axis of symmetry has only a minimal effect on the fields experienced by molecules in a pin-style Stark decelerator.
 An additional challenge is that installation of many tapered pins acts as a fairly effective wedge for causing the main rod to bend ever so slightly.
 After installation, we worked very hard to adjust the mounting structure so as to force the decelerator into proper alignment.
 Lacking all requisite degrees of freedom, we settled for a precision tuning of the pin pair spacing, in the hope that as long as that remained correct, the molecules would be able to follow any slight bends in the device.
@@ -509,7 +515,7 @@ With the new design, an effort was made to address challenges that had developed
 The MACOR was found to allow surface currents, which also were un-phased by the surface path-length extension grooves that had been added to reduce their likelihood, as can be seen in Fig.~\ref{macorbad}.
 There was never a clear indication that these surface arcs were actually causing a reduction in molecule yield, but nevertheless it seemed wise to make an attempt at improving the situation.
 In reviewing literature~\cite[Sec.~4.3.3]{Faircloth2013} and consulting other opinions, it was found that the previous geometry did not respect recommended considerations regarding so-called ``triple-points'' where vacuum, dielectric, and conductor meet. 
-These are advised to be recessed or otherwise manipulated so as to minimize the electric field at their location~\cite{Miller1989}.
+It is advised to have the triple-points recessed or otherwise manipulated so as to minimize the electric field at their locations~\cite{Miller1989}.
 This is achieved in the new design, as well as increasing the safety distance and removing reliance on sharp insulator features, by the geometry visible in Fig.~\ref{fig:decelmountingimages} and heavily influenced by~\citep[Fig.~4]{VanDeMeerakker2006}.
 Borosilicate glass rods were selected for their vacuum and insulating properties, with alumina rods as a close second.
 
@@ -542,19 +548,39 @@ The device has yet to arrive after requiring a rebuild following a miscommunicat
 It is also relevant to again consider the capacitive load associated with switching between various distinct field distributions.
 In this case, it becomes necessary to treat the full system of electrodes not as a single capacitor but actually as a network of different capacitors most efficiently captured in the form of a capacitance matrix $C_{ij}$ satisfying:
 \begin{equation}
-Q_i = C_{ij}V_j,
+Q_i = C_{ij}V_j,\label{eqqcv}
 \end{equation}
 so that a vector of charges on each conductor can be obtained given a vector of voltages on each.
 Surprisingly, in our system the capacitance between a pair of rods with parallel pins is actually slightly less than that between a pair of rods whose pins are orthogonal, see the matrices reported in Fig.~\ref{capmat}.
-An important corollary of the multi-capacitor system is that the transient dynamics of the system do not follow the usual RC behavior, as shown in panel (c) of Fig.~\ref{capmat}.
+The entries in these matrices are computed experimentally using a capacitance meter, the SR720.
+It is not possible to measure $C_{ij}$ simply by connecting an LCR meter only to nodes $i$ and $j$.
+What happens in this case is that the nodes other than $i$ and $j$ float to various unknown voltages, and confound the measurement.
 
 \begin{figure}[t!]
 \centering
 \includegraphics[width=\linewidth]{capmats.png}
 \caption[Capacitance Matrix for Third Generation Decelerator]{\label{capmat}
-Capacitance matrices from LRC meter and simulation for third generation decelerator. (a) Capacitance matrix by measurement and (b) by COMSOL simulation. (c) Example of the multi-timescale dynamics that can occur when solving the transient response of a capacitive system to sudden changes in the voltages applied to the electrodes.
+Capacitance matrices from LCR meter and simulation for third generation decelerator. (a) Capacitance matrix by measurement and (b) by COMSOL simulation. (c) Example of the multi-timescale dynamics that can occur when solving the transient response of a capacitive system to sudden changes in the voltages applied to the electrodes. Traces are simulated dynamics using the experimentally determined capacitance matrix.
 }
 \end{figure}
+
+We opted instead to partition the nodes into two groups, short these groups to one another, and then measure the two point capacitance between those groups.
+Consider for example the case where rods 1-3 are shorted together, and 4 is grounded.
+When the capacitance meter applies a test voltage $V_T$ to rods 1-3 and measures the stored charge $Q_T$, this can be related to the $C_{ij}$'s as follows:
+\begin{equation}
+Q_T = \sum\limits_{i=1}^3 Q_i = \sum\limits_{i=1}^3 \sum\limits_{j=1}^5 C_{ij} V_j = V_T \sum\limits_{i=1}^3 \sum\limits_{j=1}^3 C_{ij}.
+\end{equation}
+That is to say, we measure the total sum of a sub-matrix of the full matrix $C_{ij}$.
+It is clear that such measurements may be added and subtracted so as to obtain each $C_{ij}$ independently.
+
+Another interesting property of the capacitance matrices shown in Fig.~\ref{capmat} is their positive diagonal and negative off-diagonal.
+This is as expected, as can be proven by considering the case where all $V_i$ are zero except for one, $V_j = V > 0$.
+To achieve such a configuration, positive charge must have flowed onto conductor $j$, which would then require negative charge to flow from ground onto conductors $i\neq j$.
+It follows that $C_{ij}<0$ whenever $i\neq J$.
+
+An important corollary of the multi-capacitor system is that the transient dynamics of the system do not follow the usual RC behavior, as shown in panel (c) of Fig.~\ref{capmat}.
+When one considers the response of the system to a specific impulse vector of voltages, the system will respond on a few different timescales according to the eigenvalues of the matrix.
+In panel (c), which is a first order dynamical simulation applying just such an impulse using the experimentally measured capacitance matrix, the current through the resistor connecting to one of the rods is seen to first briefly increase with time before then decreasing exponentially in a less surprising manner.
 
 \subsection{Differential Pumping}
 
