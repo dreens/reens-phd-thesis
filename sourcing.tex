@@ -14,6 +14,7 @@ I will begin with supersonic expansions and the thermodynamics thereof, before m
 
 Suppose that an ideal gas is trapped in a certain volume $V_1$ and at a certain pressure $P_1$, when one of the walls enclosing the volume is suddenly removed, and the gas is allowed to expand into a much larger volume $V_2$.
 To determine the long term properties of the system, one can use the fact that neither heat nor work were transferred out of the gas, so that its energy $E$ must remain fixed, and therefore also its temperature, following the well-known intrinsic formula relating the temperature of an ideal gas to its internal energy, $E = C_VNT$.
+Here $C_V$ denotes the specific heat of the gas at constant pressure, and $N$ the number of particles present in the system.
 It would follow that $P_2$ = $P_1\cdot V_1/V_2$, and that the entropy would be significantly increased.
 To determine by how much, we can use the thermodynamic relation for the internal energy $E$ of the system:
 \begin{equation}
@@ -28,7 +29,7 @@ This is also intuitively valid, since the entropy ought to correspond to the log
 With nothing else changing about the momentum distribution before and after the event, only the system size contributes to an increase in accessible micro-states, by an amount given by the ratio of volumes before and after.
 
 Although the foregoing example is ubiquitous in the problem sets assigned to physicists and mechanical engineers during thermodynamics classes, the corresponding short term behavior is rarely if ever treated.
-At first glance, it may seem that the short term behavior would be intractable to the methods of statistical physics, owing to the suddenness of the event and its obvious lack of reversibility.
+At first glance, it may seem that in the short term, i.e. times $t$ after barrier removal smaller than that required for the reestablishment of a pressure equilibrium, the suddenness of the event and its obvious lack of reversibility would make it somewhat intractable to the methods of statistical physics.
 To the contrary, much progress can be made once some additional details and assumptions are specified.
 Suppose that the initial volume is allowed to expand into a much larger volume, but only through a rather small opening.
 Suppose further that the expansion process is in a flow equilibrium, so that gas is constantly supplied to the initial volume in order to maintain a constant pressure, and gas is constantly pumped out of the back of the much larger volume.
@@ -38,8 +39,7 @@ Now consider a small sub-volume $V_1$ within the high pressure volume, close to 
 Since the speed of egress is fast compared to diffusion timescales, we may assume that this volume is isolated from the rest of the gas, and consider its fate as the molecules within follow the flow lines of the fluid.
 As we follow the flow lines, this volume expands, performing work on the surrounding environment, but not exchanging any heat with it.
 Paradoxically, the process is then adiabatic, despite the significant and non-zero $\Delta S$ calculated above for the long term behavior.
-The work done during expansion primarily serves to accelerate the volume just ahead along the flow, and the magnitude of the acceleration is such that information in the form of pressure fluctuations is not able to keep pace with the expansion~\cite{Miller1988,StuhlThesis2012}.
-This is the sense in which it is termed a supersonic expansion.
+The work done during expansion primarily serves to accelerate the volume just ahead along the flow, and the magnitude of the acceleration is such that sound waves are significantly outpaced~\cite{Miller1988,StuhlThesis2012}, hence the ``supersonic'' in the expansion.
 %Of course an adiabatic process should be reversible, and indeed, were one to continuously flow gas through a small hole into a vacuum chamber, provided the flow remained in the continuum regime and the chamber were somehow aerodynamically shaped so as to prevent turbulence, there is no conceptual reason the vacuum pumps could not be reversed and some suction applied to the gas reservoir so as to suck the flow back through the nozzle.
 
 As the gas expands, it continues to work on the environment until it has exchanged all of its internal energy, in principle reaching $T=0$ and satisfying Bernoulli's flow equation by converting its initial enthalpy entirely to kinetic energy:
@@ -108,10 +108,17 @@ In the continuum flow region of a supersonic expansion, the fluid obeys a kind o
 As the molecules leave the continuum regime and the cooling process halts at nonzero temperature, this breaks down, so that individual molecules no longer appear to originate from a single point.
 
 A useful way to understand these phenomena is to work in transverse phase space, where the velocity of molecules in one of the directions transverse to the beam is plotted against their position in that same direction.
-If the cooling were to continue indefinitely and all molecules appeared to originate from a single point, the transverse phase space distribution function describing the ensemble at a fixed large time $t$ after passing through the orifice would look like an infinitely thin diagonal line with infinite phase space density. 
-This is because particles having some transverse coordinate $x$ after traveling time $t$, if they originated exactly at $x=0$, must then have $v$ given exactly by $v = x/t$.
-The nonzero final transverse temperature contributes extra spread in the velocity direction over this infinitely dense diagonal line, which is relevant for the use of hexapole focusers as discussed in Chapter~\ref{chapter:hex}.
-An example of transverse phase space generated by propagating molecules perfectly from a source point and then adding nonzero transverse temperature at a distance reflective of the transition out of the continuum regime is shown in Fig.~\ref{transversephase}.
+If the cooling were to continue indefinitely and all molecules appeared to originate from a single point, the transverse phase space distribution function describing the ensemble at a fixed large time $t$ after passing through the orifice would look something like:
+\begin{equation}
+\d{x,v} = \delta{vt-x}e^{- (v^2/2\sigma_v^2},
+\end{equation}
+where $d$ is the phase space distribution function, and $\delta$ the Dirac delta function. 
+The delta function term enforces the criterion that molecules originate at $x=0$, since with velocity $v$ they may only be found at $x = vt$. 
+The additional gaussian term assumes some generic velocity spread with a standard deviation of $\sigma_v$.
+The nonzero final transverse temperature convolves extra spread in the velocity direction over this narrow distribution, which is relevant for the use of hexapole focusers as discussed in Chapter~\ref{chapter:hex}.
+
+An example of transverse phase space generated by propagating molecules perfectly from a source point and then adding nonzero transverse temperature at a certain distance is shown in Fig.~\ref{transversephase}.
+The distance is chosen to be representative of the transition between continuum and molecular flow, which is often termed the quitting surface.
 \figdave{transversephase}{Transverse Phase Space from a Supersonic Expansion}{
 This scatter plot samples a distribution function designed to be reflective of that which may be generated in an Even-Lavie valve, see Sec.~\ref{evenvsec}. 
 The quitting surface, where continuum flow ceases, is assumed to lie $3$~cm distant from the $500~\mu$m nozzle, and a transverse temperature of $200$~mK in both transverse and longitudinal directions is used.}{\linewidth}
@@ -125,8 +132,11 @@ Actual directed-ness of supersonic expansions tend to follow an angular distribu
 \subsection{Experimental Transverse Temperature}
 
 It is possible to access some of this information experimentally by observing the angular distribution of a beam, especially downstream of some additional collimating aperture.
-In the same way that light diffracts through a pinhole, a beam with nonzero transverse temperature, when imaged on a far field detector after passing an aperture, will appear as a disk with a blurry boundary, where the blurriness is proportional to this transverse temperature.
-Another way to say this is that the transverse temperature contributes a point spread function to the transfer function that images an aperture onto a detector plane downstream, see Fig.~\ref{blurryboundary} for an illustration of this.
+%In the same way that light diffracts through a pinhole, a beam with nonzero transverse temperature, when imaged on a far field detector after passing an aperture, will appear as a disk with a blurry boundary, where the blurriness is proportional to this transverse temperature.
+We can adopt similar terminology to that used in optics, although no corollary exists here to the possibility of constructive and destructive interference. 
+The point spread function gives the distribution in a detector plane after convolution with the distribution found in the aperture plane. 
+Transverse temperature controls the width of this point spread function, causing a sharp edged aperture to cast a nonetheless blurry shadow in the detector plane. 
+See Fig.~\ref{blurryboundary} for an illustration of this.
 \figdave{blurryboundary}{Molecular Beam Imaging PSF}{
 Transverse temperature lends a point spread function (PSF) to the image of apertures in the detector plane of a molecular beam. 
 These distribution functions reflect a $20$~cm distance between the source and the aperture, and a $3$~mm aperture.
@@ -144,7 +154,13 @@ The area under the curves are computed, leading to the data-points in the next p
 For a suitably small transverse temperature, we would expect that once the valve is close enough to the aperture that the detector area is fully illuminated by the beam, signal no longer increases as a function of reduced valve skimmer coordinate.
 This is at odds with the data shown in Fig.~\ref{neontranslate}, where the signal is seen to increase even below a $3$~cm valve-skimmer distance.
 At this valve-skimmer distance, considering the $3$~mm skimmer opening and $40$~cm detector distance, the zero temperature spot size of the beam would be a $4$~cm diameter circle, well overlapping our fast ion gauge detector ($6$~mm x $18$~mm).
-By adopting the assumption of a bimodal distribution, discussed in~\cite{beijerinck1981,Miller1988}, and varying the fraction assumed cold and the hot temperature, various fits are obtained as described in the legend of Fig.~\ref{neontranslate}b.
+One way to make sense of this discrepancy is to introduce a bimodal transverse temperature distribution:
+\begin{equation}
+d(v) = \alpha e^{-v^2/2\sigma_c^2} + \beta e^{-v^2/2\sigma_h^2},
+\end{equation}
+where $d$ the distribution function consists of two normal distributions weighted by $\alpha$ and $\beta$, with widths $\sigma_c$ and $\sigma_h$ where the latter is hotter than the former and thus respecting $\sigma_c < \sigma_h$.
+This hypothesis has some scientific support and relates to the relatively hot collisions that can occur for molecules which do happen to collide well after the quitting surface~\cite{beijerinck1981,Miller1988}. 
+Varying the fraction assumed cold and the hot temperature, various fits are obtained as described in the legend of Fig.~\ref{neontranslate}b.
 The cold fraction is assumed to be at $200$~mK, the measured longitudinal temperature, which well overlaps the detector at all valve-skimmer distances included here and essentially contributes only a baseline offset for the fitting.
 The warm fraction is assumed responsible for the upturn at closest distances, leading to the various fractions and temperatures shown in the legend.
 The temperatures required for obtaining any agreement with the experimentally observed upturn are not surprising.
@@ -156,12 +172,12 @@ The surprising thing here would be that the interference effects actually lead t
 It could be that this is a compound effect of some kind, for example that the close proximity of the valve may reduce interference with the aperture in a certain range. 
 This could be caused by a favorable match between the angle of the conical skimmer faces and the position of the source, leading to a reduced cross section presented to the beam by the skimmer.
 Another possibility is that ions generated in the discharge, see Sec.~\ref{secdisch}, have a cleaning effect that enhances the performance of the cryogenic skimmer.
-This is not out of the question, as in-situ noble gas ion cleaning techniques are a legitimate surface preparation strategy~\cite{Hite2012}
+This is not out of the question, as in-situ noble gas ion cleaning techniques are a legitimate surface preparation strategy~\cite{Hite2012}.
 
 \section{Pulsed Valves}
 
 Pulsed valves solve what is otherwise a significant dilemma for a vacuum system, and enable significant improvements in brightness compared to their continuous analogs.
-The key challenge for a pulsed valve is to rapidly transition from leak-tight to fully formed, low impedance flow.
+The key challenge for a pulsed valve is to rapidly transition from leak-tight to fully formed, minimally impeded flow.
 Many strategies exist for achieving this, and many have been utilized right here in Jun's OH experiment.
 A current loop, solenoid, and drum-mode piezo valve have been used, well described in~\cite[Sec.~3.1.3.1-3]{SawyerThesis2010}.
 The latter proved particularly well suited for stable long-term operation, and continued to serve our needs well into 2017.
@@ -172,11 +188,12 @@ In what follows, I focus on two pulsed valves with which I have played a more di
 
 Towards the middle of my thesis work, a decision was made to lengthen the decelerator and switch to a lighter Neon carrier gas.
 The use of Neon opens up many opportunities for possible increases in source brightness, at the expense of increased beam forward velocity.
-Neon has a lower viscosity, reduced propensity for clustering, colder final temperature, and reduced velocity slippage with OH due to the more comparable mass.
-The reduced clustering issues make it possible to consider running at dramatically increased pressures, and also heating the valve to run at correspondingly enhanced water pressures.
+Neon has a lower viscosity, reduced propensity for clustering and colder final temperature relative to Krypton, the previously employed carrier gas.
+Additionally, velocity slippage, a phenomenon whereby the species of interest reaches a different speed than the carrier, is reduced with OH due to the more comparable mass.
+The reduced clustering issues also make it possible to consider running at dramatically increased pressures, and also heating the valve to run at correspondingly enhanced water pressures.
 The use of high pressures has an important effect on the operating mechanism for a pulsed valve, since this can significantly increase the mechanical force which must be exerted in order to open the valve.
-This seems particularly problematic for piezo valves, which seem already somewhat limited in throw and force.
-For this reason, together with the change to a longer decelerator, we decided to purchase an Even-Lavie valve~\cite{Even2014,Even2015}, considered to be a kind of gold standard in high density pulsed molecular beams, although with more challengers of late~\footnote{David Nesbitt claimed that this valve was comparable~\cite{Irimia2009} in email communication to Hao, Jun, and I}.
+This seems particularly problematic for piezo valves, which seem already somewhat limited in actuating distance and applied force.
+For this reason, together with the change to a longer decelerator, we decided to purchase an Even-Lavie valve~\cite{Even2014,Even2015}, considered to be a kind of gold standard in high density pulsed molecular beams, although with more challengers of late~\footnote{David Nesbitt claimed that this valve was comparable~\cite{Irimia2009} to the Even-Lavie valve in email communication to Hao, Jun, and I}.
 Refer to Fig.~\ref{evenlaviemounted} for a labeled view of the valve together with a custom designed and self-manufactured mounting structure.
 \figdave{evenlaviemounted}{Mounted Even-Lavie Valve}{
 The Even-Lavie valve, mounted in a thermally stabilized aluminum rig.
@@ -199,9 +216,10 @@ The performance of the valve was also somewhat lackluster, with OH brightness in
 Tuning the temperature of the system did not yield any significant change in the performance of the system either, see Fig.~\ref{eventemp}.
 \figdave{eventemp}{Even-Lavie Yield verse Temperature}{
 Free flight of OH radicals past a detection region in the source chamber as a function of the temperature of the valve housing.
-An optimum is found close to $40\,^\circ$K, only $\sim 20\%$ above the room temperature value.
+An optimum is found close to $40\,^\circ$C, only $\sim 20\%$ above the room temperature value.
 }{\linewidth}
-Increased temperature and increased partial pressure of water would have been necessary to capitalize on the possible gains of a higher pressure source region.
+Increased temperature would have been necessary to capitalize on the possible gains of a higher pressure source region.
+This is because OH radicals are formed from water as described below in Sec.~\ref{secdisch}, and the partial pressure of the water strongly depends on temperature close to room temperature (hence all the weather here on planet earth).
 Great care was taken to optimize all relevant parameters, including discharge frequency, length, and delay; valve opening current and time; filament position and current.
 Many plots similar to that in Fig.~\ref{eventemp} may be found in the data folders and logbooks from May-June of 2017.
 On the bright side, the valve was successful in delivering an impressively low total gas load, and an impressive flux of Neon atoms, potentially a crucial enabler of our skimmer cooling results~\cite{Wu2018}.
