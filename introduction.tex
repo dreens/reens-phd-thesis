@@ -6,7 +6,7 @@
 \chapter{Introduction}
 \label{iii}
 
-In the beginning, God created hydroxyl radicals, through a complex expansion and condensation process beginning with higher energy forms of matter such as quark gluon plasma that thankfully are no longer relevant to anything.
+In the beginning, God created hydroxyl radicals, and it was good. God used a complex expansion and condensation process beginning with higher energy forms of matter such as quark gluon plasma that thankfully are no longer relevant to anything, except certain other PhD theses.
 Later on, God created atomic physicists, who neither know anything nor are aware of this.
 Fortunately, through centuries of ``serendipitous'' discovery and other unscrupulous tactics, God managed to orchestrate that this same group of physicists would continue to make dramatic advances relevant to life, the universe, and the obtaining of PhD's, right up to the present day.
 
@@ -19,8 +19,8 @@ Another even more recent example of the development of the field can be found in
 This device relies on coherent and high power laser sources and the finest understanding and management of the interaction between light and materials, especially optical coatings, and even the quantum mechanical manipulation of quadratures to reduce noise sources by spin-squeezing.
 
 A significant contingent within atomic physics has in recent years moved in the direction of quantum information science, especially with regard to the trapped ion modality of quantum computing, where two or several states within a trapped ion serve as a quantum bit of information~\cite{Zoller1995,Haffner2008}.
-While still only boasting rather modest near-term gains, such as the noisy, intermediate-scale quantum (NISQ) regime~\cite{Preskill2018}, this direction of atomic physics boasts some unique opportunities for atomic and condensed matter physicists to compete.
-Keeping a focus on scientific rather than technological aspects, quantum information science boasts unique opportunities for application to scientific computing, and early quantum computation demonstrations have focused on analog quantum simulations of real scientific phenomena~\cite{Kassal2008,Lu2011}.
+While still only boasting rather modest near-term gains, such as the noisy, intermediate-scale quantum (NISQ) regime~\cite{Preskill2018}, this qubit modality at least provides some unique opportunities for atomic physicsts to compete with Josephson junctions and other modalities more the purview of condensed matter physics.
+Keeping a focus on scientific rather than technological aspects, quantum information science affords unique opportunities for application to scientific computing, and early quantum computation demonstrations have focused on analog quantum simulations of real scientific phenomena~\cite{Kassal2008,Lu2011}.
 
 Lastly I'll mention precision measurement, an amusing avenue of advancement whereby atomic physicists leverage our measurement accuracy to learn something completely fundamental by understanding something simple to death and beyond.
 This branch of atomic physics has been around since the beginning and is in some sense a natural evolution out of the spectroscopic beginnings of the discipline~\cite{Drake2018}.
@@ -37,7 +37,8 @@ Molecular trapped ions offer new opportunities for circumventing the need for mo
 
 In the study of quantum gases, manipulation of interactions between atoms have long enabled studies of pairing and BEC-BCS crossover~\cite{Zwierlein2003}.
 Nevertheless, availability of a quantum gas with constituent particles themselves possessing anisotropic interactions has long attracted great interest in the field.
-Already great strides have been made in this direction, especially with magnetic atoms with unusually strong magnetic dipole moments such as Erbium and Dysprosium, which are already cutting into the territory once hoped for by molecular cooling enthusiasts with the startling discoveries of self-bound quantum droplets~\cite{Schmitt2016} and liquid-He reminiscent roton modes~\cite{Chomaz2018}.
+Great strides have already been made in this direction, especially with magnetic atoms with unusually strong magnetic dipole moments such as Erbium and Dysprosium. 
+These are already cutting into the territory once hoped for by molecular cooling enthusiasts with the startling discoveries of self-bound quantum droplets~\cite{Schmitt2016} and liquid-He reminiscent roton modes~\cite{Chomaz2018}.
 Still, it could be argued that these unexpected results connected to the dipolar character of the underlying particle only confirm the validity of the quest for quantum degenerate systems of an ever widened pool of candidate particles.
 
 With regard to precision measurement, molecules offer a number of exciting possibilities, perhaps most notably with respect to measurements of the electric dipole moment of the electron, recently measured to zero within $10^{-28} e\text{ cm}$~\cite{Cairncross2017} and $10^{-29} e\text{ cm}$\cite{Andreev2018}.
@@ -65,7 +66,7 @@ These advances have been particularly satisfying for the community given the lon
 So far no group has brought these laser cool-able species below about $5~\mu$K, although the yttrium oxide has prospects for doing so via narrow-line cooling~\cite{Collopy2015}.
 
 Another related but distinct technique that could in principle apply to a much broader class of molecules but still relies on lasers is sawtooth-wave adiabatic passage (SWAP) cooling~\cite{Bartolotta2018}.
-Somewhat controversial in its reliance on stimulated emission and the opaque role of spontaneous emission in the process, swap cooling is nevertheless a valid technique which may be useful for some species.
+Somewhat controversial in its reliance on stimulated emission and the opaque role of spontaneous emission in the process, SWAP cooling is nevertheless a valid technique which may be useful for some species.
 For a time, the YO experiment considered its implementation, or a modification using triangular waves, but this may have been superseded by opportunities with the techniques described above.
 
 \subsection{Direct Cooling}
@@ -99,15 +100,15 @@ I_z = \int\limits_V\rho r^2 dAdz,\label{izsimp}
 where the integral covers the whole volume of the body with density $\rho$, and $r$ gives the distance from the infinitesimal volume element to the axis parallel to $z$ through the center of mass of the body.
 Classically, lacking any environmental coupling, this body may indefinitely rotate about its axis of rotation with any angular velocity $\omega$, and posses a rotational kinetic energy given by:
 \begin{equation}
-U=\frac{1}{2}I\omega^2,
+U=\frac{1}{2}I_z\omega^2,
 \end{equation}
 and an angular momentum given by:
 \begin{equation}
-L= I\omega
+L= I_z\omega
 \end{equation}
-Semi-classically, we require the angular momentum to be quantized in units of $\hbar$, leading to the diophantine equation:
+We can extend into the quantum domain following Bohr's loose quantization rule and requiring the angular momentum to be quantized in units of $\hbar$:
 \begin{equation}
-L = l\hbar = I\omega,
+L = l\hbar = I_z\omega,
 \end{equation}
 with $l$ an integer, so that the allowed values of the angular velocity and energy become:
 \begin{equation}
@@ -139,13 +140,14 @@ which upon moving ahead with the Schr\"{o}dinger Equation, gives the spherical h
 \hat{H}Y_{lm}(\theta,\phi) = E_lY_{lm}(\theta,\phi),\qquad E_l = Bl(l+1),\qquad B=\frac{\hbar^2}{2I}.\label{eqdefb}
 \end{equation}
 Here $B$ is referred to as the rotational constant, and $\theta$, $\phi$ give physicist spherical coordinates relative to an axis orthogonal to the axis of the linear rotor, i.e. an axis along which the system has angular momentum $I$, \emph{not} the axis of the rotor itself.
-It is interesting to note that the wave-functions associated with these eigenvalues are quite bizarre from the perspective of classical physics, especially given that relative to the quantum mechanics of the light electron, these coordinates describe the locations of heavy atomic nuclei.
-For example, in the case of $l=0$, quantum mechanically the molecule is in a spherically symmetric state with equal probability of finding either nuclei anywhere on the surface of the two spherical shells corresponding to their generally different radii away from the center of mass.
+It is interesting to ask what the wave-functions associated with these eigenvalues are, in terms of their spatial probability distribution. 
+In the case of $l=0$, quantum mechanically the molecule is in a spherically symmetric state with equal probability of finding a nuclei anywhere on the surface of its own spherical shell, with a radius corresponding to the distance of that nuclei from the center of mass.
+This is a satisfyingly bizarre quantum mechanical state of affairs, especially given that relative to the quantum mechanics of the light electron, these coordinates describe the locations of heavy atomic nuclei.
 
 It is interesting to compare the values of $B$ calculated na\"{i}vely from Eqs.~\ref{eqdefb},~\ref{eqdefI} to the spectroscopically determined values, as shown in Tab.~\ref{bbbtable}. 
 Very good agreement is obtained, at least when using the spectroscopically determined internuclear distance, which is therefore not quite fair as far as theory experiment predictions are concerned.
 Nonetheless, it is reasonable to conclude that the rigid linear rotor model is a good description of the situation for diatomic molecules.
-The bulk of the remaining deviations relate to centrifugal affects, by which I broadly refer to the interaction between the rotational and the vibrational components of the Hamiltonian, a nice segue into the following section.
+The bulk of the remaining deviations relate to centrifugal effects, by which I broadly refer to the interaction between the rotational and the vibrational components of the Hamiltonian, a nice segue into the following section.
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[t!]
@@ -172,24 +174,26 @@ YbCs	& 75.2 & 5.4 & 0.230 & 0.207 \\
 \subsection{The Vibrational Hamiltonian}
 
 In much the same way as the canonical simple harmonic oscillator problem in quantum mechanics, at its core the vibrational Hamiltonian may be represented as a harmonic potential describing the energetics of the internuclear distance of the molecule.
-This potential may be specified in a more formal way beginning with the full Hamiltonian describing all of the electrons and nuclei in a molecule, and then separating the electronic and nuclear portions based on a hierarchy of timescales known as the Born-Oppenheimer approximation~\citep[Sec.~8.1]{Atkins2005}.
+This potential may be specified beginning with the full Hamiltonian describing all of the electrons and nuclei in a molecule, and then separating the electronic and nuclear portions based on a hierarchy of timescales known as the Born-Oppenheimer approximation~\citep[Sec.~8.1]{Atkins2005}.
 Essentially, the nuclear positions are taken as parameters to the computation of the electronic wave functions, and so by parametrically solving the electronic Hamiltonian for all nuclear distances and rotations, the energetic landscape governing the dynamics of the nuclei emerges.
 It is therefore somewhat difficult to directly specify the form of the interatomic potential experienced by the nuclei, but the results from this procedure turn out to be closely represented by the Morse potential:
 \begin{equation}
 V(x) = D\left(1-e^{-\beta x}\right)^2.\label{eqmorse}
 \end{equation}
-This potential has a minimum at $x=0$, defined to be the equilibrium distance of the vibrational oscillation. It tends to infinity as $x\rightarrow-\infty$, and to $D$ the dissociation energy as $x\rightarrow\infty$. For small $x$, expanding near zero gives a harmonic form as we would expect:
+This potential has a minimum at $x=0$, defined to be the equilibrium distance, often $R_e$, of the vibrational oscillation. Below $x=-R_e$, this coordinate is unphysical, at which point the potential is still finite, but usually quite large relative to the relevant energetics. It tends to $D$ the dissociation energy as $x\rightarrow\infty$. For small $x$, expanding near zero gives a harmonic form as we would expect:
 \begin{equation}
-V(x) \approx D\left(1-(1-\beta x + \beta^2 x^2 / 2 - ...)\right)^2 \approx \beta^2 x^2.
+V(x) \approx D\left(1-(1-\beta x + \beta^2 x^2 / 2 - ...)\right)^2 \approx D\beta^2 x^2 - D\beta^3 x^3 
 \end{equation}
-This potential is therefore an anharmonic oscillator, with the nature of the anharmonicity being such that the restoring force weakens for larger deviations, so that higher energy levels are more closely spaced.
+This potential is therefore an anharmonic oscillator, with a cubic anharmonicity that enhances restoring force in one direction but weakens it in the other.
+As far as energy level spacing is concerned, the weakening direction has the dominating effect, tending to reduce the energy level spacing at higher energies.
 Another important property of the Morse oscillator is that only a finite number of levels are supported, which is also the case for true molecular potentials, unlike electronic energy levels, for which the so-called Rydberg series of their energy levels is countably infinite.
 
 The Morse oscillator is a close enough match to true molecular potentials, that the results of molecular spectroscopy are often expressed in terms of the coefficients that describe the Morse oscillator whose rovibrational energies best match the actual level spacings of the molecule.
 It is useful therefore to write down the rovibrational level spacings predicted by the Morse oscillator:
 \begin{eqnarray}
-E(v,J)/hc = w_e(v+1/2)-x_ew_e(v+1/2)^2 \\+B_eJ(J+1)- D_eJ^2(J+1)^2\\- \alpha_e(v+1/2)J(J+1)
+E(\nu,J)/hc = w_e(\nu+1/2)-x_ew_e(\nu+1/2)^2 \\+B_eJ(J+1)- D_eJ^2(J+1)^2\\- \alpha_e(\nu+1/2)J(J+1)
 \end{eqnarray}
+Here $\nu$ gives the vibrational quantum number and $J$ the rotational quantum number.
 These energies come by using Eq.~\ref{eqmorse} in the rovibrational hamiltonian one can obtain by applying the Born-Oppenheimer approximation~\citep[Eq.~2.157]{Brown2003} to the full molecular Hamiltonian.
 The value of each of the parameters $w_e$, $x_e$, $B_e$, $D_e$, and $\alpha_e$ may be written in terms of the $\beta$ and $D$ of Eq.~\ref{eqmorse}, and the reduced mass $\mu$ and equilibrium nuclear distance $R_e$ of the molecule, see~\citep[Eq.~2.183]{Brown2003}.
 The value of the vibrational parameters $w_e$ and $x_ew_e$ for a few molecules of interest are shown in Tab.~\ref{vvvtable}.
@@ -226,20 +230,19 @@ The various sources of angular momentum in the molecule are often described usin
 \subsection{Revisiting J=L+S}
 
 Before diving in, we begin with the simplest angular momentum coupling example, but with an eye toward its generalization to the molecular situation.
-Electrons have orbit and spin in the hydrogen atom, but a state of definite orbit and definite spin is not necessarily an eigenstate of the Hamiltonian, because of ``coupling'' that may exist between these states by the Hamiltonian governing the evolution of the system.
+Electrons have orbital angular momentum and spin in the hydrogen atom, but a state of definite orbit and definite spin is not necessarily an eigenstate of the Hamiltonian, because of ``coupling'' that may exist between these states by the Hamiltonian governing the evolution of the system.
 Specifically, the orbit and the spin influence one another via the magnetic fields they generate, so that the Hamiltonian has a term proportional to their dot product.
 This classic problem may be resolved by defining true eigenstates of the Hamiltonian using a different quantum number which describes the total angular momentum of the system.
-We say that L is ``weakly'' coupled to S in the sense that the energy changes caused by the L quantum number and the S quantum number are both rather large compared to the energy of their coupling.
-Another consequence of this is that the level shift caused by including or ignoring the coupling term is small compared to the effects of the L and S terms independently.
+We say that L is ``weakly'' coupled to S in the sense that the level shift caused by including or ignoring the coupling term is small compared to the effects of the L and S terms independently.
 
 \subsection{Coupling Many Spins}
 
-Every atomic nucleus or unpaired electron in the molecule may contribute angular momentum to the coupling story, either intrinsic or extrinsic.
+Every atomic nucleus or unpaired electron in the molecule may contribute angular momentum to the coupling story, either spin or orbital.
 The latter is known as orbital angular momentum when carried by electrons, and simply rotation when carried by nuclei.
-The coupling story is then addressed essentially by writing terms down in order of the magnitude of their effect on the energy of states.
+The coupling story is then addressed essentially by writing terms down in order of the magnitude of their leading coefficient in the full Hamiltonian.
 These terms can either be coupling terms or specific terms, and we are free to treat them in order, defining as appropriate a combined quantum number to include a given coupling effect before moving on to higher order, lower energy coupling effects later on down the line.
 One way this is often indicated is to draw diagrams that indicate the magnitude of an effect by the length of a vector, and indicate the use of a coupled basis by the definition of a new vector which is the sum of the other two.
-Thinking too hard about what these vectors really mean is generally not advised.
+The first two vectors may be considered valid possible instantaneous values of the angular momenta they represent were they measured, but only the final sum vector is actually conserved by the Hamiltonian.
 The ordering of these sources of angular and their coupling strengths generally follow one of a few set patterns which are known as Hund's cases.
 These are well enumerated and diagrammed in~\citep[Sec.~2.2.1-4]{StuhlThesis2012}.
 
