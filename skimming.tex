@@ -16,8 +16,11 @@ The device chosen to perform this separation of straight line followers from the
 
 \section{Aerodynamic Skimming}
 
-Traditional skimming techniques focus on shaping a trumpet-like structure in just the right way so as to minimize the chance of rejected molecules subsequently reentering the beam after interacting with the structure~\cite{Bossel1971,Bossel1974}.
-Under the assumption of full accommodation upon interaction with the surface, a molecule may be assumed to leave the surface with a cosine distribution of trajectories, i.e. favoring exit in a direction perpendicular to the surface.
+Traditional skimming techniques focus on shaping a trumpet-like structure in just the right way so as to minimize the chance of rejected molecules subsequently reentering the beam~\cite{Bossel1971,Bossel1974}.
+To a good approximation, molecules encountering the surface may be assumed to leave with a cosine distribution of trajectories.
+This cosine distribution also describes the the likelihood of a patch of surface being struck by particles in a gas above that surface.
+For simple reasons of geometrical flux, a given patch of surface is more likely to encounter particles approaching along a normal to the surface, than at shallower angles, and quantitatively, the distribution function is proportional to the cosine of the angle between the normal and the actual line of incidence.
+It follows that the same should be true for molecules exiting a surface, at least in the thermodynamic limit for a gas interacting with a surface.
 For this reason it is advantageous to have the surface strongly tipped away from the beam, and to have the surface razor thin around its opening, so that as much as possible the molecules which interact with the skimmer are directed strongly away from the beam-line.
 With this way of thinking, it might seem ideal to separate the beam with a very long hypodermic tube, but interactions with the inner surface of the skimming structure are also a concern.
 Molecules impinge on the inner surfaces due to the inherent transverse temperature and spreading of the unperturbed beam, and also due to molecules which interact unfavorably with the tip of the skimmer, and for this region it is better to have the inside of the skimmer open up and not be shaped like a tube~\citep[Sec.~2.4]{Bossel1971}.
@@ -52,7 +55,7 @@ We first sought to address this through the use of modified skimmer geometries, 
 
 \figdave{volcanoskim}{Volcano Skimmer Mechanical Drawing}{Mechanical drawing of the volcano skimmer, units are inches, $0.079" = 2$~mm. With a valve mounted right at $2-3$~cm from the skimmer tip, the optimum found with no decelerator, 9x reduced flux from $50\%$ hole diameter reduction and doubled distance of aperture to valve.}{\linewidth}
 
-One obvious way to reduce the flux of molecules encountering the high temperature surfaces of the decelerator pins is to require the molecules of interest to go through a longer, narrower hole than previously.
+One obvious way to reduce the flux of molecules encountering the room temperature surfaces of the electrodes present in the Stark decelerator is to require the molecules of interest to go through a longer, narrower hole than previously.
 To achieve this, we installed a modified skimmer which was essentially just a cone with a hole drilled through, see the mechanical drawing shown in Fig.~\ref{volcanoskim}.
 Using na\"{i}ve solid angle arguments, this ought to have reduced flux onto the decelerator rods by more than an order of magnitude relative to the previous design.
 In practice, the volcano skimmer also performed poorly, with no significant gain during cool-down.
@@ -112,7 +115,7 @@ A thimble sized flow cryostat at the bottom of a long, thin-walled Stainless Ste
 (xii) Thermal mounting block containing water reservoir.
 }{\linewidth}
 
-In any case, the observation somewhat strongly suggests that lower temperatures could provide further benefit, as mentioned above.
+In any case, the observation suggests that lower temperatures could provide further benefit, as mentioned above.
 I devised an unconventional flow type cryostat designed for bringing only the skimmer and a small thimble worth of liquid Helium down to low temperature.
 The device is pictured in Fig.~\ref{flowcryoskimview}.
 A long 1/2" SS tube protrudes deep into the vacuum chamber, such that a 3/8" OD helium fill line is able to protrude all the way down without making significant contact and while leaving room for cold Helium gas to escape back upwards, further cooling the fill line during egress.
@@ -124,9 +127,9 @@ A workaround was to use a 1" UltraTorr fitting to bridge the vacuum barrier and 
 Further details are labeled in Fig.~\ref{flowcryoskimview}.
 
 Several of the first attempts at transferring Helium to this device were fraught with major challenges, particularly with regard to temperature stabilization, which are worth discussing further here.
-In our experiments with the pulse tube cooled skimmer, we often detected a strong sensitivity to whether or not the valve was left on during cool down.
-In particular, it was found that leaving the valve on was actually crucial to the resulting performance of the system.
-We were usually unable to recover the performance of the system without first heating somewhat close to room temperature.
+In our experiments with the pulse tube cooled skimmer, we often detected a strong sensitivity to whether or not the valve was operated during cool down.
+In particular, it was found that operating the valve was actually crucial to the resulting performance of the system.
+We were usually unable to recover the performance of the system without first heating close to room temperature.
 This strongly suggests that the performance relates to the influence of water or other high temperature freezing species on the cryo-adsorption process for neon onto the copper skimmer.
 For example, suppose that a layer of solid ice is actually detrimental to neon adsorption, and the formation of such a layer is the key process leading to reduced performance under some operating conditions.
 This could explain the observed requirement of operating the valve during cool down, provided the regular bombardment of the skimmer surface with neon was sufficient to disturb the formation of such a layer.
