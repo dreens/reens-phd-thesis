@@ -60,6 +60,7 @@ This was first installed in 2014, and improved on the Ring trap in several key w
 \end{enumerate}
 
 \begin{figure}[t!]
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{RingTricycle.png}
 \caption[Ring and Tricycle Trap Comparison]{\label{ringtricyclefigure}
 Cross Sections including the cylindrically symmetric axis for both the Ring and Tricycle traps. Arrows indicate magnetization directions up to an overall sign. Magnetic trapping fields are shown, demonstrating the destabilization of the toroidal minimum of the Ring trap. Contours every $500$~G. Steel mounting electrodes are not shown in either case, but are installed on the outer diameter of the magnets and affixed to them with setscrews.
@@ -126,6 +127,7 @@ On the other hand, $\omega$ could be tuned so as to optimize coupling between th
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=10cm]{LoadingRotation.png}
 \caption[Ideal Trap Loading as a Quarter Rotation]{\label{LoadingRotation}
 Phase space diagram depicting the action of the ideal phase space conservative loading fields derived from a large external harmonic potential. The region of phase space acted on by the external potential is indicated as a light blue ellipse. The region of phase space populated initially is shown in red along the $v$ axis. The region populated after rotation is shown along the $z$ axis also in red. Widths and origins are as indicated.
@@ -145,6 +147,7 @@ The slope of the loading field at the location of the trap center would ideally 
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=14cm]{LoadingFieldsEB.png}
 \caption[On-Axis Loading for Ring and Tricycle]{\label{loadingringtrike}
 Potential energy along axis for Ring and Tricycle traps. The trap center is located at $z=10$~mm in both cases. Note the more favorable slope of the loading potential in the vicinity of the trap center for the tricycle trap. Field magnitudes arise from application of $\pm12.5\text{ kV}$ for the Ring trap and also for the Tricycle. In practice almost half this voltage was applied on the Tricycle for optimal operation, perhaps due to arcing effects or non-adiabatic transitions during loading discussed below in Sec.~\ref{loadingtransitions}.
@@ -267,7 +270,7 @@ The green line shows what the Boltzmann distribution function accounting for the
 Blue only includes $|2,2\rangle$ and fits to $52$~mK with a zero point offset.
 }{\linewidth}
 
-\subsection{Conclusions}
+\subsection{Summary}
 
 The performance of spectroscopy deviates from the ideal in several key respects, which are spatial variation of sensitivity due to polarization, fluorescence collection, and microwave intensity variations; and oversampling beyond the small perturbation regime.
 The functional form of the expected distribution deviates from the ideal given in Eq.~\ref{spectralform} due to significant variations of the volume element relative to a linear quadrupole, including the toroidal plateau, and the gradient enhancement above $1.5$~kG.
@@ -465,7 +468,7 @@ We have also developed an algebraic scaling law, which yields the electric field
 \label{eq:etaMT}
 \eta=\frac{3}{11} \left(\frac{d_\text{eff}E}{\sqrt{\kappa\Delta}}\right)^{8/3},
 \end{equation}
-see App.~\ref{sec:der} for the full derivation.
+see Sec.~\ref{sec:der} for the full derivation.
 Here $\kappa$ represents a characteristic energy scale for spin-flips that can be derived by setting $P_\text{hop}\s {=}1/e$ in Eqn.~\ref{eqn:lz} and using a typical value of $v_z$.
 This means that for electric fields with $d_\text{eff}E>\sqrt{\kappa\Delta}$, the loss enhancement is almost cubic with electric field.
 Crucially, it is not $\Delta$ that sets the relevant scale, as one might naively suppose given that this is the energy beyond which the Stark effect is linear and the molecule is polarized.
@@ -640,9 +643,10 @@ It is remarkable that molecules survive at these energies, which are therefore f
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=13cm]{ringescape.png}\\
-\includegraphics[width=13cm]{tricycleescape.png}\\
-\includegraphics[width=13cm]{pinescape.png}
+\vspace{0.25in}
+\includegraphics[width=14cm]{ringescape.png}\\
+\includegraphics[width=14cm]{tricycleescape.png}\\
+\includegraphics[width=14cm]{pinescape.png}
 \caption[Escape Dynamics in the Ring, Tricycle and Pin traps.]{Molecules with the indicated total energy are initialized and their escape times indicated in grayscale. Position within a panel corresponds to initial position of the molecule in the transverse mid-plane of the trap.
 \label{escapes}}
 \end{figure}
@@ -675,6 +679,7 @@ This is described further in my publicly available code repository~\footnote{\hr
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=11.4cm]{pin0p25xy.png}\hspace{4.5mm}
 \includegraphics[width=3cm]{pin0p75xy.png}\\
 \vspace{1mm}
@@ -770,7 +775,7 @@ Collection solid angles close to $4$~sr should be possible, an order of magnitud
 Of course this assumes a highly reflective surface, only obtainable in the near ultraviolet with aluminum~\cite{rumble2017crc}, which is fortunately a good choice for thermal conductivity as well.
 Aluminum may be a less ideal choice as far as high voltage is concerned however, since its surface oxide layer should enable the formation of patch charges and stray electric fields to some extent.
 This could prove especially problematic in the event of any sensitive long-term studies, since variations in the patch charges could lead to variations in the enhancement of spin-flip losses near the trap center.
-One technique to address this is to detect the magnitude of spectroscopy, see Fig.~\ref{strayhyperspec.png}.
+One technique to address this is to detect the magnitude of the stray field by spectroscopy, see Fig.~\ref{strayhyperspec.png}.
 Because of the small magnitude of the differential Zeeman shift, slight perturbations of the electric fields on the magnetic field dependent line-shapes, especially in the vicinity of avoided crossings, are clearly discernible.
 Performing a full spectroscopic sequence would be slow, but similar observables could be designed to give sensitivity to stray electric fields, for example a two-point spectroscopy comparing the frequency of the dip to that of the peak.
 Another possibility would be to look for population transfer at a more distant frequency that would only address molecules close to avoided crossings.
@@ -779,6 +784,23 @@ Another possibility would be to look for population transfer at a more distant f
 The black simulated line corresponds to $10$~V/cm. 
 The two dips correspond to the inability of microwaves to address molecules at those frequencies due to avoided crossings perturbing the lines at those locations. 
 Only one crossing is significantly perturbed by small fields, that between \e3 and \f1, but this crossing occurs in two different locations for the two nuclear spin substates of \f3.}{\linewidth}
+
+\subsection{High Voltage Considerations}
+
+In addition to the material and patch considerations mentioned above, I concentrated a significant effort towards minimizing the exposure of the magnet surfaces to high electric fields.
+I was motivated in this pursuit by observations of adverse effects of the magnet surfaces on decelerator electrodes, see Fig.~\ref{TrapSpidering.png}.
+After the first data collection period with the tricycle trap in 2014, a vacuum break revealed significant arcing induced surface degradations.
+Pin pairs close to the end of the decelerator where the trap was located showed degraded surface lines or tracks, with a ring-like structure reminiscent of the cylindrically symmetric tricycle trap mounted in close proximity.
+This suggests that applying high voltage to the somewhat rough surfaces of the neodymium magnets could have been causing arcs.
+It is also possible that merely the presence of the magnetic field exacerbates or facilitates arcing somehow.
+Although we never had direct evidence that the formation of these tracks corresponded to a decline in performance of the system, at the time this observation contributed to a working hypothesis that the performance of the decelerator had degraded and needed to be addressed.
+In the new cryogenic system, the magnets are mounted in such a way that they are for the most part ensconced within the mounting structures, which can be better polished than the magnets themselves, which are a brittle ceramic with no available high polish surface preparation.
+
+\figdave{TrapSpidering.png}{Tricycle HV Tracking}{
+Decelerator pins after deinstallation of the Tricycle trap. 
+Not only discoloration, but linear scratch-like patterns or tracks, are evident.
+These tracks appear to form concentric rings about the decelerator axis, suggesting that tricycle trap magnets were involved.
+}{12cm}
 
 \subsection{Blackbody Absorption}
 

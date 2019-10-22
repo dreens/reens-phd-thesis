@@ -44,6 +44,7 @@ Successive pairs are rotated ninety degrees relative to one another, which is re
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=8cm]{chargecartoon.png}%
 \caption[Voltages, E-fields, and on-axis Energy]{\label{fig:decelcartoon}
 Voltages, electric fields, and on-axis potential energy in a conventional pin decelerator~\cite{Bethlem1999}. 
@@ -65,6 +66,7 @@ Thus there is a tradeoff between the deceleration capability of the device and t
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{Slowing/phaseangles.png}%
 \caption[Phase Space for Different Final Velocities]{\label{fig:variousphaseangles}
 Longitudinal phase space plots of a Stark decelerator with varying final velocity. From left to right, $v_f=33, 50, 100, 200, 500, 800$~m/s. Note how the size of the populated area reduces as the final speed is reduced.  This is a direct reflection of how closely the synchronous molecule approaches the charged pin-pair, which in turn controls how far ahead a non-synchronous molecule may be while still experiencing a restoring force. Note also how the size reduces much more significantly between $800-500-200$~m/s then for any of the other speed reductions. This is described further in the main text. 
@@ -90,7 +92,6 @@ This parametrization also allows us to work independently from the choice of pin
 A decelerator is often operated so that a synchronous molecule with a given speed would always experience a turn-off event at the same phase angle $\phi$ (or $\phi + 180^\circ$), which then allows the operation of the device to be specified by only that angle.
 It follows from Eq.~\ref{slowphasevary} however that very slight changes in $\Delta\text{PE}$ can lead to dramatic changes in the final velocity of the synchronous molecule, which also applies to $\phi$ since $\Delta\text{PE}\propto\sin(\phi)$ and our device operates far from $\phi=\pi/2$.
 In earlier iterations of the code used for programming the switching sequence of our decelerators, it was necessary to specify the phase angle down to the thousandth of a degree in order to get the desired final speed within a few meters per second, which in turn required carefully hand-exploring the function mapping phase angles to final speeds.
-This is discussed further in an appendix ??.
 
 It is also worth discussing some other features of the longitudinal phase space plots shown in Fig.~\ref{fig:variousphaseangles}. 
 Almost all final speeds show a bullseye type pattern, with a halo of outer particles surrounding an inner core.
@@ -137,6 +138,7 @@ For typical operating conditions, $f\sim 1-2\text{ kHz}$.
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{Slowing/many-bunching-plots.png}%
 \caption[Phase Space for S\,=\,1, S\,=\,3, and S\,=\,311]{\label{fig:bunchingphasespace311}
 Longitudinal phase space plots after several types of bunching for several decelerator lengths. Column-wise, operation is in S\,=\,1, S\,=\,3, and a hybrid of these that I term S\,=\,311. Indicated percentages are comparable by rows, but suffer from a pernicious simulation artifact. Some molecules are included which actually pass through decelerator pins. The effect adversely influences the comparative survival numbers, but not the observed projection of phase space onto the longitudinal direction.
@@ -227,6 +229,7 @@ This choice has the distinct advantage of allowing the plane to intersect all pa
 However, the defocusing effect is significantly stronger in the plane orthogonal to the grounded pin pairs, and is thus obscured.
 
 \begin{figure}[t!]
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{Slowing/pinpairformal.png}%
 \caption[Definition and Explanation of Alternate Field Distributions]{\label{fig:chargecartoon}
 Alternate field distributions which can be used alongside the conventional one for greatly enhanced performance. Configurations B and C feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to S\,=\,1 mode and its S\,=\,3 overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced.
@@ -250,6 +253,7 @@ The field distributions and on axis energy diagrams indicating when they are to 
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=7.5cm]{speedvary.png}\hspace{4mm}
 \includegraphics[width=7.5cm]{pinpairF.png}%
 \caption[S\,=\,1 and F Mode Comparison]{\label{fig:speedvary}
@@ -277,6 +281,7 @@ This can be considered the underlying reason for the transverse-longitudinal cou
 Such couplings are in some contexts useful for maintaining ergodicity in a trapping geometry~\cite{Surkov1996}, but with one dimension featuring a very low energy barrier, they lead to loss.
 
 \begin{figure}[t!]
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{Slowing/full-three-panel.png}%
 \caption[Traveling Potential Well Characteristics for different Modes]{\label{fig:efftrap}
 Characterizing the moving trap under different modes of operation. In addition to the conventional S\,=\,1 and S\,=\,3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and focusing (F) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel~(a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. The stars on SF and VSF indicate $\phi_2$ tuning, see the text. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel~(c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b). For TW a full simulation is not performed, since low speed losses are less significant, but the dashed line shows the value corresponding to 67 km/s/s in panel~(b). In panel~(d) equipotentials give a feeling for the effective trap as a whole, which is helpful for visualizing the derivation of the minimum trap depth in panel~(a). The effective traps shown correspond to $\phi=45^\circ$, about $180\text{ mK}$. The propagation axis is to the right, and transverse directions are up and diagonally outwards.}
@@ -304,6 +309,7 @@ F mode can be seen to feature greater depth longitudinally than transversely bas
 This is a direct reflection of the fact that $\phi_2$ has been tuned for optimal minimum trap depth, because what happens in this case is that longitudinal depth is exchanged for transverse by increasing the time spent in the transversely focusing direction.
 
 \begin{figure}[t!]
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{5x2-PSD-Compare.png}
 \caption[Longitudinal Phase Space for different Modes]{\label{full5x2phasespace}
 Longitudinal Phase Space Fillings are shown for several operation modes as labeled. 
@@ -352,6 +358,7 @@ This transverse trap may also be computed numerically, depending on the choice o
 \figdave{oscillate.png}{Transverse Oscillation Diagram and Data}{Transverse Oscillations in the Decelerator. (a) Schematic timing diagram for the experiment. (b) Transverse temperature (velocity spread) as a function of propagation time. (c) Phase space views demonstrating the rotation that gives rise to velocity spread variations. (d) Schematic timing diagram for application of a detection off-window for time $\text{T}_\text{det}$ after a hold time of $\text{t}_\text{det}$. (e) Resulting signal in simulation. (f-h) Experimental data for guiding with $6$~kV (blue) or $2.2$~kV (green) applied voltage. (f) Sine (solid) and damped sine (dashed) fits to the experimental $6$~kV data (black dots). (g) Same for $2.2$~kV. (h) Fourier transforms of the experimental data with dashed lines indicating the simulated breathing mode frequency.}{\linewidth}
 
 \begin{figure}[t!]
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{Slowing/guiding_compilation.png}
 \caption[Transverse Guiding Potentials]{\label{fig:guiding_compilation}
 Transverse Traps formed by Different Field Distributions. Field distributions are generated in COMSOL, converted to internal potential energy, and then averaged longitudinally.}
@@ -395,6 +402,7 @@ Being more quantitative would require simulating a denser grid of trajectories c
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=8cm]{StarkGap.png}
 \includegraphics[width=8cm]{NonadTraj.png}\\
 \includegraphics[width=8cm]{SampleTISE.png}
@@ -410,7 +418,7 @@ I find that non-adiabatic transitions are possible only if the molecule is signi
 These positions are not longitudinally phase stable anyway, unless the decelerator is being operated in an acceleration mode, in which case some locations off axis do seem to feature a significant chance of non-adiabatic transitions.
 \begin{figure}[t!]
 \centering
-\vspace{0.5mm}
+\vspace{0.25in}
 \includegraphics[width=7.5cm]{switchloss1.png}
 \includegraphics[width=7.5cm]{switchloss2.png}\\
 \includegraphics[width=7.5cm]{switchloss3.png}
@@ -433,6 +441,7 @@ Thanks to the variation in length of our decelerator pins, a known side effect o
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=8cm]{offset-avoid-loss.png}
 \includegraphics[width=8cm]{offset-avoid-loss-Ey.png}
 \caption[Fields Close to Zeros of SF Mode]{\label{offsetavoid}
@@ -461,6 +470,7 @@ Thinking in terms of the effective trap, this reduction shrinks the spatial exte
 The spacing was reduced from $5.461$~mm in the previous generation to an even $5$~mm.
 
 \begin{figure}[t!]
+\vspace{0.25in}
 \includegraphics[width=9cm]{Slowing/mp_elength_phaseload.png}
 \includegraphics[width=7cm]{choosegap.png}
 \caption[Decelerator Length Simulation]{\label{fig:mp_elength_phaseload}
@@ -487,6 +497,7 @@ The tapered pins may be a good choice for other designs, especially if a vendor 
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=8cm]{Slowing/MountingCageSystem1.png}
 \includegraphics[width=8cm]{Slowing/MountingCageSystem2.png}\\
 \includegraphics[width=\linewidth]{Slowing/MountingCageSystem3.png}
@@ -524,7 +535,7 @@ Borosilicate glass rods were selected for their vacuum and insulating properties
 
 \begin{figure}[t!]
 \centering
-\vspace{1mm}
+\vspace{0.25in}
 \includegraphics[width=9cm]{Macor2.png}
 \includegraphics[width=7.11cm]{Macor1.png}
 \caption[MACOR Surface Arcs]{\label{macorbad}
@@ -560,6 +571,7 @@ What happens in this case is that the nodes other than $i$ and $j$ float to vari
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=\linewidth]{capmats.png}
 \caption[Capacitance Matrix for Third Generation Decelerator]{\label{capmat}
 Capacitance matrices from LCR meter and simulation for third generation decelerator. (a) Capacitance matrix by measurement and (b) by COMSOL simulation. (c) Example of the multi-timescale dynamics that can occur when solving the transient response of a capacitive system to sudden changes in the voltages applied to the electrodes. Traces are simulated dynamics using the experimentally determined capacitance matrix.
@@ -593,6 +605,7 @@ Nonetheless, in the third generation of the experiment a technique was developed
 
 \begin{figure}[t!]
 \centering
+\vspace{0.25in}
 \includegraphics[width=6cm]{Glass-Baffle-Headon.png}
 \includegraphics[width=6cm]{SampleChordFilling.png}\\
 \includegraphics[width=6cm]{decel_conductance_0.png}

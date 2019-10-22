@@ -1226,7 +1226,7 @@
 }
 \renewcommand{\abstract}[2][long]{
 	\ifthenelse{\equal{#1}{short}}{\relax}{
-		\th@StoreIn{\th@AbstractPageStyle}{\thispagestyle{empty}}
+		\th@StoreIn{\th@AbstractPageStyle}{\thispagestyle{pla}}
 	}
 	\th@StoreIn{\th@abstractStash}{#2}
 }

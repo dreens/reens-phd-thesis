@@ -61,7 +61,7 @@ slow:
 	pdflatex slowing
 	open -a TexShop slowing.pdf
 
-trap:
+trop:
 	make draft
 	pdflatex trapping
 	bibtex trapping || true
